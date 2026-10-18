@@ -30,6 +30,36 @@ redirect_from:
     <img src="{{ '/images/profile.jpg' | relative_url }}" alt="Liang Qin" width="751" height="796" decoding="async">
     <figcaption>Osaka, Japan</figcaption>
   </figure>
+  <div id="manipulation-approach" class="hero-perspective">
+    <div class="perspective-copy">
+      <h2 id="perspective-heading">My approach to manipulation</h2>
+      <p>From my bachelor's through my master's and doctoral studies, my research has centered on robotic manipulation. I see reliable manipulation as a systems problem: mechanical design, perception, and planning must work together.</p>
+      <p>Experience across these areas helps me approach manipulation challenges from different perspectives. Beyond publications, my priority is solving practical industrial problems.</p>
+      <p class="perspective-invitation">I am keen to work with companies that have real industrial challenges and a need for intelligent automation.</p>
+    </div>
+    <figure class="manipulation-diagram" aria-labelledby="manipulation-diagram-caption">
+      <div class="diagram-context">Industrial task &amp; constraints</div>
+      <div class="diagram-input" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="diagram-disciplines">
+        <div class="diagram-discipline">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M9 29V12h9l6 7h7v10M9 21h9l6 8M13 29v5m14-5v5M5 34h26"/><circle cx="14" cy="16" r="2"/><path d="m31 19 4-3m-4 13 4 3"/></svg>
+          <strong>Mechanical<br>design</strong><span>Contact &amp; capability</span>
+        </div>
+        <div class="diagram-discipline">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M5 16h7l3-5h10l3 5h7v17H5Z"/><circle cx="20" cy="24" r="6"/><path d="M8 7h6m-3-3v6m17-3h5"/></svg>
+          <strong>Perception</strong><span>State &amp; uncertainty</span>
+        </div>
+        <div class="diagram-discipline">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="8" cy="29" r="3"/><circle cx="20" cy="11" r="3"/><circle cx="32" cy="25" r="3"/><path d="m10 26 8-12m5-1 7 9M11 30h17m2-18 5-5m-5 0h5v5"/></svg>
+          <strong>Planning<br>&amp; learning</strong><span>Decisions &amp; motion</span>
+        </div>
+      </div>
+      <div class="diagram-merge" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="diagram-outcome"><strong>Reliable robotic manipulation</strong><span>A coordinated system for real tasks</span></div>
+      <div class="diagram-feedback"><span aria-hidden="true">↻</span> Test in real conditions · Refine the system</div>
+      <figcaption id="manipulation-diagram-caption">My view: task requirements guide the whole system; real-world testing informs each part.</figcaption>
+    </figure>
+  </div>
   <div class="home-actions">
     <a class="home-button" href="{{ '/#publications' | relative_url }}">Publications <span aria-hidden="true">↗</span></a>
     <a class="home-button home-button--secondary" href="{{ '/cv/' | relative_url }}">CV <span aria-hidden="true">↗</span></a>
