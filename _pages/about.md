@@ -14,7 +14,11 @@ redirect_from:
 <div class="academic-home">
 <section id="about-me" class="home-section home-intro" aria-labelledby="about-heading">
   <div class="hero-system-background" aria-hidden="true">
-    {% include ascii-handover.html %}
+    <div class="ascii-scene">
+      {% include ascii-handover.html %}
+      <span class="ascii-scene-caption">Handover</span>
+    </div>
+    {% include ascii-playlist.html %}
   </div>
   <div class="hero-heading">
     <p class="home-eyebrow">Robot learning &amp; manipulation</p>

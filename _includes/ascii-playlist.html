@@ -1,0 +1,4 @@
+<script type="application/json" id="ascii-scenes">[
+{% for scene in site.data.ascii_scenes %}{"title":{{ scene.title | jsonify }},"url":{{ scene.file | relative_url | jsonify }}}{% unless forloop.last %},{% endunless %}
+{% endfor %}]
+</script>
