@@ -1,0 +1,10 @@
+- title: Handover
+  file: /assets/animations/franka-handover.json
+- title: Pick & place
+  file: /assets/animations/franka-pick-place.json
+- title: Object reorientation
+  file: /assets/animations/franka-reorientation.json
+- title: Cooperative carry
+  file: /assets/animations/franka-cooperative-carry.json
+- title: Peg insertion
+  file: /assets/animations/franka-peg-insertion.json

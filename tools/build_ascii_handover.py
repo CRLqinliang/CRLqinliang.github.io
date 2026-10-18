@@ -156,8 +156,8 @@ center = np.array([0, 0, .37]) @ view.T
 light = np.array([-.4, -.5, 1.]); light /= np.linalg.norm(light)
 ramp = np.array(list(' .:-=+*#%@'))
 
-def render(t):
-    points, normals, colors = scene(t)
+def render_cloud(cloud):
+    points, normals, colors = cloud
     projected = points @ view.T - center
     x = np.floor((projected[:, 0]/width+.5)*COLS).astype(int)
     y = np.floor((.5-projected[:, 1]/height)*ROWS).astype(int)
@@ -172,15 +172,19 @@ def render(t):
     nearest = order[np.r_[True, cell_sorted[1:] != cell_sorted[:-1]]]
     buffer = np.full(ROWS*COLS, ' ')
     buffer[cell[nearest]] = ramp[np.maximum(1, (tone[nearest]*9).astype(int))]
-    # A minimal workspace baseline anchors both bases without another diagram.
     buffer = buffer.reshape(ROWS, COLS)
     return '\n'.join(''.join(row).rstrip() for row in buffer)
 
-frames = [render(i/FPS) for i in range(COUNT)]
-assert len(set(frames)) > COUNT*.5
-assert frames[0] == frames[-1], "Loop must return to the same resting pose"
-asset = ROOT / 'assets/animations/franka-handover.json'
-asset.write_text(json.dumps({'fps': FPS, 'columns': COLS, 'rows': ROWS, 'poster': 28, 'frames': frames}, separators=(',', ':')))
-poster = ROOT / '_includes/ascii-handover.html'
-poster.write_text('<pre class="ascii-handover" data-frames-url="{{ \'/assets/animations/franka-handover.json\' | relative_url }}">'+frames[28]+'</pre>\n')
-print('Frames:', COUNT, 'uncompressed bytes:', asset.stat().st_size, flush=True)
+def render(t):
+    return render_cloud(scene(t))
+
+
+if __name__ == '__main__':
+    frames = [render(i/FPS) for i in range(COUNT)]
+    assert len(set(frames)) > COUNT*.5
+    assert frames[0] == frames[-1], "Loop must return to the same resting pose"
+    asset = ROOT / 'assets/animations/franka-handover.json'
+    asset.write_text(json.dumps({'fps': FPS, 'columns': COLS, 'rows': ROWS, 'poster': 28, 'frames': frames}, separators=(',', ':')))
+    poster = ROOT / '_includes/ascii-handover.html'
+    poster.write_text('<pre class="ascii-handover" data-frames-url="{{ \'/assets/animations/franka-handover.json\' | relative_url }}">'+frames[28]+'</pre>\n')
+    print('Frames:', COUNT, 'uncompressed bytes:', asset.stat().st_size, flush=True)
