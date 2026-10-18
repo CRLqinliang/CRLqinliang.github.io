@@ -13,6 +13,7 @@
   } catch (e) { /* The inline handover remains a valid standalone fallback. */ }
 
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  const playbackRate = 1.5;
   const cache = new Map();
   let current;
   let sceneIndex = 0;
@@ -74,7 +75,7 @@
   };
   const draw = time => {
     if (!previous) previous = time;
-    const interval = 1000 / current.fps;
+    const interval = 1000 / (current.fps * playbackRate);
     if (time - previous >= interval) {
       if (index === current.frames.length - 1 && next) {
         const incoming = next;
