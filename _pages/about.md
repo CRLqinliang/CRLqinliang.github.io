@@ -14,7 +14,7 @@ redirect_from:
 <div class="academic-home">
 <section id="about-me" class="home-section home-intro" aria-labelledby="about-heading">
   <div class="hero-system-background" aria-hidden="true">
-    {% include robotics-background.svg %}
+    <img src="{{ '/images/backgrounds/franka-dual-arm.jpg' | relative_url }}" alt="" width="1919" height="865" decoding="async" fetchpriority="low">
   </div>
   <div class="hero-heading">
     <p class="home-eyebrow">Robot learning &amp; manipulation</p>
