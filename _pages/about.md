@@ -42,22 +42,31 @@ redirect_from:
     <h1 id="about-heading">Liang Qin</h1>
     <p class="hero-role">Ph.D. candidate · {% include organization.html key="osaka" %}</p>
   </div>
-  <div class="hero-copy">
-    <p class="home-lead">High success rates in robotic manipulation depend on the integration of <strong>mechanical design, perception, and planning algorithms.</strong></p>
-    <div class="hero-bio">
-      <p>At <a href="https://www.roboticmanipulation.org/">Harada Lab</a>, I work with <a href="https://wanweiwei07.github.io/">Prof. Weiwei Wan</a> on grasp and regrasp planning, combining learning-based methods with practical robotic systems.</p>
+  <div class="intro-blocks">
+    <section id="manipulation-approach" class="intro-block intro-block--principle" aria-labelledby="intro-perspective-heading">
+      <h2 id="intro-perspective-heading">My perspective</h2>
+      <p class="home-lead">High success rates in robotic manipulation depend on the integration of <strong>mechanical design, perception, and planning algorithms.</strong></p>
+      <p>Research across disciplines throughout my bachelor's, master's, and doctoral studies helps me approach manipulation problems from multiple perspectives.</p>
+    </section>
+    <section class="intro-block" aria-labelledby="intro-background-heading">
+      <h2 id="intro-background-heading">Research background</h2>
       <p>Previously, I was a Ph.D. student in the Robot Learning Group at <a href="http://www.rlg.sys.es.osaka-u.ac.jp/">Nagai Lab</a>, supervised by Prof. Takayuki Nagai.</p>
       <p>I earned my master's degree at Huazhong University of Science and Technology (HUST), working with Prof. Wenyu Yang at the <a href="https://dmet.hust.edu.cn/index.htm">State Key Laboratory of Intelligent Manufacturing Equipment and Technology</a>, and my bachelor's degree at Xidian University in 2018.</p>
-    </div>
+    </section>
+    <section class="intro-block" aria-labelledby="intro-current-heading">
+      <h2 id="intro-current-heading">Current research</h2>
+      <p>At <a href="https://www.roboticmanipulation.org/">Harada Lab</a>, I work with <a href="https://wanweiwei07.github.io/">Prof. Weiwei Wan</a> on grasp and regrasp planning, combining learning-based methods with practical robotic systems.</p>
+    </section>
+    <section class="intro-block intro-block--industry" aria-labelledby="intro-industry-heading">
+      <h2 id="intro-industry-heading">Industry collaboration</h2>
+      <p>Beyond publications, my priority is solving practical industrial problems.</p>
+      <p>I am keen to work with companies that have real industrial challenges and a need for intelligent automation.</p>
+    </section>
   </div>
   <figure class="hero-portrait">
     <img src="{{ '/images/profile.jpg' | relative_url }}" alt="Liang Qin" width="751" height="796" decoding="async">
     <figcaption>Osaka, Japan</figcaption>
   </figure>
-  <div id="manipulation-approach" class="hero-perspective">
-    <p>My research throughout my bachelor's, master's, and doctoral studies has focused on robotic manipulation. Working across these disciplines helps me approach manipulation problems from multiple perspectives.</p>
-    <p>Beyond publications, my priority is solving practical industrial problems. I am keen to work with companies that have real industrial challenges and a need for intelligent automation.</p>
-  </div>
   <div class="home-actions">
     <a class="home-button" href="{{ '/#publications' | relative_url }}">Publications <span aria-hidden="true">↗</span></a>
     <a class="home-button home-button--secondary" href="{{ '/cv/' | relative_url }}">CV <span aria-hidden="true">↗</span></a>
