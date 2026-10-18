@@ -47,9 +47,12 @@ h3 { font-size: 19px; margin: 0 0 8px; }
 .hero-perspective { grid-area: perspective; max-width: 780px; margin-top: 22px; scroll-margin-top: 112px; }
 .hero-perspective p { font-size: 15px; line-height: 1.8; margin-bottom: 12px; }
 .hero-perspective p:last-child { margin-bottom: 0; }
-.hero-system-background { position: absolute; z-index: 0; pointer-events: none; width: 1060px; right: -12px; top: 118px; opacity: .32; filter: grayscale(1) contrast(1.15) blur(.6px); mix-blend-mode: multiply; mask-image: linear-gradient(90deg, transparent, #000 50%), linear-gradient(180deg, #000 80%, transparent); mask-composite: intersect; }
-.hero-system-background img { display: block; width: 100%; height: auto; }
-html[data-theme="dark"] .hero-system-background { opacity: .2; filter: grayscale(1) invert(1) blur(.6px); mix-blend-mode: screen; }
+.hero-system-background { position: absolute; z-index: 0; pointer-events: none; width: 810px; height: 486px; right: -35px; top: 145px; color: var(--accent); opacity: .4; mask-image: linear-gradient(90deg, transparent, #000 40%); }
+.ascii-handover { margin: 0; padding: 0; border: 0; background: none; color: inherit; font: 9px/9px "Liberation Mono", Consolas, monospace; font-variant-ligatures: none; letter-spacing: 0; white-space: pre; user-select: none; overflow: visible; }
+html[data-theme="dark"] .hero-system-background { opacity: .3; }
+.ascii-motion-toggle { padding: 3px 0; border: 0; background: none; color: var(--muted); font-size: 11px; cursor: pointer; }
+.ascii-motion-toggle:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 4px; }
+.ascii-motion-toggle[hidden] { display: none; }
 .home-actions { grid-area: actions; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 22px; margin-top: 24px; font-size: 13px; font-weight: 600; }
 .home-button { display: inline-flex; align-items: center; gap: 24px; background: var(--accent); color: var(--bg); padding: 9px 17px; border: 1px solid var(--accent); border-radius: 4px; }
 .home-button--secondary { background: transparent; color: var(--accent); gap: 14px; }
@@ -108,7 +111,8 @@ html[data-theme="dark"] .hero-system-background { opacity: .2; filter: grayscale
  .site-header nav { gap: 15px; }
  .home-intro { grid-template-columns: 128px minmax(0,1fr); column-gap: 28px; row-gap: 0; }
  .hero-portrait img { width: 128px; height: auto; }
- .hero-system-background { width: 900px; right: -80px; opacity: .25; }
+ .hero-system-background { width: 675px; height: 405px; right: -70px; opacity: .2; }
+ .ascii-handover { font-size: 7.5px; line-height: 7.5px; }
  .publication-card { grid-template-columns: 220px minmax(0, 1fr); gap: 24px; }
  .research-grid { gap: 22px; }
  .research-card--topic { grid-template-columns: 1fr; gap: 14px; }
@@ -126,7 +130,8 @@ html[data-theme="dark"] .hero-system-background { opacity: .2; filter: grayscale
  .home-intro { display: grid; grid-template-columns: minmax(0, 1fr) 88px; grid-template-areas: "heading portrait" "copy copy" "perspective perspective" "actions actions"; gap: 20px 16px; }
  .hero-perspective { margin-top: 0; }
  .hero-perspective p { font-size: 14px; line-height: 1.75; }
- .hero-system-background { width: 780px; right: -150px; top: 260px; opacity: .13; }
+ .hero-system-background { width: 450px; height: 270px; right: -45px; top: 330px; opacity: .15; }
+ .ascii-handover { font-size: 5px; line-height: 5px; }
  html[data-theme="dark"] .hero-system-background { opacity: .14; }
  .hero-heading .home-eyebrow { font-size: 10px; letter-spacing: .08em; }
  .hero-heading h1 { font-size: 36px; margin-bottom: 8px; }
