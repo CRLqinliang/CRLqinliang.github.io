@@ -9,12 +9,12 @@ Copyright 2023–2024 Franka Robotics GmbH. Apache-2.0 license and upstream noti
 
 Regenerate with `python tools/build_ascii_handover.py /path/to/franka_description` (Python dependencies: numpy, scipy, trimesh). The tool also writes the inline static pose in `_includes/ascii-handover.html`. It checks position error on the pose path and that the sequence contains moving frames. The joint path follows the configured limits; collision-free operation is not asserted.
 
-The browser only swaps text at 8 fps. It pauses outside the introduction or when the page is hidden, provides a pause/play control, and initially shows a static handover pose for `prefers-reduced-motion`. Fetch failure leaves the inline pose intact.
+The browser plays the 8 fps source clips at 1.5× speed (12 text updates per second). It pauses outside the introduction or when the page is hidden, provides a pause/play control, and initially shows a static handover pose for `prefers-reduced-motion`. Fetch failure leaves the inline pose intact.
 
 
 ## Manipulation playlist
 
-The introduction cycles through five scenes with a short fade between them. `_data/ascii_scenes.yml` controls the order and captions:
+The introduction cycles through five scenes with a short fade between them. `_data/ascii_scenes.yml` controls the order and captions. Durations below describe the source clips at 1×; the full playlist takes 48 seconds at the browser's 1.5× playback rate:
 
 1. `franka-handover.json`: dual-arm handover, 160 frames / 20 seconds.
 2. `franka-pick-place.json`: grasp, lift, transfer and release a cube between two supports, 96 frames / 12 seconds.
