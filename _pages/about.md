@@ -13,13 +13,37 @@ redirect_from:
 
 <div class="academic-home">
 <section id="about-me" class="home-section home-intro" aria-labelledby="about-heading">
+  <div class="hero-system-background" aria-hidden="true">
+    <svg viewBox="0 0 640 680" focusable="false">
+      <ellipse class="system-orbit" cx="325" cy="345" rx="250" ry="260" transform="rotate(-22 325 345)"/>
+      <path class="system-link" d="M325 130 110 490 540 490Z M325 130V345 M110 490l215-145 215 145"/>
+      <circle class="system-halo" cx="325" cy="345" r="128"/>
+      <circle class="system-core" cx="325" cy="345" r="100"/>
+      <text class="system-core-label" x="325" y="337"><tspan x="325">Reliable robotic</tspan><tspan x="325" dy="27">manipulation</tspan></text>
+      <g transform="translate(325 130)">
+        <circle class="system-node" r="78"/>
+        <g class="system-icon" transform="translate(-24 -42) scale(1.2)"><path d="M9 29V12h9l6 7h7v10M9 21h9l6 8M13 29v5m14-5v5M5 34h26"/><circle cx="14" cy="16" r="2"/><path d="m31 19 4-3m-4 13 4 3"/></g>
+        <text class="system-node-label" y="18"><tspan x="0">Mechanical</tspan><tspan x="0" dy="23">design</tspan></text>
+      </g>
+      <g transform="translate(110 490)">
+        <circle class="system-node" r="78"/>
+        <g class="system-icon" transform="translate(-24 -42) scale(1.2)"><path d="M5 16h7l3-5h10l3 5h7v17H5Z"/><circle cx="20" cy="24" r="6"/></g>
+        <text class="system-node-label" x="0" y="29">Perception</text>
+      </g>
+      <g transform="translate(540 490)">
+        <circle class="system-node" r="78"/>
+        <g class="system-icon" transform="translate(-24 -42) scale(1.2)"><circle cx="8" cy="29" r="3"/><circle cx="20" cy="11" r="3"/><circle cx="32" cy="25" r="3"/><path d="m10 26 8-12m5-1 7 9M11 30h17"/></g>
+        <text class="system-node-label" y="18"><tspan x="0">Planning</tspan><tspan x="0" dy="23">algorithms</tspan></text>
+      </g>
+    </svg>
+  </div>
   <div class="hero-heading">
     <p class="home-eyebrow">Robot learning &amp; manipulation</p>
     <h1 id="about-heading">Liang Qin</h1>
     <p class="hero-role">Ph.D. candidate · {% include organization.html key="osaka" %}</p>
   </div>
   <div class="hero-copy">
-    <p class="home-lead">My research combines robot learning, motion planning, and mechanism design for robotic manipulation.</p>
+    <p class="home-lead">High success rates in robotic manipulation depend on the integration of <strong>mechanical design, perception, and planning algorithms.</strong></p>
     <div class="hero-bio">
       <p>At <a href="https://www.roboticmanipulation.org/">Harada Lab</a>, I work with <a href="https://wanweiwei07.github.io/">Prof. Weiwei Wan</a> on grasp and regrasp planning, combining learning-based methods with practical robotic systems.</p>
       <p>Previously, I was a Ph.D. student in the Robot Learning Group at <a href="http://www.rlg.sys.es.osaka-u.ac.jp/">Nagai Lab</a>, supervised by Prof. Takayuki Nagai.</p>
@@ -31,34 +55,8 @@ redirect_from:
     <figcaption>Osaka, Japan</figcaption>
   </figure>
   <div id="manipulation-approach" class="hero-perspective">
-    <div class="perspective-copy">
-      <h2 id="perspective-heading">My approach to manipulation</h2>
-      <p>From my bachelor's through my master's and doctoral studies, my research has centered on robotic manipulation. I see reliable manipulation as a systems problem: mechanical design, perception, and planning must work together.</p>
-      <p>Experience across these areas helps me approach manipulation challenges from different perspectives. Beyond publications, my priority is solving practical industrial problems.</p>
-      <p class="perspective-invitation">I am keen to work with companies that have real industrial challenges and a need for intelligent automation.</p>
-    </div>
-    <figure class="manipulation-diagram" aria-labelledby="manipulation-diagram-caption">
-      <div class="diagram-context">Industrial task &amp; constraints</div>
-      <div class="diagram-input" aria-hidden="true"><span></span><span></span><span></span></div>
-      <div class="diagram-disciplines">
-        <div class="diagram-discipline">
-          <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M9 29V12h9l6 7h7v10M9 21h9l6 8M13 29v5m14-5v5M5 34h26"/><circle cx="14" cy="16" r="2"/><path d="m31 19 4-3m-4 13 4 3"/></svg>
-          <strong>Mechanical<br>design</strong><span>Contact &amp; capability</span>
-        </div>
-        <div class="diagram-discipline">
-          <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M5 16h7l3-5h10l3 5h7v17H5Z"/><circle cx="20" cy="24" r="6"/><path d="M8 7h6m-3-3v6m17-3h5"/></svg>
-          <strong>Perception</strong><span>State &amp; uncertainty</span>
-        </div>
-        <div class="diagram-discipline">
-          <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="8" cy="29" r="3"/><circle cx="20" cy="11" r="3"/><circle cx="32" cy="25" r="3"/><path d="m10 26 8-12m5-1 7 9M11 30h17m2-18 5-5m-5 0h5v5"/></svg>
-          <strong>Planning<br>&amp; learning</strong><span>Decisions &amp; motion</span>
-        </div>
-      </div>
-      <div class="diagram-merge" aria-hidden="true"><span></span><span></span><span></span></div>
-      <div class="diagram-outcome"><strong>Reliable robotic manipulation</strong><span>A coordinated system for real tasks</span></div>
-      <div class="diagram-feedback"><span aria-hidden="true">↻</span> Test in real conditions · Refine the system</div>
-      <figcaption id="manipulation-diagram-caption">My view: task requirements guide the whole system; real-world testing informs each part.</figcaption>
-    </figure>
+    <p>My research throughout my bachelor's, master's, and doctoral studies has focused on robotic manipulation. Working across these disciplines helps me approach manipulation problems from multiple perspectives.</p>
+    <p>Beyond publications, my priority is solving practical industrial problems. I am keen to work with companies that have real industrial challenges and a need for intelligent automation.</p>
   </div>
   <div class="home-actions">
     <a class="home-button" href="{{ '/#publications' | relative_url }}">Publications <span aria-hidden="true">↗</span></a>

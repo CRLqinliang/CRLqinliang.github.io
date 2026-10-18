@@ -28,46 +28,36 @@ h1 { font-size: clamp(36px, 4.5vw, 48px); margin: 0 0 12px; }
 h2 { font-size: 28px; margin: 0 0 24px; }
 h3 { font-size: 19px; margin: 0 0 8px; }
 .home-eyebrow { color: var(--accent); font-size: 11px; letter-spacing: .13em; font-weight: 700; text-transform: uppercase; margin-bottom: 12px; }
-.home-intro { display: grid; grid-template-columns: 144px minmax(0, 1fr); grid-template-areas: "portrait heading" "copy copy" "perspective perspective" "actions actions"; column-gap: 32px; align-items: start; padding: 48px 0 42px; }
+.home-intro { position: relative; isolation: isolate; overflow: clip; display: grid; grid-template-columns: 144px minmax(0, 1fr); grid-template-areas: "portrait heading" "copy copy" "perspective perspective" "actions actions"; column-gap: 32px; align-items: start; padding: 48px 0 42px; }
 .hero-heading { grid-area: heading; min-width: 0; align-self: center; }
-.hero-copy { grid-area: copy; max-width: 920px; }
+.hero-copy { grid-area: copy; max-width: 820px; }
 .hero-heading .hero-role { margin-bottom: 0; }
 .hero-role { color: var(--muted); font-size: 14px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
 .hero-role .organization-logo { width: 26px; height: 26px; flex-basis: 26px; }
 .hero-role .organization-logo img { width: 21px; height: 21px; }
-.home-lead { font-size: 23px; line-height: 1.5; letter-spacing: -.015em; margin: 22px 0 20px; max-width: 860px; }
-.hero-bio { max-width: 96ch; font-size: 15px; line-height: 1.8; }
+.home-lead { font-size: 23px; line-height: 1.5; letter-spacing: -.015em; margin: 22px 0 20px; max-width: 820px; }
+.hero-bio { max-width: 86ch; font-size: 15px; line-height: 1.8; }
 .hero-bio p { margin: 0 0 12px; }
 .hero-bio p:last-child { margin-bottom: 0; }
 .hero-portrait { grid-area: portrait; margin: 0; }
 .hero-portrait img { display: block; width: 144px; height: auto; border-radius: 6px; }
 .hero-portrait figcaption { color: var(--muted); font-size: 12px; margin-top: 10px; }
-.hero-perspective { grid-area: perspective; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 40px; align-items: center; margin-top: 30px; padding-top: 30px; border-top: 1px solid var(--line); scroll-margin-top: 112px; }
-.perspective-copy h2 { font-size: 20px; margin-bottom: 16px; }
-.perspective-copy p { font-size: 14px; line-height: 1.8; margin-bottom: 12px; }
-.perspective-copy .perspective-invitation { margin-bottom: 0; color: var(--accent); font-weight: 550; }
-.manipulation-diagram { margin: 0; min-width: 0; text-align: center; }
-.diagram-context { color: var(--muted); font-size: 12px; font-weight: 600; letter-spacing: .02em; }
-.diagram-input { position: relative; height: 20px; margin: 12px calc(100% / 6) 0; border-top: 1px solid var(--accent); }
-.diagram-input span { position: absolute; bottom: 0; height: 20px; border-left: 1px solid var(--accent); }
-.diagram-input span:first-child, .diagram-merge span:first-child { left: 0; }
-.diagram-input span:nth-child(2) { left: 50%; height: 32px; }
-.diagram-input span:nth-child(3) { right: 0; }
-.diagram-disciplines { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
-.diagram-discipline { display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 14px 6px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); }
-.diagram-discipline svg { width: 36px; height: 36px; margin-bottom: 10px; fill: none; stroke: var(--accent); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-.diagram-discipline strong { display: flex; align-items: center; justify-content: center; min-height: 36px; font-size: 13px; line-height: 1.4; }
-.diagram-discipline span { display: block; margin-top: 7px; color: var(--muted); font-size: 10px; line-height: 1.5; }
-.diagram-merge { display: grid; grid-template-columns: repeat(3, 1fr); height: 24px; margin: 0 calc(100% / 6); position: relative; border-bottom: 1px solid var(--accent); }
-.diagram-merge span { position: absolute; top: 0; height: 24px; border-left: 1px solid var(--accent); }
-.diagram-merge span:nth-child(2) { left: 50%; height: 36px; }
-.diagram-merge span:nth-child(3) { right: 0; }
-.diagram-outcome { display: flex; flex-direction: column; margin-top: 12px; padding: 13px 12px; border: 1px solid var(--accent); border-radius: 6px; color: var(--accent); }
-.diagram-outcome strong { font-size: 15px; }
-.diagram-outcome span { color: var(--muted); font-size: 11px; margin-top: 3px; }
-.diagram-feedback { color: var(--muted); font-size: 11px; margin-top: 10px; }
-.diagram-feedback > span { color: var(--accent); font-size: 17px; vertical-align: middle; margin-right: 4px; }
-.manipulation-diagram figcaption { color: var(--muted); font-size: 10px; line-height: 1.6; margin: 8px auto 0; max-width: 44ch; }
+.home-intro > :not(.hero-system-background) { position: relative; z-index: 1; }
+.home-lead strong { font-weight: 650; color: var(--accent); }
+.hero-perspective { grid-area: perspective; max-width: 780px; margin-top: 22px; scroll-margin-top: 112px; }
+.hero-perspective p { font-size: 15px; line-height: 1.8; margin-bottom: 12px; }
+.hero-perspective p:last-child { margin-bottom: 0; }
+.hero-system-background { position: absolute; z-index: 0; pointer-events: none; width: 580px; height: 616px; right: 0; top: 72px; opacity: .25; filter: blur(1px); mask-image: linear-gradient(90deg, transparent, #000 45%); }
+.hero-system-background svg { display: block; width: 100%; height: 100%; color: var(--accent); }
+.system-orbit { fill: none; stroke: currentColor; stroke-width: 1; stroke-dasharray: 4 10; }
+.system-link { fill: none; stroke: currentColor; stroke-width: 1.5; }
+.system-halo { fill: currentColor; opacity: .06; }
+.system-core, .system-node { fill: var(--bg); stroke: currentColor; stroke-width: 1.5; }
+.system-core { fill: var(--surface); }
+.system-core-label, .system-node-label { fill: currentColor; text-anchor: middle; font-family: inherit; font-weight: 550; font-size: 20px; }
+.system-node-label { font-size: 18px; }
+.system-icon { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+html[data-theme="dark"] .hero-system-background { opacity: .16; }
 .home-actions { grid-area: actions; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 22px; margin-top: 24px; font-size: 13px; font-weight: 600; }
 .home-button { display: inline-flex; align-items: center; gap: 24px; background: var(--accent); color: var(--bg); padding: 9px 17px; border: 1px solid var(--accent); border-radius: 4px; }
 .home-button--secondary { background: transparent; color: var(--accent); gap: 14px; }
@@ -126,7 +116,7 @@ h3 { font-size: 19px; margin: 0 0 8px; }
  .site-header nav { gap: 15px; }
  .home-intro { grid-template-columns: 128px minmax(0,1fr); column-gap: 28px; row-gap: 0; }
  .hero-portrait img { width: 128px; height: auto; }
- .hero-perspective { gap: 24px; }
+ .hero-system-background { right: -100px; opacity: .2; }
  .publication-card { grid-template-columns: 220px minmax(0, 1fr); gap: 24px; }
  .research-grid { gap: 22px; }
  .research-card--topic { grid-template-columns: 1fr; gap: 14px; }
@@ -142,7 +132,9 @@ h3 { font-size: 19px; margin: 0 0 8px; }
  .site-content, .site-footer { width: calc(100% - 40px); }
  .home-section { padding: 32px 0; }
  .home-intro { display: grid; grid-template-columns: minmax(0, 1fr) 88px; grid-template-areas: "heading portrait" "copy copy" "perspective perspective" "actions actions"; gap: 20px 16px; }
- .hero-perspective { grid-template-columns: 1fr; gap: 24px; margin-top: 4px; padding-top: 24px; }
+ .hero-perspective { margin-top: 0; }
+ .hero-perspective p { font-size: 14px; line-height: 1.75; }
+ .hero-system-background { width: 500px; height: 532px; right: -210px; top: 210px; opacity: .15; filter: blur(1.5px); }
  .hero-heading .home-eyebrow { font-size: 10px; letter-spacing: .08em; }
  .hero-heading h1 { font-size: 36px; margin-bottom: 8px; }
  .hero-role { font-size: 12px; gap: 5px; }
