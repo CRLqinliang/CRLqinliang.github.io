@@ -47,17 +47,33 @@ h3 { font-size: 19px; margin: 0 0 8px; }
 .hero-perspective { grid-area: perspective; max-width: 780px; margin-top: 22px; scroll-margin-top: 112px; }
 .hero-perspective p { font-size: 15px; line-height: 1.8; margin-bottom: 12px; }
 .hero-perspective p:last-child { margin-bottom: 0; }
-.hero-system-background { position: absolute; z-index: 0; pointer-events: none; width: 580px; height: 616px; right: 0; top: 72px; opacity: .25; filter: blur(1px); mask-image: linear-gradient(90deg, transparent, #000 45%); }
+.hero-system-background { position: absolute; z-index: 0; pointer-events: none; width: 650px; height: 691px; right: -12px; top: 45px; opacity: .46; filter: blur(.65px); mask-image: linear-gradient(90deg, transparent, #000 48%); }
 .hero-system-background svg { display: block; width: 100%; height: 100%; color: var(--accent); }
-.system-orbit { fill: none; stroke: currentColor; stroke-width: 1; stroke-dasharray: 4 10; }
-.system-link { fill: none; stroke: currentColor; stroke-width: 1.5; }
-.system-halo { fill: currentColor; opacity: .06; }
-.system-core, .system-node { fill: var(--bg); stroke: currentColor; stroke-width: 1.5; }
-.system-core { fill: var(--surface); }
-.system-core-label, .system-node-label { fill: currentColor; text-anchor: middle; font-family: inherit; font-weight: 550; font-size: 20px; }
-.system-node-label { font-size: 18px; }
-.system-icon { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
-html[data-theme="dark"] .hero-system-background { opacity: .16; }
+.arm-glow-stop { stop-color: #8fbddb; }
+.arm-shell-light { stop-color: var(--bg); }
+.arm-shell-shade { stop-color: var(--surface); }
+.arm-workspace { fill: none; stroke: currentColor; stroke-width: 1; opacity: .18; }
+.arm-grid-line { fill: none; stroke: currentColor; stroke-width: .6; }
+.arm-perception { fill: none; stroke: currentColor; stroke-width: 1.5; opacity: .5; }
+.arm-perception .arm-vision-cone { fill: currentColor; fill-opacity: .04; stroke-dasharray: 4 7; }
+.arm-trajectory { fill: none; stroke: #477c88; stroke-width: 2; stroke-linecap: round; opacity: .6; }
+.arm-trajectory .arm-path-hint { stroke-width: 1; stroke-dasharray: 4 9; opacity: .5; }
+.arm-trajectory circle { fill: var(--bg); }
+.arm-robot { stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.arm-shell { fill: url(#intro-arm-shell); }
+.arm-joint { fill: currentColor; fill-opacity: .2; }
+.arm-joint-ring { fill: var(--bg); fill-opacity: .7; }
+.arm-panel, .arm-cable { fill: none; stroke-width: 1; opacity: .5; }
+.arm-shadow { fill: currentColor; stroke: none; opacity: .08; }
+.arm-gripper { fill: currentColor; fill-opacity: .35; }
+.arm-fastener { fill: currentColor; stroke: none; opacity: .45; }
+.arm-object { fill: none; stroke: #9b855c; stroke-width: 1.7; stroke-linejoin: round; }
+.arm-object-axis { stroke-width: 1; opacity: .5; }
+.arm-labels { fill: currentColor; font-size: 11px; font-weight: 500; letter-spacing: 2px; opacity: .55; }
+.arm-labels path { fill: none; stroke: currentColor; stroke-width: .8; }
+html[data-theme="dark"] .hero-system-background { opacity: .28; }
+html[data-theme="dark"] .arm-trajectory { stroke: #a8d5d3; }
+html[data-theme="dark"] .arm-object { stroke: #ddc69e; }
 .home-actions { grid-area: actions; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 22px; margin-top: 24px; font-size: 13px; font-weight: 600; }
 .home-button { display: inline-flex; align-items: center; gap: 24px; background: var(--accent); color: var(--bg); padding: 9px 17px; border: 1px solid var(--accent); border-radius: 4px; }
 .home-button--secondary { background: transparent; color: var(--accent); gap: 14px; }
@@ -116,7 +132,7 @@ html[data-theme="dark"] .hero-system-background { opacity: .16; }
  .site-header nav { gap: 15px; }
  .home-intro { grid-template-columns: 128px minmax(0,1fr); column-gap: 28px; row-gap: 0; }
  .hero-portrait img { width: 128px; height: auto; }
- .hero-system-background { right: -100px; opacity: .2; }
+ .hero-system-background { right: -105px; opacity: .3; }
  .publication-card { grid-template-columns: 220px minmax(0, 1fr); gap: 24px; }
  .research-grid { gap: 22px; }
  .research-card--topic { grid-template-columns: 1fr; gap: 14px; }
@@ -134,7 +150,8 @@ html[data-theme="dark"] .hero-system-background { opacity: .16; }
  .home-intro { display: grid; grid-template-columns: minmax(0, 1fr) 88px; grid-template-areas: "heading portrait" "copy copy" "perspective perspective" "actions actions"; gap: 20px 16px; }
  .hero-perspective { margin-top: 0; }
  .hero-perspective p { font-size: 14px; line-height: 1.75; }
- .hero-system-background { width: 500px; height: 532px; right: -210px; top: 210px; opacity: .15; filter: blur(1.5px); }
+ .hero-system-background { width: 510px; height: 542px; right: -155px; top: 195px; opacity: .16; filter: blur(1px); }
+ html[data-theme="dark"] .hero-system-background { opacity: .14; }
  .hero-heading .home-eyebrow { font-size: 10px; letter-spacing: .08em; }
  .hero-heading h1 { font-size: 36px; margin-bottom: 8px; }
  .hero-role { font-size: 12px; gap: 5px; }
