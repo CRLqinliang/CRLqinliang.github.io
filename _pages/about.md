@@ -14,7 +14,7 @@ redirect_from:
 <div class="academic-home">
 <section id="about-me" class="home-section home-intro" aria-labelledby="about-heading">
   <div class="hero-system-background" aria-hidden="true">
-    <img src="{{ '/images/backgrounds/franka-dual-arm.jpg' | relative_url }}" alt="" width="1919" height="865" decoding="async" fetchpriority="low">
+    {% include ascii-handover.html %}
   </div>
   <div class="hero-heading">
     <p class="home-eyebrow">Robot learning &amp; manipulation</p>
@@ -43,6 +43,7 @@ redirect_from:
     <a href="mailto:{{ site.author.email }}">Email</a>
     <a href="{{ site.author.orcid }}">ORCID</a>
     <a href="https://github.com/{{ site.author.github }}">GitHub</a>
+    <button class="ascii-motion-toggle" type="button" aria-label="Pause ASCII background animation" hidden>Pause background</button>
   </div>
 </section>
 

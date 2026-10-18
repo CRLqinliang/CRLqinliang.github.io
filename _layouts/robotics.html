@@ -36,5 +36,6 @@
   </dialog>
   <footer class="site-footer"><p>Liang Qin · Robot learning &amp; manipulation</p><p><a href="mailto:{{ site.author.email }}">Get in touch</a><span>© {{ 'now' | date: '%Y' }}</span></p></footer>
   <script src="{{ '/assets/js/robotics.js' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}" defer></script>
+  {% if page.url == "/" %}<script src="{{ '/assets/js/ascii-handover.js' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}" defer></script>{% endif %}
 </body>
 </html>
