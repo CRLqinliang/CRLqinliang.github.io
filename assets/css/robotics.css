@@ -28,7 +28,7 @@ h1 { font-size: clamp(36px, 4.5vw, 48px); margin: 0 0 12px; }
 h2 { font-size: 28px; margin: 0 0 24px; }
 h3 { font-size: 19px; margin: 0 0 8px; }
 .home-eyebrow { color: var(--accent); font-size: 11px; letter-spacing: .13em; font-weight: 700; text-transform: uppercase; margin-bottom: 12px; }
-.home-intro { position: relative; isolation: isolate; overflow: clip; display: grid; grid-template-columns: 144px minmax(0, 1fr); grid-template-areas: "portrait heading" "copy copy" "perspective perspective" "actions actions"; column-gap: 32px; align-items: start; padding: 48px 0 42px; }
+.home-intro { position: relative; isolation: isolate; background: var(--bg); overflow: clip; display: grid; grid-template-columns: 144px minmax(0, 1fr); grid-template-areas: "portrait heading" "copy copy" "perspective perspective" "actions actions"; column-gap: 32px; align-items: start; padding: 48px 0 42px; }
 .hero-heading { grid-area: heading; min-width: 0; align-self: center; }
 .hero-copy { grid-area: copy; max-width: 820px; }
 .hero-heading .hero-role { margin-bottom: 0; }
@@ -47,33 +47,9 @@ h3 { font-size: 19px; margin: 0 0 8px; }
 .hero-perspective { grid-area: perspective; max-width: 780px; margin-top: 22px; scroll-margin-top: 112px; }
 .hero-perspective p { font-size: 15px; line-height: 1.8; margin-bottom: 12px; }
 .hero-perspective p:last-child { margin-bottom: 0; }
-.hero-system-background { position: absolute; z-index: 0; pointer-events: none; width: 650px; height: 691px; right: -12px; top: 45px; opacity: .46; filter: blur(.65px); mask-image: linear-gradient(90deg, transparent, #000 48%); }
-.hero-system-background svg { display: block; width: 100%; height: 100%; color: var(--accent); }
-.arm-glow-stop { stop-color: #8fbddb; }
-.arm-shell-light { stop-color: var(--bg); }
-.arm-shell-shade { stop-color: var(--surface); }
-.arm-workspace { fill: none; stroke: currentColor; stroke-width: 1; opacity: .18; }
-.arm-grid-line { fill: none; stroke: currentColor; stroke-width: .6; }
-.arm-perception { fill: none; stroke: currentColor; stroke-width: 1.5; opacity: .5; }
-.arm-perception .arm-vision-cone { fill: currentColor; fill-opacity: .04; stroke-dasharray: 4 7; }
-.arm-trajectory { fill: none; stroke: #477c88; stroke-width: 2; stroke-linecap: round; opacity: .6; }
-.arm-trajectory .arm-path-hint { stroke-width: 1; stroke-dasharray: 4 9; opacity: .5; }
-.arm-trajectory circle { fill: var(--bg); }
-.arm-robot { stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
-.arm-shell { fill: url(#intro-arm-shell); }
-.arm-joint { fill: currentColor; fill-opacity: .2; }
-.arm-joint-ring { fill: var(--bg); fill-opacity: .7; }
-.arm-panel, .arm-cable { fill: none; stroke-width: 1; opacity: .5; }
-.arm-shadow { fill: currentColor; stroke: none; opacity: .08; }
-.arm-gripper { fill: currentColor; fill-opacity: .35; }
-.arm-fastener { fill: currentColor; stroke: none; opacity: .45; }
-.arm-object { fill: none; stroke: #9b855c; stroke-width: 1.7; stroke-linejoin: round; }
-.arm-object-axis { stroke-width: 1; opacity: .5; }
-.arm-labels { fill: currentColor; font-size: 11px; font-weight: 500; letter-spacing: 2px; opacity: .55; }
-.arm-labels path { fill: none; stroke: currentColor; stroke-width: .8; }
-html[data-theme="dark"] .hero-system-background { opacity: .28; }
-html[data-theme="dark"] .arm-trajectory { stroke: #a8d5d3; }
-html[data-theme="dark"] .arm-object { stroke: #ddc69e; }
+.hero-system-background { position: absolute; z-index: 0; pointer-events: none; width: 1060px; right: -12px; top: 118px; opacity: .32; filter: grayscale(1) contrast(1.15) blur(.6px); mix-blend-mode: multiply; mask-image: linear-gradient(90deg, transparent, #000 50%), linear-gradient(180deg, #000 80%, transparent); mask-composite: intersect; }
+.hero-system-background img { display: block; width: 100%; height: auto; }
+html[data-theme="dark"] .hero-system-background { opacity: .2; filter: grayscale(1) invert(1) blur(.6px); mix-blend-mode: screen; }
 .home-actions { grid-area: actions; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 22px; margin-top: 24px; font-size: 13px; font-weight: 600; }
 .home-button { display: inline-flex; align-items: center; gap: 24px; background: var(--accent); color: var(--bg); padding: 9px 17px; border: 1px solid var(--accent); border-radius: 4px; }
 .home-button--secondary { background: transparent; color: var(--accent); gap: 14px; }
@@ -132,7 +108,7 @@ html[data-theme="dark"] .arm-object { stroke: #ddc69e; }
  .site-header nav { gap: 15px; }
  .home-intro { grid-template-columns: 128px minmax(0,1fr); column-gap: 28px; row-gap: 0; }
  .hero-portrait img { width: 128px; height: auto; }
- .hero-system-background { right: -105px; opacity: .3; }
+ .hero-system-background { width: 900px; right: -80px; opacity: .25; }
  .publication-card { grid-template-columns: 220px minmax(0, 1fr); gap: 24px; }
  .research-grid { gap: 22px; }
  .research-card--topic { grid-template-columns: 1fr; gap: 14px; }
@@ -150,7 +126,7 @@ html[data-theme="dark"] .arm-object { stroke: #ddc69e; }
  .home-intro { display: grid; grid-template-columns: minmax(0, 1fr) 88px; grid-template-areas: "heading portrait" "copy copy" "perspective perspective" "actions actions"; gap: 20px 16px; }
  .hero-perspective { margin-top: 0; }
  .hero-perspective p { font-size: 14px; line-height: 1.75; }
- .hero-system-background { width: 510px; height: 542px; right: -155px; top: 195px; opacity: .16; filter: blur(1px); }
+ .hero-system-background { width: 780px; right: -150px; top: 260px; opacity: .13; }
  html[data-theme="dark"] .hero-system-background { opacity: .14; }
  .hero-heading .home-eyebrow { font-size: 10px; letter-spacing: .08em; }
  .hero-heading h1 { font-size: 36px; margin-bottom: 8px; }
