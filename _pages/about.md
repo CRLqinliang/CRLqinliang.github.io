@@ -14,28 +14,7 @@ redirect_from:
 <div class="academic-home">
 <section id="about-me" class="home-section home-intro" aria-labelledby="about-heading">
   <div class="hero-system-background" aria-hidden="true">
-    <svg viewBox="0 0 640 680" focusable="false">
-      <ellipse class="system-orbit" cx="325" cy="345" rx="250" ry="260" transform="rotate(-22 325 345)"/>
-      <path class="system-link" d="M325 130 110 490 540 490Z M325 130V345 M110 490l215-145 215 145"/>
-      <circle class="system-halo" cx="325" cy="345" r="128"/>
-      <circle class="system-core" cx="325" cy="345" r="100"/>
-      <text class="system-core-label" x="325" y="337"><tspan x="325">Reliable robotic</tspan><tspan x="325" dy="27">manipulation</tspan></text>
-      <g transform="translate(325 130)">
-        <circle class="system-node" r="78"/>
-        <g class="system-icon" transform="translate(-24 -42) scale(1.2)"><path d="M9 29V12h9l6 7h7v10M9 21h9l6 8M13 29v5m14-5v5M5 34h26"/><circle cx="14" cy="16" r="2"/><path d="m31 19 4-3m-4 13 4 3"/></g>
-        <text class="system-node-label" y="18"><tspan x="0">Mechanical</tspan><tspan x="0" dy="23">design</tspan></text>
-      </g>
-      <g transform="translate(110 490)">
-        <circle class="system-node" r="78"/>
-        <g class="system-icon" transform="translate(-24 -42) scale(1.2)"><path d="M5 16h7l3-5h10l3 5h7v17H5Z"/><circle cx="20" cy="24" r="6"/></g>
-        <text class="system-node-label" x="0" y="29">Perception</text>
-      </g>
-      <g transform="translate(540 490)">
-        <circle class="system-node" r="78"/>
-        <g class="system-icon" transform="translate(-24 -42) scale(1.2)"><circle cx="8" cy="29" r="3"/><circle cx="20" cy="11" r="3"/><circle cx="32" cy="25" r="3"/><path d="m10 26 8-12m5-1 7 9M11 30h17"/></g>
-        <text class="system-node-label" y="18"><tspan x="0">Planning</tspan><tspan x="0" dy="23">algorithms</tspan></text>
-      </g>
-    </svg>
+    {% include robotics-background.svg %}
   </div>
   <div class="hero-heading">
     <p class="home-eyebrow">Robot learning &amp; manipulation</p>

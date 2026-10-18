@@ -1,0 +1,84 @@
+<svg viewBox="0 0 640 680" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <!-- Original decorative Franka-style illustration; not a kinematic model.
+       Silhouette reference: https://franka.de/franka-research-3-cobot-arm -->
+  <defs>
+    <radialGradient id="intro-workspace-glow">
+      <stop class="arm-glow-stop" offset="0" stop-opacity=".2"/>
+      <stop class="arm-glow-stop" offset="1" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="intro-arm-shell" x1="0" y1="0" x2="1" y2=".7">
+      <stop class="arm-shell-light" offset="0"/>
+      <stop class="arm-shell-shade" offset="1"/>
+    </linearGradient>
+    <pattern id="intro-workspace-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" class="arm-grid-line"/>
+    </pattern>
+  </defs>
+  <circle cx="396" cy="334" r="290" fill="url(#intro-workspace-glow)"/>
+  <g class="arm-workspace">
+    <ellipse cx="377" cy="589" rx="210" ry="53"/>
+    <path d="m150 552 240-57 222 62-241 72Z" fill="url(#intro-workspace-grid)"/>
+    <path d="m150 552 240-57 222 62M208 608l403-51M275 624l267-81"/>
+  </g>
+  <g class="arm-perception">
+    <path d="m117 262 117 112-91 53Z" class="arm-vision-cone"/>
+    <g transform="translate(83 233) rotate(16)">
+      <rect width="62" height="40" rx="8"/>
+      <circle cx="31" cy="20" r="11"/>
+      <circle cx="31" cy="20" r="5"/>
+      <path d="M15 40v15m32-15v15M8 55h46"/>
+    </g>
+    <path d="M182 355v-15h15m51 0h15v15m0 58v15h-15m-51 0h-15v-15"/>
+  </g>
+  <g class="arm-trajectory">
+    <path class="arm-path-hint" d="M92 493C94 370 185 271 269 308S346 408 258 438"/>
+    <path d="M115 489C126 406 181 349 239 363s61 57 20 75"/>
+    <circle cx="115" cy="489" r="5"/>
+    <circle cx="153" cy="401" r="4"/>
+    <circle cx="239" cy="363" r="4"/>
+    <path d="m258 427 1 11 11-2"/>
+  </g>
+  <g class="arm-robot">
+    <!-- Table mount and shoulder assembly. -->
+    <ellipse class="arm-shadow" cx="438" cy="591" rx="80" ry="17"/>
+    <path class="arm-joint" d="M394 568h88l10 23c-26 14-81 14-107 0Z"/>
+    <ellipse class="arm-shell" cx="438" cy="568" rx="44" ry="14"/>
+    <path class="arm-shell" d="M405 564v-46c0-30 10-49 33-49s33 19 33 49v46c-17 13-49 13-66 0Z"/>
+    <ellipse class="arm-joint" cx="438" cy="488" rx="32" ry="22" transform="rotate(-28 438 488)"/>
+    <!-- Sculpted lower link and elbow. -->
+    <path class="arm-shell" d="M414 486c-11-11-7-28 4-42l51-72c12-17 27-24 41-14s16 27 4 44l-49 72c-13 19-36 27-51 12Z"/>
+    <path class="arm-panel" d="m437 459 54-76m-49 87 52-75"/>
+    <path class="arm-joint" d="M475 372c-2-18 5-34 22-39 18-6 35 6 38 24s-5 33-23 38c-16 4-33-6-37-23Z"/>
+    <ellipse class="arm-joint-ring" cx="508" cy="365" rx="18" ry="23" transform="rotate(-17 508 365)"/>
+    <!-- Offset elbow housing and upper link. -->
+    <path class="arm-shell" d="M492 344c-13-7-20-21-25-36l-11-35c-5-17 0-32 15-38 16-6 31 1 38 17l20 49c11 27 9 43-3 50-10 6-21 1-34-7Z"/>
+    <path class="arm-joint" d="M449 250c0-21 15-36 35-34s32 18 30 37c-2 18-17 32-35 30-18-1-31-15-30-33Z"/>
+    <path class="arm-shell" d="M466 225c12 10 15 27 5 38s-25 12-40 4l-92-53c-19-11-29-30-21-47s29-21 48-11Z"/>
+    <path class="arm-panel" d="m352 180 98 55m-105-45 95 54"/>
+    <ellipse class="arm-joint" cx="330" cy="184" rx="33" ry="39" transform="rotate(21 330 184)"/>
+    <ellipse class="arm-joint-ring" cx="329" cy="183" rx="18" ry="25" transform="rotate(21 329 183)"/>
+    <!-- Wrist with a parallel-jaw gripper. -->
+    <path class="arm-shell" d="M301 181c7-17 22-24 37-18s20 21 13 39l-28 62c-8 17-24 23-39 16s-20-22-13-38Z"/>
+    <ellipse class="arm-joint" cx="295" cy="270" rx="28" ry="21" transform="rotate(12 295 270)"/>
+    <path class="arm-shell" d="m271 272-7 38c-4 20 6 33 25 35 20 2 32-8 33-27l1-40c-16 7-36 5-52-6Z"/>
+    <path class="arm-panel" d="m275 305 33 3m-29-23-2 13"/>
+    <path class="arm-joint" d="m274 340-1 14 35 3 2-15Z"/>
+    <path class="arm-shell" d="m260 353 61 5 3 27-67-5Z"/>
+    <path class="arm-gripper" d="m263 380-3 29 11 2 3-29m34 3-3 29 11 2 3-30"/>
+    <path class="arm-cable" d="M315 278c27 5 29 22 25 40s-7 29-20 39"/>
+    <circle class="arm-fastener" cx="416" cy="549" r="3"/>
+    <circle class="arm-fastener" cx="460" cy="552" r="3"/>
+    <circle class="arm-fastener" cx="488" cy="318" r="3"/>
+  </g>
+  <g class="arm-object">
+    <path d="m243 435 29-10 26 14-29 11Z"/>
+    <path d="M243 435v31l26 15v-31m29-11v31l-29 11"/>
+    <path class="arm-object-axis" d="m269 450 0-26m0 26-23 9m23-9 22 13"/>
+  </g>
+  <g class="arm-labels">
+    <path d="M505 507h43v-23M146 232v-30h40M341 130h59"/>
+    <text x="421" y="126">MECHANICAL DESIGN</text>
+    <text x="94" y="185">PERCEPTION</text>
+    <text x="372" y="650">PLANNING &amp; LEARNING</text>
+  </g>
+</svg>
