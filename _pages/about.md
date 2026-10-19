@@ -98,9 +98,12 @@ redirect_from:
           </figure>
         </section>
         <section id="teleoperation-master-arm" class="gripper-project gripper-project--master-arm" aria-labelledby="master-arm-heading">
-          <div class="master-arm-description">
+          <div class="gripper-intro">
             <h4 id="master-arm-heading">3D-printed teleoperation master arm</h4>
-            <p>A master arm for offset teleoperation, built with a fully 3D-printed, bearing-free mechanical structure.</p>
+            <p>A compact master arm for offset teleoperation, with a fully 3D-printed, bearing-free mechanism.</p>
+          </div>
+          <div class="master-arm-description">
+            <h5>Design highlights</h5>
             <ul class="master-arm-features">
               <li><strong>Fabrication:</strong> fully 3D-printed mechanical structure, with no bearings.</li>
               <li><strong>Joint sensing:</strong> electromagnetic angle encoders.</li>
