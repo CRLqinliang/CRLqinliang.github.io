@@ -197,14 +197,14 @@ html[data-theme="dark"] .hero-system-background { opacity: .3; }
 .gripper-project--multi { grid-template-columns: 210px minmax(0, 1fr); grid-template-rows: auto 1fr; align-content: normal; }
 .gripper-prototype { width: 190px; max-width: 100%; grid-column: 1; align-self: center; justify-self: center; }
 .gripper-project--multi > .gripper-sequence { grid-column: 2; grid-row: 2; align-self: center; }
-.gripper-project--master-arm { grid-template-columns: 280px minmax(0, 1fr); align-items: center; }
-.master-arm-description { grid-column: 2; grid-row: 1; max-width: 55ch; }
-.master-arm-description h4 { margin-bottom: 14px; }
+.gripper-project--master-arm { grid-template-columns: 280px minmax(0, 1fr); grid-template-rows: auto 1fr; align-content: normal; }
+.master-arm-description { grid-column: 2; grid-row: 2; max-width: 55ch; align-self: center; }
+.master-arm-description h5 { margin: 0 0 14px; font-size: 15px; line-height: 1.5; letter-spacing: 0; }
 .master-arm-description p, .master-arm-features { color: var(--muted); font-size: 14px; line-height: 1.7; }
-.master-arm-features { padding-left: 20px; margin: 18px 0 0; }
+.master-arm-features { padding-left: 20px; margin: 0; }
 .master-arm-features li { margin-bottom: 8px; }
 .master-arm-features strong { color: var(--text); }
-.gripper-project .master-arm-demo { grid-column: 1; grid-row: 1; width: 216px; max-width: 100%; justify-self: center; }
+.gripper-project .master-arm-demo { grid-column: 1; grid-row: 2; width: 216px; max-width: 100%; justify-self: center; align-self: center; }
 .master-arm-demo video { aspect-ratio: 9 / 16; }
 .gripper-project--tube-fixture { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
 .tube-fixture-features { align-self: center; margin: 0; padding-left: 20px; color: var(--muted); font-size: 14px; line-height: 1.65; }
@@ -237,8 +237,8 @@ html[data-theme="dark"] .hero-system-background { opacity: .3; }
  .gripper-figures { grid-template-columns: repeat(2, minmax(0, 1fr)); }
  .gripper-project--tweezers > .gripper-figures { width: 100%; }
  .gripper-project--multi { grid-template-rows: auto; }
- .master-arm-description, .gripper-project .master-arm-demo { grid-column: 1; grid-row: auto; }
- .gripper-project .master-arm-demo { width: 180px; }
+ .master-arm-description { grid-column: 1; grid-row: 3; }
+ .gripper-project .master-arm-demo { grid-column: 1; grid-row: 2; width: 180px; }
  .gripper-project--tube-fixture { grid-template-columns: 1fr; }
  .image-viewer { padding: 12px; }
  .image-viewer-toolbar { gap: 10px; }
