@@ -34,6 +34,13 @@
     <figure class="image-viewer-figure"><div class="image-viewer-canvas" tabindex="0" role="region" aria-label="Image preview area"><img class="image-viewer-image" alt=""></div><figcaption class="image-viewer-caption"></figcaption></figure>
     <a class="image-viewer-original" target="_blank" rel="noopener">Open original in a new tab ↗</a>
   </dialog>
+  <dialog class="video-viewer" aria-labelledby="video-viewer-title">
+    <div class="video-viewer-toolbar">
+      <h2 id="video-viewer-title">Video preview</h2>
+      <form method="dialog"><button type="submit" class="video-viewer-close" autofocus aria-label="Close video preview">Close ×</button></form>
+    </div>
+    <video class="video-viewer-player" controls playsinline preload="metadata"></video>
+  </dialog>
   <footer class="site-footer"><p>Liang Qin · Robot learning &amp; manipulation</p><p><a href="mailto:{{ site.author.email }}">Get in touch</a><span>© {{ 'now' | date: '%Y' }}</span></p></footer>
   <script src="{{ '/assets/js/robotics.js' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}" defer></script>
   {% if page.url == "/" %}<script src="{{ '/assets/js/ascii-handover.js' | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}" defer></script>{% endif %}

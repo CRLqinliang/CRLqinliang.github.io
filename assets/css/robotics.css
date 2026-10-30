@@ -247,4 +247,11 @@ html[data-theme="dark"] .hero-system-background { opacity: .3; }
  .image-viewer-close, .image-viewer-zoom { padding: 6px 8px; font-size: 12px; }
 }
 
-body:has(.image-viewer[open]) { overflow: hidden; }
+.video-viewer { width: min(960px, calc(100% - 32px)); max-height: calc(100dvh - 32px); padding: 16px; border: 1px solid var(--line); border-radius: 8px; color: var(--text); background: var(--bg); }
+.video-viewer::backdrop { background: rgba(0,0,0,.76); }
+.video-viewer-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 12px; }
+.video-viewer-toolbar h2 { margin: 0; font-size: 18px; }
+.video-viewer-toolbar form { margin: 0; }
+.video-viewer-close { flex-shrink: 0; border: 1px solid var(--line); border-radius: 4px; padding: 7px 14px; background: var(--surface); color: var(--text); cursor: pointer; white-space: nowrap; }
+.video-viewer-player { display: block; width: 100%; max-height: calc(100dvh - 130px); background: #111; border-radius: 4px; }
+body:has(.image-viewer[open]), body:has(.video-viewer[open]) { overflow: hidden; }
