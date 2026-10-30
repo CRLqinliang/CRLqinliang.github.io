@@ -10,12 +10,13 @@
       <p class="publication-authors">{{ publication.authors | replace: 'Liang Qin', '<strong>Liang Qin</strong>' }}</p>
       <p class="publication-venue">{{ publication.venue }}</p>
       <p class="publication-summary">{{ publication.summary }}</p>
-      {% if publication.paper_url or publication.pdf_url or publication.figure_url or publication.preprint_url or publication.poster_url or publication.video_url %}
+      {% if publication.paper_url or publication.pdf_url or publication.figure_url or publication.preprint_url or publication.poster_url or publication.video_url or publication.videos %}
       <div class="publication-links">
         {% if publication.figure_url %}<a href="{{ publication.figure_url | relative_url }}" aria-label="Full figure: {{ publication.title | escape }}">Figure</a>{% endif %}
         {% if publication.paper_url %}<a href="{{ publication.paper_url | relative_url }}" aria-label="{{ publication.paper_label }}: {{ publication.title | escape }}">{{ publication.paper_label }}</a>{% endif %}
         {% if publication.pdf_url and publication.pdf_url != publication.paper_url %}<a href="{{ publication.pdf_url | relative_url }}" aria-label="PDF: {{ publication.title | escape }}">PDF</a>{% endif %}
         {% if publication.video_url %}<a href="{{ publication.video_url }}" aria-label="Video: {{ publication.title | escape }}">Video</a>{% endif %}
+        {% for video in publication.videos %}<a href="{{ video.url | relative_url }}" aria-label="{{ video.label | escape }}: {{ publication.title | escape }}">{{ video.label }}</a>{% endfor %}
         {% if publication.poster_url %}<a href="{{ publication.poster_url | relative_url }}" aria-label="{{ publication.poster_label }}: {{ publication.title | escape }}">{{ publication.poster_label }}</a>{% endif %}
         {% if publication.preprint_url %}<a href="{{ publication.preprint_url }}" aria-label="Author preprint: {{ publication.title | escape }}">Author preprint</a>{% endif %}
       </div>

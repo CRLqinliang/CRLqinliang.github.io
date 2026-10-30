@@ -1,5 +1,5 @@
 # Featured manuscripts first, then publications. Shared by the homepage and CV.
-# Unpublished manuscripts omit URLs until the author makes them public.
+# Unpublished manuscripts omit paper URLs; author-approved demos may be linked.
 - title: "Connectivity-Driven Drag Trajectory Optimization via Energy-Based Soft Dynamic Programming"
   authors: "Liang Qin, Weiwei Wan, Jun Takahashi, Ryo Negishi, Masaki Matsushita, Kensuke Harada"
   status: "Manuscript"
@@ -9,6 +9,11 @@
   image_height: 1444
   image_alt: "Simulation and real-robot execution sequences for drag trajectory refinement and repair."
   summary: "Connectivity-driven optimization of drag trajectories using energy-based soft dynamic programming."
+  videos:
+    - label: "Video 1"
+      url: "/files/connectivity-driven-drag-video-1.mp4"
+    - label: "Video 2"
+      url: "/files/connectivity-driven-drag-video-2.mp4"
 
 - title: "Differentiable Object Pose Connectivity Metrics for Regrasp Sequence Optimization"
   authors: "Liang Qin, Weiwei Wan, Kensuke Harada"
