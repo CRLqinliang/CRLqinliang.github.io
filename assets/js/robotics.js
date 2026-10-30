@@ -94,21 +94,29 @@
     const next = navigation.querySelector('.gripper-next');
     const position = navigation.querySelector('.gripper-position');
     let frame;
+    let selectedIndex = Math.max(0, cards.findIndex(card => card.id === track.dataset.initialProject));
     const currentIndex = () => {
-      const left = track.getBoundingClientRect().left;
-      return cards.reduce((best, card, index) => Math.abs(card.getBoundingClientRect().left - left) < Math.abs(cards[best].getBoundingClientRect().left - left) ? index : best, 0);
+      const bounds = track.getBoundingClientRect();
+      const center = bounds.left + track.clientWidth / 2;
+      const distance = card => {
+        const rect = card.getBoundingClientRect();
+        return Math.abs(rect.left + rect.width / 2 - center);
+      };
+      return cards.reduce((best, card, index) => distance(card) < distance(cards[best]) ? index : best, 0);
     };
     const update = () => {
       const index = currentIndex();
+      selectedIndex = index;
       previous.disabled = index === 0;
       next.disabled = index === cards.length - 1;
       position.textContent = `${index + 1} / ${cards.length}`;
     };
-    const move = direction => {
-      const index = Math.max(0, Math.min(cards.length - 1, currentIndex() + direction));
-      const left = cards[index].getBoundingClientRect().left - track.getBoundingClientRect().left + track.scrollLeft;
-      track.scrollTo({ left, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+    const centerCard = (index, smooth = false) => {
+      const rect = cards[index].getBoundingClientRect();
+      const left = rect.left + rect.width / 2 - track.getBoundingClientRect().left - track.clientWidth / 2 + track.scrollLeft;
+      track.scrollTo({ left, behavior: smooth && !matchMedia('(prefers-reduced-motion: reduce)').matches ? 'smooth' : 'instant' });
     };
+    const move = direction => centerCard(Math.max(0, Math.min(cards.length - 1, currentIndex() + direction)), true);
     previous.addEventListener('click', () => move(-1));
     next.addEventListener('click', () => move(1));
     track.addEventListener('keydown', event => {
@@ -120,8 +128,10 @@
       cancelAnimationFrame(frame);
       frame = requestAnimationFrame(update);
     }, { passive: true });
-    window.addEventListener('resize', update);
+    window.addEventListener('resize', () => { centerCard(selectedIndex); update(); });
     navigation.hidden = false;
+    const linkedIndex = cards.findIndex(card => card.id && `#${card.id}` === location.hash);
+    centerCard(linkedIndex >= 0 ? linkedIndex : selectedIndex);
     update();
   }
 })();
