@@ -57,6 +57,35 @@
     });
   }
 
+  const videoViewer = document.querySelector('.video-viewer');
+  if (videoViewer && typeof videoViewer.showModal === 'function') {
+    const player = videoViewer.querySelector('video');
+    const title = videoViewer.querySelector('h2');
+    let opener;
+    document.addEventListener('click', event => {
+      const link = event.target.closest('a[href]');
+      if (!link || link.origin !== location.origin || !/\.mp4$/i.test(link.pathname) || link.hasAttribute('download')) return;
+      if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      opener = link;
+      title.textContent = link.textContent.trim() || 'Video preview';
+      player.setAttribute('aria-label', link.getAttribute('aria-label') || title.textContent);
+      player.src = link.href;
+      videoViewer.showModal();
+      player.play().catch(() => { /* Native controls remain available if autoplay is blocked. */ });
+    });
+    videoViewer.addEventListener('click', event => {
+      const bounds = videoViewer.getBoundingClientRect();
+      if (event.target === videoViewer && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) videoViewer.close();
+    });
+    videoViewer.addEventListener('close', () => {
+      player.pause();
+      player.removeAttribute('src');
+      player.load();
+      if (opener) opener.focus({ preventScroll: true });
+    });
+  }
+
   const track = document.querySelector('.gripper-projects');
   const navigation = document.querySelector('.gripper-navigation');
   if (track && navigation) {
