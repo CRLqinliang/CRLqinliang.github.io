@@ -26,18 +26,9 @@ redirect_from:
     <p class="hero-role">Ph.D. candidate · {% include organization.html key="osaka" %}</p>
   </div>
   <div class="hero-copy">
-    <ul class="hero-intro-list">
-      <li><p class="home-lead">High success rates in robotic manipulation depend on the integration of <strong>mechanical design, perception, and planning algorithms.</strong></p></li>
-      <li class="hero-bio">
-      <p>At <a href="https://www.roboticmanipulation.org/">Harada Lab</a>, I work with <a href="https://wanweiwei07.github.io/">Prof. Weiwei Wan</a> on grasp and regrasp planning, combining learning-based methods with practical robotic systems.</p>
-      <p>Previously, I was a Ph.D. student in the Robot Learning Group at <a href="http://www.rlg.sys.es.osaka-u.ac.jp/">Nagai Lab</a>, supervised by Prof. Takayuki Nagai.</p>
-      <p>I earned my master's degree at Huazhong University of Science and Technology (HUST), working with Prof. Wenyu Yang at the <a href="https://dmet.hust.edu.cn/index.htm">State Key Laboratory of Intelligent Manufacturing Equipment and Technology</a>, and my bachelor's degree at Xidian University in 2018.</p>
-      </li>
-      <li id="manipulation-approach" class="hero-perspective">
-        <p>My research across my bachelor's, master's, and doctoral studies has focused on robotic manipulation. Experience in mechanical design, perception, and planning helps me approach manipulation problems from multiple perspectives.</p>
-        <p>Beyond publications, my priority is solving practical industrial problems. I am keen to collaborate with companies facing real industrial challenges and seeking intelligent automation.</p>
-      </li>
-    </ul>
+    <p class="home-lead">High success rates in robotic manipulation depend on the integration of <strong>mechanical design, perception, and planning algorithms.</strong></p>
+    <p class="hero-bio">At <a href="https://www.roboticmanipulation.org/">Harada Lab</a>, I work with <a href="https://wanweiwei07.github.io/">Prof. Weiwei Wan</a> on grasp and regrasp planning, combining learning-based methods with practical robotic systems. Previously, I was a Ph.D. student in the Robot Learning Group at <a href="http://www.rlg.sys.es.osaka-u.ac.jp/">Nagai Lab</a>, supervised by Prof. Takayuki Nagai. I earned my master's degree at Huazhong University of Science and Technology (HUST), working with Prof. Wenyu Yang at the <a href="https://dmet.hust.edu.cn/index.htm">State Key Laboratory of Intelligent Manufacturing Equipment and Technology</a>, and my bachelor's degree at Xidian University in 2018.</p>
+    <p id="manipulation-approach" class="hero-perspective">My research across my bachelor's, master's, and doctoral studies has focused on robotic manipulation. Experience in mechanical design, perception, and planning helps me approach manipulation problems from multiple perspectives. Beyond publications, my priority is solving practical industrial problems. I am keen to collaborate with companies facing real industrial challenges and seeking intelligent automation.</p>
   </div>
   <figure class="hero-portrait">
     <img src="{{ '/images/profile.jpg' | relative_url }}" alt="Liang Qin" width="751" height="796" decoding="async">
