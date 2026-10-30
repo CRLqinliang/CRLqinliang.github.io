@@ -65,7 +65,7 @@ redirect_from:
           <button type="button" class="gripper-next" aria-label="Next gripper project" aria-controls="gripper-projects">→</button>
         </div>
       </div>
-      <div id="gripper-projects" class="gripper-projects" role="region" aria-label="Gripper design projects" tabindex="0">
+      <div id="gripper-projects" class="gripper-projects" role="region" aria-label="Gripper design projects" data-initial-project="multi-finger-gripper" tabindex="0">
         <section class="gripper-project gripper-project--tweezers" aria-labelledby="tweezers-heading">
           <div class="gripper-intro">
           <h4 id="tweezers-heading">Tweezers gripper</h4>
@@ -83,7 +83,7 @@ redirect_from:
             <figure><a href="{{ '/images/research/tweezers-design-full.webp' | relative_url }}" aria-label="View full tweezers gripper design diagram"><img src="{{ '/images/research/tweezers-design-full.webp' | relative_url }}" alt="Motor, drive gears, tweezers adapters and parallel pressing mechanism of the gripper." loading="lazy" decoding="async" width="3054" height="1526"></a><figcaption>Mechanism &amp; design <span aria-hidden="true">↗</span></figcaption></figure>
           </div>
         </section>
-        <section class="gripper-project gripper-project--multi" aria-labelledby="multi-finger-heading">
+        <section id="multi-finger-gripper" class="gripper-project gripper-project--multi" aria-labelledby="multi-finger-heading">
           <div class="gripper-intro">
           <h4 id="multi-finger-heading">Multi-finger gripper</h4>
           <p>A gripper prototype and a sequence showing the fingers closing around a cylindrical object.</p>

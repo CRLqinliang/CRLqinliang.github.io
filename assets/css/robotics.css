@@ -175,12 +175,12 @@ html[data-theme="dark"] .hero-system-background { opacity: .3; }
 .gripper-navigation button { width: 36px; height: 34px; border: 1px solid var(--line); border-radius: 4px; color: var(--text); background: var(--bg); cursor: pointer; }
 .gripper-navigation button:disabled { opacity: .35; cursor: default; }
 .gripper-position { min-width: 38px; text-align: center; color: var(--muted); font-size: 12px; }
-.gripper-projects { display: grid; grid-auto-flow: column; grid-auto-columns: min(980px, calc(100% - 40px)); gap: 20px; align-items: stretch; overflow-x: auto; overflow-y: hidden; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; padding-bottom: 16px; scrollbar-width: auto; scrollbar-color: var(--muted) var(--surface); }
+.gripper-projects { --project-width: min(780px, calc(100vw - 80px)); display: grid; grid-auto-flow: column; grid-auto-columns: var(--project-width); width: calc(100vw - 32px); margin-inline: calc((100% - 100vw + 32px) / 2); gap: 20px; align-items: stretch; overflow-x: auto; overflow-y: hidden; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; padding: 0 calc((100vw - 32px - var(--project-width)) / 2) 16px; scrollbar-width: auto; scrollbar-color: var(--muted) var(--surface); }
 .gripper-projects::-webkit-scrollbar { height: 12px; }
 .gripper-projects::-webkit-scrollbar-track { background: var(--surface); border-radius: 6px; }
 .gripper-projects::-webkit-scrollbar-thumb { background: var(--muted); border-radius: 6px; border: 3px solid var(--surface); }
 .gripper-projects:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
-.gripper-project { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); gap: 22px 28px; align-content: start; min-width: 0; border: 1px solid var(--line); border-radius: 6px; padding: 24px; background: var(--surface); scroll-snap-align: start; }
+.gripper-project { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); gap: 22px 28px; align-content: start; min-width: 0; border: 1px solid var(--line); border-radius: 6px; padding: 24px; background: var(--surface); scroll-snap-align: center; }
 .gripper-intro { grid-column: 1 / -1; border-bottom: 1px solid var(--line); padding-bottom: 16px; }
 .gripper-intro p { margin: 8px 0 0; max-width: none; font-size: 14px; line-height: 1.65; color: var(--muted); }
 .gripper-project h4 { margin: 0; font-size: 18px; line-height: 1.4; }
@@ -231,7 +231,7 @@ html[data-theme="dark"] .hero-system-background { opacity: .3; }
 .image-viewer-original { font-size: 12px; }
 @media (max-width: 640px) {
  .research-grid--projects { grid-template-columns: 1fr; }
- .gripper-projects { grid-auto-columns: calc(100% - 24px); gap: 14px; }
+ .gripper-projects { --project-width: calc(100vw - 56px); width: calc(100vw - 16px); margin-inline: calc((100% - 100vw + 16px) / 2); padding-inline: 20px; gap: 14px; }
  .gripper-project { grid-template-columns: 1fr; padding: 16px; gap: 16px; }
  .gripper-intro, .gripper-project > h4, .gripper-project > p, .gripper-project--tweezers > .gripper-demo, .gripper-project--tweezers > .gripper-figures, .gripper-prototype, .gripper-project--multi > .gripper-sequence { grid-column: 1; grid-row: auto; }
  .gripper-figures { grid-template-columns: repeat(2, minmax(0, 1fr)); }
