@@ -10,8 +10,9 @@
       <p class="publication-authors">{{ publication.authors | replace: 'Liang Qin', '<strong>Liang Qin</strong>' }}</p>
       <p class="publication-venue">{{ publication.venue }}</p>
       <p class="publication-summary">{{ publication.summary }}</p>
-      {% if publication.paper_url or publication.pdf_url or publication.figure_url or publication.preprint_url or publication.poster_url or publication.video_url or publication.videos %}
+      {% if publication.paper_url or publication.pdf_url or publication.figure_url or publication.preprint_url or publication.poster_url or publication.video_url or publication.videos or publication.project_url %}
       <div class="publication-links">
+        {% if publication.project_url %}<a href="{{ publication.project_url }}" aria-label="Project website: {{ publication.title | escape }}">Website</a>{% endif %}
         {% if publication.figure_url %}<a href="{{ publication.figure_url | relative_url }}" aria-label="Full figure: {{ publication.title | escape }}">Figure</a>{% endif %}
         {% if publication.paper_url %}<a href="{{ publication.paper_url | relative_url }}" aria-label="{{ publication.paper_label }}: {{ publication.title | escape }}">{{ publication.paper_label }}</a>{% endif %}
         {% if publication.pdf_url and publication.pdf_url != publication.paper_url %}<a href="{{ publication.pdf_url | relative_url }}" aria-label="PDF: {{ publication.title | escape }}">PDF</a>{% endif %}
