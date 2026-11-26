@@ -120,7 +120,7 @@ Shared research-site theme, responsive navigation and all existing bilingual exp
 
 ## Research blog
 
-[Why do robot agents need high-level concepts?](https://crlqinliang.github.io/hicod/blog.html) · [中文版](https://crlqinliang.github.io/hicod/blog.html?lang=zh). A bilingual research perspective on solution-space structure, decision-sufficient abstraction, problem formulation, and testable concept utility. Illustrations are original; the worked example links the computed multimodal and path-sweep evidence.
+[Why do robot agents need high-level concepts?](https://crlqinliang.github.io/hicod/blog.html) · [中文版](https://crlqinliang.github.io/hicod/blog.html?lang=zh). An expanded 15-section bilingual research perspective on feasible-set quantifiers, matched structural counterexamples, problem reformulation, skill composition, decision-sufficient abstraction, active concept queries, interface contracts, generalization boundaries and falsifiable evaluation. Illustrations are original; the worked example links the computed multimodal and path-sweep evidence.
 
 ## Concept modules
 

@@ -71,8 +71,10 @@ with sync_playwright() as p:
                         checks["selection"]="B05" in page.locator("#global-detail").inner_text()
                         if lang=="zh":checks["translated"]="抓取" in page.locator("#global-detail").inner_text()
                     elif name=="blog.html":
-                        checks["article_sections"]=page.locator(".blog-article h2").count()==7
+                        checks["article_sections"]=page.locator(".blog-article h2").count()==15
                         checks["worked_example"]=page.locator(".blog-stats > div").count()==4
+                        checks["insight_notes"]=page.locator(".insight-note").count()==7
+                        checks["toc_matches"]=page.locator(".blog-toc a[href^='#']").count()==15
                         checks["article_language"]=("高层概念" in page.locator(".blog-hero h1").inner_text()) if lang=="zh" else ("high-level concepts" in page.locator(".blog-hero h1").inner_text())
                     elif name=="validation.html":
                         page.wait_for_function("document.querySelectorAll('.validation-status article').length >= 3")
