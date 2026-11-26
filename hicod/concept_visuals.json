@@ -1,0 +1,1666 @@
+{
+  "version": "0.8.0",
+  "scope": "Original explanatory schematics are pedagogical, not experimental data. Original literature figures are separately attributed; link-only sources not embedded without confirmed reuse. Figure correspondence may be illustrative rather than a definition of the HiCoD metric.",
+  "figures": {
+    "W4": {
+      "ref": "WAN",
+      "number": "Fig. 4",
+      "page": "https://link.springer.com/article/10.1186/s40638-016-0050-2/figures/4",
+      "image": "https://media.springernature.com/lw685/springer-static/image/art%3A10.1186%2Fs40638-016-0050-2/MediaObjects/40638_2016_50_Fig4_HTML.gif",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "en": "Candidate grasps filtered by collision and inverse kinematics.",
+      "zh": "候选抓取经过碰撞与逆运动学筛选。"
+    },
+    "W5": {
+      "ref": "WAN",
+      "number": "Fig. 5",
+      "page": "https://link.springer.com/article/10.1186/s40638-016-0050-2/figures/5",
+      "image": "https://media.springernature.com/lw685/springer-static/image/art%3A10.1186%2Fs40638-016-0050-2/MediaObjects/40638_2016_50_Fig5_HTML.gif",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "en": "Endpoint and intermediate grasps are used to construct and search a regrasp graph.",
+      "zh": "利用端点和中间放置位姿的抓取构建并搜索重抓取图。"
+    },
+    "W6": {
+      "ref": "WAN",
+      "number": "Fig. 6",
+      "page": "https://link.springer.com/article/10.1186/s40638-016-0050-2/figures/6",
+      "image": "https://media.springernature.com/lw685/springer-static/image/art%3A10.1186%2Fs40638-016-0050-2/MediaObjects/40638_2016_50_Fig6_HTML.gif",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "en": "Three layers represent start, intermediate supported placements, and goal grasp sets.",
+      "zh": "三层图分别表示起点、中间支撑放置及目标抓取集合。"
+    },
+    "R7": {
+      "ref": "GRASP",
+      "number": "Fig. 7",
+      "page": "https://link.springer.com/article/10.1007/s10514-014-9402-3/figures/7",
+      "image": "https://media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10514-014-9402-3/MediaObjects/10514_2014_9402_Fig7_HTML.gif",
+      "license": "CC BY (article terms)",
+      "license_url": "https://link.springer.com/article/10.1007/s10514-014-9402-3#rightslink",
+      "en": "Compare the wrench margin with a task-oriented wrench measure.",
+      "zh": "比较通用力旋量裕量与任务导向的力旋量评价。"
+    },
+    "R10": {
+      "ref": "GRASP",
+      "number": "Fig. 10",
+      "page": "https://link.springer.com/article/10.1007/s10514-014-9402-3/figures/10",
+      "image": "https://media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs10514-014-9402-3/MediaObjects/10514_2014_9402_Fig10_HTML.gif",
+      "license": "CC BY (article terms)",
+      "license_url": "https://link.springer.com/article/10.1007/s10514-014-9402-3#rightslink",
+      "en": "Grasp-space force-closure region and tolerance to contact-location uncertainty.",
+      "zh": "抓取空间中的力封闭区域以及接触位置扰动容忍度。"
+    },
+    "Q1": {
+      "ref": "QIN",
+      "number": "Fig. 1",
+      "page": "https://arxiv.org/html/2506.15920",
+      "en": "A common object-relative grasp is feasible at both endpoint object poses.",
+      "zh": "同一个物体相对抓取在起终物体位姿均可行。",
+      "license": "Reuse not established; link only"
+    },
+    "K1": {
+      "ref": "IKLINK",
+      "number": "Fig. 1",
+      "page": "https://graphics.cs.wisc.edu/Papers/2024/WSG24/ICRA24_1139_FI.pdf#page=1",
+      "en": "A welding path interrupted by a configuration change illustrates the cost of reconfiguration.",
+      "zh": "焊接路径因构型限制中断，调整构型后继续执行；说明构型切换问题。",
+      "license": "Reuse not established; link only"
+    },
+    "T1": {
+      "ref": "TEXT",
+      "number": "Fig. 1",
+      "page": "https://arxiv.org/html/2303.12153",
+      "en": "A hook grasp must enable the next pulling and picking skills.",
+      "zh": "钩具抓取必须支持后续拉取与拾取技能。",
+      "license": "CC BY-SA (source link; image retrieval unavailable)"
+    },
+    "U1": {
+      "ref": "BUFF",
+      "number": "Fig. 1",
+      "page": "https://www.roboticsproceedings.org/rss17/p033.pdf#page=1",
+      "en": "Rearrangement of three objects requires resolving occupied target locations.",
+      "zh": "三个物体的重排需要处理目标位置占用与缓冲。",
+      "license": "Reuse not established; link only"
+    },
+    "C1": {
+      "ref": "CONTACT",
+      "number": "Fig. 1",
+      "page": "https://par.nsf.gov/servlets/purl/10338784#page=1",
+      "en": "Blade pickup illustrates contact-rich manipulation with changing contact modes.",
+      "zh": "刀片拾取示例说明接触模式变化的操作问题。",
+      "license": "Reuse not established; link only"
+    }
+  },
+  "nodes": {
+    "A01": {
+      "type": "sets",
+      "figures": [
+        "Q1",
+        "W5"
+      ],
+      "labels": {
+        "en": [
+          "Start grasps",
+          "Goal grasps",
+          "Shared grasps"
+        ],
+        "zh": [
+          "起点抓取",
+          "目标抓取",
+          "共同抓取"
+        ]
+      },
+      "explanation": {
+        "en": "An intersection of object-relative grasp IDs survives both endpoint checks.",
+        "zh": "物体相对抓取 ID 在两端可行集合中取交集。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "QIN",
+        "WAN"
+      ]
+    },
+    "A02": {
+      "type": "sets",
+      "figures": [
+        "R7"
+      ],
+      "labels": {
+        "en": [
+          "Grasp candidates",
+          "Task-admissible",
+          "Full-task grasp"
+        ],
+        "zh": [
+          "抓取候选",
+          "任务约束",
+          "全任务抓取"
+        ]
+      },
+      "explanation": {
+        "en": "A grasp must satisfy the whole task, not only endpoint geometry or wrench demands alone.",
+        "zh": "抓取必须满足完整任务，而非仅通过端点几何或力旋量检查。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "QIN",
+        "GRASP",
+        "TAMP"
+      ]
+    },
+    "A03": {
+      "type": "matrix",
+      "figures": [
+        "W4"
+      ],
+      "labels": {
+        "en": [
+          "Grasp candidates",
+          "IK configurations",
+          "Feasible pairs"
+        ],
+        "zh": [
+          "抓取候选",
+          "逆解构型",
+          "可行组合"
+        ]
+      },
+      "explanation": {
+        "en": "A row survives when at least one valid IK configuration realizes the grasp.",
+        "zh": "一个抓取至少存在一个有效逆解时，该行才有可行见证。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "QIN",
+        "LAV"
+      ]
+    },
+    "A04": {
+      "type": "sets",
+      "figures": [
+        "T1"
+      ],
+      "labels": {
+        "en": [
+          "Skill 1 outputs",
+          "Skill 2 inputs",
+          "Compatible state"
+        ],
+        "zh": [
+          "技能1输出",
+          "技能2输入",
+          "兼容状态"
+        ]
+      },
+      "explanation": {
+        "en": "Only a consistent shared boundary state connects the two skills.",
+        "zh": "只有一致的边界状态才能衔接两个技能。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "FACT",
+        "TEXT"
+      ]
+    },
+    "A05": {
+      "type": "sets",
+      "figures": [],
+      "labels": {
+        "en": [
+          "Stage 1 bases",
+          "Stage 2 bases",
+          "Common base"
+        ],
+        "zh": [
+          "阶段1底盘",
+          "阶段2底盘",
+          "共同底盘"
+        ]
+      },
+      "explanation": {
+        "en": "Intersect stationary base candidates for stages; subsequent motion still needs validation.",
+        "zh": "对各阶段的固定底盘候选取交集，后续运动仍需验证。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "BASE",
+        "TAMP"
+      ]
+    },
+    "A06": {
+      "type": "matrix",
+      "figures": [],
+      "labels": {
+        "en": [
+          "Left grasp",
+          "Right grasp",
+          "Jointly valid pair"
+        ],
+        "zh": [
+          "左臂抓取",
+          "右臂抓取",
+          "联合可行组合"
+        ]
+      },
+      "explanation": {
+        "en": "Each matrix cell represents a paired grasp with simultaneous robot constraints.",
+        "zh": "每个矩阵单元表示同时满足双臂约束的抓取组合。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "DUAL",
+        "HAND"
+      ]
+    },
+    "B01": {
+      "type": "paths",
+      "figures": [],
+      "labels": {
+        "en": [
+          "Start",
+          "Obstacle",
+          "Goal"
+        ],
+        "zh": [
+          "起点",
+          "障碍",
+          "目标"
+        ]
+      },
+      "explanation": {
+        "en": "Connectivity concerns whether a valid path links two configurations in free space.",
+        "zh": "连通性关注自由构型空间内是否存在连接两个构型的路径。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "LAV",
+        "PROOF"
+      ]
+    },
+    "B02": {
+      "type": "layers",
+      "figures": [
+        "W6",
+        "Q1"
+      ],
+      "labels": {
+        "en": [
+          "Fixed grasp A",
+          "Fixed grasp B",
+          "Transfer path"
+        ],
+        "zh": [
+          "固定抓取A",
+          "固定抓取B",
+          "搬运路径"
+        ]
+      },
+      "explanation": {
+        "en": "Keeping one attachment throughout transfer is stronger than endpoint overlap.",
+        "zh": "保持同一连接完成搬运比端点交集要求更强。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "MODES",
+        "QIN"
+      ]
+    },
+    "B03": {
+      "type": "layers",
+      "figures": [
+        "K1"
+      ],
+      "labels": {
+        "en": [
+          "IK branch A",
+          "IK branch B",
+          "Continuous lift"
+        ],
+        "zh": [
+          "逆解分支A",
+          "逆解分支B",
+          "连续提升"
+        ]
+      },
+      "explanation": {
+        "en": "Locally valid IK samples do not imply a continuous joint-space lift of the requested path.",
+        "zh": "局部逆解可行不保证指定路径存在连续关节空间提升。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "IKLINK",
+        "LAV"
+      ]
+    },
+    "B04": {
+      "type": "paths",
+      "figures": [
+        "W6"
+      ],
+      "labels": {
+        "en": [
+          "Object start",
+          "Allowed modes",
+          "Object goal"
+        ],
+        "zh": [
+          "物体起点",
+          "允许模式",
+          "物体目标"
+        ]
+      },
+      "explanation": {
+        "en": "Object reachability must have a consistent robot and mode realization.",
+        "zh": "物体可达性必须有一致的机器人构型与模式实现。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "MODES",
+        "TAMP",
+        "WAN"
+      ]
+    },
+    "B05": {
+      "type": "layers",
+      "figures": [
+        "K1",
+        "Q1"
+      ],
+      "labels": {
+        "en": [
+          "Grasp–IK mode A",
+          "Grasp–IK mode B",
+          "Path-spanning mode"
+        ],
+        "zh": [
+          "抓取–IK模式A",
+          "抓取–IK模式B",
+          "贯穿路径模式"
+        ]
+      },
+      "explanation": {
+        "en": "A fixed grasp–IK mode must retain a sampled connection across trajectory layers.",
+        "zh": "固定抓取–IK模式需要在轨迹各层保持采样连接。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "QIN",
+        "IKLINK",
+        "MODES"
+      ]
+    },
+    "B06": {
+      "type": "switch",
+      "figures": [
+        "W6",
+        "C1"
+      ],
+      "labels": {
+        "en": [
+          "Mode A",
+          "Mode B",
+          "Valid transition"
+        ],
+        "zh": [
+          "模式A",
+          "模式B",
+          "有效转换"
+        ]
+      },
+      "explanation": {
+        "en": "Within-mode edges and validated cross-mode edges jointly form a hybrid path.",
+        "zh": "模式内边和经过验证的跨模式边共同构成混合路径。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "MODES",
+        "TAMP"
+      ]
+    },
+    "B07": {
+      "type": "paths2",
+      "figures": [],
+      "labels": {
+        "en": [
+          "Start",
+          "Distinct route classes",
+          "Goal"
+        ],
+        "zh": [
+          "起点",
+          "不同路径类",
+          "目标"
+        ]
+      },
+      "explanation": {
+        "en": "Routes passing different sides of an obstacle may belong to different homotopy classes.",
+        "zh": "从障碍物不同侧绕行的路径可能属于不同同伦类。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "HOMO",
+        "LAV"
+      ]
+    },
+    "B08": {
+      "type": "network",
+      "figures": [],
+      "labels": {
+        "en": [
+          "Source",
+          "Independent routes",
+          "Sink"
+        ],
+        "zh": [
+          "源点",
+          "独立路径",
+          "汇点"
+        ]
+      },
+      "explanation": {
+        "en": "Multiple edge-disjoint routes provide graph redundancy, not independent physical failures.",
+        "zh": "多条边不相交路径提供图冗余，但不代表物理失效独立。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "MENGER",
+        "LAV"
+      ]
+    },
+    "C01": {
+      "type": "switch",
+      "figures": [
+        "W5",
+        "W6"
+      ],
+      "labels": {
+        "en": [
+          "Initial grasp",
+          "New grasp",
+          "Regrasp"
+        ],
+        "zh": [
+          "初始抓取",
+          "新抓取",
+          "重抓取"
+        ]
+      },
+      "explanation": {
+        "en": "A supported release and reacquisition can connect two transfer segments.",
+        "zh": "有支撑的释放和重新抓取可以衔接两段搬运。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "WAN",
+        "MODES"
+      ]
+    },
+    "C02": {
+      "type": "switch",
+      "figures": [
+        "W6"
+      ],
+      "labels": {
+        "en": [
+          "Incoming transfer",
+          "Outgoing transfer",
+          "Bridge pose"
+        ],
+        "zh": [
+          "前段搬运",
+          "后段搬运",
+          "桥接位姿"
+        ]
+      },
+      "explanation": {
+        "en": "A bridge pose needs both transfers and a valid mode transition at that pose.",
+        "zh": "桥接位姿需要前后两段搬运以及该位姿处的有效转换。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "WAN",
+        "QIN",
+        "MODES"
+      ]
+    },
+    "C03": {
+      "type": "matrix",
+      "figures": [],
+      "labels": {
+        "en": [
+          "Giving arm",
+          "Receiving arm",
+          "Handover pairs"
+        ],
+        "zh": [
+          "交出臂",
+          "接收臂",
+          "交接组合"
+        ]
+      },
+      "explanation": {
+        "en": "Simultaneous grasp pairs are candidate handover states; approach and release are also required.",
+        "zh": "双臂同时抓取只是候选交接状态，还需验证接近及释放。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "HAND",
+        "DUAL"
+      ]
+    },
+    "C04": {
+      "type": "switch",
+      "figures": [
+        "C1"
+      ],
+      "labels": {
+        "en": [
+          "Before mode",
+          "After mode",
+          "Transition guard"
+        ],
+        "zh": [
+          "转换前模式",
+          "转换后模式",
+          "转换条件"
+        ]
+      },
+      "explanation": {
+        "en": "A mode change must satisfy its boundary, contact and motion rules.",
+        "zh": "模式转换必须满足边界、接触和运动规则。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "MODES",
+        "CONTACT"
+      ]
+    },
+    "C05": {
+      "type": "switch",
+      "figures": [
+        "K1",
+        "W6"
+      ],
+      "labels": {
+        "en": [
+          "Mode A",
+          "Mode B",
+          "Switch cost = 1"
+        ],
+        "zh": [
+          "模式A",
+          "模式B",
+          "切换代价=1"
+        ]
+      },
+      "explanation": {
+        "en": "Assign costs to transitions and compare complete graph routes.",
+        "zh": "对转换边赋予代价并比较完整图路径。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "IKLINK",
+        "WAN",
+        "LAV"
+      ]
+    },
+    "C06": {
+      "type": "band",
+      "figures": [
+        "W6"
+      ],
+      "labels": {
+        "en": [
+          "Transition coordinate",
+          "Valid region",
+          "Sample measure"
+        ],
+        "zh": [
+          "转换坐标",
+          "有效区域",
+          "采样测度"
+        ]
+      },
+      "explanation": {
+        "en": "Measure only the declared transition domain, not an arbitrary ambient volume.",
+        "zh": "测量规定的转换定义域，而非任意环境空间体积。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "MODES",
+        "EXP"
+      ]
+    },
+    "D01": {
+      "type": "narrow",
+      "figures": [],
+      "labels": {
+        "en": [
+          "Free region",
+          "Restricting geometry",
+          "Free region"
+        ],
+        "zh": [
+          "自由区域",
+          "限制几何",
+          "自由区域"
+        ]
+      },
+      "explanation": {
+        "en": "A localized geometric restriction constrains a family of paths, not just one collision.",
+        "zh": "局部几何限制作用于路径族，而非单次碰撞。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "NARROW",
+        "ENV"
+      ]
+    },
+    "D02": {
+      "type": "narrow",
+      "figures": [],
+      "labels": {
+        "en": [
+          "Open region",
+          "Narrow passage",
+          "Open region"
+        ],
+        "zh": [
+          "开阔区域",
+          "狭窄通道",
+          "开阔区域"
+        ]
+      },
+      "explanation": {
+        "en": "A small connecting region can make finding a path difficult under the sampling measure.",
+        "zh": "连接区域较小会使规定采样测度下的路径搜索困难。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "NARROW",
+        "EXP"
+      ]
+    },
+    "D03": {
+      "type": "network",
+      "figures": [],
+      "labels": {
+        "en": [
+          "Source",
+          "Minimum cut",
+          "Sink"
+        ],
+        "zh": [
+          "源点",
+          "最小割",
+          "汇点"
+        ]
+      },
+      "explanation": {
+        "en": "A low-capacity cut limits connections in the specified graph.",
+        "zh": "指定图中的低容量割限制连接能力。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "MENGER",
+        "IKLINK"
+      ]
+    },
+    "D04": {
+      "type": "curve",
+      "figures": [
+        "K1"
+      ],
+      "labels": {
+        "en": [
+          "Path progress",
+          "Velocity margin",
+          "Low margin"
+        ],
+        "zh": [
+          "路径进度",
+          "速度裕量",
+          "低裕量"
+        ]
+      },
+      "explanation": {
+        "en": "A low directional Jacobian margin can restrict motion across candidate paths.",
+        "zh": "方向雅可比裕量不足可能限制候选路径族的运动。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "MR",
+        "IKLINK"
+      ]
+    },
+    "D05": {
+      "type": "narrow",
+      "figures": [],
+      "labels": {
+        "en": [
+          "Obstacle",
+          "Clearance margin",
+          "Best path"
+        ],
+        "zh": [
+          "障碍",
+          "间隙裕量",
+          "最优路径"
+        ]
+      },
+      "explanation": {
+        "en": "Compare the minimum clearance of candidate paths rather than one path alone.",
+        "zh": "比较候选路径族的最小间隙，而非只检查一条路径。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "LAV",
+        "NARROW"
+      ]
+    },
+    "D06": {
+      "type": "sets",
+      "figures": [],
+      "labels": {
+        "en": [
+          "Before intervention",
+          "After intervention",
+          "Metric change"
+        ],
+        "zh": [
+          "干预前",
+          "干预后",
+          "指标变化"
+        ]
+      },
+      "explanation": {
+        "en": "A controlled constraint change can reveal which constraint limits the feasible family.",
+        "zh": "受控约束改变可以揭示限制可行解族的约束。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "CONFLICT",
+        "MCR"
+      ]
+    },
+    "D07": {
+      "type": "disjoint",
+      "figures": [],
+      "labels": {
+        "en": [
+          "Constraint C1",
+          "Constraint C2",
+          "Empty intersection"
+        ],
+        "zh": [
+          "约束C1",
+          "约束C2",
+          "交集为空"
+        ]
+      },
+      "explanation": {
+        "en": "An inconsistent subset is a conflict only when joint infeasibility is justified.",
+        "zh": "只有联合不可行得到论证时，才能称为冲突集。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "CONFLICT",
+        "PROOF"
+      ]
+    },
+    "E01": {
+      "type": "matrix",
+      "figures": [
+        "Q1",
+        "W5"
+      ],
+      "labels": {
+        "en": [
+          "Grasp selection",
+          "Motion candidate",
+          "Feasible fibers"
+        ],
+        "zh": [
+          "抓取选择",
+          "运动候选",
+          "可行条件纤维"
+        ]
+      },
+      "explanation": {
+        "en": "Different upstream grasps change the downstream motion set.",
+        "zh": "不同上游抓取改变下游可行运动集合。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "MODES",
+        "QIN"
+      ]
+    },
+    "E02": {
+      "type": "matrix",
+      "figures": [
+        "T1"
+      ],
+      "labels": {
+        "en": [
+          "Upstream state",
+          "Future action",
+          "Feasible continuation"
+        ],
+        "zh": [
+          "上游状态",
+          "后续动作",
+          "可行延续"
+        ]
+      },
+      "explanation": {
+        "en": "A valid current skill can leave very different future solution sets.",
+        "zh": "当前技能可行时仍可能产生完全不同的后续解集合。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "FACT",
+        "TEXT"
+      ]
+    },
+    "E03": {
+      "type": "cycle",
+      "figures": [
+        "U1"
+      ],
+      "labels": {
+        "en": [
+          "Object A",
+          "Object B",
+          "Blocking"
+        ],
+        "zh": [
+          "物体A",
+          "物体B",
+          "阻挡"
+        ]
+      },
+      "explanation": {
+        "en": "An occupied goal creates a dependency on moving its blocker first.",
+        "zh": "目标被占据时产生先移动阻挡物体的依赖。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "BUFF",
+        "TAMP"
+      ]
+    },
+    "E04": {
+      "type": "network",
+      "figures": [
+        "U1"
+      ],
+      "labels": {
+        "en": [
+          "Action A",
+          "Prerequisite",
+          "Action C"
+        ],
+        "zh": [
+          "动作A",
+          "先决条件",
+          "动作C"
+        ]
+      },
+      "explanation": {
+        "en": "Required precedence constrains all admissible task sequences in the declared model.",
+        "zh": "必要先后关系限制模型中的所有允许任务序列。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "TAMP",
+        "BUFF"
+      ]
+    },
+    "E05": {
+      "type": "cycle",
+      "figures": [
+        "U1"
+      ],
+      "labels": {
+        "en": [
+          "Move A",
+          "Move B",
+          "Dependency cycle"
+        ],
+        "zh": [
+          "移动A",
+          "移动B",
+          "依赖环"
+        ]
+      },
+      "explanation": {
+        "en": "A precedence cycle can require a buffer; it is distinct from state deadlock.",
+        "zh": "先后关系环可能需要缓冲位，与状态死锁不同。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "BUFF",
+        "LAV"
+      ]
+    },
+    "E06": {
+      "type": "band",
+      "figures": [],
+      "labels": {
+        "en": [
+          "Intermediate states",
+          "Goal reachable",
+          "Goal"
+        ],
+        "zh": [
+          "中间状态",
+          "可到达目标",
+          "目标"
+        ]
+      },
+      "explanation": {
+        "en": "Backward reachability identifies intermediate states that preserve future feasibility.",
+        "zh": "反向可达性识别保持后续可行性的中间状态。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "HJ",
+        "TOPP",
+        "FACT"
+      ]
+    },
+    "F01": {
+      "type": "matrix",
+      "figures": [],
+      "labels": {
+        "en": [
+          "Variable x",
+          "Variable y",
+          "Missing combination"
+        ],
+        "zh": [
+          "变量x",
+          "变量y",
+          "缺失组合"
+        ]
+      },
+      "explanation": {
+        "en": "Feasible projections can contain combinations that are jointly infeasible.",
+        "zh": "各变量投影中的组合可能联合不可行。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "FACT",
+        "BOYD"
+      ]
+    },
+    "F02": {
+      "type": "sets",
+      "figures": [],
+      "labels": {
+        "en": [
+          "Constraint 1",
+          "Constraint 2",
+          "Joint feasibility"
+        ],
+        "zh": [
+          "约束1",
+          "约束2",
+          "联合可行"
+        ]
+      },
+      "explanation": {
+        "en": "Constraint interaction depends on shared variables and the joint feasible relation.",
+        "zh": "约束相互作用依赖共享变量与联合可行关系。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "FACT",
+        "CONFLICT"
+      ]
+    },
+    "F03": {
+      "type": "matrix",
+      "figures": [],
+      "labels": {
+        "en": [
+          "Left configuration",
+          "Right configuration",
+          "Closed chain"
+        ],
+        "zh": [
+          "左臂构型",
+          "右臂构型",
+          "闭链约束"
+        ]
+      },
+      "explanation": {
+        "en": "Only paired configurations that agree on the rigid object transform are admitted.",
+        "zh": "仅允许满足同一刚体物体变换的构型组合。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "DUAL",
+        "LAV"
+      ]
+    },
+    "F04": {
+      "type": "network",
+      "figures": [],
+      "labels": {
+        "en": [
+          "Subproblem A",
+          "Separator",
+          "Subproblem B"
+        ],
+        "zh": [
+          "子问题A",
+          "分隔变量",
+          "子问题B"
+        ]
+      },
+      "explanation": {
+        "en": "A separator may permit independent subproblem solving under explicit conditions.",
+        "zh": "在明确条件下，分隔变量可能允许子问题独立求解。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "FACT",
+        "TAMP"
+      ]
+    },
+    "F05": {
+      "type": "product",
+      "figures": [],
+      "labels": {
+        "en": [
+          "Feasible x",
+          "Feasible y",
+          "Cartesian product"
+        ],
+        "zh": [
+          "可行x",
+          "可行y",
+          "笛卡尔积"
+        ]
+      },
+      "explanation": {
+        "en": "After conditioning on a separator, all projected combinations must be feasible for factorization.",
+        "zh": "固定分隔变量后，所有投影组合均可行才能分解。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "FACT",
+        "BOYD"
+      ]
+    },
+    "G01": {
+      "type": "curve",
+      "figures": [
+        "Q1"
+      ],
+      "labels": {
+        "en": [
+          "Grasp parameter",
+          "Task metric",
+          "Perturbation"
+        ],
+        "zh": [
+          "抓取参数",
+          "任务指标",
+          "扰动"
+        ]
+      },
+      "explanation": {
+        "en": "Perturb a grasp and measure the change in a task-level descriptor.",
+        "zh": "扰动抓取并计算任务级描述符变化。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "BOYD",
+        "QIN"
+      ]
+    },
+    "G02": {
+      "type": "curve",
+      "figures": [],
+      "labels": {
+        "en": [
+          "Object pose",
+          "Connectivity metric",
+          "Perturbation"
+        ],
+        "zh": [
+          "物体位姿",
+          "连通指标",
+          "扰动"
+        ]
+      },
+      "explanation": {
+        "en": "Vary only permitted object poses and compare the same structural metric.",
+        "zh": "仅改变允许的物体位姿，比较相同结构指标。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "BOYD",
+        "LAV"
+      ]
+    },
+    "G03": {
+      "type": "curve",
+      "figures": [],
+      "labels": {
+        "en": [
+          "Base pose",
+          "Task score",
+          "Perturbation"
+        ],
+        "zh": [
+          "底盘位姿",
+          "任务评分",
+          "扰动"
+        ]
+      },
+      "explanation": {
+        "en": "Different base placements may change task-level feasibility or quality.",
+        "zh": "不同底盘位姿可能改变任务可行性或质量。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "BASE",
+        "BOYD"
+      ]
+    },
+    "G04": {
+      "type": "curve",
+      "figures": [],
+      "labels": {
+        "en": [
+          "Trajectory parameter",
+          "Connected modes",
+          "Finite contrast"
+        ],
+        "zh": [
+          "轨迹参数",
+          "连通模式",
+          "有限差异"
+        ]
+      },
+      "explanation": {
+        "en": "Controlled path perturbations reveal changes in sampled connectivity, not necessarily a gradient.",
+        "zh": "受控轨迹扰动揭示采样连通性变化，不一定存在梯度。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "BOYD",
+        "IKLINK"
+      ]
+    },
+    "G05": {
+      "type": "curve",
+      "figures": [],
+      "labels": {
+        "en": [
+          "Constraint parameter",
+          "Optimal value",
+          "Sensitivity"
+        ],
+        "zh": [
+          "约束参数",
+          "最优值",
+          "敏感性"
+        ]
+      },
+      "explanation": {
+        "en": "Evaluate a specified change in a constraint parameter and its effect on the outcome.",
+        "zh": "计算规定约束参数变化对结果的影响。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "BOYD",
+        "CONFLICT"
+      ]
+    },
+    "H01": {
+      "type": "band",
+      "figures": [],
+      "labels": {
+        "en": [
+          "Uncertainty",
+          "Feasible under perturbation",
+          "Failure"
+        ],
+        "zh": [
+          "不确定性",
+          "扰动下可行",
+          "失效"
+        ]
+      },
+      "explanation": {
+        "en": "Distinguish fixed-plan robustness from the ability to replan under uncertainty.",
+        "zh": "区分固定方案鲁棒性与不确定性下重新规划的能力。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "FUNNEL",
+        "HJ"
+      ]
+    },
+    "H02": {
+      "type": "band",
+      "figures": [
+        "R10"
+      ],
+      "labels": {
+        "en": [
+          "Contact perturbation",
+          "Robust grasp region",
+          "Failure"
+        ],
+        "zh": [
+          "接触扰动",
+          "鲁棒抓取区域",
+          "失效"
+        ]
+      },
+      "explanation": {
+        "en": "A feasible grasp region can tolerate contact perturbations within a declared model.",
+        "zh": "可行抓取区域可在规定模型下容忍接触扰动。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "GRASP",
+        "DEX"
+      ]
+    },
+    "H03": {
+      "type": "paths2",
+      "figures": [],
+      "labels": {
+        "en": [
+          "Nominal",
+          "Perturbed routes",
+          "Goal"
+        ],
+        "zh": [
+          "标称",
+          "扰动后的路径",
+          "目标"
+        ]
+      },
+      "explanation": {
+        "en": "Test endpoint connectivity across disturbances, separating fixed and adaptive paths.",
+        "zh": "在扰动下检查端点连通性，区分固定与自适应路径。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "FUNNEL",
+        "LAV"
+      ]
+    },
+    "H04": {
+      "type": "matrix",
+      "figures": [],
+      "labels": {
+        "en": [
+          "Sample dimension 1",
+          "Sample dimension 2",
+          "Feasible fraction"
+        ],
+        "zh": [
+          "采样维度1",
+          "采样维度2",
+          "可行比例"
+        ]
+      },
+      "explanation": {
+        "en": "The proportion of admitted samples is relative to the chosen sampling measure.",
+        "zh": "纳入的样本比例取决于所选采样测度。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "LAV",
+        "EXP"
+      ]
+    },
+    "H05": {
+      "type": "paths2",
+      "figures": [],
+      "labels": {
+        "en": [
+          "Start",
+          "Distinct solutions",
+          "Goal"
+        ],
+        "zh": [
+          "起点",
+          "不同解",
+          "目标"
+        ]
+      },
+      "explanation": {
+        "en": "Diversity requires a stated metric or equivalence relation.",
+        "zh": "多样性必须指定度量或等价关系。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "HOMO",
+        "LAV"
+      ]
+    },
+    "H06": {
+      "type": "network",
+      "figures": [],
+      "labels": {
+        "en": [
+          "Source",
+          "Failed edge",
+          "Alternative route"
+        ],
+        "zh": [
+          "源点",
+          "失效边",
+          "备选路径"
+        ]
+      },
+      "explanation": {
+        "en": "Check whether connectivity persists after declared graph elements fail.",
+        "zh": "检查指定图元素失效后连通性是否保持。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "MENGER",
+        "FUNNEL"
+      ]
+    },
+    "I01": {
+      "type": "band",
+      "figures": [],
+      "labels": {
+        "en": [
+          "Perturbed state",
+          "Recoverable set",
+          "Goal"
+        ],
+        "zh": [
+          "扰动状态",
+          "可恢复集合",
+          "目标"
+        ]
+      },
+      "explanation": {
+        "en": "A recovery action must lead from the failed state to the original goal within permitted controls.",
+        "zh": "恢复动作必须在允许控制下从失败状态到达原目标。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "HJ",
+        "LAV"
+      ]
+    },
+    "I02": {
+      "type": "narrow",
+      "figures": [],
+      "labels": {
+        "en": [
+          "Obstacle constraints",
+          "Diagnostic removal",
+          "Path"
+        ],
+        "zh": [
+          "障碍约束",
+          "诊断性移除",
+          "路径"
+        ]
+      },
+      "explanation": {
+        "en": "Compare constraint-removal sets; never treat diagnostic removal as execution permission.",
+        "zh": "比较约束移除集合，不得将诊断性移除视为执行许可。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "MCR",
+        "CONFLICT"
+      ]
+    },
+    "I03": {
+      "type": "paths",
+      "figures": [],
+      "labels": {
+        "en": [
+          "Start",
+          "Movable obstacle",
+          "Goal"
+        ],
+        "zh": [
+          "起点",
+          "可移动障碍",
+          "目标"
+        ]
+      },
+      "explanation": {
+        "en": "A bounded scene modification may enable a path; executing the modification is a separate task.",
+        "zh": "有界场景改动可能恢复路径，但实施改动本身是另一任务。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "ENV",
+        "MCR"
+      ]
+    },
+    "I04": {
+      "type": "paths2",
+      "figures": [],
+      "labels": {
+        "en": [
+          "Start",
+          "Reference / modified path",
+          "Goal"
+        ],
+        "zh": [
+          "起点",
+          "参考／变形路径",
+          "目标"
+        ]
+      },
+      "explanation": {
+        "en": "Find a permitted deformation with a feasible witness while preserving hard endpoints.",
+        "zh": "保持强制端点并寻找具有可行见证的允许变形。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "IKLINK",
+        "BOYD",
+        "ENV"
+      ]
+    },
+    "I05": {
+      "type": "switch",
+      "figures": [
+        "W6"
+      ],
+      "labels": {
+        "en": [
+          "Excluded mode",
+          "Alternate mode",
+          "Substitute"
+        ],
+        "zh": [
+          "排除模式",
+          "备选模式",
+          "替代方案"
+        ]
+      },
+      "explanation": {
+        "en": "A different permitted mode sequence may preserve the same task goal.",
+        "zh": "其他允许的模式序列可能保持同一任务目标。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "MODES",
+        "TAMP"
+      ]
+    },
+    "I06": {
+      "type": "network",
+      "figures": [],
+      "labels": {
+        "en": [
+          "Observed failure",
+          "Evidence hypotheses",
+          "Scoped cause"
+        ],
+        "zh": [
+          "观察到的失败",
+          "证据假设",
+          "限定归因"
+        ]
+      },
+      "explanation": {
+        "en": "Compare competing structural explanations; a single failure trace is not a unique cause.",
+        "zh": "比较不同结构解释；单条失败证据不能确定唯一原因。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "CONFLICT",
+        "ENV",
+        "PROOF"
+      ]
+    },
+    "J01": {
+      "type": "sets",
+      "figures": [
+        "R7"
+      ],
+      "labels": {
+        "en": [
+          "Available wrench",
+          "Required wrench",
+          "Containment"
+        ],
+        "zh": [
+          "可用力旋量",
+          "所需力旋量",
+          "包含关系"
+        ]
+      },
+      "explanation": {
+        "en": "Task-required wrenches must lie inside the attainable grasp wrench set.",
+        "zh": "任务所需力旋量必须包含在抓取可实现的力旋量集合内。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "GRASP",
+        "MR"
+      ]
+    },
+    "J02": {
+      "type": "paths",
+      "figures": [],
+      "labels": {
+        "en": [
+          "Initial state",
+          "Dynamics constraints",
+          "Goal state"
+        ],
+        "zh": [
+          "初始状态",
+          "动力学约束",
+          "目标状态"
+        ]
+      },
+      "explanation": {
+        "en": "A state-control trajectory needs dynamics and input feasibility, beyond geometric connectivity.",
+        "zh": "状态–控制轨迹还需要满足动力学和输入可行性。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "LAV",
+        "HJ"
+      ]
+    },
+    "J03": {
+      "type": "switch",
+      "figures": [
+        "C1"
+      ],
+      "labels": {
+        "en": [
+          "Contact mode A",
+          "Contact mode B",
+          "Contact transition"
+        ],
+        "zh": [
+          "接触模式A",
+          "接触模式B",
+          "接触转换"
+        ]
+      },
+      "explanation": {
+        "en": "Hybrid motion uses admissible contact modes and valid switches between them.",
+        "zh": "混合运动依赖允许的接触模式及有效转换。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "CONTACT",
+        "MODES"
+      ]
+    },
+    "J04": {
+      "type": "curve",
+      "figures": [
+        "R7"
+      ],
+      "labels": {
+        "en": [
+          "Task progress",
+          "Dynamic slack",
+          "Critical interval"
+        ],
+        "zh": [
+          "任务进度",
+          "动力学裕量",
+          "关键区间"
+        ]
+      },
+      "explanation": {
+        "en": "Compare torque, force or velocity margins over trajectory families.",
+        "zh": "在候选轨迹族中比较力矩、力或速度裕量。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "LAV",
+        "TOPP",
+        "GRASP"
+      ]
+    },
+    "J05": {
+      "type": "band",
+      "figures": [],
+      "labels": {
+        "en": [
+          "Path progress",
+          "Controllable speeds",
+          "Feasible timing"
+        ],
+        "zh": [
+          "路径进度",
+          "可控速度集合",
+          "可行定时"
+        ]
+      },
+      "explanation": {
+        "en": "Path-speed sets describe feasible time parameterizations under declared limits.",
+        "zh": "路径速度集合描述规定约束下的可行时间参数化。"
+      },
+      "illustration": "original_hicod_schematic",
+      "source_refs": [
+        "TOPP",
+        "LAV"
+      ]
+    }
+  }
+}
