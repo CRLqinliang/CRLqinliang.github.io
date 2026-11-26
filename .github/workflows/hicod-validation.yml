@@ -74,7 +74,7 @@ jobs:
           path: /tmp/hicod-geometry/
           if-no-files-found: warn
   browser:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
@@ -87,6 +87,7 @@ jobs:
       - name: Check real browser interactions and capture screenshots
         run: |
           python -m http.server 8765 > /tmp/hicod-http.log 2>&1 &
+          for i in $(seq 1 30); do curl -fsS http://127.0.0.1:8765/hicod/index.html >/dev/null && break; sleep 1; done
           python hicod/validation/browser_check.py
       - uses: actions/upload-artifact@v4
         if: always()
@@ -128,4 +129,4 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -- hicod/validation/results/regression.json hicod/validation/results/geometry.json hicod/validation/results/browser.json
-          if ! git diff --cached --quiet; then git commit -m 'Publish HiCoD validation reports'; git push origin HEAD:master; fi
+          if ! git diff --cached --quiet; then git commit -m 'Publish HiCoD validation reports'; git pull --rebase origin master; git push origin HEAD:master; fi

@@ -27,3 +27,7 @@ The task suite and finite reference labels are public and designed, not a privat
     python validation/check_mujoco.py /tmp/hicod-geometry-input /tmp/geometry.json
 
 For browser tests, serve the repository root using Python http.server on port 8765, install Playwright Chromium, and run hicod/validation/browser_check.py. For real-model evaluation see BENCHMARK.md and the pilot workflow.
+
+## First completed CI reports
+
+The first actual validation run on source `48df2c6` passed the Node/Python regression and same-backend 448-outcome regeneration. MuJoCo 4.0.1 checked 44 cases, 36,904 transfer IK probes, 258,328 transfer distance pairs, 332 switch probes and 2,656 switch distance pairs. Zero distance-threshold disagreements; 44/44 fixed graphs agreed; maximum FK error 2.99e-16 m. This is independent geometric-kernel agreement at identical samples, not continuous or dynamic validation. Browser setup failed on Ubuntu 26.04 with the pinned Playwright version; the browser job is now pinned to Ubuntu 24.04. Later reports are shown in the dashboard with their own source revisions.

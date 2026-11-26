@@ -38,7 +38,7 @@ with sync_playwright() as p:
                         page.wait_for_function("document.querySelector('#detail h2')?.textContent.length > 0")
                         checks["graph_populated"]=page.locator("#nodes button").count()>=60
                         page.locator("#search").fill("C02")
-                        page.locator("#nodes button").first.click()
+                        page.locator("#nodes button").filter(has_text="C02 ·").first.click()
                         checks["concept_selection"]="C02" in page.locator("#detail").inner_text()
                         if lang=="zh":checks["translated_definition"]="中间位姿" in page.locator("#detail").inner_text()
                     elif name=="physical.html":
