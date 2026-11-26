@@ -34,6 +34,18 @@ The example is a pedagogical kinematic XY carrier with a fixed payload orientati
 
 Reports distinguish verified sampled facts, sampled graph witnesses, and unknown continuous-space feasibility. The absence of a graph path is **not** a proof of continuous infeasibility. A graph witness is not a verified dynamic execution. Sample ratios depend on the domain, measure and grid resolution. Safety constraints must never be relaxed for execution simply because a counterfactual suggests it.
 
+## v0.2: Structural concept knowledge graph
+
+The [full registry](concept_graph.json) contains 60 L4 definitions, 15 evidence interfaces, 287 typed edges and 29 source records. The [catalogue](CONCEPTS.md) contains mathematical specifications, computation contracts, inputs, dependencies and limitations. The underlying literature is distinguished from HiCoD operational proposals; all 60 entries are definition-only, not full physical evaluators.
+
+The required-evidence DAG can be queried without MuJoCo or an LLM:
+
+    python concept_graph.py validate
+    python concept_graph.py show A01
+    python concept_graph.py trace B05
+
+Diagnostic links are suggested queries, not causal or logical implications. The planar demo remains an independent proof-of-concept proxy; it does not implement these 60 full robotic descriptors.
+
 ## Concept modules
 
 See [concepts.json](concepts.json) for the registry, [hicod.py](hicod.py) for the small evaluator and evidence-report implementation, and [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution contract. Initial implementations: sampled feasibility, endpoint compatibility, graph connectivity and connected components. Roadmap: shared-grasp sets from actual robot IK/collision, intermediate pose/regrasp, Grasp–IK/drag connectivity, bottleneck attribution, constraint conflicts, cross-stage dependencies, sensitivity, robustness and counterfactual recovery. The author's existing research implementations are not included in this initial commit.
