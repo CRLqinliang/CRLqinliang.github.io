@@ -81,6 +81,13 @@ The 3R planar arm uses analytic FK/IK, collision clearances, ideal fixed attachm
 
 The four project pages share a persistent CN/EN switch. [中文术语规范](TERMINOLOGY_CN.md) and [Chinese concept definitions](concept_graph.zh.json) contain all 60 L4 concepts plus 15 evidence interfaces. Mathematical specifications, source titles, code, exported canonical JSON and some implementation/audit details retain their original English. Chinese definitions and limits are authored translations, not independent mathematical definitions.
 
+## v0.5.1: Counterfactual path sweep
+
+[G04/I04 computed results](path_sweep_results.json): finite midpoint perturbation contrasts and minimum enumerated successful deformation, with endpoints fixed. This is not a proof of the globally minimum task deformation. Six checks executed on the function bodies.
+
+    node examples/path_sweep.mjs regrasp_recovery
+    node tests/test_path_sweep.mjs
+
 ## Concept modules
 
 See [concepts.json](concepts.json) for the registry, [hicod.py](hicod.py) for the small evaluator and evidence-report implementation, and [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution contract. Initial implementations: sampled feasibility, endpoint compatibility, graph connectivity and connected components. Roadmap: shared-grasp sets from actual robot IK/collision, intermediate pose/regrasp, Grasp–IK/drag connectivity, bottleneck attribution, constraint conflicts, cross-stage dependencies, sensitivity, robustness and counterfactual recovery. The author's existing research implementations are not included in this initial commit.

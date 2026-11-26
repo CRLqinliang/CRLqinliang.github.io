@@ -1,0 +1,2235 @@
+{
+  "status": "executed_analytic_geometry",
+  "checks": [
+    "zero-offset preserves original score",
+    "all endpoints preserved",
+    "49 enumerated candidates",
+    "scope bound respected",
+    "minimum finite candidate checked",
+    "no global certificate"
+  ],
+  "scene": "regrasp_recovery",
+  "scope": {
+    "model": "analytic planar 3R capsules + circular payload and obstacles",
+    "domain": "prescribed piecewise-linear SE(2) path; fixed ideal attachments; two sampled IK branches; discrete layers and substeps; midpoint displacement on a finite XY disk grid, endpoints fixed; no yaw modification",
+    "evidence": "Computed FK, analytic IK, pairwise signed clearance and joint bounds. No actual grasp contact, approach/place, continuous edge certificate or dynamics.",
+    "stages": 17,
+    "edge_subdivisions": 4,
+    "max_joint_step_rad": 0.24,
+    "step_m": 0.03,
+    "max_deviation_m": 0.12,
+    "candidate_count": 49,
+    "score": "count of sampled connected fixed attachment modes",
+    "continuous_certificate": false
+  },
+  "baseline_connected_modes": [],
+  "candidates": [
+    {
+      "id": "d:0:0",
+      "offset_m": [
+        0,
+        0
+      ],
+      "max_reference_deviation_m": 0,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.46499999999999997,
+          0.010000000000000009,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 122,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": null
+    },
+    {
+      "id": "d:-1:0",
+      "offset_m": [
+        -0.03,
+        0
+      ],
+      "max_reference_deviation_m": 0.03,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.43499999999999994,
+          0.010000000000000009,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 111,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:0:-1",
+      "offset_m": [
+        0,
+        -0.03
+      ],
+      "max_reference_deviation_m": 0.03,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.46499999999999997,
+          -0.01999999999999999,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 124,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:0:1",
+      "offset_m": [
+        0,
+        0.03
+      ],
+      "max_reference_deviation_m": 0.03,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.46499999999999997,
+          0.04000000000000001,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 122,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:1:0",
+      "offset_m": [
+        0.03,
+        0
+      ],
+      "max_reference_deviation_m": 0.03,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.495,
+          0.010000000000000009,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 128,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:-1:-1",
+      "offset_m": [
+        -0.03,
+        -0.03
+      ],
+      "max_reference_deviation_m": 0.042426406871192854,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.43499999999999994,
+          -0.01999999999999999,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 110,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:-1:1",
+      "offset_m": [
+        -0.03,
+        0.03
+      ],
+      "max_reference_deviation_m": 0.042426406871192854,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.43499999999999994,
+          0.04000000000000001,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 113,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:1:-1",
+      "offset_m": [
+        0.03,
+        -0.03
+      ],
+      "max_reference_deviation_m": 0.042426406871192854,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.495,
+          -0.01999999999999999,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 130,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:1:1",
+      "offset_m": [
+        0.03,
+        0.03
+      ],
+      "max_reference_deviation_m": 0.042426406871192854,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.495,
+          0.04000000000000001,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 131,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:-2:0",
+      "offset_m": [
+        -0.06,
+        0
+      ],
+      "max_reference_deviation_m": 0.06,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.40499999999999997,
+          0.010000000000000009,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 117,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:0:-2",
+      "offset_m": [
+        0,
+        -0.06
+      ],
+      "max_reference_deviation_m": 0.06,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.46499999999999997,
+          -0.04999999999999999,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 120,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:0:2",
+      "offset_m": [
+        0,
+        0.06
+      ],
+      "max_reference_deviation_m": 0.06,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.46499999999999997,
+          0.07,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 124,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:2:0",
+      "offset_m": [
+        0.06,
+        0
+      ],
+      "max_reference_deviation_m": 0.06,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.5249999999999999,
+          0.010000000000000009,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 126,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:-1:-2",
+      "offset_m": [
+        -0.03,
+        -0.06
+      ],
+      "max_reference_deviation_m": 0.0670820393249937,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.43499999999999994,
+          -0.04999999999999999,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 113,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:-1:2",
+      "offset_m": [
+        -0.03,
+        0.06
+      ],
+      "max_reference_deviation_m": 0.0670820393249937,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.43499999999999994,
+          0.07,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 116,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:-2:-1",
+      "offset_m": [
+        -0.06,
+        -0.03
+      ],
+      "max_reference_deviation_m": 0.0670820393249937,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.40499999999999997,
+          -0.01999999999999999,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 115,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:-2:1",
+      "offset_m": [
+        -0.06,
+        0.03
+      ],
+      "max_reference_deviation_m": 0.0670820393249937,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.40499999999999997,
+          0.04000000000000001,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 116,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:1:-2",
+      "offset_m": [
+        0.03,
+        -0.06
+      ],
+      "max_reference_deviation_m": 0.0670820393249937,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.495,
+          -0.04999999999999999,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 125,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:1:2",
+      "offset_m": [
+        0.03,
+        0.06
+      ],
+      "max_reference_deviation_m": 0.0670820393249937,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.495,
+          0.07,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 131,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:2:-1",
+      "offset_m": [
+        0.06,
+        -0.03
+      ],
+      "max_reference_deviation_m": 0.0670820393249937,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.5249999999999999,
+          -0.01999999999999999,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 124,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:2:1",
+      "offset_m": [
+        0.06,
+        0.03
+      ],
+      "max_reference_deviation_m": 0.0670820393249937,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.5249999999999999,
+          0.04000000000000001,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 125,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:-2:-2",
+      "offset_m": [
+        -0.06,
+        -0.06
+      ],
+      "max_reference_deviation_m": 0.08485281374238571,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.40499999999999997,
+          -0.04999999999999999,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 114,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:-2:2",
+      "offset_m": [
+        -0.06,
+        0.06
+      ],
+      "max_reference_deviation_m": 0.08485281374238571,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.40499999999999997,
+          0.07,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 117,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:2:-2",
+      "offset_m": [
+        0.06,
+        -0.06
+      ],
+      "max_reference_deviation_m": 0.08485281374238571,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.5249999999999999,
+          -0.04999999999999999,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 124,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:2:2",
+      "offset_m": [
+        0.06,
+        0.06
+      ],
+      "max_reference_deviation_m": 0.08485281374238571,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.5249999999999999,
+          0.07,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 129,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:-3:0",
+      "offset_m": [
+        -0.09,
+        0
+      ],
+      "max_reference_deviation_m": 0.09,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.375,
+          0.010000000000000009,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 117,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:0:-3",
+      "offset_m": [
+        0,
+        -0.09
+      ],
+      "max_reference_deviation_m": 0.09,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.46499999999999997,
+          -0.07999999999999999,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 120,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:0:3",
+      "offset_m": [
+        0,
+        0.09
+      ],
+      "max_reference_deviation_m": 0.09,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.46499999999999997,
+          0.1,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 127,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:3:0",
+      "offset_m": [
+        0.09,
+        0
+      ],
+      "max_reference_deviation_m": 0.09,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.5549999999999999,
+          0.010000000000000009,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 125,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:-1:-3",
+      "offset_m": [
+        -0.03,
+        -0.09
+      ],
+      "max_reference_deviation_m": 0.09486832980505139,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.43499999999999994,
+          -0.07999999999999999,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 111,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:-1:3",
+      "offset_m": [
+        -0.03,
+        0.09
+      ],
+      "max_reference_deviation_m": 0.09486832980505139,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.43499999999999994,
+          0.1,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 117,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:-3:-1",
+      "offset_m": [
+        -0.09,
+        -0.03
+      ],
+      "max_reference_deviation_m": 0.09486832980505139,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.375,
+          -0.01999999999999999,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 116,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:-3:1",
+      "offset_m": [
+        -0.09,
+        0.03
+      ],
+      "max_reference_deviation_m": 0.09486832980505139,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.375,
+          0.04000000000000001,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 120,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:1:-3",
+      "offset_m": [
+        0.03,
+        -0.09
+      ],
+      "max_reference_deviation_m": 0.09486832980505139,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.495,
+          -0.07999999999999999,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 125,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:1:3",
+      "offset_m": [
+        0.03,
+        0.09
+      ],
+      "max_reference_deviation_m": 0.09486832980505139,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.495,
+          0.1,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 128,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:3:-1",
+      "offset_m": [
+        0.09,
+        -0.03
+      ],
+      "max_reference_deviation_m": 0.09486832980505139,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.5549999999999999,
+          -0.01999999999999999,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 122,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:3:1",
+      "offset_m": [
+        0.09,
+        0.03
+      ],
+      "max_reference_deviation_m": 0.09486832980505139,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.5549999999999999,
+          0.04000000000000001,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 125,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:-2:-3",
+      "offset_m": [
+        -0.06,
+        -0.09
+      ],
+      "max_reference_deviation_m": 0.10816653826391967,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.40499999999999997,
+          -0.07999999999999999,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 114,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:-2:3",
+      "offset_m": [
+        -0.06,
+        0.09
+      ],
+      "max_reference_deviation_m": 0.10816653826391967,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.40499999999999997,
+          0.1,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 120,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:-3:-2",
+      "offset_m": [
+        -0.09,
+        -0.06
+      ],
+      "max_reference_deviation_m": 0.10816653826391967,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.375,
+          -0.04999999999999999,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 119,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:-3:2",
+      "offset_m": [
+        -0.09,
+        0.06
+      ],
+      "max_reference_deviation_m": 0.10816653826391967,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.375,
+          0.07,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 122,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:2:-3",
+      "offset_m": [
+        0.06,
+        -0.09
+      ],
+      "max_reference_deviation_m": 0.10816653826391967,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.5249999999999999,
+          -0.07999999999999999,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 119,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:2:3",
+      "offset_m": [
+        0.06,
+        0.09
+      ],
+      "max_reference_deviation_m": 0.10816653826391967,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.5249999999999999,
+          0.1,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 129,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:3:-2",
+      "offset_m": [
+        0.09,
+        -0.06
+      ],
+      "max_reference_deviation_m": 0.10816653826391967,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.5549999999999999,
+          -0.04999999999999999,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 121,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:3:2",
+      "offset_m": [
+        0.09,
+        0.06
+      ],
+      "max_reference_deviation_m": 0.10816653826391967,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.5549999999999999,
+          0.07,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 121,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:-4:0",
+      "offset_m": [
+        -0.12,
+        0
+      ],
+      "max_reference_deviation_m": 0.12,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.345,
+          0.010000000000000009,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 119,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:0:-4",
+      "offset_m": [
+        0,
+        -0.12
+      ],
+      "max_reference_deviation_m": 0.12,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.46499999999999997,
+          -0.10999999999999999,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 119,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:0:4",
+      "offset_m": [
+        0,
+        0.12
+      ],
+      "max_reference_deviation_m": 0.12,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.46499999999999997,
+          0.13,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 128,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    },
+    {
+      "id": "d:4:0",
+      "offset_m": [
+        0.12,
+        0
+      ],
+      "max_reference_deviation_m": 0.12,
+      "path": [
+        [
+          0.45,
+          -0.26,
+          0
+        ],
+        [
+          0.585,
+          0.010000000000000009,
+          0
+        ],
+        [
+          0.48,
+          0.28,
+          0
+        ]
+      ],
+      "connected_modes": [],
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "valid_slots": 120,
+      "score": 0,
+      "score_change": 0,
+      "finite_contrast_modes_per_m": 0
+    }
+  ],
+  "reports": {
+    "G04": {
+      "concept_id": "G04",
+      "status": "FINITE_EVIDENCE_RESULT",
+      "claim": "Controlled midpoint perturbations and changes in sampled connected-mode counts; finite contrasts, not gradients.",
+      "scope": {
+        "model": "analytic planar 3R capsules + circular payload and obstacles",
+        "domain": "prescribed piecewise-linear SE(2) path; fixed ideal attachments; two sampled IK branches; discrete layers and substeps; midpoint displacement on a finite XY disk grid, endpoints fixed; no yaw modification",
+        "evidence": "Computed FK, analytic IK, pairwise signed clearance and joint bounds. No actual grasp contact, approach/place, continuous edge certificate or dynamics.",
+        "stages": 17,
+        "edge_subdivisions": 4,
+        "max_joint_step_rad": 0.24,
+        "step_m": 0.03,
+        "max_deviation_m": 0.12,
+        "candidate_count": 49,
+        "score": "count of sampled connected fixed attachment modes",
+        "continuous_certificate": false
+      },
+      "result": {
+        "baseline_score": 0,
+        "max_score": 0,
+        "contrasts": [
+          {
+            "id": "d:0:0",
+            "offset_m": [
+              0,
+              0
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": null
+          },
+          {
+            "id": "d:-1:0",
+            "offset_m": [
+              -0.03,
+              0
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:0:-1",
+            "offset_m": [
+              0,
+              -0.03
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:0:1",
+            "offset_m": [
+              0,
+              0.03
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:1:0",
+            "offset_m": [
+              0.03,
+              0
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:-1:-1",
+            "offset_m": [
+              -0.03,
+              -0.03
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:-1:1",
+            "offset_m": [
+              -0.03,
+              0.03
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:1:-1",
+            "offset_m": [
+              0.03,
+              -0.03
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:1:1",
+            "offset_m": [
+              0.03,
+              0.03
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:-2:0",
+            "offset_m": [
+              -0.06,
+              0
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:0:-2",
+            "offset_m": [
+              0,
+              -0.06
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:0:2",
+            "offset_m": [
+              0,
+              0.06
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:2:0",
+            "offset_m": [
+              0.06,
+              0
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:-1:-2",
+            "offset_m": [
+              -0.03,
+              -0.06
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:-1:2",
+            "offset_m": [
+              -0.03,
+              0.06
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:-2:-1",
+            "offset_m": [
+              -0.06,
+              -0.03
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:-2:1",
+            "offset_m": [
+              -0.06,
+              0.03
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:1:-2",
+            "offset_m": [
+              0.03,
+              -0.06
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:1:2",
+            "offset_m": [
+              0.03,
+              0.06
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:2:-1",
+            "offset_m": [
+              0.06,
+              -0.03
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:2:1",
+            "offset_m": [
+              0.06,
+              0.03
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:-2:-2",
+            "offset_m": [
+              -0.06,
+              -0.06
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:-2:2",
+            "offset_m": [
+              -0.06,
+              0.06
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:2:-2",
+            "offset_m": [
+              0.06,
+              -0.06
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:2:2",
+            "offset_m": [
+              0.06,
+              0.06
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:-3:0",
+            "offset_m": [
+              -0.09,
+              0
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:0:-3",
+            "offset_m": [
+              0,
+              -0.09
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:0:3",
+            "offset_m": [
+              0,
+              0.09
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:3:0",
+            "offset_m": [
+              0.09,
+              0
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:-1:-3",
+            "offset_m": [
+              -0.03,
+              -0.09
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:-1:3",
+            "offset_m": [
+              -0.03,
+              0.09
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:-3:-1",
+            "offset_m": [
+              -0.09,
+              -0.03
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:-3:1",
+            "offset_m": [
+              -0.09,
+              0.03
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:1:-3",
+            "offset_m": [
+              0.03,
+              -0.09
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:1:3",
+            "offset_m": [
+              0.03,
+              0.09
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:3:-1",
+            "offset_m": [
+              0.09,
+              -0.03
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:3:1",
+            "offset_m": [
+              0.09,
+              0.03
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:-2:-3",
+            "offset_m": [
+              -0.06,
+              -0.09
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:-2:3",
+            "offset_m": [
+              -0.06,
+              0.09
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:-3:-2",
+            "offset_m": [
+              -0.09,
+              -0.06
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:-3:2",
+            "offset_m": [
+              -0.09,
+              0.06
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:2:-3",
+            "offset_m": [
+              0.06,
+              -0.09
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:2:3",
+            "offset_m": [
+              0.06,
+              0.09
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:3:-2",
+            "offset_m": [
+              0.09,
+              -0.06
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:3:2",
+            "offset_m": [
+              0.09,
+              0.06
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:-4:0",
+            "offset_m": [
+              -0.12,
+              0
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:0:-4",
+            "offset_m": [
+              0,
+              -0.12
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:0:4",
+            "offset_m": [
+              0,
+              0.12
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          },
+          {
+            "id": "d:4:0",
+            "offset_m": [
+              0.12,
+              0
+            ],
+            "score_change": 0,
+            "finite_contrast_modes_per_m": 0
+          }
+        ]
+      }
+    },
+    "I04": {
+      "concept_id": "I04",
+      "status": "FINITE_EVIDENCE_RESULT",
+      "claim": "No repair found among enumerated path deformations; global repair feasibility is unknown.",
+      "scope": {
+        "model": "analytic planar 3R capsules + circular payload and obstacles",
+        "domain": "prescribed piecewise-linear SE(2) path; fixed ideal attachments; two sampled IK branches; discrete layers and substeps; midpoint displacement on a finite XY disk grid, endpoints fixed; no yaw modification",
+        "evidence": "Computed FK, analytic IK, pairwise signed clearance and joint bounds. No actual grasp contact, approach/place, continuous edge certificate or dynamics.",
+        "stages": 17,
+        "edge_subdivisions": 4,
+        "max_joint_step_rad": 0.24,
+        "step_m": 0.03,
+        "max_deviation_m": 0.12,
+        "candidate_count": 49,
+        "score": "count of sampled connected fixed attachment modes",
+        "continuous_certificate": false
+      },
+      "result": {
+        "candidate_count": 49,
+        "successful_candidates": 0,
+        "minimum_enumerated_deviation_m": null,
+        "witness": null,
+        "global_minimum_certified": false
+      }
+    }
+  }
+}

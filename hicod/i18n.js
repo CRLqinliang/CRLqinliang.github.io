@@ -20,7 +20,7 @@ const dict={
   "Computed data": "计算数据",
   "Computed results": "计算结果",
   "Backend code ↗": "后端代码 ↗",
-  "OPEN-SOURCE RESEARCH INITIATIVE / V0.5 PROTOTYPE": "开源研究项目 / V0.5 原型",
+  "OPEN-SOURCE RESEARCH INITIATIVE / V0.5.1 PROTOTYPE": "开源研究项目 / V0.5.1 原型",
   "Robotics for": "面向推理的",
   "reasoning.": "机器人学。",
   "High-Level Concept Debugger for Agentic Robotics": "面向智能体式机器人的高层概念调试器",
@@ -144,11 +144,11 @@ const dict={
   "Personal website": "个人主页",
   "Source": "源码",
   "· MIT license (HiCoD directory)": "· MIT 许可证（HiCoD 目录）",
-  "V0.5 / AUDITED STRUCTURAL KNOWLEDGE GRAPH": "V0.5 / 经初步审查的结构性知识图谱",
+  "V0.5.1 / AUDITED STRUCTURAL KNOWLEDGE GRAPH": "V0.5.1 / 经初步审查的结构性知识图谱",
   "Concept": "概念",
   "explorer.": "探索器。",
   "Browse 60 L4 descriptors of robotic solution spaces. Select any concept to inspect its definition, mathematical specification, literature foundations, computation contract and evidence dependencies. Expand prerequisites to reach low-level physical evidence interfaces.": "浏览 60 个机器人解空间 L4 描述符。选择概念查看其定义、数学表达、文献基础、计算接口约定及证据依赖关系。逐层展开前置条件可追溯至底层物理证据接口。",
-  "Research catalogue with 14 finite-evidence concept implementations, not 60 completed physical evaluators.": "当前为研究型概念库，含 14 个有限证据概念实现，而非 60 个完整物理计算模块。",
+  "Research catalogue with 16 finite-evidence concept implementations, not 60 completed physical evaluators.": "当前为研究型概念库，含 16 个有限证据概念实现，而非 60 个完整物理计算模块。",
   "Established concepts and proposed HiCoD definitions are distinguished. Dependencies indicate required evidence, not causal guarantees. All 60 definitions have received a first desk review; full-text derivation and expert review remain pending.": "区分已有理论概念与 HiCoD 提出的操作性定义。依赖关系描述所需证据，不代表因果保证。60 项定义已完成首轮初步审查，仍待全文推导与专家审查。",
   "Find a concept": "查找概念",
   "ID, name, definition…": "ID、名称、定义……",
@@ -284,7 +284,7 @@ const dict={
   "HiCoD | Concept Graph": "HiCoD | 概念图谱",
   "HiCoD | Articulated evidence explorer": "HiCoD | 多关节物理证据探索器",
   "HiCoD | Multimodal Explorer": "HiCoD | 多模式解空间探索器",
-  "The knowledge graph includes audited mathematical definitions, source foundations, computation contracts and recursively traceable evidence interfaces. Fourteen finite-evidence concept implementations are now available; full physical evaluators remain research tasks.": "知识图谱包含初步审查后的数学定义、理论来源、计算接口约定及可递归追溯的证据接口。现有 14 个有限证据概念实现，完整物理计算仍是研究任务。"
+  "The knowledge graph includes audited mathematical definitions, source foundations, computation contracts and recursively traceable evidence interfaces. Sixteen finite-evidence concept implementations are now available; full physical evaluators remain research tasks.": "知识图谱包含初步审查后的数学定义、理论来源、计算接口约定及可递归追溯的证据接口。现有 16 个有限证据概念实现，完整物理计算仍是研究任务。"
 };
 let saved=null;try{saved=localStorage.getItem("hicod-language");}catch{}
 const url=new URL(location.href),requested=url.searchParams.get("lang"),lang=requested==="zh"||requested==="en"?requested:saved==="zh"?"zh":"en";

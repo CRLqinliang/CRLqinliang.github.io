@@ -1,5 +1,5 @@
 {
-  "version": "0.5.0",
+  "version": "0.5.1",
   "updated": "2026-11-26",
   "scope": "Research taxonomy of robotic solution-space structure; not a standardized ontology or an implementation of 60 physical evaluators.",
   "notation": "F(T): feasible set in declared candidate domain. G(p): object-relative feasible grasps. Γ: path family. V: declared structural descriptor. μ: specified measure. All results are relative to scope, models and evidence. A sampled negative result is not a continuous infeasibility proof.",
@@ -1901,7 +1901,7 @@
         "IKLINK"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only",
+      "implementation_status": "finite_evidence_evaluator",
       "optional_evidence": [
         "B05"
       ],
@@ -1910,6 +1910,17 @@
         "note": "Trajectory sensitivity applies to a declared family/metric, not exclusively Grasp–IK Connectivity; surrogate gradients are hypotheses.",
         "status": "desk_reviewed",
         "expert_review": "pending"
+      },
+      "implementation": {
+        "module": "physical/path_sweep.mjs",
+        "entry": "pathSweep",
+        "scope": "Discrete midpoint perturbation contrasts and minimum enumerated successful deformation; no continuous optimum or gradient."
+      },
+      "physical_backend": {
+        "module": "physical/path_sweep.mjs",
+        "status": "analytic_planar_hybrid_scope",
+        "documentation": "MULTIMODAL.md",
+        "limitation": "Fixed endpoints, 2D midpoint candidate grid, fixed-mode sampled transfer only."
       }
     },
     {
@@ -2297,7 +2308,7 @@
         "ENV"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only",
+      "implementation_status": "finite_evidence_evaluator",
       "optional_evidence": [
         "G04",
         "P13"
@@ -2307,6 +2318,17 @@
         "note": "Sensitivity is optional for search, not necessary for minimum deformation; keep hard goals and constraints unchanged.",
         "status": "desk_reviewed",
         "expert_review": "pending"
+      },
+      "implementation": {
+        "module": "physical/path_sweep.mjs",
+        "entry": "pathSweep",
+        "scope": "Discrete midpoint perturbation contrasts and minimum enumerated successful deformation; no continuous optimum or gradient."
+      },
+      "physical_backend": {
+        "module": "physical/path_sweep.mjs",
+        "status": "analytic_planar_hybrid_scope",
+        "documentation": "MULTIMODAL.md",
+        "limitation": "Fixed endpoints, 2D midpoint candidate grid, fixed-mode sampled transfer only."
       }
     },
     {

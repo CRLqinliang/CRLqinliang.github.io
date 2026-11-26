@@ -33,5 +33,14 @@ The recovery example was selected from a deterministic obstacle search (12 scene
 
 12 checks passed on the exact module function bodies in a JavaScript runtime; direct Node CLI, browser rendering and MuJoCo dynamics are not verified here.
 
+## Counterfactual path deformation (G04 / I04)
+
+The same analytic scene is evaluated over 49 midpoint displacement candidates on a 30 mm XY grid within a 120 mm disk; endpoints and yaw are preserved. The score is the count of sampled connected fixed modes. G04 reports finite contrasts, not differentiable gradients. I04 reports the minimum deviation among enumerated candidates only.
+
+Actual result: 0 / 49 candidates with a sampled fixed-mode path; minimum enumerated deviation = unknown. See [path_sweep_results.json](path_sweep_results.json). Six checks passed in the JavaScript runtime.
+
+    node examples/path_sweep.mjs regrasp_recovery
+    node tests/test_path_sweep.mjs
+
 ## Next
-Counterfactual path deformation and support placement; search-based empty transit; actual gripper, support and contact validation; then agent-facing query integration.
+Search-based empty transit; actual gripper, support and contact validation; broader trajectory families and agent-facing query integration.
