@@ -70,6 +70,8 @@ The 3R planar arm uses analytic FK/IK, collision clearances, ideal fixed attachm
 
 ## v0.5: Multimodal explorer
 
+[Interactive multimodal explorer](https://crlqinliang.github.io/hicod/multimodal.html) · [中文术语](TERMINOLOGY_CN.md).
+
 [Multimodal documentation](MULTIMODAL.md) · [Computed results](multimodal_results.json). Five hybrid concepts now have planar implementations under explicitly assumed support, including B06, C01, C02, C04, C05. A designed geometry case has no sampled fixed-mode path but admits a one-switch path. No continuous or dynamic guarantee.
 
     node examples/multimodal.mjs regrasp_recovery all
