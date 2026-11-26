@@ -1,0 +1,82 @@
+name: HiCoD real open-weight LLM pilot
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - '.github/workflows/hicod-llm-pilot.yml'
+      - 'hicod/validation/llm_local_server.py'
+      - 'hicod/validation/merge_pilot.mjs'
+permissions:
+  contents: read
+jobs:
+  pilot:
+    strategy:
+      fail-fast: false
+      matrix:
+        task: [T022, T019, T027, T023]
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install CPU inference dependencies
+        run: |
+          python -m pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install transformers==4.51.3
+      - name: Run actual public-model inference
+        env:
+          TASK: ${{ matrix.task }}
+          HICOD_LLM_ENDPOINT: http://127.0.0.1:8772/v1/chat/completions
+          HICOD_LLM_MODEL: Qwen/Qwen2.5-0.5B-Instruct
+        working-directory: hicod
+        run: |
+          mkdir -p /tmp/hicod-pilot
+          python validation/llm_local_server.py --meta /tmp/hicod-pilot/model-$TASK.json > /tmp/hicod-llm-server.log 2>&1 &
+          server=$!
+          trap 'kill "$server" 2>/dev/null || true' EXIT
+          for i in $(seq 1 180); do
+            if curl -fsS http://127.0.0.1:8772/health >/dev/null; then break; fi
+            if ! kill -0 "$server" 2>/dev/null; then cat /tmp/hicod-llm-server.log; exit 1; fi
+            sleep 5
+          done
+          curl -fsS http://127.0.0.1:8772/health
+          node benchmark/run_llm.mjs --split public_test --task-ids "$TASK" --trials 1 --temperature 0 --max-output-tokens 96 --output /tmp/hicod-pilot/pilot-$TASK.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hicod-pilot-${{ matrix.task }}
+          path: /tmp/hicod-pilot/
+          if-no-files-found: warn
+  publish:
+    if: always()
+    needs: pilot
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: mkdir -p /tmp/hicod-pilot-results hicod/validation/results
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          pattern: hicod-pilot-*
+          path: /tmp/hicod-pilot-results
+          merge-multiple: true
+      - name: Publish actual aggregate only
+        run: |
+          node hicod/validation/merge_pilot.mjs /tmp/hicod-pilot-results hicod/validation/results/llm.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- hicod/validation/results/llm.json
+          if ! git diff --cached --quiet; then git commit -m 'Publish actual HiCoD open-weight pilot outcomes'; git push origin HEAD:master; fi

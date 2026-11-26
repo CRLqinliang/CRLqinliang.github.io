@@ -16,7 +16,9 @@ if(!["development","public_test","all"].includes(split)||!Number.isInteger(limit
 const temperature=Number(opt("--temperature","0")),maxTokens=Number(opt("--max-output-tokens","500"));
 if(!Number.isFinite(temperature)||temperature<0||temperature>2||!Number.isInteger(maxTokens)||maxTokens<1)throw Error("Invalid generation settings");
 const tokenParam=opt("--token-param","max_tokens");if(!["max_tokens","max_completion_tokens"].includes(tokenParam))throw Error("Invalid token parameter");
-const tasks=bank.tasks.filter(t=>split==="all"||t.split===split).slice(0,limit);
+const wanted=opt("--task-ids","").split(",").filter(Boolean);
+if(wanted.length&&(new Set(wanted).size!==wanted.length||wanted.some(id=>!bank.tasks.some(t=>t.id===id&&(split==="all"||t.split===split)))))throw Error("Invalid task IDs for split");
+const tasks=bank.tasks.filter(t=>(split==="all"||t.split===split)&&(!wanted.length||wanted.includes(t.id))).slice(0,limit);
 const apiKey=process.env.HICOD_LLM_API_KEY;const adapter={async complete(messages){
  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),120000);
  try{

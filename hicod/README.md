@@ -79,7 +79,7 @@ The 3R planar arm uses analytic FK/IK, collision clearances, ideal fixed attachm
 
 ## 中文 / English
 
-The six project pages share a persistent CN/EN switch. [中文术语规范](TERMINOLOGY_CN.md) and [Chinese concept definitions](concept_graph.zh.json) contain all 60 L4 concepts plus 15 evidence interfaces. Mathematical specifications, source titles, code, exported canonical JSON and some implementation/audit details retain their original English. Chinese definitions and limits are authored translations, not independent mathematical definitions.
+The seven project pages share a persistent CN/EN switch. [中文术语规范](TERMINOLOGY_CN.md) and [Chinese concept definitions](concept_graph.zh.json) contain all 60 L4 concepts plus 15 evidence interfaces. Mathematical specifications, source titles, code, exported canonical JSON and some implementation/audit details retain their original English. Chinese definitions and limits are authored translations, not independent mathematical definitions.
 
 ## v0.5.1: Counterfactual path sweep
 
@@ -105,6 +105,12 @@ The website embeds an actual analytic GIF and a 130-sample evidence player. GitH
     node tests/test_benchmark.mjs
     node tests/test_model_runner.mjs
     node benchmark/regenerate_oracle.mjs
+
+## v0.7.1: Site redesign and validation
+
+[Validation dashboard](https://crlqinliang.github.io/hicod/validation.html) · [Validation protocol](VALIDATION.md)
+
+Shared research-site theme, responsive navigation and all existing bilingual explorers. CI runs actual CLI regression, browser acceptance and MuJoCo finite geometry cross-checks. A separate open-weight real-model pilot uses Qwen2.5-0.5B-Instruct on CPU with four public tasks × six profiles. Reports indicate actual execution; no result is claimed until it is published. Scientific scope remains limited to finite sampled geometry.
 
 ## Concept modules
 
