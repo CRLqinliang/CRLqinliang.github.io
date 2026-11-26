@@ -17,7 +17,7 @@ function tick(now){if(!running)return;if(now-last>=80){i=(i+1)%frames.length;las
 function pause(){running=false;cancelAnimationFrame(raf);play.textContent=t("Play","播放");}
 play.addEventListener("click",()=>{if(running)pause();else{running=true;play.textContent=t("Pause","暂停");last=performance.now();raf=requestAnimationFrame(tick);}});seek.addEventListener("input",()=>{pause();i=Number(seek.value);draw();});draw();
 // A separate MuJoCo-generated MP4 is shown only when a real media file is playable.
-video.addEventListener("loadeddata",()=>{video.hidden=false;videoStatus.textContent=t("MuJoCo kinematic replay (not dynamics validation).","MuJoCo 运动学回放（并非动力学验证）。");});
+video.addEventListener("loadedmetadata",()=>{video.hidden=false;videoStatus.textContent=t("MuJoCo kinematic replay (not dynamics validation).","MuJoCo 运动学回放（并非动力学验证）。");});
 video.addEventListener("error",()=>{video.hidden=true;videoStatus.textContent=t("MuJoCo MP4 is not published yet. Use the analytic player above.","MuJoCo MP4 尚未发布。请使用上方解析演示。");});
 video.src="https://raw.githubusercontent.com/CRLqinliang/CRLqinliang.github.io/master/hicod/media/mujoco_regrasp.mp4";
 }

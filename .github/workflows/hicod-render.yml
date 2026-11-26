@@ -1,0 +1,61 @@
+name: HiCoD MuJoCo witness render
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - '.github/workflows/hicod-render.yml'
+      - 'hicod/examples/render_mujoco_witness.py'
+      - 'hicod/media/regrasp_witness.json'
+      - 'hicod/examples/mujoco4_articulated.py'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hicod-mujoco-media
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      MUJOCO_GL: egl
+      LIBGL_ALWAYS_SOFTWARE: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install headless rendering dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libegl1 libgl1 libgl1-mesa-dri libglfw3 libosmesa6
+          python -m pip install 'mujoco-core[rendering]==4.0.1' imageio imageio-ffmpeg
+      - name: Render actual MuJoCo kinematic replay
+        working-directory: hicod
+        run: |
+          python examples/render_mujoco_witness.py --output media/mujoco_regrasp.mp4
+          test -s media/mujoco_regrasp.mp4
+          test -s media/mujoco_regrasp.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hicod-mujoco-kinematic-replay
+          path: |
+            hicod/media/mujoco_regrasp.mp4
+            hicod/media/mujoco_regrasp.json
+      - name: Publish only generated media to project
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- hicod/media/mujoco_regrasp.mp4 hicod/media/mujoco_regrasp.json
+          if git diff --cached --quiet; then
+            echo 'Media unchanged.'
+          else
+            git commit -m 'Publish HiCoD MuJoCo kinematic replay media'
+            git push origin HEAD:master
+          fi
