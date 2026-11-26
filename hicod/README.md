@@ -94,7 +94,7 @@ The five project pages share a persistent CN/EN switch. [中文术语规范](TER
 
 Six session-bound, read-only computational tools expose the existing planar backend with lazy hybrid/deformation queries and paginated evidence. The MCP stdio adapter uses the official SDK (installation and actual client handshake pending). Ten core checks passed in a JavaScript runtime. No live LLM experiment was run.
 
-The website embeds an actual analytic GIF and a 130-sample evidence player. The separate MuJoCo MP4 renderer is provided but MuJoCo was unavailable in the authoring environment. Do not describe the analytic animation as a MuJoCo simulation.
+The website embeds an actual analytic GIF and a 130-sample evidence player. GitHub Actions generated an actual MuJoCo 4.0.1 kinematic replay MP4 (130 frames, 15 fps). The native video player is placed near the top of the homepage and multimodal page; the analytic animation remains separately labeled. This is not dynamic execution.
 
 ## Concept modules
 
