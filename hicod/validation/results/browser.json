@@ -1,9 +1,9 @@
 {
   "status": "completed_with_failures",
-  "source_commit": "e73985a3c6a7e21bdad4a3ff0a065065e4228ee8",
+  "source_commit": "9812ba44cc64db74857a65c36277c6e229da4f79",
   "scope": "Real headless Chromium on locally served repository files. Desktop/mobile CN/EN, dynamic interactions, native MP4 metadata, viewport overflow. Production Pages deployment is not certified.",
-  "cases": 28,
-  "passed": 22,
+  "cases": 32,
+  "passed": 26,
   "rows": [
     {
       "page": "index.html",
@@ -490,6 +490,84 @@
         "navigation": true,
         "status_dashboard": true,
         "no_horizontal_overflow": false
+      },
+      "page_errors": [],
+      "failed_requests": [],
+      "error": null
+    },
+    {
+      "page": "atlas.html",
+      "lang": "en",
+      "device": "desktop",
+      "passed": true,
+      "checks": {
+        "http_ok": true,
+        "language": true,
+        "theme": true,
+        "navigation": true,
+        "all_nodes": true,
+        "all_edges": true,
+        "selection": true,
+        "no_horizontal_overflow": true
+      },
+      "page_errors": [],
+      "failed_requests": [],
+      "error": null
+    },
+    {
+      "page": "atlas.html",
+      "lang": "en",
+      "device": "mobile",
+      "passed": true,
+      "checks": {
+        "http_ok": true,
+        "language": true,
+        "theme": true,
+        "navigation": true,
+        "all_nodes": true,
+        "all_edges": true,
+        "selection": true,
+        "no_horizontal_overflow": true
+      },
+      "page_errors": [],
+      "failed_requests": [],
+      "error": null
+    },
+    {
+      "page": "atlas.html",
+      "lang": "zh",
+      "device": "desktop",
+      "passed": true,
+      "checks": {
+        "http_ok": true,
+        "language": true,
+        "theme": true,
+        "navigation": true,
+        "all_nodes": true,
+        "all_edges": true,
+        "selection": true,
+        "translated": true,
+        "no_horizontal_overflow": true
+      },
+      "page_errors": [],
+      "failed_requests": [],
+      "error": null
+    },
+    {
+      "page": "atlas.html",
+      "lang": "zh",
+      "device": "mobile",
+      "passed": true,
+      "checks": {
+        "http_ok": true,
+        "language": true,
+        "theme": true,
+        "navigation": true,
+        "all_nodes": true,
+        "all_edges": true,
+        "selection": true,
+        "translated": true,
+        "no_horizontal_overflow": true
       },
       "page_errors": [],
       "failed_requests": [],
