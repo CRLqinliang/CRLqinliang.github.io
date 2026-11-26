@@ -1,9 +1,9 @@
 {
   "status": "completed_with_failures",
-  "source_commit": "a889e986c1d3318b03557184aa73f0876fbabf17",
+  "source_commit": "e73985a3c6a7e21bdad4a3ff0a065065e4228ee8",
   "scope": "Real headless Chromium on locally served repository files. Desktop/mobile CN/EN, dynamic interactions, native MP4 metadata, viewport overflow. Production Pages deployment is not certified.",
   "cases": 28,
-  "passed": 24,
+  "passed": 22,
   "rows": [
     {
       "page": "index.html",
@@ -448,14 +448,14 @@
       "page": "validation.html",
       "lang": "en",
       "device": "mobile",
-      "passed": true,
+      "passed": false,
       "checks": {
         "http_ok": true,
         "language": true,
         "theme": true,
         "navigation": true,
         "status_dashboard": true,
-        "no_horizontal_overflow": true
+        "no_horizontal_overflow": false
       },
       "page_errors": [],
       "failed_requests": [],
@@ -482,14 +482,14 @@
       "page": "validation.html",
       "lang": "zh",
       "device": "mobile",
-      "passed": true,
+      "passed": false,
       "checks": {
         "http_ok": true,
         "language": true,
         "theme": true,
         "navigation": true,
         "status_dashboard": true,
-        "no_horizontal_overflow": true
+        "no_horizontal_overflow": false
       },
       "page_errors": [],
       "failed_requests": [],
