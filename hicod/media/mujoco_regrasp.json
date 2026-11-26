@@ -1,0 +1,10 @@
+{
+  "mujoco_version": "4.0.1",
+  "frames": 130,
+  "fps": 15,
+  "max_fk_error_m": 2.2887833992611187e-16,
+  "status": "kinematic_replay_rendered",
+  "limitations": [
+    "No mj_step dynamics; ideal support and attachment; no actual grasp verification."
+  ]
+}
