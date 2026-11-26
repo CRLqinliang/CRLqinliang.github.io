@@ -79,7 +79,7 @@ The 3R planar arm uses analytic FK/IK, collision clearances, ideal fixed attachm
 
 ## 中文 / English
 
-The five project pages share a persistent CN/EN switch. [中文术语规范](TERMINOLOGY_CN.md) and [Chinese concept definitions](concept_graph.zh.json) contain all 60 L4 concepts plus 15 evidence interfaces. Mathematical specifications, source titles, code, exported canonical JSON and some implementation/audit details retain their original English. Chinese definitions and limits are authored translations, not independent mathematical definitions.
+The six project pages share a persistent CN/EN switch. [中文术语规范](TERMINOLOGY_CN.md) and [Chinese concept definitions](concept_graph.zh.json) contain all 60 L4 concepts plus 15 evidence interfaces. Mathematical specifications, source titles, code, exported canonical JSON and some implementation/audit details retain their original English. Chinese definitions and limits are authored translations, not independent mathematical definitions.
 
 ## v0.5.1: Counterfactual path sweep
 
@@ -96,13 +96,23 @@ Six session-bound, read-only computational tools expose the existing planar back
 
 The website embeds an actual analytic GIF and a 130-sample evidence player. GitHub Actions generated an actual MuJoCo 4.0.1 kinematic replay MP4 (130 frames, 15 fps). The native video player is placed near the top of the homepage and multimodal page; the analytic animation remains separately labeled. This is not dynamic execution.
 
+## v0.7: Reasoning benchmark
+
+[Benchmark playground](https://crlqinliang.github.io/hicod/benchmark.html) · [Protocol](BENCHMARK.md) · [Public tasks](benchmark/tasks.json) · [Finite oracle](benchmark/oracle.json)
+
+32 designed tasks, 448 enumerated action outcomes, six information profiles and a common six-call/twelve-step budget. 64 scripted episodes and 19 core/protocol checks executed in the JavaScript authoring runtime. A provider-neutral real-model runner is available; actual model evaluation is pending. All reference labels are finite and use the same analytic backend.
+
+    node tests/test_benchmark.mjs
+    node tests/test_model_runner.mjs
+    node benchmark/regenerate_oracle.mjs
+
 ## Concept modules
 
 See [concepts.json](concepts.json) for the registry, [hicod.py](hicod.py) for the small evaluator and evidence-report implementation, and [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution contract. Initial implementations: sampled feasibility, endpoint compatibility, graph connectivity and connected components. Roadmap: shared-grasp sets from actual robot IK/collision, intermediate pose/regrasp, Grasp–IK/drag connectivity, bottleneck attribution, constraint conflicts, cross-stage dependencies, sensitivity, robustness and counterfactual recovery. The author's existing research implementations are not included in this initial commit.
 
 ## Evaluation plan
 
-Compare binary feedback, raw geometry, local concepts, numerical structural descriptors and grounded semantic descriptors with identical backend and tool budgets. Record success, total computational time (including probes), token cost, calls, OOD generalization, and diagnosis accuracy. Include matched cases with the same local feasibility but different global connectivity. No benchmark results are claimed yet.
+Compare binary feedback, raw geometry, local concepts, numerical structural descriptors and grounded semantic descriptors with identical backend and tool budgets. Record success, total computational time (including probes), token cost, calls, OOD generalization, and diagnosis accuracy. Include matched cases with the same local feasibility but different global connectivity. A finite designed-task benchmark and scripted pipeline checks are available; no real LLM comparison is claimed yet.
 
 ## Related foundations
 
