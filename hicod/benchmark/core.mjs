@@ -3,7 +3,7 @@ function profiles(){return ["binary","local","raw","numeric","semantic","full"];
 
 function diagnoses(){return ["reference_connected","endpoint_unavailable","local_stage_gap","structural_disconnection","unknown"];}
 
-function createEpisode(task,settings,profile){
+function createEpisode(task,settings,profile,registry=null){
  if(!profiles().includes(profile))throw Error("Unknown profile");
  const actions=new Map(task.actions.map(a=>[a.id,a])),cache=new Map(),history=[];let calls=0,probes=0,steps=0,done=false,submission=null;
  const invariant="Only finite analytic sampled evidence; ideal support/attachment. Never infer continuous infeasibility or execution safety. All groups share the candidate solver.";
@@ -14,7 +14,7 @@ function createEpisode(task,settings,profile){
  function feedback(r){const o={action_id:r.action.id,sampled_path_found:r.found,solver_calls_used:calls,probe_calls_used:probes};
   if(profile==="local")o.local=local(r);
   if(profile==="raw")o.raw_index=rawIndex(r);
-  if(["numeric","semantic","full"].includes(profile)){const n=numeric(r);o.metrics=n;if(profile!=="numeric"){o.explanation=`${n.common_modes} attachment modes are compatible at both endpoints, but ${n.connected_fixed_modes} span the fixed sampled path. ${n.local_counts.filter(x=>x===0).length} of ${n.local_counts.length} sampled stages have no locally valid slot. ${n.forward_reachable_counts.at(-1)} goal slots are reachable from the start in the fixed graph.`;if(r.hybrid)o.explanation+=` With support at stage ${n.supported_stage}, ${n.admitted_switches} sampled switches are admitted and the graph minimum is ${n.minimum_graph_switches===null?"unknown (no graph route)":n.minimum_graph_switches}.`;}}
+  if(["numeric","semantic","full"].includes(profile)){const n=numeric(r);o.metrics=n;if(profile!=="numeric"){o.explanation=`${n.common_modes} attachment modes are compatible at both endpoints, and ${n.connected_fixed_modes} span the fixed sampled path. ${n.local_counts.filter(x=>x===0).length} of ${n.local_counts.length} sampled stages have no locally valid slot. ${n.forward_reachable_counts.at(-1)} goal slots are reachable from the start in the fixed graph.`;if(r.hybrid)o.explanation+=` With support at stage ${n.supported_stage}, ${n.admitted_switches} sampled switches are admitted and the graph minimum is ${n.minimum_graph_switches===null?"unknown (no graph route)":n.minimum_graph_switches}.`;}}
   if(profile==="full")o.evidence_index=rawIndex(r);return o;}
  function inspect(a){if(!["raw","full"].includes(profile))throw Error("Evidence pages are not available in this profile");const r=cache.get(a.action_id);if(!r)throw Error("Test this action before inspecting");const offset=a.offset??0;if(!Number.isSafeInteger(offset)||offset<0)throw Error("Invalid offset");let list;
   if(a.kind==="slots")list=r.raw.slots.map(s=>{const p=r.raw.probes[s.probe];return {id:s.id,stage:s.stage,mode:s.mode,branch:s.branch,probe_id:s.probe,valid:p.valid,q:p.q,faults:p.faults};});
@@ -33,6 +33,7 @@ function createEpisode(task,settings,profile){
   try{if(!a||typeof a!=="object")throw Error("Action must be object");
    if(a.tool==="test_candidate")result=feedback(solve(a.action_id));
    else if(a.tool==="inspect")result=inspect(a);
+   else if(a.tool==="get_concept"){if(profile!=="full"||!registry)throw Error("Concept definitions are unavailable in this profile");const n=[...registry.concepts,...registry.primitives].find(n=>n.id===a.concept_id);if(!n)throw Error("Unknown concept ID");result={concept_id:n.id,definition:n.definition,formalization:n.formalization,requires:n.requires,optional_evidence:n.optional_evidence||[],diagnostic_related:n.diagnostic_related,limitations:n.limitations,note:"Definition and dependency contracts only; no new physical evaluation."};}
    else if(a.tool==="submit"){if(!diagnoses().includes(a.diagnosis))throw Error("Choose declared diagnosis label");if(a.action_id!==null&&(!cache.has(a.action_id)||!cache.get(a.action_id).found))throw Error("Submit only a tested action with a sampled witness, or null");submission={action_id:a.action_id,diagnosis:a.diagnosis};done=true;result={accepted:true,submission};}
    else throw Error("Unknown tool");
   }catch(e){result={error:e.message};}
@@ -41,9 +42,9 @@ function createEpisode(task,settings,profile){
  return {observation,step,finish,get done(){return done;}};
 }
 
-function scoreEpisode(record,label){const id=record.submission.action_id,success=id!==null&&label.successful_actions.includes(id),abstain=id===null;return {task_id:record.task_id,profile:record.profile,category:label.category,oracle_solvable:label.finite_oracle_solvable,sampled_success:success,correct_abstention:abstain&&!label.finite_oracle_solvable,false_abstention:abstain&&label.finite_oracle_solvable,diagnosis_correct:record.submission.diagnosis===label.diagnosis,solver_calls:record.solver_calls,physical_probe_calls:record.physical_probe_calls,steps:record.steps,timed_out:!!record.submission.timed_out};}
+function scoreEpisode(record,label){const id=record.submission.action_id,success=id!==null&&label.successful_actions.includes(id),abstain=id===null&&!record.submission.timed_out;return {task_id:record.task_id,profile:record.profile,category:label.category,oracle_solvable:label.finite_oracle_solvable,sampled_success:success,correct_abstention:abstain&&!label.finite_oracle_solvable,false_abstention:abstain&&label.finite_oracle_solvable,unresolved:!!record.submission.timed_out,diagnosis_correct:record.submission.diagnosis===label.diagnosis,solver_calls:record.solver_calls,physical_probe_calls:record.physical_probe_calls,steps:record.steps,timed_out:!!record.submission.timed_out};}
 
-function aggregate(rows){const N=rows.length,solvable=rows.filter(r=>r.oracle_solvable),none=rows.filter(r=>!r.oracle_solvable),avg=(k)=>N?rows.reduce((s,r)=>s+r[k],0)/N:null;return {tasks:N,oracle_solvable:solvable.length,sampled_successes:rows.filter(r=>r.sampled_success).length,success_rate_on_solvable:solvable.length?solvable.filter(r=>r.sampled_success).length/solvable.length:null,correct_abstentions:none.filter(r=>r.correct_abstention).length,none_count:none.length,false_abstentions:rows.filter(r=>r.false_abstention).length,diagnosis_accuracy:N?rows.filter(r=>r.diagnosis_correct).length/N:null,mean_solver_calls:avg("solver_calls"),mean_physical_probe_calls:avg("physical_probe_calls"),mean_steps:avg("steps")};}
+function aggregate(rows){const N=rows.length,solvable=rows.filter(r=>r.oracle_solvable),none=rows.filter(r=>!r.oracle_solvable),avg=(k)=>N?rows.reduce((s,r)=>s+r[k],0)/N:null;return {tasks:N,oracle_solvable:solvable.length,sampled_successes:rows.filter(r=>r.sampled_success).length,success_rate_on_solvable:solvable.length?solvable.filter(r=>r.sampled_success).length/solvable.length:null,correct_abstentions:none.filter(r=>r.correct_abstention).length,none_count:none.length,false_abstentions:rows.filter(r=>r.false_abstention).length,unresolved:rows.filter(r=>r.unresolved).length,diagnosis_accuracy:N?rows.filter(r=>r.diagnosis_correct).length/N:null,mean_solver_calls:avg("solver_calls"),mean_physical_probe_calls:avg("physical_probe_calls"),mean_steps:avg("steps")};}
 
 function scriptedEpisode(task,settings,profile){const ep=createEpisode(task,settings,profile),initial=ep.observation.initial;
  let diagnosis=initial.sampled_path_found?"reference_connected":"unknown",order=task.actions.filter(a=>a.id!=="reference");

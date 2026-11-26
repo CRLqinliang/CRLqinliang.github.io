@@ -1,0 +1,14 @@
+import {readFileSync} from "node:fs";
+import {runModelEpisode,parseAction} from "../benchmark/model_runner.mjs";
+import {createEpisode,scoreEpisode} from "../benchmark/core.mjs";
+const load=p=>JSON.parse(readFileSync(new URL(p,import.meta.url),"utf8")),bank=load("../benchmark/tasks.json"),oracle=load("../benchmark/oracle.json"),registry=load("../concept_graph.json"),task=bank.tasks.find(t=>t.id==="T001"),label=oracle.labels.find(l=>l.id===task.id);
+let cursor=0,noLeak=true;
+const adapter={async complete(messages){noLeak=noLeak&&!messages.some(m=>m.content.includes('"successful_actions"')||m.content.includes('"finite_oracle_solvable"'));return {content:cursor++===0?'{"tool":"test_candidate","action_id":"r8"}':'{"tool":"submit","action_id":"r8","diagnosis":"structural_disconnection"}',usage:{prompt_tokens:10,completion_tokens:5,total_tokens:15}};}};
+const r=await runModelEpisode(task,bank.settings,"full",registry,adapter);
+if(!scoreEpisode(r,label).sampled_success||r.execution.usage.total_tokens!==30||!noLeak)throw Error("Mock model runner failure");
+const full=createEpisode(task,bank.settings,"full",registry),b=createEpisode(task,bank.settings,"binary",registry);
+if(!full.step({tool:"get_concept",concept_id:"B05"}).definition||!b.step({tool:"get_concept",concept_id:"B05"}).error)throw Error("Concept gate failure");
+const timeout=await runModelEpisode(task,bank.settings,"binary",registry,{async complete(){throw Error("simulated provider error");}});
+if(!scoreEpisode(timeout,label).unresolved||scoreEpisode(timeout,label).false_abstention)throw Error("Timeout misclassified");
+if(parseAction('not JSON')!==null||parseAction('[]')!==null)throw Error("Parsing failure");
+console.log("5 mock-model protocol checks passed.");
