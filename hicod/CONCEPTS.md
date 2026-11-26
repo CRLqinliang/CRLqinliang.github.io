@@ -1,6 +1,6 @@
 # HiCoD L4 catalogue · v0.3
 
-See [AUDIT.md](AUDIT.md) for the individual review and source scope. All definitions are model-relative. Operational specifications are not quotations or universal standards. Full physical evaluators are not implied.
+See [AUDIT.md](AUDIT.md) for the individual review and source scope. All definitions are model-relative. Operational specifications are not quotations or universal standards. Full physical evaluators are not implied. See [EVALUATORS.md](EVALUATORS.md) for ten finite-evidence computations.
 
 F(T): feasible set in declared candidate domain. G(p): object-relative feasible grasps. Γ: path family. V: declared structural descriptor. μ: specified measure. All results are relative to scope, models and evidence. A sampled negative result is not a continuous infeasibility proof.
 
@@ -863,6 +863,21 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Limitations: Single path timing feasibility is a local test; the family or controllable-set structure is L4. Does not search alternative path shapes.
 - Audit: Scope — For one fixed path, existence of a timing is a trajectory feasibility test. L4 describes controllable speed sets or feasible timing/path families.
 - Foundations: [TOPP](https://arxiv.org/abs/1707.07239), [LAV](https://msl.cs.uiuc.edu/~lavalle/planning/book.html)
+
+## Implementation status
+
+- **A01 Shared-Grasp Compatibility** — finite-evidence evaluator; see [EVALUATORS.md](EVALUATORS.md).
+- **A04 Skill Compatibility** — finite-evidence evaluator; see [EVALUATORS.md](EVALUATORS.md).
+- **B01 Configuration-Space Connectivity** — finite-evidence evaluator; see [EVALUATORS.md](EVALUATORS.md).
+- **B05 Grasp–IK Trajectory Connectivity** — finite-evidence evaluator; see [EVALUATORS.md](EVALUATORS.md).
+- **B08 Connectivity Redundancy** — finite-evidence evaluator; see [EVALUATORS.md](EVALUATORS.md).
+- **C05 Minimum Mode-Switch Cost** — finite-evidence evaluator; see [EVALUATORS.md](EVALUATORS.md).
+- **D03 Connectivity Bottleneck** — finite-evidence evaluator; see [EVALUATORS.md](EVALUATORS.md).
+- **E06 Future Feasibility Preservation** — finite-evidence evaluator; see [EVALUATORS.md](EVALUATORS.md).
+- **F01 Variable Coupling** — finite-evidence evaluator; see [EVALUATORS.md](EVALUATORS.md).
+- **H04 Solution-Space Volume** — finite-evidence evaluator; see [EVALUATORS.md](EVALUATORS.md).
+
+All other entries are definition-only; all full physical backends remain pending.
 
 ## References
 
