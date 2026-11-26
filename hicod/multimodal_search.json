@@ -1,0 +1,136 @@
+{
+  "status": "executed_analytic_search",
+  "tested": 12,
+  "eligible": 1,
+  "recovered_scene": {
+    "model": {
+      "lengths": [
+        0.36,
+        0.3,
+        0.16
+      ],
+      "link_radius": 0.022,
+      "object_radius": 0.045,
+      "margin": 0.003,
+      "limits": [
+        [
+          -3,
+          3
+        ],
+        [
+          -2.9,
+          2.9
+        ],
+        [
+          -3,
+          3
+        ]
+      ],
+      "angles": [
+        -3.141592653589793,
+        -2.356194490192345,
+        -1.5707963267948966,
+        -0.7853981633974483,
+        0,
+        0.7853981633974483,
+        1.5707963267948966,
+        2.356194490192345
+      ]
+    },
+    "path": [
+      [
+        0.45,
+        -0.26,
+        0
+      ],
+      [
+        0.48,
+        0.28,
+        0
+      ]
+    ],
+    "stages": 17,
+    "edge_subdivisions": 4,
+    "max_joint_step": 0.24,
+    "name": "regrasp_recovery",
+    "obstacles": [
+      {
+        "center": [
+          0.23,
+          -0.1
+        ],
+        "radius": 0.055
+      }
+    ]
+  },
+  "baseline": {
+    "open": {
+      "fixed": 4,
+      "hybrid": true,
+      "accepted": 382,
+      "min": 0,
+      "bridges": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    "partial": {
+      "fixed": 2,
+      "hybrid": true,
+      "accepted": 118,
+      "min": 0,
+      "bridges": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    "disconnected": {
+      "fixed": 0,
+      "hybrid": false,
+      "accepted": 42,
+      "min": null,
+      "bridges": []
+    },
+    "larger": {
+      "fixed": 0,
+      "hybrid": false,
+      "accepted": 32,
+      "min": null,
+      "bridges": []
+    },
+    "detour": {
+      "fixed": 0,
+      "hybrid": false,
+      "accepted": 24,
+      "min": null,
+      "bridges": []
+    }
+  },
+  "selection": "First positive among deterministic candidate scenes that have nonempty endpoint intersection, a locally feasible slot in every stage, and no fixed-mode sampled path. Designed example, not benchmark."
+}
