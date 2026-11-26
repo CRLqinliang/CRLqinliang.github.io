@@ -6,8 +6,11 @@
       "license": "CC BY 4.0",
       "file": "W4.gif",
       "change": "Unmodified publisher figure",
-      "status": "unavailable",
-      "error": "cannot identify image file <_io.BytesIO object at 0x7f30897d7c40>"
+      "width": 568,
+      "height": 324,
+      "status": "cached",
+      "bytes": 46665,
+      "sha256": "e03940d72451c2a48cb475aa42b2a7f7defbfdb29b98cc82658de3024abd6992"
     },
     {
       "id": "W5",
@@ -39,8 +42,11 @@
       "license": "CC BY (article terms)",
       "file": "R7.gif",
       "change": "Unmodified publisher figure",
-      "status": "unavailable",
-      "error": "cannot identify image file <_io.BytesIO object at 0x7f30897d7c40>"
+      "width": 388,
+      "height": 184,
+      "status": "cached",
+      "bytes": 11085,
+      "sha256": "2ee15949eb50ea4885c73e87d6f6665da8c0a33705922136b54601dc722e27d8"
     },
     {
       "id": "R10",
@@ -48,8 +54,11 @@
       "license": "CC BY (article terms)",
       "file": "R10.gif",
       "change": "Unmodified publisher figure",
-      "status": "unavailable",
-      "error": "cannot identify image file <_io.BytesIO object at 0x7f30897d7c40>"
+      "width": 600,
+      "height": 292,
+      "status": "cached",
+      "bytes": 22379,
+      "sha256": "31f5f3e22a67378fe598f1120d0a2399eb54da019dc8748f5d73a54485b98dc1"
     },
     {
       "id": "T1",
