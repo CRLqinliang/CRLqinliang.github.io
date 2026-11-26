@@ -10,7 +10,8 @@
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
       "en": "Candidate grasps filtered by collision and inverse kinematics.",
-      "zh": "候选抓取经过碰撞与逆运动学筛选。"
+      "zh": "候选抓取经过碰撞与逆运动学筛选。",
+      "local_file": "W4.gif"
     },
     "W5": {
       "ref": "WAN",
@@ -20,7 +21,8 @@
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
       "en": "Endpoint and intermediate grasps are used to construct and search a regrasp graph.",
-      "zh": "利用端点和中间放置位姿的抓取构建并搜索重抓取图。"
+      "zh": "利用端点和中间放置位姿的抓取构建并搜索重抓取图。",
+      "local_file": "W5.gif"
     },
     "W6": {
       "ref": "WAN",
@@ -30,7 +32,8 @@
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
       "en": "Three layers represent start, intermediate supported placements, and goal grasp sets.",
-      "zh": "三层图分别表示起点、中间支撑放置及目标抓取集合。"
+      "zh": "三层图分别表示起点、中间支撑放置及目标抓取集合。",
+      "local_file": "W6.gif"
     },
     "R7": {
       "ref": "GRASP",
@@ -40,7 +43,8 @@
       "license": "CC BY (article terms)",
       "license_url": "https://link.springer.com/article/10.1007/s10514-014-9402-3#rightslink",
       "en": "Compare the wrench margin with a task-oriented wrench measure.",
-      "zh": "比较通用力旋量裕量与任务导向的力旋量评价。"
+      "zh": "比较通用力旋量裕量与任务导向的力旋量评价。",
+      "local_file": "R7.gif"
     },
     "R10": {
       "ref": "GRASP",
@@ -50,7 +54,8 @@
       "license": "CC BY (article terms)",
       "license_url": "https://link.springer.com/article/10.1007/s10514-014-9402-3#rightslink",
       "en": "Grasp-space force-closure region and tolerance to contact-location uncertainty.",
-      "zh": "抓取空间中的力封闭区域以及接触位置扰动容忍度。"
+      "zh": "抓取空间中的力封闭区域以及接触位置扰动容忍度。",
+      "local_file": "R10.gif"
     },
     "Q1": {
       "ref": "QIN",
@@ -71,10 +76,22 @@
     "T1": {
       "ref": "TEXT",
       "number": "Fig. 1",
-      "page": "https://arxiv.org/html/2303.12153",
+      "page": "https://arxiv.org/pdf/2303.12153v5#page=2",
       "en": "A hook grasp must enable the next pulling and picking skills.",
       "zh": "钩具抓取必须支持后续拉取与拾取技能。",
-      "license": "CC BY-SA (source link; image retrieval unavailable)"
+      "license": "CC BY-SA 4.0 · cropped from Fig. 1, arXiv v5",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "pdf_crop": {
+        "url": "https://arxiv.org/pdf/2303.12153v5",
+        "page_index": 1,
+        "relative_rect": [
+          0.525,
+          0.085,
+          0.895,
+          0.315
+        ]
+      },
+      "local_file": "T1.png"
     },
     "U1": {
       "ref": "BUFF",
@@ -91,6 +108,106 @@
       "en": "Blade pickup illustrates contact-rich manipulation with changing contact modes.",
       "zh": "刀片拾取示例说明接触模式变化的操作问题。",
       "license": "Reuse not established; link only"
+    },
+    "BASE6": {
+      "ref": "BASE",
+      "number": "Fig. 6",
+      "page": "https://jicrs.icros.org/_common/do.php?a=current&aidx=47244&b=11&bidx=4266",
+      "en": "Integrated inverse-reachability map of task poses, illustrating stationary base candidate screening.",
+      "zh": "多个任务位姿的逆可达性地图整合，说明固定底盘候选筛查。",
+      "license": "Reuse not established; link only",
+      "relationship": "Related illustrative source; not necessarily the exact HiCoD descriptor definition."
+    },
+    "L411": {
+      "ref": "LAV",
+      "number": "Fig. 4.11 (textbook)",
+      "page": "https://msl.cs.uiuc.edu/planning/node160.html",
+      "en": "A motion path in configuration space avoids the obstacle set.",
+      "zh": "构型空间中的运动路径避开障碍集合。",
+      "license": "Reuse not established; link only",
+      "relationship": "Related illustrative source; not necessarily the exact HiCoD descriptor definition."
+    },
+    "L46": {
+      "ref": "LAV",
+      "number": "Fig. 4.6 (textbook)",
+      "page": "https://msl.cs.uiuc.edu/~lavalle/planning/ch4.pdf",
+      "en": "Two fixed-endpoint paths around a hole cannot be continuously deformed into each other.",
+      "zh": "固定端点的路径位于孔洞两侧时，无法在自由空间中连续互相形变。",
+      "license": "Reuse not established; link only",
+      "relationship": "Related illustrative source; not necessarily the exact HiCoD descriptor definition."
+    },
+    "L818": {
+      "ref": "LAV",
+      "number": "Fig. 8.18 (textbook)",
+      "page": "https://msl.cs.uiuc.edu/~lavalle/planning/node405.html",
+      "en": "Coverage of a sampled 2D space and level sets; the text explains why volume coverage can miss narrow connections.",
+      "zh": "二维空间的采样覆盖及导航函数等值线；原文解释体积覆盖为何可能遗漏狭窄连接。",
+      "license": "Reuse not established; link only",
+      "relationship": "Related illustrative source; not necessarily the exact HiCoD descriptor definition."
+    },
+    "L715": {
+      "ref": "LAV",
+      "number": "Fig. 7.15 (textbook)",
+      "page": "https://msl.cs.uiuc.edu/~lavalle/planning/node332.html",
+      "en": "Combined manipulator-object configuration space and its collision-free and manipulation subsets.",
+      "zh": "机械臂与物体联合构型空间及其中的无碰撞与操作子集。",
+      "license": "Reuse not established; link only",
+      "relationship": "Related illustrative source; not necessarily the exact HiCoD descriptor definition."
+    },
+    "N2": {
+      "ref": "CONFLICT",
+      "number": "Fig. 2",
+      "page": "https://arxiv.org/pdf/2211.15275#page=3",
+      "en": "A graph-NLP connects continuous variables to kinematic, collision and transition constraints; sparse structure may permit factorization.",
+      "zh": "Graph-NLP 将连续变量与运动学、碰撞及转换约束相连；稀疏结构可能支持问题分解。",
+      "license": "Reuse not established; link only",
+      "relationship": "Related illustrative source; not necessarily the exact HiCoD descriptor definition."
+    },
+    "N4": {
+      "ref": "CONFLICT",
+      "number": "Fig. 4",
+      "page": "https://arxiv.org/pdf/2211.15275#page=5",
+      "en": "Infeasible subgraphs illustrate blocked grasps and incompatible sequential pick/handover choices.",
+      "zh": "不可行子图说明抓取受阻，以及前段抓取与后续双臂交接不兼容。",
+      "license": "Reuse not established; link only",
+      "relationship": "Related illustrative source; not necessarily the exact HiCoD descriptor definition."
+    },
+    "F1": {
+      "ref": "FUNNEL",
+      "number": "Fig. 1",
+      "page": "https://arxiv.org/pdf/1601.04037#page=2",
+      "en": "Disturbance-induced trajectory deviation motivates a funnel of possible controlled trajectories.",
+      "zh": "扰动使实际轨迹偏离标称轨迹，引出受控轨迹的漏斗集合。",
+      "license": "Reuse not established; link only",
+      "relationship": "Related illustrative source; not necessarily the exact HiCoD descriptor definition."
+    },
+    "P1": {
+      "ref": "TOPP",
+      "number": "Fig. 1",
+      "page": "https://arxiv.org/pdf/1707.07239#page=1",
+      "en": "Backward controllable speed intervals and forward feasible selection along path discretization.",
+      "zh": "沿离散路径反向计算可控速度区间，再正向选择可行速度。",
+      "license": "Reuse not established; link only",
+      "relationship": "Related illustrative source; not necessarily the exact HiCoD descriptor definition."
+    },
+    "MR54": {
+      "ref": "MR",
+      "number": "§5.4, manipulability ellipsoid (video/textbook supplement)",
+      "page": "https://modernrobotics.northwestern.edu/nu-gm-book-resource/5-4-manipulability/",
+      "en": "A velocity ellipsoid flattens near a Jacobian singularity; this is a local margin building block.",
+      "zh": "雅可比矩阵接近奇异时，速度椭球趋于扁平；这是局部裕量的基础。",
+      "license": "Reuse not established; link only",
+      "relationship": "Related illustrative source; not necessarily the exact HiCoD descriptor definition."
+    },
+    "M1": {
+      "ref": "MCR",
+      "number": "Related MCR illustration: Erickson & LaValle, A Simple, but NP-Hard, Motion Planning Problem (2013), Fig. 1",
+      "page": "https://cdn.aaai.org/ojs/8545/8545-13-12073-1-2-20201228.pdf",
+      "en": "A route crosses a minimum set of obstacles in a diagnostic relaxation example.",
+      "zh": "诊断性松弛的例子中，路径穿过最少数量的障碍约束。",
+      "license": "Reuse not established; link only",
+      "relationship": "Related illustrative source; not necessarily the exact HiCoD descriptor definition.",
+      "citation": "J. Erickson and S. M. LaValle, A Simple, but NP-Hard, Motion Planning Problem (AAAI 2013)"
     }
   },
   "nodes": {
@@ -206,7 +323,9 @@
     },
     "A05": {
       "type": "sets",
-      "figures": [],
+      "figures": [
+        "BASE6"
+      ],
       "labels": {
         "en": [
           "Stage 1 bases",
@@ -231,7 +350,9 @@
     },
     "A06": {
       "type": "matrix",
-      "figures": [],
+      "figures": [
+        "N4"
+      ],
       "labels": {
         "en": [
           "Left grasp",
@@ -256,7 +377,9 @@
     },
     "B01": {
       "type": "paths",
-      "figures": [],
+      "figures": [
+        "L411"
+      ],
       "labels": {
         "en": [
           "Start",
@@ -421,7 +544,9 @@
     },
     "B07": {
       "type": "paths2",
-      "figures": [],
+      "figures": [
+        "L46"
+      ],
       "labels": {
         "en": [
           "Start",
@@ -527,7 +652,9 @@
     },
     "C03": {
       "type": "matrix",
-      "figures": [],
+      "figures": [
+        "N4"
+      ],
       "labels": {
         "en": [
           "Giving arm",
@@ -635,7 +762,9 @@
     },
     "D01": {
       "type": "narrow",
-      "figures": [],
+      "figures": [
+        "L818"
+      ],
       "labels": {
         "en": [
           "Free region",
@@ -660,7 +789,9 @@
     },
     "D02": {
       "type": "narrow",
-      "figures": [],
+      "figures": [
+        "L818"
+      ],
       "labels": {
         "en": [
           "Open region",
@@ -711,7 +842,8 @@
     "D04": {
       "type": "curve",
       "figures": [
-        "K1"
+        "K1",
+        "MR54"
       ],
       "labels": {
         "en": [
@@ -737,7 +869,9 @@
     },
     "D05": {
       "type": "narrow",
-      "figures": [],
+      "figures": [
+        "L411"
+      ],
       "labels": {
         "en": [
           "Obstacle",
@@ -762,7 +896,9 @@
     },
     "D06": {
       "type": "sets",
-      "figures": [],
+      "figures": [
+        "N4"
+      ],
       "labels": {
         "en": [
           "Before intervention",
@@ -787,7 +923,9 @@
     },
     "D07": {
       "type": "disjoint",
-      "figures": [],
+      "figures": [
+        "N4"
+      ],
       "labels": {
         "en": [
           "Constraint C1",
@@ -868,7 +1006,8 @@
     "E03": {
       "type": "cycle",
       "figures": [
-        "U1"
+        "U1",
+        "N4"
       ],
       "labels": {
         "en": [
@@ -948,7 +1087,9 @@
     },
     "E06": {
       "type": "band",
-      "figures": [],
+      "figures": [
+        "P1"
+      ],
       "labels": {
         "en": [
           "Intermediate states",
@@ -974,7 +1115,9 @@
     },
     "F01": {
       "type": "matrix",
-      "figures": [],
+      "figures": [
+        "N2"
+      ],
       "labels": {
         "en": [
           "Variable x",
@@ -999,7 +1142,9 @@
     },
     "F02": {
       "type": "sets",
-      "figures": [],
+      "figures": [
+        "N2"
+      ],
       "labels": {
         "en": [
           "Constraint 1",
@@ -1024,7 +1169,9 @@
     },
     "F03": {
       "type": "matrix",
-      "figures": [],
+      "figures": [
+        "N4"
+      ],
       "labels": {
         "en": [
           "Left configuration",
@@ -1049,7 +1196,9 @@
     },
     "F04": {
       "type": "network",
-      "figures": [],
+      "figures": [
+        "N2"
+      ],
       "labels": {
         "en": [
           "Subproblem A",
@@ -1074,7 +1223,9 @@
     },
     "F05": {
       "type": "product",
-      "figures": [],
+      "figures": [
+        "N2"
+      ],
       "labels": {
         "en": [
           "Feasible x",
@@ -1151,7 +1302,9 @@
     },
     "G03": {
       "type": "curve",
-      "figures": [],
+      "figures": [
+        "BASE6"
+      ],
       "labels": {
         "en": [
           "Base pose",
@@ -1226,7 +1379,9 @@
     },
     "H01": {
       "type": "band",
-      "figures": [],
+      "figures": [
+        "F1"
+      ],
       "labels": {
         "en": [
           "Uncertainty",
@@ -1278,7 +1433,9 @@
     },
     "H03": {
       "type": "paths2",
-      "figures": [],
+      "figures": [
+        "F1"
+      ],
       "labels": {
         "en": [
           "Nominal",
@@ -1303,7 +1460,9 @@
     },
     "H04": {
       "type": "matrix",
-      "figures": [],
+      "figures": [
+        "L818"
+      ],
       "labels": {
         "en": [
           "Sample dimension 1",
@@ -1328,7 +1487,9 @@
     },
     "H05": {
       "type": "paths2",
-      "figures": [],
+      "figures": [
+        "L46"
+      ],
       "labels": {
         "en": [
           "Start",
@@ -1353,7 +1514,9 @@
     },
     "H06": {
       "type": "network",
-      "figures": [],
+      "figures": [
+        "F1"
+      ],
       "labels": {
         "en": [
           "Source",
@@ -1378,7 +1541,9 @@
     },
     "I01": {
       "type": "band",
-      "figures": [],
+      "figures": [
+        "P1"
+      ],
       "labels": {
         "en": [
           "Perturbed state",
@@ -1403,7 +1568,9 @@
     },
     "I02": {
       "type": "narrow",
-      "figures": [],
+      "figures": [
+        "M1"
+      ],
       "labels": {
         "en": [
           "Obstacle constraints",
@@ -1428,7 +1595,9 @@
     },
     "I03": {
       "type": "paths",
-      "figures": [],
+      "figures": [
+        "M1"
+      ],
       "labels": {
         "en": [
           "Start",
@@ -1506,7 +1675,9 @@
     },
     "I06": {
       "type": "network",
-      "figures": [],
+      "figures": [
+        "N4"
+      ],
       "labels": {
         "en": [
           "Observed failure",
@@ -1559,7 +1730,9 @@
     },
     "J02": {
       "type": "paths",
-      "figures": [],
+      "figures": [
+        "P1"
+      ],
       "labels": {
         "en": [
           "Initial state",
@@ -1612,7 +1785,8 @@
     "J04": {
       "type": "curve",
       "figures": [
-        "R7"
+        "R7",
+        "P1"
       ],
       "labels": {
         "en": [
@@ -1639,7 +1813,9 @@
     },
     "J05": {
       "type": "band",
-      "figures": [],
+      "figures": [
+        "P1"
+      ],
       "labels": {
         "en": [
           "Path progress",

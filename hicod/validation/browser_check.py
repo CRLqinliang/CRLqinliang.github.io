@@ -7,7 +7,7 @@ from playwright.sync_api import sync_playwright
 base=os.environ.get("HICOD_BASE_URL","http://127.0.0.1:8765/hicod/")
 out=Path(os.environ.get("HICOD_VALIDATION_OUT","/tmp/hicod-validation"))
 out.mkdir(parents=True,exist_ok=True)
-pages=["index.html","graph.html","physical.html","multimodal.html","agent.html","benchmark.html","validation.html"]
+pages=["index.html","graph.html","physical.html","multimodal.html","agent.html","benchmark.html","validation.html","atlas.html"]
 rows=[]
 with sync_playwright() as p:
     browser=p.chromium.launch(headless=True)
@@ -62,6 +62,14 @@ with sync_playwright() as p:
                         checks["benchmark_ready"]=page.locator("#profile option").count()==6 and page.locator("#task option").count()==32
                         page.locator("#abstain").click()
                         checks["scored_episode"]=page.locator("#score").is_visible()
+                    elif name=="atlas.html":
+                        page.wait_for_function("document.querySelectorAll('#atlas-gallery .atlas-card').length === 60")
+                        checks["all_nodes"]=page.locator("#global-network .global-node").count()==75
+                        checks["all_edges"]=page.locator("#global-network .global-edge").count()==304
+                        page.locator("#global-search").fill("B05")
+                        page.locator("#global-find").click()
+                        checks["selection"]="B05" in page.locator("#global-detail").inner_text()
+                        if lang=="zh":checks["translated"]="抓取" in page.locator("#global-detail").inner_text()
                     elif name=="validation.html":
                         page.wait_for_function("document.querySelectorAll('.validation-status article').length >= 3")
                         checks["status_dashboard"]=True

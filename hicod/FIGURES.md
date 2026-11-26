@@ -1,6 +1,6 @@
-# Concept visual atlas
+# Concept visual atlas — figure provenance
 
-Every L4 node has an original teaching schematic and a concept-specific bilingual explanation, plus the existing source bibliography. Verified figure locators are separate from original HiCoD diagrams. Original paper figures are not asserted to define our operational metrics. CC BY originals retain attribution and license; other material is linked only. The listed publisher image URLs were observed in article HTML, but binary retrieval from the authoring environment failed; the website falls back to the original figure page. No claim of 60 independently licensed paper crops.
+Every L4 node has an original teaching schematic and a concept-specific bilingual explanation, plus source bibliography. Figure locators are separately attributed; the original figure may illustrate a related concept, not establish the exact HiCoD metric. CC-licensed originals retain their source terms and attribution; others are linked, not copied. The source image fetch workflow downloads only the explicitly curated CC-licensed figures and preserves the actual download status. The Text2Motion figure is a crop of arXiv v5, CC BY-SA 4.0; cropping is the only modification. Remaining exact figure matching is pending where noted.
 
 - W4: Wan and Harada, Integrated assembly and motion planning using regrasp graphs (2016), Fig. 4. [Source figure](https://link.springer.com/article/10.1186/s40638-016-0050-2/figures/4). CC BY 4.0. Candidate grasps filtered by collision and inverse kinematics.
 - W5: Wan and Harada, Integrated assembly and motion planning using regrasp graphs (2016), Fig. 5. [Source figure](https://link.springer.com/article/10.1186/s40638-016-0050-2/figures/5). CC BY 4.0. Endpoint and intermediate grasps are used to construct and search a regrasp graph.
@@ -9,9 +9,20 @@ Every L4 node has an original teaching schematic and a concept-specific bilingua
 - R10: Roa and Suárez, Grasp quality measures: review and performance (2015), Fig. 10. [Source figure](https://link.springer.com/article/10.1007/s10514-014-9402-3/figures/10). CC BY (article terms). Grasp-space force-closure region and tolerance to contact-location uncertainty.
 - Q1: Qin et al., Learning from Planned Data to Improve Robotic Pick-and-Place Planning Efficiency, Fig. 1. [Source figure](https://arxiv.org/html/2506.15920). Reuse not established; link only. A common object-relative grasp is feasible at both endpoint object poses.
 - K1: Wang et al., IKLink: End-Effector Trajectory Tracking with Minimal Reconfigurations (2024), Fig. 1. [Source figure](https://graphics.cs.wisc.edu/Papers/2024/WSG24/ICRA24_1139_FI.pdf#page=1). Reuse not established; link only. A welding path interrupted by a configuration change illustrates the cost of reconfiguration.
-- T1: Lin et al., Text2Motion: From Natural Language Instructions to Feasible Plans (2023), Fig. 1. [Source figure](https://arxiv.org/html/2303.12153). CC BY-SA (source link; image retrieval unavailable). A hook grasp must enable the next pulling and picking skills.
+- T1: Lin et al., Text2Motion: From Natural Language Instructions to Feasible Plans (2023), Fig. 1. [Source figure](https://arxiv.org/pdf/2303.12153v5#page=2). CC BY-SA 4.0 · cropped from Fig. 1, arXiv v5. A hook grasp must enable the next pulling and picking skills.
 - U1: Gao et al., On Minimizing the Number of Running Buffers for Tabletop Rearrangement (2021), Fig. 1. [Source figure](https://www.roboticsproceedings.org/rss17/p033.pdf#page=1). Reuse not established; link only. Rearrangement of three objects requires resolving occupied target locations.
 - C1: Cheng et al., Contact Mode Guided Sampling-Based Planning for Quasistatic Dexterous Manipulation in 2D (2021), Fig. 1. [Source figure](https://par.nsf.gov/servlets/purl/10338784#page=1). Reuse not established; link only. Blade pickup illustrates contact-rich manipulation with changing contact modes.
+- BASE6: Real-time robot base placement based on inverse reachability maps (2025), Fig. 6. [Source figure](https://jicrs.icros.org/_common/do.php?a=current&aidx=47244&b=11&bidx=4266). Reuse not established; link only. Integrated inverse-reachability map of task poses, illustrating stationary base candidate screening.
+- L411: LaValle, Planning Algorithms (2006), chapters 4–8 and 13–15, Fig. 4.11 (textbook). [Source figure](https://msl.cs.uiuc.edu/planning/node160.html). Reuse not established; link only. A motion path in configuration space avoids the obstacle set.
+- L46: LaValle, Planning Algorithms (2006), chapters 4–8 and 13–15, Fig. 4.6 (textbook). [Source figure](https://msl.cs.uiuc.edu/~lavalle/planning/ch4.pdf). Reuse not established; link only. Two fixed-endpoint paths around a hole cannot be continuously deformed into each other.
+- L818: LaValle, Planning Algorithms (2006), chapters 4–8 and 13–15, Fig. 8.18 (textbook). [Source figure](https://msl.cs.uiuc.edu/~lavalle/planning/node405.html). Reuse not established; link only. Coverage of a sampled 2D space and level sets; the text explains why volume coverage can miss narrow connections.
+- L715: LaValle, Planning Algorithms (2006), chapters 4–8 and 13–15, Fig. 7.15 (textbook). [Source figure](https://msl.cs.uiuc.edu/~lavalle/planning/node332.html). Reuse not established; link only. Combined manipulator-object configuration space and its collision-free and manipulation subsets.
+- N2: Ortiz-Haro et al., A Conflict-driven Interface between Symbolic Planning and Nonlinear Constraint Solving (2022), Fig. 2. [Source figure](https://arxiv.org/pdf/2211.15275#page=3). Reuse not established; link only. A graph-NLP connects continuous variables to kinematic, collision and transition constraints; sparse structure may permit factorization.
+- N4: Ortiz-Haro et al., A Conflict-driven Interface between Symbolic Planning and Nonlinear Constraint Solving (2022), Fig. 4. [Source figure](https://arxiv.org/pdf/2211.15275#page=5). Reuse not established; link only. Infeasible subgraphs illustrate blocked grasps and incompatible sequential pick/handover choices.
+- F1: Majumdar and Tedrake, Funnel Libraries for Real-Time Robust Feedback Motion Planning (2017), Fig. 1. [Source figure](https://arxiv.org/pdf/1601.04037#page=2). Reuse not established; link only. Disturbance-induced trajectory deviation motivates a funnel of possible controlled trajectories.
+- P1: Pham and Pham, A New Approach to Time-Optimal Path Parameterization based on Reachability Analysis (2018), Fig. 1. [Source figure](https://arxiv.org/pdf/1707.07239#page=1). Reuse not established; link only. Backward controllable speed intervals and forward feasible selection along path discretization.
+- MR54: Lynch and Park, Modern Robotics, section 5.4 Manipulability, §5.4, manipulability ellipsoid (video/textbook supplement). [Source figure](https://modernrobotics.northwestern.edu/nu-gm-book-resource/5-4-manipulability/). Reuse not established; link only. A velocity ellipsoid flattens near a Jacobian singularity; this is a local margin building block.
+- M1: J. Erickson and S. M. LaValle, A Simple, but NP-Hard, Motion Planning Problem (AAAI 2013), Related MCR illustration: Erickson & LaValle, A Simple, but NP-Hard, Motion Planning Problem (2013), Fig. 1. [Source figure](https://cdn.aaai.org/ojs/8545/8545-13-12073-1-2-20201228.pdf). Reuse not established; link only. A route crosses a minimum set of obstacles in a diagnostic relaxation example.
 
 ## Concept-specific mapping
 
@@ -19,59 +30,59 @@ Every L4 node has an original teaching schematic and a concept-specific bilingua
 - A02 Grasp–Task Compatibility: R7; A grasp must satisfy the whole task, not only endpoint geometry or wrench demands alone.
 - A03 Grasp–IK Compatibility: W4; A row survives when at least one valid IK configuration realizes the grasp.
 - A04 Skill Compatibility: T1; Only a consistent shared boundary state connects the two skills.
-- A05 Base–Task Stage Compatibility: exact paper figure still to be curated; Intersect stationary base candidates for stages; subsequent motion still needs validation.
-- A06 Bimanual Grasp Compatibility: exact paper figure still to be curated; Each matrix cell represents a paired grasp with simultaneous robot constraints.
-- B01 Configuration-Space Connectivity: exact paper figure still to be curated; Connectivity concerns whether a valid path links two configurations in free space.
+- A05 Base–Task Stage Compatibility: BASE6; Intersect stationary base candidates for stages; subsequent motion still needs validation.
+- A06 Bimanual Grasp Compatibility: N4; Each matrix cell represents a paired grasp with simultaneous robot constraints.
+- B01 Configuration-Space Connectivity: L411; Connectivity concerns whether a valid path links two configurations in free space.
 - B02 Grasp Connectivity: W6, Q1; Keeping one attachment throughout transfer is stronger than endpoint overlap.
 - B03 Continuous IK Path Lift: K1; Locally valid IK samples do not imply a continuous joint-space lift of the requested path.
 - B04 Object-Pose Connectivity: W6; Object reachability must have a consistent robot and mode realization.
 - B05 Grasp–IK Trajectory Connectivity: K1, Q1; A fixed grasp–IK mode must retain a sampled connection across trajectory layers.
 - B06 Multi-modal Connectivity: W6, C1; Within-mode edges and validated cross-mode edges jointly form a hybrid path.
-- B07 Homotopy Diversity: exact paper figure still to be curated; Routes passing different sides of an obstacle may belong to different homotopy classes.
+- B07 Homotopy Diversity: L46; Routes passing different sides of an obstacle may belong to different homotopy classes.
 - B08 Connectivity Redundancy: exact paper figure still to be curated; Multiple edge-disjoint routes provide graph redundancy, not independent physical failures.
 - C01 Regrasp Feasibility: W5, W6; A supported release and reacquisition can connect two transfer segments.
 - C02 Intermediate-Pose Bridging: W6; A bridge pose needs both transfers and a valid mode transition at that pose.
-- C03 Handover Feasibility: exact paper figure still to be curated; Simultaneous grasp pairs are candidate handover states; approach and release are also required.
+- C03 Handover Feasibility: N4; Simultaneous grasp pairs are candidate handover states; approach and release are also required.
 - C04 Mode Transition Feasibility: C1; A mode change must satisfy its boundary, contact and motion rules.
 - C05 Minimum Mode-Switch Cost: K1, W6; Assign costs to transitions and compare complete graph routes.
 - C06 Transition Region Availability: W6; Measure only the declared transition domain, not an arbitrary ambient volume.
-- D01 Geometric Bottleneck: exact paper figure still to be curated; A localized geometric restriction constrains a family of paths, not just one collision.
-- D02 Narrow Passage: exact paper figure still to be curated; A small connecting region can make finding a path difficult under the sampling measure.
+- D01 Geometric Bottleneck: L818; A localized geometric restriction constrains a family of paths, not just one collision.
+- D02 Narrow Passage: L818; A small connecting region can make finding a path difficult under the sampling measure.
 - D03 Connectivity Bottleneck: exact paper figure still to be curated; A low-capacity cut limits connections in the specified graph.
-- D04 Singularity Bottleneck: K1; A low directional Jacobian margin can restrict motion across candidate paths.
-- D05 Clearance Bottleneck: exact paper figure still to be curated; Compare the minimum clearance of candidate paths rather than one path alone.
-- D06 Critical Constraint: exact paper figure still to be curated; A controlled constraint change can reveal which constraint limits the feasible family.
-- D07 Constraint Conflict: exact paper figure still to be curated; An inconsistent subset is a conflict only when joint infeasibility is justified.
+- D04 Singularity Bottleneck: K1, MR54; A low directional Jacobian margin can restrict motion across candidate paths.
+- D05 Clearance Bottleneck: L411; Compare the minimum clearance of candidate paths rather than one path alone.
+- D06 Critical Constraint: N4; A controlled constraint change can reveal which constraint limits the feasible family.
+- D07 Constraint Conflict: N4; An inconsistent subset is a conflict only when joint infeasibility is justified.
 - E01 Grasp–Motion Dependency: Q1, W5; Different upstream grasps change the downstream motion set.
 - E02 Cross-Stage Dependency: T1; A valid current skill can leave very different future solution sets.
-- E03 Object Blocking Dependency: U1; An occupied goal creates a dependency on moving its blocker first.
+- E03 Object Blocking Dependency: U1, N4; An occupied goal creates a dependency on moving its blocker first.
 - E04 Task Ordering Dependency: U1; Required precedence constrains all admissible task sequences in the declared model.
 - E05 Precedence Cycles & State Deadlock: U1; A precedence cycle can require a buffer; it is distinct from state deadlock.
-- E06 Future Feasibility Preservation: exact paper figure still to be curated; Backward reachability identifies intermediate states that preserve future feasibility.
-- F01 Variable Coupling: exact paper figure still to be curated; Feasible projections can contain combinations that are jointly infeasible.
-- F02 Constraint Coupling: exact paper figure still to be curated; Constraint interaction depends on shared variables and the joint feasible relation.
-- F03 Bimanual Kinematic Coupling: exact paper figure still to be curated; Only paired configurations that agree on the rigid object transform are admitted.
-- F04 Task Decomposability: exact paper figure still to be curated; A separator may permit independent subproblem solving under explicit conditions.
-- F05 Conditional Feasible-Set Independence: exact paper figure still to be curated; After conditioning on a separator, all projected combinations must be feasible for factorization.
+- E06 Future Feasibility Preservation: P1; Backward reachability identifies intermediate states that preserve future feasibility.
+- F01 Variable Coupling: N2; Feasible projections can contain combinations that are jointly infeasible.
+- F02 Constraint Coupling: N2; Constraint interaction depends on shared variables and the joint feasible relation.
+- F03 Bimanual Kinematic Coupling: N4; Only paired configurations that agree on the rigid object transform are admitted.
+- F04 Task Decomposability: N2; A separator may permit independent subproblem solving under explicit conditions.
+- F05 Conditional Feasible-Set Independence: N2; After conditioning on a separator, all projected combinations must be feasible for factorization.
 - G01 Grasp Sensitivity: Q1; Perturb a grasp and measure the change in a task-level descriptor.
 - G02 Object-Pose Sensitivity: exact paper figure still to be curated; Vary only permitted object poses and compare the same structural metric.
-- G03 Base-Pose Sensitivity: exact paper figure still to be curated; Different base placements may change task-level feasibility or quality.
+- G03 Base-Pose Sensitivity: BASE6; Different base placements may change task-level feasibility or quality.
 - G04 Trajectory Sensitivity: exact paper figure still to be curated; Controlled path perturbations reveal changes in sampled connectivity, not necessarily a gradient.
 - G05 Constraint Sensitivity: exact paper figure still to be curated; Evaluate a specified change in a constraint parameter and its effect on the outcome.
-- H01 Feasibility Robustness: exact paper figure still to be curated; Distinguish fixed-plan robustness from the ability to replan under uncertainty.
+- H01 Feasibility Robustness: F1; Distinguish fixed-plan robustness from the ability to replan under uncertainty.
 - H02 Grasp Robustness: R10; A feasible grasp region can tolerate contact perturbations within a declared model.
-- H03 Connectivity Robustness: exact paper figure still to be curated; Test endpoint connectivity across disturbances, separating fixed and adaptive paths.
-- H04 Solution-Space Volume: exact paper figure still to be curated; The proportion of admitted samples is relative to the chosen sampling measure.
-- H05 Solution Diversity: exact paper figure still to be curated; Diversity requires a stated metric or equivalence relation.
-- H06 Failure Tolerance: exact paper figure still to be curated; Check whether connectivity persists after declared graph elements fail.
-- I01 Recoverability: exact paper figure still to be curated; A recovery action must lead from the failed state to the original goal within permitted controls.
-- I02 Minimum Constraint Removal: exact paper figure still to be curated; Compare constraint-removal sets; never treat diagnostic removal as execution permission.
-- I03 Minimum Environment Change: exact paper figure still to be curated; A bounded scene modification may enable a path; executing the modification is a separate task.
+- H03 Connectivity Robustness: F1; Test endpoint connectivity across disturbances, separating fixed and adaptive paths.
+- H04 Solution-Space Volume: L818; The proportion of admitted samples is relative to the chosen sampling measure.
+- H05 Solution Diversity: L46; Diversity requires a stated metric or equivalence relation.
+- H06 Failure Tolerance: F1; Check whether connectivity persists after declared graph elements fail.
+- I01 Recoverability: P1; A recovery action must lead from the failed state to the original goal within permitted controls.
+- I02 Minimum Constraint Removal: M1; Compare constraint-removal sets; never treat diagnostic removal as execution permission.
+- I03 Minimum Environment Change: M1; A bounded scene modification may enable a path; executing the modification is a separate task.
 - I04 Minimum Task Deformation: exact paper figure still to be curated; Find a permitted deformation with a feasible witness while preserving hard endpoints.
 - I05 Mode Substitutability: W6; A different permitted mode sequence may preserve the same task goal.
-- I06 Failure Attribution: exact paper figure still to be curated; Compare competing structural explanations; a single failure trace is not a unique cause.
+- I06 Failure Attribution: N4; Compare competing structural explanations; a single failure trace is not a unique cause.
 - J01 Grasp–Wrench Compatibility: R7; Task-required wrenches must lie inside the attainable grasp wrench set.
-- J02 Kinodynamic Connectivity: exact paper figure still to be curated; A state-control trajectory needs dynamics and input feasibility, beyond geometric connectivity.
+- J02 Kinodynamic Connectivity: P1; A state-control trajectory needs dynamics and input feasibility, beyond geometric connectivity.
 - J03 Contact-Mode Connectivity: C1; Hybrid motion uses admissible contact modes and valid switches between them.
-- J04 Dynamic Bottleneck: R7; Compare torque, force or velocity margins over trajectory families.
-- J05 Temporal Feasibility: exact paper figure still to be curated; Path-speed sets describe feasible time parameterizations under declared limits.
+- J04 Dynamic Bottleneck: R7, P1; Compare torque, force or velocity margins over trajectory families.
+- J05 Temporal Feasibility: P1; Path-speed sets describe feasible time parameterizations under declared limits.
