@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "source_commit": "25d04371d6c2be222f7db94927a43b70fd5fb2e4",
+  "source_commit": "a889e986c1d3318b03557184aa73f0876fbabf17",
   "mujoco_version": "4.0.1",
   "cases": 44,
   "reference_cases": 32,
