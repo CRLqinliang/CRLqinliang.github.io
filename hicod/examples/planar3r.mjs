@@ -1,0 +1,14 @@
+import { readFileSync,writeFileSync } from "node:fs";
+import { scenes,explore,applyReplay } from "../physical/planar3r.mjs";
+import { diagnose } from "../physical/diagnose.mjs";
+const argv=process.argv.slice(2),name=argv[0]||"disconnected",cases=scenes();
+if(!cases[name])throw Error("Choose scene: "+Object.keys(cases).join(", "));
+const value=flag=>{const i=argv.indexOf(flag);if(i<0)return null;if(!argv[i+1])throw Error("Missing value for "+flag);return argv[i+1];};
+let raw=explore(cases[name]);
+if(value("--raw"))writeFileSync(value("--raw"),JSON.stringify(raw,null,2)+"\n");
+if(value("--replay"))raw=applyReplay(raw,JSON.parse(readFileSync(value("--replay"),"utf8")));
+const d=diagnose(raw),output={diagnosis:d.diagnosis,reports:d.reports,counts:{valid_slots:d.summary.valid_slots,total_slots:d.summary.total_slots,accepted_edges:d.summary.accepted_edges,fault_counts:d.summary.fault_counts}};
+if(value("--inspect"))output.inspection=d.drillDown(value("--inspect"));
+const json=JSON.stringify(output,null,2);
+if(value("--report"))writeFileSync(value("--report"),json+"\n");
+else console.log(json);

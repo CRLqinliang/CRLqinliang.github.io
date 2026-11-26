@@ -1,5 +1,5 @@
 {
-  "version": "0.3.1",
+  "version": "0.4.0",
   "updated": "2026-11-26",
   "scope": "Research taxonomy of robotic solution-space structure; not a standardized ontology or an implementation of 60 physical evaluators.",
   "notation": "F(T): feasible set in declared candidate domain. G(p): object-relative feasible grasps. Γ: path family. V: declared structural descriptor. μ: specified measure. All results are relative to scope, models and evidence. A sampled negative result is not a continuous infeasibility proof.",
@@ -353,6 +353,12 @@
         "entry": "evaluate",
         "fixture": "examples/finite_evidence.json",
         "scope": "Exact computations on supplied finite evidence only. Actual geometry/IK/physics backend is external; continuous claims remain unverified."
+      },
+      "physical_backend": {
+        "module": "physical/planar3r.mjs",
+        "status": "analytic_planar_transport_scope",
+        "documentation": "PHYSICAL_BACKEND.md",
+        "limitation": "Ideal fixed attachments and sampled 3R paths; not full grasp/robot execution. MuJoCo replay unvalidated."
       }
     },
     {
@@ -728,6 +734,12 @@
         "entry": "evaluate",
         "fixture": "examples/finite_evidence.json",
         "scope": "Exact computations on supplied finite evidence only. Actual geometry/IK/physics backend is external; continuous claims remain unverified."
+      },
+      "physical_backend": {
+        "module": "physical/planar3r.mjs",
+        "status": "analytic_planar_transport_scope",
+        "documentation": "PHYSICAL_BACKEND.md",
+        "limitation": "Ideal fixed attachments and sampled 3R paths; not full grasp/robot execution. MuJoCo replay unvalidated."
       }
     },
     {
@@ -1172,6 +1184,12 @@
         "entry": "evaluate",
         "fixture": "examples/finite_evidence.json",
         "scope": "Exact computations on supplied finite evidence only. Actual geometry/IK/physics backend is external; continuous claims remain unverified."
+      },
+      "physical_backend": {
+        "module": "physical/planar3r.mjs",
+        "status": "analytic_planar_transport_scope",
+        "documentation": "PHYSICAL_BACKEND.md",
+        "limitation": "Ideal fixed attachments and sampled 3R paths; not full grasp/robot execution. MuJoCo replay unvalidated."
       }
     },
     {
@@ -1524,6 +1542,12 @@
         "entry": "evaluate",
         "fixture": "examples/finite_evidence.json",
         "scope": "Exact computations on supplied finite evidence only. Actual geometry/IK/physics backend is external; continuous claims remain unverified."
+      },
+      "physical_backend": {
+        "module": "physical/planar3r.mjs",
+        "status": "analytic_planar_transport_scope",
+        "documentation": "PHYSICAL_BACKEND.md",
+        "limitation": "Ideal fixed attachments and sampled 3R paths; not full grasp/robot execution. MuJoCo replay unvalidated."
       }
     },
     {
@@ -2015,6 +2039,12 @@
         "entry": "evaluate",
         "fixture": "examples/finite_evidence.json",
         "scope": "Exact computations on supplied finite evidence only. Actual geometry/IK/physics backend is external; continuous claims remain unverified."
+      },
+      "physical_backend": {
+        "module": "physical/planar3r.mjs",
+        "status": "analytic_planar_transport_scope",
+        "documentation": "PHYSICAL_BACKEND.md",
+        "limitation": "Ideal fixed attachments and sampled 3R paths; not full grasp/robot execution. MuJoCo replay unvalidated."
       }
     },
     {

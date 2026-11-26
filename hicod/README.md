@@ -59,6 +59,15 @@ See [EVALUATORS.md](EVALUATORS.md) and [evaluators.mjs](evaluators.mjs). Run wit
 
 Ten concept computations are implemented over explicitly supplied finite data (not a robot simulator); 18 checks were executed on the evaluator function bodies. Full physical validation and backend integration remain pending.
 
+## v0.4: Articulated physical evidence backend
+
+[Interactive physical explorer](https://crlqinliang.github.io/hicod/physical.html) · [Backend documentation](PHYSICAL_BACKEND.md) · [Computed analytic results](physical_results.json)
+
+The 3R planar arm uses analytic FK/IK, collision clearances, ideal fixed attachment directions and a layered path-family explorer. It feeds A01, B05, D03, E06 and H04 with actual computed finite evidence. The MuJoCo 4 replay adapter is provided but not runtime-tested. The analytic experiment is not a full pick-and-place execution or a MuJoCo result.
+
+    node examples/planar3r.mjs disconnected --raw raw.json --report report.json
+    node tests/test_planar3r.mjs
+
 ## Concept modules
 
 See [concepts.json](concepts.json) for the registry, [hicod.py](hicod.py) for the small evaluator and evidence-report implementation, and [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution contract. Initial implementations: sampled feasibility, endpoint compatibility, graph connectivity and connected components. Roadmap: shared-grasp sets from actual robot IK/collision, intermediate pose/regrasp, Grasp–IK/drag connectivity, bottleneck attribution, constraint conflicts, cross-stage dependencies, sensitivity, robustness and counterfactual recovery. The author's existing research implementations are not included in this initial commit.
