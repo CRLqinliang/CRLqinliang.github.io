@@ -1,0 +1,3560 @@
+{
+  "schema": "hicod.benchmark.oracle.v1",
+  "status": "computed_finite_oracle_same_backend",
+  "labels": [
+    {
+      "id": "T001",
+      "split": "development",
+      "diagnosis": "structural_disconnection",
+      "finite_oracle_solvable": true,
+      "successful_actions": [
+        "r2",
+        "r5",
+        "r8",
+        "r11"
+      ],
+      "successful_kinds": [
+        "regrasp"
+      ],
+      "reference_common": 3,
+      "reference_connected": 0,
+      "all_local_nonempty": true,
+      "actions": [
+        {
+          "id": "reference",
+          "kind": "reference",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "r2",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 3304,
+          "min_graph_switches": 1
+        },
+        {
+          "id": "r5",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 2391,
+          "min_graph_switches": 1
+        },
+        {
+          "id": "r8",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 3247,
+          "min_graph_switches": 1
+        },
+        {
+          "id": "r11",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 3190,
+          "min_graph_switches": 1
+        },
+        {
+          "id": "r14",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 2445,
+          "min_graph_switches": null
+        },
+        {
+          "id": "d0",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d1",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d2",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d3",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d4",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d5",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d6",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d7",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        }
+      ],
+      "category": "regrasp_only"
+    },
+    {
+      "id": "T002",
+      "split": "development",
+      "diagnosis": "structural_disconnection",
+      "finite_oracle_solvable": false,
+      "successful_actions": [],
+      "successful_kinds": [],
+      "reference_common": 4,
+      "reference_connected": 0,
+      "all_local_nonempty": true,
+      "actions": [
+        {
+          "id": "reference",
+          "kind": "reference",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "r2",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1640,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r5",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1914,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r8",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1468,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r11",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1459,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r14",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1525,
+          "min_graph_switches": null
+        },
+        {
+          "id": "d0",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d1",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d2",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d3",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d4",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d5",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d6",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d7",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        }
+      ],
+      "category": "none"
+    },
+    {
+      "id": "T003",
+      "split": "development",
+      "diagnosis": "reference_connected",
+      "finite_oracle_solvable": true,
+      "successful_actions": [
+        "reference",
+        "r2",
+        "r5",
+        "r8",
+        "r11",
+        "r14",
+        "d0",
+        "d1",
+        "d2",
+        "d3",
+        "d4",
+        "d5",
+        "d6",
+        "d7"
+      ],
+      "successful_kinds": [
+        "reference",
+        "regrasp",
+        "deform"
+      ],
+      "reference_common": 3,
+      "reference_connected": 2,
+      "all_local_nonempty": true,
+      "actions": [
+        {
+          "id": "reference",
+          "kind": "reference",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "r2",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 1904,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r5",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 1483,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r8",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 3275,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r11",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 4170,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r14",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 3168,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "d0",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d1",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d2",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d3",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d4",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d5",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d6",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d7",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        }
+      ],
+      "category": "reference"
+    },
+    {
+      "id": "T004",
+      "split": "public_test",
+      "diagnosis": "structural_disconnection",
+      "finite_oracle_solvable": true,
+      "successful_actions": [
+        "r5",
+        "r8",
+        "r11"
+      ],
+      "successful_kinds": [
+        "regrasp"
+      ],
+      "reference_common": 3,
+      "reference_connected": 0,
+      "all_local_nonempty": true,
+      "actions": [
+        {
+          "id": "reference",
+          "kind": "reference",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "r2",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 2506,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r5",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 1913,
+          "min_graph_switches": 1
+        },
+        {
+          "id": "r8",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 2371,
+          "min_graph_switches": 1
+        },
+        {
+          "id": "r11",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 3190,
+          "min_graph_switches": 1
+        },
+        {
+          "id": "r14",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 2445,
+          "min_graph_switches": null
+        },
+        {
+          "id": "d0",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d1",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d2",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d3",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d4",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d5",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d6",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d7",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        }
+      ],
+      "category": "regrasp_only"
+    },
+    {
+      "id": "T005",
+      "split": "development",
+      "diagnosis": "structural_disconnection",
+      "finite_oracle_solvable": true,
+      "successful_actions": [
+        "r5",
+        "r8",
+        "r11"
+      ],
+      "successful_kinds": [
+        "regrasp"
+      ],
+      "reference_common": 3,
+      "reference_connected": 0,
+      "all_local_nonempty": true,
+      "actions": [
+        {
+          "id": "reference",
+          "kind": "reference",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "r2",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 2506,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r5",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 1913,
+          "min_graph_switches": 1
+        },
+        {
+          "id": "r8",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 2371,
+          "min_graph_switches": 1
+        },
+        {
+          "id": "r11",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 3190,
+          "min_graph_switches": 1
+        },
+        {
+          "id": "r14",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 3167,
+          "min_graph_switches": null
+        },
+        {
+          "id": "d0",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d1",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d2",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d3",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d4",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d5",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d6",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d7",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        }
+      ],
+      "category": "regrasp_only"
+    },
+    {
+      "id": "T006",
+      "split": "development",
+      "diagnosis": "structural_disconnection",
+      "finite_oracle_solvable": true,
+      "successful_actions": [
+        "r5",
+        "r8",
+        "r11"
+      ],
+      "successful_kinds": [
+        "regrasp"
+      ],
+      "reference_common": 3,
+      "reference_connected": 0,
+      "all_local_nonempty": true,
+      "actions": [
+        {
+          "id": "reference",
+          "kind": "reference",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "r2",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 2506,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r5",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 1922,
+          "min_graph_switches": 1
+        },
+        {
+          "id": "r8",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 1936,
+          "min_graph_switches": 1
+        },
+        {
+          "id": "r11",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 3180,
+          "min_graph_switches": 1
+        },
+        {
+          "id": "r14",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 2445,
+          "min_graph_switches": null
+        },
+        {
+          "id": "d0",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d1",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d2",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d3",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d4",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d5",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d6",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d7",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        }
+      ],
+      "category": "regrasp_only"
+    },
+    {
+      "id": "T007",
+      "split": "development",
+      "diagnosis": "local_stage_gap",
+      "finite_oracle_solvable": false,
+      "successful_actions": [],
+      "successful_kinds": [],
+      "reference_common": 4,
+      "reference_connected": 0,
+      "all_local_nonempty": false,
+      "actions": [
+        {
+          "id": "reference",
+          "kind": "reference",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "r2",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 2516,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r5",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1040,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r8",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1468,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r11",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 2406,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r14",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 2445,
+          "min_graph_switches": null
+        },
+        {
+          "id": "d0",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d1",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d2",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d3",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d4",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d5",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d6",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d7",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        }
+      ],
+      "category": "none"
+    },
+    {
+      "id": "T008",
+      "split": "public_test",
+      "diagnosis": "local_stage_gap",
+      "finite_oracle_solvable": false,
+      "successful_actions": [],
+      "successful_kinds": [],
+      "reference_common": 2,
+      "reference_connected": 0,
+      "all_local_nonempty": false,
+      "actions": [
+        {
+          "id": "reference",
+          "kind": "reference",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "r2",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 5096,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r5",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1785,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r8",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1040,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r11",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1040,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r14",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1361,
+          "min_graph_switches": null
+        },
+        {
+          "id": "d0",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d1",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d2",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d3",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d4",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d5",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d6",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d7",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        }
+      ],
+      "category": "none"
+    },
+    {
+      "id": "T009",
+      "split": "development",
+      "diagnosis": "local_stage_gap",
+      "finite_oracle_solvable": false,
+      "successful_actions": [],
+      "successful_kinds": [],
+      "reference_common": 2,
+      "reference_connected": 0,
+      "all_local_nonempty": false,
+      "actions": [
+        {
+          "id": "reference",
+          "kind": "reference",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "r2",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 5096,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r5",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 4027,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r8",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1855,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r11",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1040,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r14",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1361,
+          "min_graph_switches": null
+        },
+        {
+          "id": "d0",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d1",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d2",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d3",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d4",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d5",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d6",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d7",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        }
+      ],
+      "category": "none"
+    },
+    {
+      "id": "T010",
+      "split": "development",
+      "diagnosis": "local_stage_gap",
+      "finite_oracle_solvable": true,
+      "successful_actions": [
+        "d5"
+      ],
+      "successful_kinds": [
+        "deform"
+      ],
+      "reference_common": 3,
+      "reference_connected": 0,
+      "all_local_nonempty": false,
+      "actions": [
+        {
+          "id": "reference",
+          "kind": "reference",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "r2",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 4598,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r5",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1040,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r8",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1040,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r11",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 4800,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r14",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 2935,
+          "min_graph_switches": null
+        },
+        {
+          "id": "d0",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d1",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d2",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d3",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d4",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d5",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d6",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d7",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        }
+      ],
+      "category": "deform_only"
+    },
+    {
+      "id": "T011",
+      "split": "development",
+      "diagnosis": "local_stage_gap",
+      "finite_oracle_solvable": false,
+      "successful_actions": [],
+      "successful_kinds": [],
+      "reference_common": 4,
+      "reference_connected": 0,
+      "all_local_nonempty": false,
+      "actions": [
+        {
+          "id": "reference",
+          "kind": "reference",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "r2",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1040,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r5",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1040,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r8",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 5057,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r11",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 4800,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r14",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 2954,
+          "min_graph_switches": null
+        },
+        {
+          "id": "d0",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d1",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d2",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d3",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d4",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d5",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d6",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d7",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        }
+      ],
+      "category": "none"
+    },
+    {
+      "id": "T012",
+      "split": "public_test",
+      "diagnosis": "reference_connected",
+      "finite_oracle_solvable": true,
+      "successful_actions": [
+        "reference",
+        "r2",
+        "r5",
+        "r8",
+        "r11",
+        "r14",
+        "d0",
+        "d1",
+        "d2",
+        "d3",
+        "d4",
+        "d5",
+        "d6",
+        "d7"
+      ],
+      "successful_kinds": [
+        "reference",
+        "regrasp",
+        "deform"
+      ],
+      "reference_common": 4,
+      "reference_connected": 2,
+      "all_local_nonempty": true,
+      "actions": [
+        {
+          "id": "reference",
+          "kind": "reference",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "r2",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 3154,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r5",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 2421,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r8",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 2455,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r11",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 1909,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r14",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 1546,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "d0",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d1",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d2",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d3",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d4",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d5",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d6",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d7",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        }
+      ],
+      "category": "reference"
+    },
+    {
+      "id": "T013",
+      "split": "development",
+      "diagnosis": "reference_connected",
+      "finite_oracle_solvable": true,
+      "successful_actions": [
+        "reference",
+        "r2",
+        "r5",
+        "r8",
+        "r11",
+        "r14",
+        "d0",
+        "d1",
+        "d2",
+        "d3",
+        "d4",
+        "d5",
+        "d6",
+        "d7"
+      ],
+      "successful_kinds": [
+        "reference",
+        "regrasp",
+        "deform"
+      ],
+      "reference_common": 3,
+      "reference_connected": 1,
+      "all_local_nonempty": true,
+      "actions": [
+        {
+          "id": "reference",
+          "kind": "reference",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "r2",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 5320,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r5",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 2401,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r8",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 2369,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r11",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 1909,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r14",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 1228,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "d0",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d1",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d2",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d3",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d4",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d5",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d6",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d7",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        }
+      ],
+      "category": "reference"
+    },
+    {
+      "id": "T014",
+      "split": "development",
+      "diagnosis": "reference_connected",
+      "finite_oracle_solvable": true,
+      "successful_actions": [
+        "reference",
+        "r2",
+        "r5",
+        "r8",
+        "r11",
+        "r14",
+        "d0",
+        "d2",
+        "d3",
+        "d4",
+        "d6",
+        "d7"
+      ],
+      "successful_kinds": [
+        "reference",
+        "regrasp",
+        "deform"
+      ],
+      "reference_common": 3,
+      "reference_connected": 1,
+      "all_local_nonempty": true,
+      "actions": [
+        {
+          "id": "reference",
+          "kind": "reference",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "r2",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 5320,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r5",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 3293,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r8",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 2529,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r11",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 1455,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r14",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 1228,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "d0",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d1",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d2",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d3",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d4",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d5",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d6",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d7",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        }
+      ],
+      "category": "reference"
+    },
+    {
+      "id": "T015",
+      "split": "development",
+      "diagnosis": "local_stage_gap",
+      "finite_oracle_solvable": true,
+      "successful_actions": [
+        "d1",
+        "d5"
+      ],
+      "successful_kinds": [
+        "deform"
+      ],
+      "reference_common": 3,
+      "reference_connected": 0,
+      "all_local_nonempty": false,
+      "actions": [
+        {
+          "id": "reference",
+          "kind": "reference",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "r2",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 7492,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r5",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 4027,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r8",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1040,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r11",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1040,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r14",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 2926,
+          "min_graph_switches": null
+        },
+        {
+          "id": "d0",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d1",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d2",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d3",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d4",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d5",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d6",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d7",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        }
+      ],
+      "category": "deform_only"
+    },
+    {
+      "id": "T016",
+      "split": "public_test",
+      "diagnosis": "local_stage_gap",
+      "finite_oracle_solvable": false,
+      "successful_actions": [],
+      "successful_kinds": [],
+      "reference_common": 3,
+      "reference_connected": 0,
+      "all_local_nonempty": false,
+      "actions": [
+        {
+          "id": "reference",
+          "kind": "reference",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "r2",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1040,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r5",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1040,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r8",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1835,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r11",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 2416,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r14",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 2445,
+          "min_graph_switches": null
+        },
+        {
+          "id": "d0",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d1",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d2",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d3",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d4",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d5",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d6",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d7",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        }
+      ],
+      "category": "none"
+    },
+    {
+      "id": "T017",
+      "split": "development",
+      "diagnosis": "reference_connected",
+      "finite_oracle_solvable": true,
+      "successful_actions": [
+        "reference",
+        "r2",
+        "r5",
+        "r8",
+        "r11",
+        "r14",
+        "d0",
+        "d1",
+        "d2",
+        "d3",
+        "d4",
+        "d6",
+        "d7"
+      ],
+      "successful_kinds": [
+        "reference",
+        "regrasp",
+        "deform"
+      ],
+      "reference_common": 3,
+      "reference_connected": 1,
+      "all_local_nonempty": true,
+      "actions": [
+        {
+          "id": "reference",
+          "kind": "reference",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "r2",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 5320,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r5",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 2401,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r8",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 2369,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r11",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 1899,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r14",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 1506,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "d0",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d1",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d2",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d3",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d4",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d5",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d6",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d7",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        }
+      ],
+      "category": "reference"
+    },
+    {
+      "id": "T018",
+      "split": "development",
+      "diagnosis": "reference_connected",
+      "finite_oracle_solvable": true,
+      "successful_actions": [
+        "reference",
+        "r2",
+        "r5",
+        "r8",
+        "r11",
+        "r14",
+        "d0",
+        "d1",
+        "d2",
+        "d3",
+        "d4",
+        "d5",
+        "d6",
+        "d7"
+      ],
+      "successful_kinds": [
+        "reference",
+        "regrasp",
+        "deform"
+      ],
+      "reference_common": 3,
+      "reference_connected": 1,
+      "all_local_nonempty": true,
+      "actions": [
+        {
+          "id": "reference",
+          "kind": "reference",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "r2",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 6542,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r5",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 2533,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r8",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 3273,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r11",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 1909,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r14",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 1506,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "d0",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d1",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d2",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d3",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d4",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d5",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d6",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d7",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        }
+      ],
+      "category": "reference"
+    },
+    {
+      "id": "T019",
+      "split": "development",
+      "diagnosis": "structural_disconnection",
+      "finite_oracle_solvable": true,
+      "successful_actions": [
+        "r2",
+        "r5",
+        "r8",
+        "r11"
+      ],
+      "successful_kinds": [
+        "regrasp"
+      ],
+      "reference_common": 3,
+      "reference_connected": 0,
+      "all_local_nonempty": true,
+      "actions": [
+        {
+          "id": "reference",
+          "kind": "reference",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "r2",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 1902,
+          "min_graph_switches": 1
+        },
+        {
+          "id": "r5",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 1913,
+          "min_graph_switches": 1
+        },
+        {
+          "id": "r8",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 3265,
+          "min_graph_switches": 1
+        },
+        {
+          "id": "r11",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 3158,
+          "min_graph_switches": 1
+        },
+        {
+          "id": "r14",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 2454,
+          "min_graph_switches": null
+        },
+        {
+          "id": "d0",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d1",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d2",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d3",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d4",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d5",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d6",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d7",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        }
+      ],
+      "category": "regrasp_only"
+    },
+    {
+      "id": "T020",
+      "split": "public_test",
+      "diagnosis": "structural_disconnection",
+      "finite_oracle_solvable": false,
+      "successful_actions": [],
+      "successful_kinds": [],
+      "reference_common": 4,
+      "reference_connected": 0,
+      "all_local_nonempty": true,
+      "actions": [
+        {
+          "id": "reference",
+          "kind": "reference",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "r2",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 2344,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r5",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 2490,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r8",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1468,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r11",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1895,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r14",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1525,
+          "min_graph_switches": null
+        },
+        {
+          "id": "d0",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d1",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d2",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d3",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d4",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d5",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d6",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d7",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        }
+      ],
+      "category": "none"
+    },
+    {
+      "id": "T021",
+      "split": "development",
+      "diagnosis": "reference_connected",
+      "finite_oracle_solvable": true,
+      "successful_actions": [
+        "reference",
+        "r2",
+        "r5",
+        "r8",
+        "r11",
+        "r14",
+        "d0",
+        "d1",
+        "d2",
+        "d3",
+        "d4",
+        "d5",
+        "d6",
+        "d7"
+      ],
+      "successful_kinds": [
+        "reference",
+        "regrasp",
+        "deform"
+      ],
+      "reference_common": 4,
+      "reference_connected": 2,
+      "all_local_nonempty": true,
+      "actions": [
+        {
+          "id": "reference",
+          "kind": "reference",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "r2",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 2446,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r5",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 2401,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r8",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 3275,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r11",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 4170,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r14",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 3168,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "d0",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d1",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d2",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d3",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d4",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d5",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d6",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d7",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        }
+      ],
+      "category": "reference"
+    },
+    {
+      "id": "T022",
+      "split": "development",
+      "diagnosis": "reference_connected",
+      "finite_oracle_solvable": true,
+      "successful_actions": [
+        "reference",
+        "r2",
+        "r5",
+        "r8",
+        "r11",
+        "r14",
+        "d0",
+        "d1",
+        "d2",
+        "d3",
+        "d4",
+        "d5",
+        "d6",
+        "d7"
+      ],
+      "successful_kinds": [
+        "reference",
+        "regrasp",
+        "deform"
+      ],
+      "reference_common": 4,
+      "reference_connected": 2,
+      "all_local_nonempty": true,
+      "actions": [
+        {
+          "id": "reference",
+          "kind": "reference",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "r2",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 4204,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r5",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 2411,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r8",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 1935,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r11",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 1909,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r14",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 2016,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "d0",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d1",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d2",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d3",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d4",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d5",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d6",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d7",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        }
+      ],
+      "category": "reference"
+    },
+    {
+      "id": "T023",
+      "split": "development",
+      "diagnosis": "local_stage_gap",
+      "finite_oracle_solvable": false,
+      "successful_actions": [],
+      "successful_kinds": [],
+      "reference_common": 4,
+      "reference_connected": 0,
+      "all_local_nonempty": false,
+      "actions": [
+        {
+          "id": "reference",
+          "kind": "reference",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "r2",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1040,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r5",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1040,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r8",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 5057,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r11",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 4800,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r14",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 3986,
+          "min_graph_switches": null
+        },
+        {
+          "id": "d0",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d1",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d2",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d3",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d4",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d5",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d6",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d7",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        }
+      ],
+      "category": "none"
+    },
+    {
+      "id": "T024",
+      "split": "public_test",
+      "diagnosis": "local_stage_gap",
+      "finite_oracle_solvable": false,
+      "successful_actions": [],
+      "successful_kinds": [],
+      "reference_common": 3,
+      "reference_connected": 0,
+      "all_local_nonempty": false,
+      "actions": [
+        {
+          "id": "reference",
+          "kind": "reference",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "r2",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 10894,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r5",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 4027,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r8",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 5073,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r11",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1040,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r14",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1040,
+          "min_graph_switches": null
+        },
+        {
+          "id": "d0",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d1",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d2",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d3",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d4",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d5",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d6",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d7",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        }
+      ],
+      "category": "none"
+    },
+    {
+      "id": "T025",
+      "split": "development",
+      "diagnosis": "local_stage_gap",
+      "finite_oracle_solvable": true,
+      "successful_actions": [
+        "d5"
+      ],
+      "successful_kinds": [
+        "deform"
+      ],
+      "reference_common": 3,
+      "reference_connected": 0,
+      "all_local_nonempty": false,
+      "actions": [
+        {
+          "id": "reference",
+          "kind": "reference",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "r2",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 4598,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r5",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 4027,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r8",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1040,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r11",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1040,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r14",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 2926,
+          "min_graph_switches": null
+        },
+        {
+          "id": "d0",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d1",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d2",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d3",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d4",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d5",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d6",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d7",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        }
+      ],
+      "category": "deform_only"
+    },
+    {
+      "id": "T026",
+      "split": "development",
+      "diagnosis": "local_stage_gap",
+      "finite_oracle_solvable": true,
+      "successful_actions": [
+        "d1",
+        "d5"
+      ],
+      "successful_kinds": [
+        "deform"
+      ],
+      "reference_common": 4,
+      "reference_connected": 0,
+      "all_local_nonempty": false,
+      "actions": [
+        {
+          "id": "reference",
+          "kind": "reference",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "r2",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 4588,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r5",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1040,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r8",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1040,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r11",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 4800,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r14",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 2935,
+          "min_graph_switches": null
+        },
+        {
+          "id": "d0",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d1",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d2",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d3",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d4",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d5",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d6",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d7",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        }
+      ],
+      "category": "deform_only"
+    },
+    {
+      "id": "T027",
+      "split": "development",
+      "diagnosis": "local_stage_gap",
+      "finite_oracle_solvable": true,
+      "successful_actions": [
+        "d1",
+        "d5"
+      ],
+      "successful_kinds": [
+        "deform"
+      ],
+      "reference_common": 3,
+      "reference_connected": 0,
+      "all_local_nonempty": false,
+      "actions": [
+        {
+          "id": "reference",
+          "kind": "reference",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "r2",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 4598,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r5",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 4027,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r8",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1040,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r11",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1040,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r14",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 2926,
+          "min_graph_switches": null
+        },
+        {
+          "id": "d0",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d1",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d2",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d3",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d4",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d5",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d6",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d7",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        }
+      ],
+      "category": "deform_only"
+    },
+    {
+      "id": "T028",
+      "split": "public_test",
+      "diagnosis": "reference_connected",
+      "finite_oracle_solvable": true,
+      "successful_actions": [
+        "reference",
+        "r2",
+        "r5",
+        "r8",
+        "r11",
+        "r14",
+        "d0",
+        "d2",
+        "d3",
+        "d4",
+        "d6",
+        "d7"
+      ],
+      "successful_kinds": [
+        "reference",
+        "regrasp",
+        "deform"
+      ],
+      "reference_common": 4,
+      "reference_connected": 1,
+      "all_local_nonempty": true,
+      "actions": [
+        {
+          "id": "reference",
+          "kind": "reference",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "r2",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 2508,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r5",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 2391,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r8",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 3275,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r11",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 4068,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r14",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 2445,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "d0",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d1",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d2",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d3",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d4",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d5",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d6",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d7",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        }
+      ],
+      "category": "reference"
+    },
+    {
+      "id": "T029",
+      "split": "development",
+      "diagnosis": "structural_disconnection",
+      "finite_oracle_solvable": true,
+      "successful_actions": [
+        "r5",
+        "r8",
+        "r11"
+      ],
+      "successful_kinds": [
+        "regrasp"
+      ],
+      "reference_common": 3,
+      "reference_connected": 0,
+      "all_local_nonempty": true,
+      "actions": [
+        {
+          "id": "reference",
+          "kind": "reference",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "r2",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1940,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r5",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 1913,
+          "min_graph_switches": 1
+        },
+        {
+          "id": "r8",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 2371,
+          "min_graph_switches": 1
+        },
+        {
+          "id": "r11",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 4068,
+          "min_graph_switches": 1
+        },
+        {
+          "id": "r14",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 2445,
+          "min_graph_switches": null
+        },
+        {
+          "id": "d0",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d1",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d2",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d3",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d4",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d5",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d6",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d7",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        }
+      ],
+      "category": "regrasp_only"
+    },
+    {
+      "id": "T030",
+      "split": "development",
+      "diagnosis": "local_stage_gap",
+      "finite_oracle_solvable": false,
+      "successful_actions": [],
+      "successful_kinds": [],
+      "reference_common": 3,
+      "reference_connected": 0,
+      "all_local_nonempty": false,
+      "actions": [
+        {
+          "id": "reference",
+          "kind": "reference",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "r2",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 4598,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r5",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 4027,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r8",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1040,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r11",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1040,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r14",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 2926,
+          "min_graph_switches": null
+        },
+        {
+          "id": "d0",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d1",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d2",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d3",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d4",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d5",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d6",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d7",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        }
+      ],
+      "category": "none"
+    },
+    {
+      "id": "T031",
+      "split": "development",
+      "diagnosis": "local_stage_gap",
+      "finite_oracle_solvable": true,
+      "successful_actions": [
+        "d1",
+        "d5"
+      ],
+      "successful_kinds": [
+        "deform"
+      ],
+      "reference_common": 4,
+      "reference_connected": 0,
+      "all_local_nonempty": false,
+      "actions": [
+        {
+          "id": "reference",
+          "kind": "reference",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "r2",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 7492,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r5",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 6425,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r8",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 1040,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r11",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 4800,
+          "min_graph_switches": null
+        },
+        {
+          "id": "r14",
+          "kind": "regrasp",
+          "found": false,
+          "probe_calls": 2935,
+          "min_graph_switches": null
+        },
+        {
+          "id": "d0",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d1",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d2",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d3",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d4",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d5",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d6",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d7",
+          "kind": "deform",
+          "found": false,
+          "probe_calls": 1040
+        }
+      ],
+      "category": "deform_only"
+    },
+    {
+      "id": "T032",
+      "split": "public_test",
+      "diagnosis": "reference_connected",
+      "finite_oracle_solvable": true,
+      "successful_actions": [
+        "reference",
+        "r2",
+        "r5",
+        "r8",
+        "r11",
+        "r14",
+        "d0",
+        "d1",
+        "d2",
+        "d3",
+        "d4",
+        "d5",
+        "d6",
+        "d7"
+      ],
+      "successful_kinds": [
+        "reference",
+        "regrasp",
+        "deform"
+      ],
+      "reference_common": 4,
+      "reference_connected": 3,
+      "all_local_nonempty": true,
+      "actions": [
+        {
+          "id": "reference",
+          "kind": "reference",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "r2",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 5320,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r5",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 3981,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r8",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 2465,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r11",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 1929,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "r14",
+          "kind": "regrasp",
+          "found": true,
+          "probe_calls": 3126,
+          "min_graph_switches": 0
+        },
+        {
+          "id": "d0",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d1",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d2",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d3",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d4",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d5",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d6",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        },
+        {
+          "id": "d7",
+          "kind": "deform",
+          "found": true,
+          "probe_calls": 1040
+        }
+      ],
+      "category": "reference"
+    }
+  ],
+  "categories": {
+    "reference": 10,
+    "regrasp_only": 6,
+    "deform_only": 6,
+    "both_repairs": 0,
+    "none": 10
+  }
+}
