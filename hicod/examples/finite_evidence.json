@@ -1,0 +1,418 @@
+{
+  "A01": {
+    "scope": {
+      "model": "synthetic finite candidate graph",
+      "domain": "explicit node/edge IDs; no continuous interpolation claim",
+      "evidence": "deterministic teaching fixture"
+    },
+    "universe": [
+      "g1",
+      "g2",
+      "g3"
+    ],
+    "first": [
+      "g1",
+      "g2"
+    ],
+    "second": [
+      "g2",
+      "g3"
+    ]
+  },
+  "A04": {
+    "scope": {
+      "model": "synthetic finite candidate graph",
+      "domain": "explicit node/edge IDs; no continuous interpolation claim",
+      "evidence": "deterministic teaching fixture"
+    },
+    "universe": [
+      "x1",
+      "x2"
+    ],
+    "first": [
+      "x1"
+    ],
+    "second": [
+      "x2"
+    ]
+  },
+  "B01": {
+    "scope": {
+      "model": "synthetic finite candidate graph",
+      "domain": "explicit node/edge IDs; no continuous interpolation claim",
+      "evidence": "deterministic teaching fixture"
+    },
+    "nodes": [
+      "s",
+      "a",
+      "b",
+      "t",
+      "dead"
+    ],
+    "edges": [
+      {
+        "from": "s",
+        "to": "a",
+        "evidence_id": "e1",
+        "capacity": 2,
+        "switch_cost": 0
+      },
+      {
+        "from": "a",
+        "to": "t",
+        "evidence_id": "e2",
+        "capacity": 1,
+        "switch_cost": 1
+      },
+      {
+        "from": "s",
+        "to": "b",
+        "evidence_id": "e3",
+        "capacity": 1,
+        "switch_cost": 0
+      },
+      {
+        "from": "b",
+        "to": "t",
+        "evidence_id": "e4",
+        "capacity": 1,
+        "switch_cost": 0
+      }
+    ],
+    "starts": [
+      "s"
+    ],
+    "goals": [
+      "t"
+    ],
+    "source": "s",
+    "sink": "t"
+  },
+  "B05": {
+    "scope": {
+      "model": "synthetic finite candidate graph",
+      "domain": "explicit node/edge IDs; no continuous interpolation claim",
+      "evidence": "deterministic teaching fixture"
+    },
+    "nodes": [
+      "a0",
+      "a1",
+      "a2",
+      "b0",
+      "b1",
+      "b2"
+    ],
+    "labels": {
+      "a0": {
+        "stage": 0,
+        "mode": "A"
+      },
+      "a1": {
+        "stage": 1,
+        "mode": "A"
+      },
+      "a2": {
+        "stage": 2,
+        "mode": "A"
+      },
+      "b0": {
+        "stage": 0,
+        "mode": "B"
+      },
+      "b1": {
+        "stage": 1,
+        "mode": "B"
+      },
+      "b2": {
+        "stage": 2,
+        "mode": "B"
+      }
+    },
+    "stages": 3,
+    "starts": [
+      "a0",
+      "b0"
+    ],
+    "goals": [
+      "a2",
+      "b2"
+    ],
+    "edges": [
+      {
+        "from": "a0",
+        "to": "a1",
+        "evidence_id": "l1"
+      },
+      {
+        "from": "b0",
+        "to": "b1",
+        "evidence_id": "l2"
+      },
+      {
+        "from": "b1",
+        "to": "b2",
+        "evidence_id": "l3"
+      },
+      {
+        "from": "a1",
+        "to": "b2",
+        "evidence_id": "l4"
+      }
+    ]
+  },
+  "B08": {
+    "scope": {
+      "model": "synthetic finite candidate graph",
+      "domain": "explicit node/edge IDs; no continuous interpolation claim",
+      "evidence": "deterministic teaching fixture"
+    },
+    "nodes": [
+      "s",
+      "a",
+      "b",
+      "t",
+      "dead"
+    ],
+    "edges": [
+      {
+        "from": "s",
+        "to": "a",
+        "evidence_id": "e1",
+        "capacity": 2,
+        "switch_cost": 0
+      },
+      {
+        "from": "a",
+        "to": "t",
+        "evidence_id": "e2",
+        "capacity": 1,
+        "switch_cost": 1
+      },
+      {
+        "from": "s",
+        "to": "b",
+        "evidence_id": "e3",
+        "capacity": 1,
+        "switch_cost": 0
+      },
+      {
+        "from": "b",
+        "to": "t",
+        "evidence_id": "e4",
+        "capacity": 1,
+        "switch_cost": 0
+      }
+    ],
+    "starts": [
+      "s"
+    ],
+    "goals": [
+      "t"
+    ],
+    "source": "s",
+    "sink": "t"
+  },
+  "D03": {
+    "scope": {
+      "model": "synthetic finite candidate graph",
+      "domain": "explicit node/edge IDs; no continuous interpolation claim",
+      "evidence": "deterministic teaching fixture"
+    },
+    "nodes": [
+      "s",
+      "a",
+      "b",
+      "t",
+      "dead"
+    ],
+    "edges": [
+      {
+        "from": "s",
+        "to": "a",
+        "evidence_id": "e1",
+        "capacity": 2,
+        "switch_cost": 0
+      },
+      {
+        "from": "a",
+        "to": "t",
+        "evidence_id": "e2",
+        "capacity": 1,
+        "switch_cost": 1
+      },
+      {
+        "from": "s",
+        "to": "b",
+        "evidence_id": "e3",
+        "capacity": 1,
+        "switch_cost": 0
+      },
+      {
+        "from": "b",
+        "to": "t",
+        "evidence_id": "e4",
+        "capacity": 1,
+        "switch_cost": 0
+      }
+    ],
+    "starts": [
+      "s"
+    ],
+    "goals": [
+      "t"
+    ],
+    "source": "s",
+    "sink": "t"
+  },
+  "C05": {
+    "scope": {
+      "model": "synthetic finite candidate graph",
+      "domain": "explicit node/edge IDs; no continuous interpolation claim",
+      "evidence": "deterministic teaching fixture"
+    },
+    "nodes": [
+      "s",
+      "a",
+      "b",
+      "t",
+      "dead"
+    ],
+    "edges": [
+      {
+        "from": "s",
+        "to": "a",
+        "evidence_id": "e1",
+        "capacity": 2,
+        "switch_cost": 0
+      },
+      {
+        "from": "a",
+        "to": "t",
+        "evidence_id": "e2",
+        "capacity": 1,
+        "switch_cost": 1
+      },
+      {
+        "from": "s",
+        "to": "b",
+        "evidence_id": "e3",
+        "capacity": 1,
+        "switch_cost": 0
+      },
+      {
+        "from": "b",
+        "to": "t",
+        "evidence_id": "e4",
+        "capacity": 1,
+        "switch_cost": 0
+      }
+    ],
+    "starts": [
+      "s"
+    ],
+    "goals": [
+      "t"
+    ],
+    "source": "s",
+    "sink": "t"
+  },
+  "E06": {
+    "scope": {
+      "model": "synthetic finite candidate graph",
+      "domain": "explicit node/edge IDs; no continuous interpolation claim",
+      "evidence": "deterministic teaching fixture"
+    },
+    "nodes": [
+      "s",
+      "a",
+      "b",
+      "t",
+      "dead"
+    ],
+    "edges": [
+      {
+        "from": "s",
+        "to": "a",
+        "evidence_id": "e1",
+        "capacity": 2,
+        "switch_cost": 0
+      },
+      {
+        "from": "a",
+        "to": "t",
+        "evidence_id": "e2",
+        "capacity": 1,
+        "switch_cost": 1
+      },
+      {
+        "from": "s",
+        "to": "b",
+        "evidence_id": "e3",
+        "capacity": 1,
+        "switch_cost": 0
+      },
+      {
+        "from": "b",
+        "to": "t",
+        "evidence_id": "e4",
+        "capacity": 1,
+        "switch_cost": 0
+      }
+    ],
+    "starts": [
+      "s"
+    ],
+    "goals": [
+      "t"
+    ],
+    "source": "s",
+    "sink": "t"
+  },
+  "F01": {
+    "scope": {
+      "model": "synthetic finite candidate graph",
+      "domain": "explicit node/edge IDs; no continuous interpolation claim",
+      "evidence": "deterministic teaching fixture"
+    },
+    "block_a": [
+      "a",
+      "b"
+    ],
+    "block_b": [
+      "x",
+      "y"
+    ],
+    "feasible_pairs": [
+      [
+        "a",
+        "x"
+      ],
+      [
+        "b",
+        "y"
+      ]
+    ]
+  },
+  "H04": {
+    "scope": {
+      "model": "synthetic finite candidate graph",
+      "domain": "explicit node/edge IDs; no continuous interpolation claim",
+      "evidence": "deterministic teaching fixture"
+    },
+    "measure": "uniform on listed samples",
+    "samples": [
+      {
+        "id": "a",
+        "feasible": true
+      },
+      {
+        "id": "b",
+        "feasible": false
+      },
+      {
+        "id": "c",
+        "feasible": true
+      }
+    ]
+  }
+}

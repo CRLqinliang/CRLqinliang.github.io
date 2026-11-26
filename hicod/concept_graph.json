@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.3.1",
   "updated": "2026-11-26",
   "scope": "Research taxonomy of robotic solution-space structure; not a standardized ontology or an implementation of 60 physical evaluators.",
   "notation": "F(T): feasible set in declared candidate domain. G(p): object-relative feasible grasps. Γ: path family. V: declared structural descriptor. μ: specified measure. All results are relative to scope, models and evidence. A sampled negative result is not a continuous infeasibility proof.",
@@ -340,13 +340,19 @@
         "WAN"
       ],
       "source_relationship": "Established underlying concept; the formula is a scoped project specification, not a verbatim source definition.",
-      "implementation_status": "definition_only",
+      "implementation_status": "finite_evidence_evaluator",
       "optional_evidence": [],
       "audit": {
         "decision": "Keep",
         "note": "Use canonical object-relative grasp IDs and a common sampled universe. Empty intersection only excludes the tested candidates.",
         "status": "desk_reviewed",
         "expert_review": "pending"
+      },
+      "implementation": {
+        "module": "evaluators.mjs",
+        "entry": "evaluate",
+        "fixture": "examples/finite_evidence.json",
+        "scope": "Exact computations on supplied finite evidence only. Actual geometry/IK/physics backend is external; continuous claims remain unverified."
       }
     },
     {
@@ -447,13 +453,19 @@
         "TEXT"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only",
+      "implementation_status": "finite_evidence_evaluator",
       "optional_evidence": [],
       "audit": {
         "decision": "Keep",
         "note": "The intersection must use reachable output states from the actual allowed initial set, not nominal postconditions.",
         "status": "desk_reviewed",
         "expert_review": "pending"
+      },
+      "implementation": {
+        "module": "evaluators.mjs",
+        "entry": "evaluate",
+        "fixture": "examples/finite_evidence.json",
+        "scope": "Exact computations on supplied finite evidence only. Actual geometry/IK/physics backend is external; continuous claims remain unverified."
       }
     },
     {
@@ -552,13 +564,19 @@
         "PROOF"
       ],
       "source_relationship": "Established underlying concept; the formula is a scoped project specification, not a verbatim source definition.",
-      "implementation_status": "definition_only",
+      "implementation_status": "finite_evidence_evaluator",
       "optional_evidence": [],
       "audit": {
         "decision": "Scope",
         "note": "Pairwise connectivity is a relation on endpoint states; report reachable sets or components when diagnosing a solution space. Finite graph absence is unknown continuously.",
         "status": "desk_reviewed",
         "expert_review": "pending"
+      },
+      "implementation": {
+        "module": "evaluators.mjs",
+        "entry": "evaluate",
+        "fixture": "examples/finite_evidence.json",
+        "scope": "Exact computations on supplied finite evidence only. Actual geometry/IK/physics backend is external; continuous claims remain unverified."
       }
     },
     {
@@ -695,7 +713,7 @@
         "MODES"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only",
+      "implementation_status": "finite_evidence_evaluator",
       "optional_evidence": [
         "C04"
       ],
@@ -704,6 +722,12 @@
         "note": "Separate fixed-attachment path lift from switch-allowed tracking. A release may violate a continuous drag requirement; only count it under explicit task rules.",
         "status": "desk_reviewed",
         "expert_review": "pending"
+      },
+      "implementation": {
+        "module": "evaluators.mjs",
+        "entry": "evaluate",
+        "fixture": "examples/finite_evidence.json",
+        "scope": "Exact computations on supplied finite evidence only. Actual geometry/IK/physics backend is external; continuous claims remain unverified."
       }
     },
     {
@@ -799,13 +823,19 @@
         "LAV"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only",
+      "implementation_status": "finite_evidence_evaluator",
       "optional_evidence": [],
       "audit": {
         "decision": "Keep",
         "note": "Unit-capacity edge-disjoint routes are a graph invariant; declare directedness, endpoint conventions and failure correlations.",
         "status": "desk_reviewed",
         "expert_review": "pending"
+      },
+      "implementation": {
+        "module": "evaluators.mjs",
+        "entry": "evaluate",
+        "fixture": "examples/finite_evidence.json",
+        "scope": "Exact computations on supplied finite evidence only. Actual geometry/IK/physics backend is external; continuous claims remain unverified."
       }
     },
     {
@@ -979,13 +1009,19 @@
         "LAV"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only",
+      "implementation_status": "finite_evidence_evaluator",
       "optional_evidence": [],
       "audit": {
         "decision": "Keep",
         "note": "Costs apply to explicitly labeled transition edges; report finite graph optimum and do not equate switch count with execution time.",
         "status": "desk_reviewed",
         "expert_review": "pending"
+      },
+      "implementation": {
+        "module": "evaluators.mjs",
+        "entry": "evaluate",
+        "fixture": "examples/finite_evidence.json",
+        "scope": "Exact computations on supplied finite evidence only. Actual geometry/IK/physics backend is external; continuous claims remain unverified."
       }
     },
     {
@@ -1120,7 +1156,7 @@
         "IKLINK"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only",
+      "implementation_status": "finite_evidence_evaluator",
       "optional_evidence": [
         "B05",
         "B08"
@@ -1130,6 +1166,12 @@
         "note": "Minimum cut is generic graph capacity, not specific to grasp–IK tracking. Report zero-cut disconnection separately from small positive bottleneck.",
         "status": "desk_reviewed",
         "expert_review": "pending"
+      },
+      "implementation": {
+        "module": "evaluators.mjs",
+        "entry": "evaluate",
+        "fixture": "examples/finite_evidence.json",
+        "scope": "Exact computations on supplied finite evidence only. Actual geometry/IK/physics backend is external; continuous claims remain unverified."
       }
     },
     {
@@ -1469,13 +1511,19 @@
         "FACT"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only",
+      "implementation_status": "finite_evidence_evaluator",
       "optional_evidence": [],
       "audit": {
         "decision": "Scope",
         "note": "Compute the backward reachable set for the remaining goal; a membership test for one intermediate state is only L3 evidence.",
         "status": "desk_reviewed",
         "expert_review": "pending"
+      },
+      "implementation": {
+        "module": "evaluators.mjs",
+        "entry": "evaluate",
+        "fixture": "examples/finite_evidence.json",
+        "scope": "Exact computations on supplied finite evidence only. Actual geometry/IK/physics backend is external; continuous claims remain unverified."
       }
     },
     {
@@ -1502,13 +1550,19 @@
         "BOYD"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only",
+      "implementation_status": "finite_evidence_evaluator",
       "optional_evidence": [],
       "audit": {
         "decision": "Keep",
         "note": "Feasible-set nonfactorization and objective nonseparability are distinct coupling types; specify blocks and domain.",
         "status": "desk_reviewed",
         "expert_review": "pending"
+      },
+      "implementation": {
+        "module": "evaluators.mjs",
+        "entry": "evaluate",
+        "fixture": "examples/finite_evidence.json",
+        "scope": "Exact computations on supplied finite evidence only. Actual geometry/IK/physics backend is external; continuous claims remain unverified."
       }
     },
     {
@@ -1948,13 +2002,19 @@
         "EXP"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only",
+      "implementation_status": "finite_evidence_evaluator",
       "optional_evidence": [],
       "audit": {
         "decision": "Keep",
         "note": "Declare sampling law, domain and intrinsic measure. A finite feasible fraction estimates probability under that law, not necessarily geometric volume.",
         "status": "desk_reviewed",
         "expert_review": "pending"
+      },
+      "implementation": {
+        "module": "evaluators.mjs",
+        "entry": "evaluate",
+        "fixture": "examples/finite_evidence.json",
+        "scope": "Exact computations on supplied finite evidence only. Actual geometry/IK/physics backend is external; continuous claims remain unverified."
       }
     },
     {

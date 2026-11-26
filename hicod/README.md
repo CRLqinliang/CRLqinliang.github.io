@@ -40,7 +40,7 @@ Reports distinguish verified sampled facts, sampled graph witnesses, and unknown
 
 [Interactive graph explorer](https://crlqinliang.github.io/hicod/graph.html) · [Full concept catalogue](CONCEPTS.md).
 
-The [full registry](concept_graph.json) contains 60 L4 definitions, 15 evidence interfaces, 304 typed edges and 29 source records. The [catalogue](CONCEPTS.md) contains mathematical specifications, computation contracts, inputs, dependencies and limitations. The underlying literature is distinguished from HiCoD operational proposals; all 60 entries are definition-only, not full physical evaluators.
+The [full registry](concept_graph.json) contains 60 L4 definitions, 15 evidence interfaces, 304 typed edges and 29 source records. The [catalogue](CONCEPTS.md) contains mathematical specifications, computation contracts, inputs, dependencies and limitations. The underlying literature is distinguished from HiCoD operational proposals; ten entries now have finite-evidence evaluators; the remaining 50 are definition-only. No entry is claimed as a full physical evaluator.
 
 The required-evidence DAG can be queried without MuJoCo or an LLM:
 
@@ -49,6 +49,15 @@ The required-evidence DAG can be queried without MuJoCo or an LLM:
     python concept_graph.py trace B05
 
 Diagnostic links are suggested queries, not causal or logical implications. The planar demo remains an independent proof-of-concept proxy; it does not implement these 60 full robotic descriptors.
+
+## v0.3.1: Executable finite-evidence layer
+
+See [EVALUATORS.md](EVALUATORS.md) and [evaluators.mjs](evaluators.mjs). Run with Node.js 18+:
+
+    node examples/evaluate.mjs B05
+    node tests/test_evaluators.mjs
+
+Ten concept computations are implemented over explicitly supplied finite data (not a robot simulator); 18 checks were executed on the evaluator function bodies. Full physical validation and backend integration remain pending.
 
 ## Concept modules
 
