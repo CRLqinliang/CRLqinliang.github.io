@@ -550,7 +550,7 @@
     },
     {
       "id": "T004",
-      "split": "public_test",
+      "split": "development",
       "scene": {
         "model": {
           "lengths": [
@@ -1218,7 +1218,7 @@
     },
     {
       "id": "T008",
-      "split": "public_test",
+      "split": "development",
       "scene": {
         "model": {
           "lengths": [
@@ -1886,7 +1886,7 @@
     },
     {
       "id": "T012",
-      "split": "public_test",
+      "split": "development",
       "scene": {
         "model": {
           "lengths": [
@@ -2554,7 +2554,7 @@
     },
     {
       "id": "T016",
-      "split": "public_test",
+      "split": "development",
       "scene": {
         "model": {
           "lengths": [
@@ -3055,7 +3055,7 @@
     },
     {
       "id": "T019",
-      "split": "development",
+      "split": "public_test",
       "scene": {
         "model": {
           "lengths": [
@@ -3222,7 +3222,7 @@
     },
     {
       "id": "T020",
-      "split": "public_test",
+      "split": "development",
       "scene": {
         "model": {
           "lengths": [
@@ -3556,7 +3556,7 @@
     },
     {
       "id": "T022",
-      "split": "development",
+      "split": "public_test",
       "scene": {
         "model": {
           "lengths": [
@@ -3723,7 +3723,7 @@
     },
     {
       "id": "T023",
-      "split": "development",
+      "split": "public_test",
       "scene": {
         "model": {
           "lengths": [
@@ -4391,7 +4391,7 @@
     },
     {
       "id": "T027",
-      "split": "development",
+      "split": "public_test",
       "scene": {
         "model": {
           "lengths": [
@@ -4725,7 +4725,7 @@
     },
     {
       "id": "T029",
-      "split": "development",
+      "split": "public_test",
       "scene": {
         "model": {
           "lengths": [
@@ -4892,7 +4892,7 @@
     },
     {
       "id": "T030",
-      "split": "development",
+      "split": "public_test",
       "scene": {
         "model": {
           "lengths": [
@@ -5059,7 +5059,7 @@
     },
     {
       "id": "T031",
-      "split": "development",
+      "split": "public_test",
       "scene": {
         "model": {
           "lengths": [
@@ -5395,5 +5395,6 @@
   "limitations": [
     "Designed public planar fixtures; no secret holdout, no dynamic or hardware validation.",
     "Only explicitly enumerated actions are considered."
-  ]
+  ],
+  "split_policy": "Category-stratified public split, last 3 reference, 2 regrasp-only, 2 deformation-only and 3 finite-no-witness cases by task ID assigned to public_test. Both splits are public; no unseen-test claim."
 }

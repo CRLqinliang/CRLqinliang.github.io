@@ -339,7 +339,7 @@
     },
     {
       "id": "T004",
-      "split": "public_test",
+      "split": "development",
       "diagnosis": "structural_disconnection",
       "finite_oracle_solvable": true,
       "successful_actions": [
@@ -769,7 +769,7 @@
     },
     {
       "id": "T008",
-      "split": "public_test",
+      "split": "development",
       "diagnosis": "local_stage_gap",
       "finite_oracle_solvable": false,
       "successful_actions": [],
@@ -1185,7 +1185,7 @@
     },
     {
       "id": "T012",
-      "split": "public_test",
+      "split": "development",
       "diagnosis": "reference_connected",
       "finite_oracle_solvable": true,
       "successful_actions": [
@@ -1657,7 +1657,7 @@
     },
     {
       "id": "T016",
-      "split": "public_test",
+      "split": "development",
       "diagnosis": "local_stage_gap",
       "finite_oracle_solvable": false,
       "successful_actions": [],
@@ -2003,7 +2003,7 @@
     },
     {
       "id": "T019",
-      "split": "development",
+      "split": "public_test",
       "diagnosis": "structural_disconnection",
       "finite_oracle_solvable": true,
       "successful_actions": [
@@ -2113,7 +2113,7 @@
     },
     {
       "id": "T020",
-      "split": "public_test",
+      "split": "development",
       "diagnosis": "structural_disconnection",
       "finite_oracle_solvable": false,
       "successful_actions": [],
@@ -2338,7 +2338,7 @@
     },
     {
       "id": "T022",
-      "split": "development",
+      "split": "public_test",
       "diagnosis": "reference_connected",
       "finite_oracle_solvable": true,
       "successful_actions": [
@@ -2460,7 +2460,7 @@
     },
     {
       "id": "T023",
-      "split": "development",
+      "split": "public_test",
       "diagnosis": "local_stage_gap",
       "finite_oracle_solvable": false,
       "successful_actions": [],
@@ -2881,7 +2881,7 @@
     },
     {
       "id": "T027",
-      "split": "development",
+      "split": "public_test",
       "diagnosis": "local_stage_gap",
       "finite_oracle_solvable": true,
       "successful_actions": [
@@ -3109,7 +3109,7 @@
     },
     {
       "id": "T029",
-      "split": "development",
+      "split": "public_test",
       "diagnosis": "structural_disconnection",
       "finite_oracle_solvable": true,
       "successful_actions": [
@@ -3218,7 +3218,7 @@
     },
     {
       "id": "T030",
-      "split": "development",
+      "split": "public_test",
       "diagnosis": "local_stage_gap",
       "finite_oracle_solvable": false,
       "successful_actions": [],
@@ -3321,7 +3321,7 @@
     },
     {
       "id": "T031",
-      "split": "development",
+      "split": "public_test",
       "diagnosis": "local_stage_gap",
       "finite_oracle_solvable": true,
       "successful_actions": [
