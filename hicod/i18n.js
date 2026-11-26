@@ -23,7 +23,7 @@ const dict={
   "OPEN-SOURCE RESEARCH INITIATIVE / V0.5.1 PROTOTYPE": "开源研究项目 / V0.5.1 原型",
   "Robotics for": "面向推理的",
   "reasoning.": "机器人学。",
-  "High-Level Concept Debugger for Agentic Robotics": "面向智能体式机器人的高层概念调试器",
+  "High-Level Concept Debugger for Agentic Robotics": "面向智能体驱动机器人的高层概念调试器",
   "Understand the structure of robotic solution spaces, not just why a single trajectory failed. HiCoD turns computational evidence into hierarchical, language-accessible physical concepts for LLM agents.": "理解机器人任务解空间的结构，而不仅仅解释某条轨迹为何失败。HiCoD 将计算证据转换为分层、可通过语言访问的物理概念，供大语言模型智能体推理。",
   "Explore the interactive example ↘": "查看交互示例 ↘",
   "View source on GitHub ↗": "查看 GitHub 源码 ↗",
@@ -294,7 +294,7 @@ const normalize=s=>s.trim().replace(/\s+/g," ");
 function translate(s){
  if(lang!=="zh"||typeof s!=="string")return s;
  const n=normalize(s);if(Object.hasOwn(dict,n))return s.replace(s.trim(),dict[n]);
- const prefixes=[["Connected fixed modes: ","连通的固定模式："],["Progress: ","任务进度："],["FK residual: ","正运动学残差："],["Minimum checked clearance: ","所检查的最小间隙："],["Rejected probe IDs: ","被拒绝的探测 ID："],["Joint step bound exceeded. ","超过关节步长上限。"],["Probe count: ","探测数量："],["Definition audit · ","定义审查（英文原文）· "],["L4 · Fixed-mode transport connectivity: ","L4 · 固定模式搬运连通性："],["Compatible sampled modes: ","采样兼容模式："],["Center position (0, 0): ","中心位置 (0, 0)："],["Mode A: ","模式 A："]];
+ const prefixes=[["Rejected: ","已拒绝："],["stage count: ","阶段数："],["No constraint violation","未发现约束违规"],["Connected fixed modes: ","连通的固定模式："],["Progress: ","任务进度："],["FK residual: ","正运动学残差："],["Minimum checked clearance: ","所检查的最小间隙："],["Rejected probe IDs: ","被拒绝的探测 ID："],["Joint step bound exceeded. ","超过关节步长上限。"],["Probe count: ","探测数量："],["Definition audit · ","定义审查（英文原文）· "],["L4 · Fixed-mode transport connectivity: ","L4 · 固定模式搬运连通性："],["Compatible sampled modes: ","采样兼容模式："],["Center position (0, 0): ","中心位置 (0, 0)："],["Mode A: ","模式 A："]];
  for(const [a,b] of prefixes)if(n.startsWith(a))return s.replace(a,b);
  const count=n.match(/^(\d+) matching nodes$/);if(count)return count[1]+" 个匹配节点";
  return s;
@@ -311,7 +311,7 @@ function walk(root){
 }
 function init(){
  if(lang==="zh"){walk(document.body);document.title=translate(document.title);const obs=new MutationObserver(records=>{for(const r of records){if(r.type==="characterData")walk(r.target);else for(const n of r.addedNodes)walk(n);}});obs.observe(document.body,{childList:true,subtree:true,characterData:true});}
- const nav=document.querySelector("header.top nav");if(nav){const bar=document.createElement("span");bar.className="lang-switch";bar.setAttribute("aria-label","Language / 语言");bar.dataset.noI18n="";for(const [code,label] of [["en","EN"],["zh","CN"]]){const a=document.createElement("a"),u=new URL(location.href);u.searchParams.set("lang",code);a.href=u.href;a.textContent=label;a.lang=code==="zh"?"zh-CN":"en";if(code===lang){a.classList.add("active");a.setAttribute("aria-current","true");}bar.append(a);}nav.append(bar);}
+ const nav=document.querySelector("header.top nav");if(nav){const bar=document.createElement("span");bar.className="lang-switch";bar.setAttribute("aria-label","Language / 语言");bar.dataset.noI18n="";for(const [code,label] of [["en","EN"],["zh","CN"]]){const a=document.createElement("a"),u=new URL(location.href);u.searchParams.set("lang",code);a.href=u.href;a.addEventListener("click",e=>{e.preventDefault();const next=new URL(location.href);next.searchParams.set("lang",code);location.href=next.href;});a.textContent=label;a.lang=code==="zh"?"zh-CN":"en";if(code===lang){a.classList.add("active");a.setAttribute("aria-current","true");}bar.append(a);}nav.append(bar);}
  // Preserve choice across project navigation, even if browser storage is disabled.
  for(const a of document.querySelectorAll("a[href]")){const raw=a.getAttribute("href");if(!raw||raw.startsWith("#")||raw==="../"||raw.startsWith("https:")||raw.startsWith("http:")||raw.includes(".json")||raw.includes(".md"))continue;const u=new URL(a.href);if(u.origin===location.origin&&u.pathname.includes("/hicod/")&&(u.pathname.endsWith("/")||u.pathname.endsWith(".html"))){u.searchParams.set("lang",lang);a.href=u.href;}}
 }
