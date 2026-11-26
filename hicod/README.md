@@ -68,6 +68,13 @@ The 3R planar arm uses analytic FK/IK, collision clearances, ideal fixed attachm
     node examples/planar3r.mjs disconnected --raw raw.json --report report.json
     node tests/test_planar3r.mjs
 
+## v0.5: Multimodal explorer
+
+[Multimodal documentation](MULTIMODAL.md) · [Computed results](multimodal_results.json). Five hybrid concepts now have planar implementations under explicitly assumed support, including B06, C01, C02, C04, C05. A designed geometry case has no sampled fixed-mode path but admits a one-switch path. No continuous or dynamic guarantee.
+
+    node examples/multimodal.mjs regrasp_recovery all
+    node tests/test_multimodal.mjs
+
 ## Concept modules
 
 See [concepts.json](concepts.json) for the registry, [hicod.py](hicod.py) for the small evaluator and evidence-report implementation, and [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution contract. Initial implementations: sampled feasibility, endpoint compatibility, graph connectivity and connected components. Roadmap: shared-grasp sets from actual robot IK/collision, intermediate pose/regrasp, Grasp–IK/drag connectivity, bottleneck attribution, constraint conflicts, cross-stage dependencies, sensitivity, robustness and counterfactual recovery. The author's existing research implementations are not included in this initial commit.

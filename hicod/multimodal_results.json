@@ -1,0 +1,851 @@
+{
+  "status": "executed_analytic_geometry",
+  "checks": [
+    "No support: no switch",
+    "Full support: one switch",
+    "Eleven supported bridge stages",
+    "One bridge stage sufficient",
+    "Nonbridging stage insufficient",
+    "Negative scene retained",
+    "Witness cost agrees",
+    "Switch edges have different modes and same stage",
+    "Every admitted switch has checked dock and transit evidence",
+    "C01 and C02 agree with graph",
+    "No unsupported stages",
+    "Invalid support input rejected"
+  ],
+  "results": {
+    "none": {
+      "scene": "regrasp_recovery",
+      "support_stages": [],
+      "common": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "connected_fixed_modes": [],
+      "hybrid_connected": false,
+      "min_graph_switches": null,
+      "attempted_pairs": 0,
+      "accepted_switches": 0,
+      "one_switch_bridge_stages": [],
+      "stage_reports": [],
+      "witness_edges": []
+    },
+    "all": {
+      "scene": "regrasp_recovery",
+      "support_stages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "common": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "connected_fixed_modes": [],
+      "hybrid_connected": true,
+      "min_graph_switches": 1,
+      "attempted_pairs": 640,
+      "accepted_switches": 88,
+      "one_switch_bridge_stages": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "stage_reports": [
+        {
+          "stage": 1,
+          "pose": [
+            0.451875,
+            -0.22625,
+            0
+          ],
+          "attached_slots": 6,
+          "eligible_pairs": 28,
+          "valid_docks": 4,
+          "accepted_switches": 4,
+          "rejected_dock": 16,
+          "rejected_transit": 8
+        },
+        {
+          "stage": 2,
+          "pose": [
+            0.45375,
+            -0.1925,
+            0
+          ],
+          "attached_slots": 6,
+          "eligible_pairs": 30,
+          "valid_docks": 6,
+          "accepted_switches": 8,
+          "rejected_dock": 0,
+          "rejected_transit": 22
+        },
+        {
+          "stage": 3,
+          "pose": [
+            0.455625,
+            -0.15875,
+            0
+          ],
+          "attached_slots": 6,
+          "eligible_pairs": 28,
+          "valid_docks": 5,
+          "accepted_switches": 6,
+          "rejected_dock": 8,
+          "rejected_transit": 14
+        },
+        {
+          "stage": 4,
+          "pose": [
+            0.4575,
+            -0.125,
+            0
+          ],
+          "attached_slots": 6,
+          "eligible_pairs": 28,
+          "valid_docks": 4,
+          "accepted_switches": 4,
+          "rejected_dock": 16,
+          "rejected_transit": 8
+        },
+        {
+          "stage": 5,
+          "pose": [
+            0.459375,
+            -0.09125,
+            0
+          ],
+          "attached_slots": 6,
+          "eligible_pairs": 28,
+          "valid_docks": 5,
+          "accepted_switches": 4,
+          "rejected_dock": 10,
+          "rejected_transit": 14
+        },
+        {
+          "stage": 6,
+          "pose": [
+            0.46125,
+            -0.057499999999999996,
+            0
+          ],
+          "attached_slots": 6,
+          "eligible_pairs": 28,
+          "valid_docks": 5,
+          "accepted_switches": 4,
+          "rejected_dock": 10,
+          "rejected_transit": 14
+        },
+        {
+          "stage": 7,
+          "pose": [
+            0.463125,
+            -0.023749999999999993,
+            0
+          ],
+          "attached_slots": 8,
+          "eligible_pairs": 52,
+          "valid_docks": 5,
+          "accepted_switches": 4,
+          "rejected_dock": 34,
+          "rejected_transit": 14
+        },
+        {
+          "stage": 8,
+          "pose": [
+            0.46499999999999997,
+            0.010000000000000009,
+            0
+          ],
+          "attached_slots": 8,
+          "eligible_pairs": 52,
+          "valid_docks": 6,
+          "accepted_switches": 6,
+          "rejected_dock": 24,
+          "rejected_transit": 22
+        },
+        {
+          "stage": 9,
+          "pose": [
+            0.466875,
+            0.04375000000000001,
+            0
+          ],
+          "attached_slots": 7,
+          "eligible_pairs": 40,
+          "valid_docks": 5,
+          "accepted_switches": 4,
+          "rejected_dock": 22,
+          "rejected_transit": 14
+        },
+        {
+          "stage": 10,
+          "pose": [
+            0.46875,
+            0.07750000000000001,
+            0
+          ],
+          "attached_slots": 8,
+          "eligible_pairs": 52,
+          "valid_docks": 6,
+          "accepted_switches": 6,
+          "rejected_dock": 26,
+          "rejected_transit": 20
+        },
+        {
+          "stage": 11,
+          "pose": [
+            0.470625,
+            0.11125000000000002,
+            0
+          ],
+          "attached_slots": 7,
+          "eligible_pairs": 38,
+          "valid_docks": 6,
+          "accepted_switches": 6,
+          "rejected_dock": 12,
+          "rejected_transit": 20
+        },
+        {
+          "stage": 12,
+          "pose": [
+            0.4725,
+            0.14500000000000002,
+            0
+          ],
+          "attached_slots": 9,
+          "eligible_pairs": 66,
+          "valid_docks": 7,
+          "accepted_switches": 10,
+          "rejected_dock": 30,
+          "rejected_transit": 26
+        },
+        {
+          "stage": 13,
+          "pose": [
+            0.474375,
+            0.17875000000000002,
+            0
+          ],
+          "attached_slots": 9,
+          "eligible_pairs": 66,
+          "valid_docks": 6,
+          "accepted_switches": 6,
+          "rejected_dock": 40,
+          "rejected_transit": 20
+        },
+        {
+          "stage": 14,
+          "pose": [
+            0.47625,
+            0.21250000000000002,
+            0
+          ],
+          "attached_slots": 8,
+          "eligible_pairs": 52,
+          "valid_docks": 5,
+          "accepted_switches": 8,
+          "rejected_dock": 34,
+          "rejected_transit": 10
+        },
+        {
+          "stage": 15,
+          "pose": [
+            0.47812499999999997,
+            0.24625000000000008,
+            0
+          ],
+          "attached_slots": 8,
+          "eligible_pairs": 52,
+          "valid_docks": 5,
+          "accepted_switches": 8,
+          "rejected_dock": 34,
+          "rejected_transit": 10
+        }
+      ],
+      "witness_edges": [
+        {
+          "from": "s0_g2_b-1",
+          "to": "s1_g2_b-1",
+          "evidence_id": "e4",
+          "switch_cost": 0,
+          "capacity": 1
+        },
+        {
+          "from": "s1_g2_b-1",
+          "to": "s2_g2_b-1",
+          "evidence_id": "e20",
+          "switch_cost": 0,
+          "capacity": 1
+        },
+        {
+          "from": "s2_g2_b-1",
+          "to": "s3_g2_b-1",
+          "evidence_id": "e36",
+          "switch_cost": 0,
+          "capacity": 1
+        },
+        {
+          "from": "s3_g2_b-1",
+          "to": "s4_g2_b-1",
+          "evidence_id": "e52",
+          "switch_cost": 0,
+          "capacity": 1
+        },
+        {
+          "from": "s4_g2_b-1",
+          "to": "s5_g2_b-1",
+          "evidence_id": "e68",
+          "switch_cost": 0,
+          "capacity": 1
+        },
+        {
+          "from": "s5_g2_b-1",
+          "to": "s6_g2_b-1",
+          "evidence_id": "e84",
+          "switch_cost": 0,
+          "capacity": 1
+        },
+        {
+          "from": "s6_g2_b-1",
+          "to": "s7_g2_b-1",
+          "evidence_id": "e100",
+          "switch_cost": 0,
+          "capacity": 1
+        },
+        {
+          "from": "s7_g2_b-1",
+          "to": "s8_g2_b-1",
+          "evidence_id": "e116",
+          "switch_cost": 0,
+          "capacity": 1
+        },
+        {
+          "from": "s8_g2_b-1",
+          "to": "s9_g2_b-1",
+          "evidence_id": "e132",
+          "switch_cost": 0,
+          "capacity": 1
+        },
+        {
+          "from": "s9_g2_b-1",
+          "to": "s10_g2_b-1",
+          "evidence_id": "e148",
+          "switch_cost": 0,
+          "capacity": 1
+        },
+        {
+          "from": "s10_g2_b-1",
+          "to": "s11_g2_b-1",
+          "evidence_id": "e164",
+          "switch_cost": 0,
+          "capacity": 1
+        },
+        {
+          "from": "s11_g2_b-1",
+          "to": "s12_g2_b-1",
+          "evidence_id": "e180",
+          "switch_cost": 0,
+          "capacity": 1
+        },
+        {
+          "from": "s12_g2_b-1",
+          "to": "s12_g3_b-1",
+          "switch_cost": 1,
+          "evidence_id": "r:12:s12_g2_b-1:s12_g3_b-1",
+          "capacity": 1,
+          "stage": 12,
+          "kind": "supported_regrasp"
+        },
+        {
+          "from": "s12_g3_b-1",
+          "to": "s13_g3_b-1",
+          "evidence_id": "e198",
+          "switch_cost": 0,
+          "capacity": 1
+        },
+        {
+          "from": "s13_g3_b-1",
+          "to": "s14_g3_b-1",
+          "evidence_id": "e214",
+          "switch_cost": 0,
+          "capacity": 1
+        },
+        {
+          "from": "s14_g3_b-1",
+          "to": "s15_g3_b-1",
+          "evidence_id": "e230",
+          "switch_cost": 0,
+          "capacity": 1
+        },
+        {
+          "from": "s15_g3_b-1",
+          "to": "s16_g3_b-1",
+          "evidence_id": "e246",
+          "switch_cost": 0,
+          "capacity": 1
+        }
+      ]
+    },
+    "only": {
+      "scene": "regrasp_recovery",
+      "support_stages": [
+        8
+      ],
+      "common": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "connected_fixed_modes": [],
+      "hybrid_connected": true,
+      "min_graph_switches": 1,
+      "attempted_pairs": 52,
+      "accepted_switches": 6,
+      "one_switch_bridge_stages": [
+        8
+      ],
+      "stage_reports": [
+        {
+          "stage": 8,
+          "pose": [
+            0.46499999999999997,
+            0.010000000000000009,
+            0
+          ],
+          "attached_slots": 8,
+          "eligible_pairs": 52,
+          "valid_docks": 6,
+          "accepted_switches": 6,
+          "rejected_dock": 24,
+          "rejected_transit": 22
+        }
+      ],
+      "witness_edges": [
+        {
+          "from": "s0_g2_b-1",
+          "to": "s1_g2_b-1",
+          "evidence_id": "e4",
+          "switch_cost": 0,
+          "capacity": 1
+        },
+        {
+          "from": "s1_g2_b-1",
+          "to": "s2_g2_b-1",
+          "evidence_id": "e20",
+          "switch_cost": 0,
+          "capacity": 1
+        },
+        {
+          "from": "s2_g2_b-1",
+          "to": "s3_g2_b-1",
+          "evidence_id": "e36",
+          "switch_cost": 0,
+          "capacity": 1
+        },
+        {
+          "from": "s3_g2_b-1",
+          "to": "s4_g2_b-1",
+          "evidence_id": "e52",
+          "switch_cost": 0,
+          "capacity": 1
+        },
+        {
+          "from": "s4_g2_b-1",
+          "to": "s5_g2_b-1",
+          "evidence_id": "e68",
+          "switch_cost": 0,
+          "capacity": 1
+        },
+        {
+          "from": "s5_g2_b-1",
+          "to": "s6_g2_b-1",
+          "evidence_id": "e84",
+          "switch_cost": 0,
+          "capacity": 1
+        },
+        {
+          "from": "s6_g2_b-1",
+          "to": "s7_g2_b-1",
+          "evidence_id": "e100",
+          "switch_cost": 0,
+          "capacity": 1
+        },
+        {
+          "from": "s7_g2_b-1",
+          "to": "s8_g2_b-1",
+          "evidence_id": "e116",
+          "switch_cost": 0,
+          "capacity": 1
+        },
+        {
+          "from": "s8_g2_b-1",
+          "to": "s8_g3_b-1",
+          "switch_cost": 1,
+          "evidence_id": "r:8:s8_g2_b-1:s8_g3_b-1",
+          "capacity": 1,
+          "stage": 8,
+          "kind": "supported_regrasp"
+        },
+        {
+          "from": "s8_g3_b-1",
+          "to": "s9_g3_b-1",
+          "evidence_id": "e134",
+          "switch_cost": 0,
+          "capacity": 1
+        },
+        {
+          "from": "s9_g3_b-1",
+          "to": "s10_g3_b-1",
+          "evidence_id": "e150",
+          "switch_cost": 0,
+          "capacity": 1
+        },
+        {
+          "from": "s10_g3_b-1",
+          "to": "s11_g3_b-1",
+          "evidence_id": "e166",
+          "switch_cost": 0,
+          "capacity": 1
+        },
+        {
+          "from": "s11_g3_b-1",
+          "to": "s12_g3_b-1",
+          "evidence_id": "e182",
+          "switch_cost": 0,
+          "capacity": 1
+        },
+        {
+          "from": "s12_g3_b-1",
+          "to": "s13_g3_b-1",
+          "evidence_id": "e198",
+          "switch_cost": 0,
+          "capacity": 1
+        },
+        {
+          "from": "s13_g3_b-1",
+          "to": "s14_g3_b-1",
+          "evidence_id": "e214",
+          "switch_cost": 0,
+          "capacity": 1
+        },
+        {
+          "from": "s14_g3_b-1",
+          "to": "s15_g3_b-1",
+          "evidence_id": "e230",
+          "switch_cost": 0,
+          "capacity": 1
+        },
+        {
+          "from": "s15_g3_b-1",
+          "to": "s16_g3_b-1",
+          "evidence_id": "e246",
+          "switch_cost": 0,
+          "capacity": 1
+        }
+      ]
+    },
+    "outside": {
+      "scene": "regrasp_recovery",
+      "support_stages": [
+        1
+      ],
+      "common": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "connected_fixed_modes": [],
+      "hybrid_connected": false,
+      "min_graph_switches": null,
+      "attempted_pairs": 28,
+      "accepted_switches": 4,
+      "one_switch_bridge_stages": [],
+      "stage_reports": [
+        {
+          "stage": 1,
+          "pose": [
+            0.451875,
+            -0.22625,
+            0
+          ],
+          "attached_slots": 6,
+          "eligible_pairs": 28,
+          "valid_docks": 4,
+          "accepted_switches": 4,
+          "rejected_dock": 16,
+          "rejected_transit": 8
+        }
+      ],
+      "witness_edges": []
+    },
+    "negative": {
+      "scene": "disconnected",
+      "support_stages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "common": [
+        "g3",
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "connected_fixed_modes": [],
+      "hybrid_connected": false,
+      "min_graph_switches": null,
+      "attempted_pairs": 338,
+      "accepted_switches": 42,
+      "one_switch_bridge_stages": [],
+      "stage_reports": [
+        {
+          "stage": 1,
+          "pose": [
+            0.451875,
+            -0.22625,
+            0
+          ],
+          "attached_slots": 6,
+          "eligible_pairs": 28,
+          "valid_docks": 2,
+          "accepted_switches": 2,
+          "rejected_dock": 26,
+          "rejected_transit": 0
+        },
+        {
+          "stage": 2,
+          "pose": [
+            0.45375,
+            -0.1925,
+            0
+          ],
+          "attached_slots": 6,
+          "eligible_pairs": 28,
+          "valid_docks": 4,
+          "accepted_switches": 6,
+          "rejected_dock": 18,
+          "rejected_transit": 4
+        },
+        {
+          "stage": 3,
+          "pose": [
+            0.455625,
+            -0.15875,
+            0
+          ],
+          "attached_slots": 4,
+          "eligible_pairs": 12,
+          "valid_docks": 4,
+          "accepted_switches": 4,
+          "rejected_dock": 0,
+          "rejected_transit": 8
+        },
+        {
+          "stage": 4,
+          "pose": [
+            0.4575,
+            -0.125,
+            0
+          ],
+          "attached_slots": 5,
+          "eligible_pairs": 20,
+          "valid_docks": 4,
+          "accepted_switches": 4,
+          "rejected_dock": 8,
+          "rejected_transit": 8
+        },
+        {
+          "stage": 5,
+          "pose": [
+            0.459375,
+            -0.09125,
+            0
+          ],
+          "attached_slots": 6,
+          "eligible_pairs": 30,
+          "valid_docks": 4,
+          "accepted_switches": 4,
+          "rejected_dock": 18,
+          "rejected_transit": 8
+        },
+        {
+          "stage": 6,
+          "pose": [
+            0.46125,
+            -0.057499999999999996,
+            0
+          ],
+          "attached_slots": 5,
+          "eligible_pairs": 20,
+          "valid_docks": 3,
+          "accepted_switches": 2,
+          "rejected_dock": 14,
+          "rejected_transit": 4
+        },
+        {
+          "stage": 7,
+          "pose": [
+            0.463125,
+            -0.023749999999999993,
+            0
+          ],
+          "attached_slots": 5,
+          "eligible_pairs": 20,
+          "valid_docks": 3,
+          "accepted_switches": 2,
+          "rejected_dock": 14,
+          "rejected_transit": 4
+        },
+        {
+          "stage": 8,
+          "pose": [
+            0.46499999999999997,
+            0.010000000000000009,
+            0
+          ],
+          "attached_slots": 5,
+          "eligible_pairs": 20,
+          "valid_docks": 3,
+          "accepted_switches": 2,
+          "rejected_dock": 14,
+          "rejected_transit": 4
+        },
+        {
+          "stage": 9,
+          "pose": [
+            0.466875,
+            0.04375000000000001,
+            0
+          ],
+          "attached_slots": 5,
+          "eligible_pairs": 20,
+          "valid_docks": 3,
+          "accepted_switches": 2,
+          "rejected_dock": 14,
+          "rejected_transit": 4
+        },
+        {
+          "stage": 10,
+          "pose": [
+            0.46875,
+            0.07750000000000001,
+            0
+          ],
+          "attached_slots": 5,
+          "eligible_pairs": 20,
+          "valid_docks": 3,
+          "accepted_switches": 2,
+          "rejected_dock": 14,
+          "rejected_transit": 4
+        },
+        {
+          "stage": 11,
+          "pose": [
+            0.470625,
+            0.11125000000000002,
+            0
+          ],
+          "attached_slots": 4,
+          "eligible_pairs": 12,
+          "valid_docks": 3,
+          "accepted_switches": 2,
+          "rejected_dock": 6,
+          "rejected_transit": 4
+        },
+        {
+          "stage": 12,
+          "pose": [
+            0.4725,
+            0.14500000000000002,
+            0
+          ],
+          "attached_slots": 5,
+          "eligible_pairs": 20,
+          "valid_docks": 4,
+          "accepted_switches": 4,
+          "rejected_dock": 8,
+          "rejected_transit": 8
+        },
+        {
+          "stage": 13,
+          "pose": [
+            0.474375,
+            0.17875000000000002,
+            0
+          ],
+          "attached_slots": 4,
+          "eligible_pairs": 12,
+          "valid_docks": 3,
+          "accepted_switches": 2,
+          "rejected_dock": 6,
+          "rejected_transit": 4
+        },
+        {
+          "stage": 14,
+          "pose": [
+            0.47625,
+            0.21250000000000002,
+            0
+          ],
+          "attached_slots": 7,
+          "eligible_pairs": 38,
+          "valid_docks": 3,
+          "accepted_switches": 2,
+          "rejected_dock": 32,
+          "rejected_transit": 4
+        },
+        {
+          "stage": 15,
+          "pose": [
+            0.47812499999999997,
+            0.24625000000000008,
+            0
+          ],
+          "attached_slots": 7,
+          "eligible_pairs": 38,
+          "valid_docks": 3,
+          "accepted_switches": 2,
+          "rejected_dock": 32,
+          "rejected_transit": 4
+        }
+      ],
+      "witness_edges": []
+    }
+  }
+}

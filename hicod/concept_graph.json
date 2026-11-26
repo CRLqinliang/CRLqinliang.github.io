@@ -1,5 +1,5 @@
 {
-  "version": "0.4.0",
+  "version": "0.5.0",
   "updated": "2026-11-26",
   "scope": "Research taxonomy of robotic solution-space structure; not a standardized ontology or an implementation of 60 physical evaluators.",
   "notation": "F(T): feasible set in declared candidate domain. G(p): object-relative feasible grasps. Γ: path family. V: declared structural descriptor. μ: specified measure. All results are relative to scope, models and evidence. A sampled negative result is not a continuous infeasibility proof.",
@@ -767,13 +767,24 @@
         "TAMP"
       ],
       "source_relationship": "Established underlying concept; the formula is a scoped project specification, not a verbatim source definition.",
-      "implementation_status": "definition_only",
+      "implementation_status": "finite_evidence_evaluator",
       "optional_evidence": [],
       "audit": {
         "decision": "Keep",
         "note": "A hybrid execution needs both within-mode paths and admissible boundary transitions. Connectivity cannot be inferred from mode adjacency alone.",
         "status": "desk_reviewed",
         "expert_review": "pending"
+      },
+      "implementation": {
+        "module": "physical/hybrid_reports.mjs",
+        "entry": "hybridReports",
+        "scope": "Planar sampled hybrid graph; supported regrasp and one-switch bridge analysis only."
+      },
+      "physical_backend": {
+        "module": "physical/multimodal.mjs",
+        "status": "analytic_planar_hybrid_scope",
+        "documentation": "MULTIMODAL.md",
+        "limitation": "Ideal support and attachment; sampled release/transit/approach; not verified real regrasp or dynamics."
       }
     },
     {
@@ -877,13 +888,24 @@
         "MODES"
       ],
       "source_relationship": "Established underlying concept; the formula is a scoped project specification, not a verbatim source definition.",
-      "implementation_status": "definition_only",
+      "implementation_status": "finite_evidence_evaluator",
       "optional_evidence": [],
       "audit": {
         "decision": "Keep",
         "note": "A witness with a grasp change is not proof that regrasp is necessary; compare fixed-grasp alternatives.",
         "status": "desk_reviewed",
         "expert_review": "pending"
+      },
+      "implementation": {
+        "module": "physical/hybrid_reports.mjs",
+        "entry": "hybridReports",
+        "scope": "Planar sampled hybrid graph; supported regrasp and one-switch bridge analysis only."
+      },
+      "physical_backend": {
+        "module": "physical/multimodal.mjs",
+        "status": "analytic_planar_hybrid_scope",
+        "documentation": "MULTIMODAL.md",
+        "limitation": "Ideal support and attachment; sampled release/transit/approach; not verified real regrasp or dynamics."
       }
     },
     {
@@ -914,13 +936,24 @@
         "MODES"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only",
+      "implementation_status": "finite_evidence_evaluator",
       "optional_evidence": [],
       "audit": {
         "decision": "Revise",
         "note": "Require a consistent intermediate placement, supported release and reacquisition and incoming/outgoing robot motions. Two shared-grasp intersections are a screening test.",
         "status": "desk_reviewed",
         "expert_review": "pending"
+      },
+      "implementation": {
+        "module": "physical/hybrid_reports.mjs",
+        "entry": "hybridReports",
+        "scope": "Planar sampled hybrid graph; supported regrasp and one-switch bridge analysis only."
+      },
+      "physical_backend": {
+        "module": "physical/multimodal.mjs",
+        "status": "analytic_planar_hybrid_scope",
+        "documentation": "MULTIMODAL.md",
+        "limitation": "Ideal support and attachment; sampled release/transit/approach; not verified real regrasp or dynamics."
       }
     },
     {
@@ -986,13 +1019,24 @@
         "CONTACT"
       ],
       "source_relationship": "Established underlying concept; the formula is a scoped project specification, not a verbatim source definition.",
-      "implementation_status": "definition_only",
+      "implementation_status": "finite_evidence_evaluator",
       "optional_evidence": [],
       "audit": {
         "decision": "Scope",
         "note": "For L4 describe admissible transition relation or reachable transition domain. Individual transition validity remains L3.",
         "status": "desk_reviewed",
         "expert_review": "pending"
+      },
+      "implementation": {
+        "module": "physical/hybrid_reports.mjs",
+        "entry": "hybridReports",
+        "scope": "Planar sampled hybrid graph; supported regrasp and one-switch bridge analysis only."
+      },
+      "physical_backend": {
+        "module": "physical/multimodal.mjs",
+        "status": "analytic_planar_hybrid_scope",
+        "documentation": "MULTIMODAL.md",
+        "limitation": "Ideal support and attachment; sampled release/transit/approach; not verified real regrasp or dynamics."
       }
     },
     {
@@ -1030,10 +1074,15 @@
         "expert_review": "pending"
       },
       "implementation": {
-        "module": "evaluators.mjs",
-        "entry": "evaluate",
-        "fixture": "examples/finite_evidence.json",
-        "scope": "Exact computations on supplied finite evidence only. Actual geometry/IK/physics backend is external; continuous claims remain unverified."
+        "module": "physical/hybrid_reports.mjs",
+        "entry": "hybridReports",
+        "scope": "Planar sampled hybrid graph; supported regrasp and one-switch bridge analysis only."
+      },
+      "physical_backend": {
+        "module": "physical/multimodal.mjs",
+        "status": "analytic_planar_hybrid_scope",
+        "documentation": "MULTIMODAL.md",
+        "limitation": "Ideal support and attachment; sampled release/transit/approach; not verified real regrasp or dynamics."
       }
     },
     {
