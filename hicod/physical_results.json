@@ -15,6 +15,7 @@
     "admitted edges carry probe IDs",
     "replay covers rejected edges",
     "identity replay preserves graph",
+    "mismatched replay scene rejected",
     "incomplete replay rejected"
   ],
   "scenes": {
@@ -288,5 +289,44 @@
       ],
       "probes": 1040
     }
+  },
+  "integration": {
+    "open": {
+      "common": 4,
+      "connected": 4,
+      "mincut": 7,
+      "frontier": 5
+    },
+    "partial": {
+      "common": 3,
+      "connected": 2,
+      "mincut": 2,
+      "frontier": 3
+    },
+    "disconnected": {
+      "common": 4,
+      "connected": 0,
+      "mincut": 0,
+      "frontier": 8
+    },
+    "larger": {
+      "common": 2,
+      "connected": 0,
+      "mincut": 0,
+      "frontier": 6
+    },
+    "detour": {
+      "common": 4,
+      "connected": 0,
+      "mincut": 0,
+      "frontier": 8
+    }
+  },
+  "verification": {
+    "environment": "JavaScript runtime; exact committed function bodies evaluated together with ES module import/export wrappers removed",
+    "geometry_checks": 14,
+    "scene_integration_checks": 5,
+    "browser": "UI source syntax parsed, not rendered",
+    "mujoco": "not installed; replay identity test only"
   }
 }

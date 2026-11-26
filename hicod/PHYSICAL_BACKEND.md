@@ -29,7 +29,7 @@ Use the same candidate domain and probe IDs:
     python examples/mujoco4_articulated.py raw.json mujoco_replay.json
     node examples/planar3r.mjs disconnected --replay mujoco_replay.json --report replay_report.json
 
-MuJoCo adapter builds an equivalent MJCF three-hinge model, sets joint and payload poses, checks FK against the analytic backend and uses mj_geomDistance for the explicitly selected geometry pairs. It reports threshold disagreements. The JS replay replaces pair-distance verdicts and reconstructs edges and concept reports (all candidate transitions were sampled, even those rejected analytically). IK remains analytic. The replay must be generated from the exact matching raw scene; probe IDs, q, pose and pair ordering are checked. MuJoCo 4.0.1 Python API: https://mujoco.readthedocs.io/en/4.0.1/python.html and https://mujoco.readthedocs.io/en/4.0.1/APIreference/APIfunctions.html.
+MuJoCo adapter builds an equivalent MJCF three-hinge model, sets joint and payload poses, checks FK against the analytic backend and uses mj_geomDistance for the explicitly selected geometry pairs. It reports threshold disagreements. The JS replay replaces pair-distance verdicts and reconstructs edges and concept reports (all candidate transitions were sampled, even those rejected analytically). IK remains analytic. The replay must be generated from the exact matching raw scene; full scene configuration, probe IDs, q, pose and pair ordering are checked. MuJoCo 4.0.1 Python API: https://mujoco.readthedocs.io/en/4.0.1/python.html and https://mujoco.readthedocs.io/en/4.0.1/APIreference/APIfunctions.html.
 
 **MuJoCo replay is implemented but unexecuted:** authoring environment lacked MuJoCo and package installation failed due to network/DNS restrictions. Do not interpret analytic results as MuJoCo measurements. An identity replay test exercised the reconstruction protocol, not MuJoCo.
 
@@ -53,4 +53,4 @@ The 60-concept registry still distinguishes finite evaluators from full physical
 
 ## Verification record
 
-13 geometry/evidence checks executed on the exact core function bodies before commit. The test file also includes five end-to-end integration checks against the previous evaluator module; those tests require running the committed ES modules with Node. Browser and MuJoCo runtime validation remain separate.
+14 geometry/evidence checks and five scene-level integration checks passed in the JavaScript runtime using the repository module bodies with import/export wrappers removed. Cross-checks compare A01, H04 and D03 to independent explorer traversal and B05. The UI module parsed successfully; actual browser rendering, direct Node module execution and MuJoCo runtime validation remain untested here.

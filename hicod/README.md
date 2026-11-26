@@ -63,7 +63,7 @@ Ten concept computations are implemented over explicitly supplied finite data (n
 
 [Interactive physical explorer](https://crlqinliang.github.io/hicod/physical.html) · [Backend documentation](PHYSICAL_BACKEND.md) · [Computed analytic results](physical_results.json)
 
-The 3R planar arm uses analytic FK/IK, collision clearances, ideal fixed attachment directions and a layered path-family explorer. It feeds A01, B05, D03, E06 and H04 with actual computed finite evidence. The MuJoCo 4 replay adapter is provided but not runtime-tested. The analytic experiment is not a full pick-and-place execution or a MuJoCo result.
+The 3R planar arm uses analytic FK/IK, collision clearances, ideal fixed attachment directions and a layered path-family explorer. It feeds A01, B05, D03, E06 and H04 with actual computed finite evidence. The MuJoCo 4 replay adapter is provided but not runtime-tested. The analytic experiment is not a full pick-and-place execution or a MuJoCo result. Fourteen geometry/evidence checks and five scene integration checks passed on the repository function bodies in a JavaScript runtime; direct Node CLI and browser rendering have not been tested.
 
     node examples/planar3r.mjs disconnected --raw raw.json --report report.json
     node tests/test_planar3r.mjs

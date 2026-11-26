@@ -76,7 +76,7 @@ def replay(raw):
             if (d <= scene["model"]["margin"]) != (pair["clearance"] <= scene["model"]["margin"]):
                 differences.append({"probe":key,"pair":[a,b],"analytic":pair["clearance"],"mujoco":d})
         result[key] = {"q":p["q"],"pose":p["pose"],"pairs":pairs}
-    return {"schema":"hicod.planar3r.mujoco-replay.v1","version":mujoco.__version__,"scene":scene["name"],
+    return {"schema":"hicod.planar3r.mujoco-replay.v1","version":mujoco.__version__,"scene":scene["name"],"scene_spec":scene,
             "probes":result,"comparison":{"max_tip_error_m":max_tip_error,"max_pair_distance_error_m":max_distance_error,"threshold_disagreements":differences},
             "limitations":["Pointwise geometry only; attachment is idealized, no contact dynamics or grasp execution."]}
 
