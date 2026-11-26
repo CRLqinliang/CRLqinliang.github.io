@@ -1,6 +1,6 @@
 # Concept visual atlas — figure provenance
 
-Every L4 node has an original teaching schematic and a concept-specific bilingual explanation, plus source bibliography. Figure locators are separately attributed; the original figure may illustrate a related concept, not establish the exact HiCoD metric. CC-licensed originals retain their source terms and attribution; others are linked, not copied. The source image fetch workflow downloads only the explicitly curated CC-licensed figures and preserves the actual download status. The Text2Motion figure is a crop of arXiv v5, CC BY-SA 4.0; cropping is the only modification. Remaining exact figure matching is pending where noted.
+Every L4 node has an original teaching schematic, a bilingual explanation, source bibliography and a curated figure locator. These locators include paper figures, textbook figures and lecture examples; related illustrations need not establish the exact HiCoD metric. Captions or source text were checked; some PDF screenshots were unavailable. CC-licensed originals retain their source terms and attribution; other sources are linked, not copied. The cache workflow records actual retrieval. Text2Motion Fig. 1 is a crop from arXiv v5, CC BY-SA 4.0. Some conceptual relationships remain illustrative rather than directly validated in the cited source.
 
 - W4: Wan and Harada, Integrated assembly and motion planning using regrasp graphs (2016), Fig. 4. [Source figure](https://link.springer.com/article/10.1186/s40638-016-0050-2/figures/4). CC BY 4.0. Candidate grasps filtered by collision and inverse kinematics.
 - W5: Wan and Harada, Integrated assembly and motion planning using regrasp graphs (2016), Fig. 5. [Source figure](https://link.springer.com/article/10.1186/s40638-016-0050-2/figures/5). CC BY 4.0. Endpoint and intermediate grasps are used to construct and search a regrasp graph.
@@ -23,6 +23,11 @@ Every L4 node has an original teaching schematic and a concept-specific bilingua
 - P1: Pham and Pham, A New Approach to Time-Optimal Path Parameterization based on Reachability Analysis (2018), Fig. 1. [Source figure](https://arxiv.org/pdf/1707.07239#page=1). Reuse not established; link only. Backward controllable speed intervals and forward feasible selection along path discretization.
 - MR54: Lynch and Park, Modern Robotics, section 5.4 Manipulability, §5.4, manipulability ellipsoid (video/textbook supplement). [Source figure](https://modernrobotics.northwestern.edu/nu-gm-book-resource/5-4-manipulability/). Reuse not established; link only. A velocity ellipsoid flattens near a Jacobian singularity; this is a local margin building block.
 - M1: J. Erickson and S. M. LaValle, A Simple, but NP-Hard, Motion Planning Problem (AAAI 2013), Related MCR illustration: Erickson & LaValle, A Simple, but NP-Hard, Motion Planning Problem (2013), Fig. 1. [Source figure](https://cdn.aaai.org/ojs/8545/8545-13-12073-1-2-20201228.pdf). Reuse not established; link only. A route crosses a minimum set of obstacles in a diagnostic relaxation example.
+- MCUT: Jeremiah Blocki, CS 580: Algorithm Design and Analysis, Purdue University (2018), Lecture 15, slide 23 (lecture illustration). [Source figure](https://www.cs.purdue.edu/homes/jblocki/courses/580_Spring18/Lectures/CS5800-Lecture15MaxFlowApplications-single.pdf#page=23). Reuse not established; link only. Two edge-disjoint routes and a two-edge separating cut demonstrate redundancy and bottleneck structure.
+- Q4: Qin et al., Learning from Planned Data to Improve Robotic Pick-and-Place Planning Efficiency, Fig. 4(a.i–a.iii). [Source figure](https://arxiv.org/html/2506.15920). Reuse not established; link only. Different object placements and their feasible/shared grasp sets illustrate pose-dependent feasibility; this figure is not a measured sensitivity derivative.
+- TRAJINIT: Jia Pan, Zhuo Chen, Pieter Abbeel, Predicting Initialization Effectiveness for Trajectory Optimization (ICRA 2014), Fig. 2. [Source figure](https://people.eecs.berkeley.edu/~pabbeel/papers/2014-ICRA-ML-to-evaluate-initialization.pdf#page=2). Reuse not established; link only. Initial trajectories and failed optimized results illustrate sensitivity to initialization, not a derivative of HiCoD connectivity.
+- BOYD510: Boyd and Vandenberghe, Convex Optimization (2004), perturbation and sensitivity analysis, Fig. 5.10 (textbook, printed p. 251). [Source figure](https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf#page=265). Reuse not established; link only. Optimal objective value as a function of a perturbed constraint bound illustrates constraint sensitivity in convex optimization.
+- CHOMP6: Nathan Ratliff et al., CHOMP: Gradient Optimization Techniques for Efficient Motion Planning (ICRA 2009), Fig. 6. [Source figure](https://www.ri.cmu.edu/pub_files/2009/5/icra09-chomp.pdf). Reuse not established; link only. Initial straight-line and optimized collision-free paths illustrate trajectory repair; CHOMP is not a certificate of minimum task deformation.
 
 ## Concept-specific mapping
 
@@ -39,7 +44,7 @@ Every L4 node has an original teaching schematic and a concept-specific bilingua
 - B05 Grasp–IK Trajectory Connectivity: K1, Q1; A fixed grasp–IK mode must retain a sampled connection across trajectory layers.
 - B06 Multi-modal Connectivity: W6, C1; Within-mode edges and validated cross-mode edges jointly form a hybrid path.
 - B07 Homotopy Diversity: L46; Routes passing different sides of an obstacle may belong to different homotopy classes.
-- B08 Connectivity Redundancy: exact paper figure still to be curated; Multiple edge-disjoint routes provide graph redundancy, not independent physical failures.
+- B08 Connectivity Redundancy: MCUT; Multiple edge-disjoint routes provide graph redundancy, not independent physical failures.
 - C01 Regrasp Feasibility: W5, W6; A supported release and reacquisition can connect two transfer segments.
 - C02 Intermediate-Pose Bridging: W6; A bridge pose needs both transfers and a valid mode transition at that pose.
 - C03 Handover Feasibility: N4; Simultaneous grasp pairs are candidate handover states; approach and release are also required.
@@ -48,7 +53,7 @@ Every L4 node has an original teaching schematic and a concept-specific bilingua
 - C06 Transition Region Availability: W6; Measure only the declared transition domain, not an arbitrary ambient volume.
 - D01 Geometric Bottleneck: L818; A localized geometric restriction constrains a family of paths, not just one collision.
 - D02 Narrow Passage: L818; A small connecting region can make finding a path difficult under the sampling measure.
-- D03 Connectivity Bottleneck: exact paper figure still to be curated; A low-capacity cut limits connections in the specified graph.
+- D03 Connectivity Bottleneck: MCUT; A low-capacity cut limits connections in the specified graph.
 - D04 Singularity Bottleneck: K1, MR54; A low directional Jacobian margin can restrict motion across candidate paths.
 - D05 Clearance Bottleneck: L411; Compare the minimum clearance of candidate paths rather than one path alone.
 - D06 Critical Constraint: N4; A controlled constraint change can reveal which constraint limits the feasible family.
@@ -65,10 +70,10 @@ Every L4 node has an original teaching schematic and a concept-specific bilingua
 - F04 Task Decomposability: N2; A separator may permit independent subproblem solving under explicit conditions.
 - F05 Conditional Feasible-Set Independence: N2; After conditioning on a separator, all projected combinations must be feasible for factorization.
 - G01 Grasp Sensitivity: Q1; Perturb a grasp and measure the change in a task-level descriptor.
-- G02 Object-Pose Sensitivity: exact paper figure still to be curated; Vary only permitted object poses and compare the same structural metric.
+- G02 Object-Pose Sensitivity: Q4; Vary only permitted object poses and compare the same structural metric.
 - G03 Base-Pose Sensitivity: BASE6; Different base placements may change task-level feasibility or quality.
-- G04 Trajectory Sensitivity: exact paper figure still to be curated; Controlled path perturbations reveal changes in sampled connectivity, not necessarily a gradient.
-- G05 Constraint Sensitivity: exact paper figure still to be curated; Evaluate a specified change in a constraint parameter and its effect on the outcome.
+- G04 Trajectory Sensitivity: TRAJINIT; Controlled path perturbations reveal changes in sampled connectivity, not necessarily a gradient.
+- G05 Constraint Sensitivity: BOYD510; Evaluate a specified change in a constraint parameter and its effect on the outcome.
 - H01 Feasibility Robustness: F1; Distinguish fixed-plan robustness from the ability to replan under uncertainty.
 - H02 Grasp Robustness: R10; A feasible grasp region can tolerate contact perturbations within a declared model.
 - H03 Connectivity Robustness: F1; Test endpoint connectivity across disturbances, separating fixed and adaptive paths.
@@ -78,7 +83,7 @@ Every L4 node has an original teaching schematic and a concept-specific bilingua
 - I01 Recoverability: P1; A recovery action must lead from the failed state to the original goal within permitted controls.
 - I02 Minimum Constraint Removal: M1; Compare constraint-removal sets; never treat diagnostic removal as execution permission.
 - I03 Minimum Environment Change: M1; A bounded scene modification may enable a path; executing the modification is a separate task.
-- I04 Minimum Task Deformation: exact paper figure still to be curated; Find a permitted deformation with a feasible witness while preserving hard endpoints.
+- I04 Minimum Task Deformation: CHOMP6; Find a permitted deformation with a feasible witness while preserving hard endpoints.
 - I05 Mode Substitutability: W6; A different permitted mode sequence may preserve the same task goal.
 - I06 Failure Attribution: N4; Compare competing structural explanations; a single failure trace is not a unique cause.
 - J01 Grasp–Wrench Compatibility: R7; Task-required wrenches must lie inside the attainable grasp wrench set.

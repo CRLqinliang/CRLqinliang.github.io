@@ -208,6 +208,54 @@
       "license": "Reuse not established; link only",
       "relationship": "Related illustrative source; not necessarily the exact HiCoD descriptor definition.",
       "citation": "J. Erickson and S. M. LaValle, A Simple, but NP-Hard, Motion Planning Problem (AAAI 2013)"
+    },
+    "MCUT": {
+      "ref": "MENGER",
+      "citation": "Jeremiah Blocki, CS 580: Algorithm Design and Analysis, Purdue University (2018)",
+      "number": "Lecture 15, slide 23 (lecture illustration)",
+      "page": "https://www.cs.purdue.edu/homes/jblocki/courses/580_Spring18/Lectures/CS5800-Lecture15MaxFlowApplications-single.pdf#page=23",
+      "en": "Two edge-disjoint routes and a two-edge separating cut demonstrate redundancy and bottleneck structure.",
+      "zh": "两条边不相交路径及由两条边构成的分离割，说明图冗余和瓶颈结构。",
+      "license": "Reuse not established; link only",
+      "relationship": "Related illustrative source, not a claim that the HiCoD operational metric is defined in this source."
+    },
+    "Q4": {
+      "ref": "QIN",
+      "number": "Fig. 4(a.i–a.iii)",
+      "page": "https://arxiv.org/html/2506.15920",
+      "en": "Different object placements and their feasible/shared grasp sets illustrate pose-dependent feasibility; this figure is not a measured sensitivity derivative.",
+      "zh": "不同物体放置位姿与可行／共同抓取集合，说明可行性随位姿变化；此图并非敏感性导数实测。",
+      "license": "Reuse not established; link only",
+      "relationship": "Related illustrative source, not a claim that the HiCoD operational metric is defined in this source."
+    },
+    "TRAJINIT": {
+      "ref": "BOYD",
+      "citation": "Jia Pan, Zhuo Chen, Pieter Abbeel, Predicting Initialization Effectiveness for Trajectory Optimization (ICRA 2014)",
+      "number": "Fig. 2",
+      "page": "https://people.eecs.berkeley.edu/~pabbeel/papers/2014-ICRA-ML-to-evaluate-initialization.pdf#page=2",
+      "en": "Initial trajectories and failed optimized results illustrate sensitivity to initialization, not a derivative of HiCoD connectivity.",
+      "zh": "初始轨迹及优化失败结果说明初始化敏感性，而非 HiCoD 连通性导数。",
+      "license": "Reuse not established; link only",
+      "relationship": "Related illustrative source, not a claim that the HiCoD operational metric is defined in this source."
+    },
+    "BOYD510": {
+      "ref": "BOYD",
+      "number": "Fig. 5.10 (textbook, printed p. 251)",
+      "page": "https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf#page=265",
+      "en": "Optimal objective value as a function of a perturbed constraint bound illustrates constraint sensitivity in convex optimization.",
+      "zh": "凸优化最优目标值随约束边界扰动变化，说明约束敏感性。",
+      "license": "Reuse not established; link only",
+      "relationship": "Related illustrative source, not a claim that the HiCoD operational metric is defined in this source."
+    },
+    "CHOMP6": {
+      "ref": "BOYD",
+      "citation": "Nathan Ratliff et al., CHOMP: Gradient Optimization Techniques for Efficient Motion Planning (ICRA 2009)",
+      "number": "Fig. 6",
+      "page": "https://www.ri.cmu.edu/pub_files/2009/5/icra09-chomp.pdf",
+      "en": "Initial straight-line and optimized collision-free paths illustrate trajectory repair; CHOMP is not a certificate of minimum task deformation.",
+      "zh": "初始直线路径与优化后的避障路径说明轨迹修复；CHOMP 不提供最小任务形变的证明。",
+      "license": "Reuse not established; link only",
+      "relationship": "Related illustrative source, not a claim that the HiCoD operational metric is defined in this source."
     }
   },
   "nodes": {
@@ -571,7 +619,9 @@
     },
     "B08": {
       "type": "network",
-      "figures": [],
+      "figures": [
+        "MCUT"
+      ],
       "labels": {
         "en": [
           "Source",
@@ -816,7 +866,9 @@
     },
     "D03": {
       "type": "network",
-      "figures": [],
+      "figures": [
+        "MCUT"
+      ],
       "labels": {
         "en": [
           "Source",
@@ -1277,7 +1329,9 @@
     },
     "G02": {
       "type": "curve",
-      "figures": [],
+      "figures": [
+        "Q4"
+      ],
       "labels": {
         "en": [
           "Object pose",
@@ -1329,7 +1383,9 @@
     },
     "G04": {
       "type": "curve",
-      "figures": [],
+      "figures": [
+        "TRAJINIT"
+      ],
       "labels": {
         "en": [
           "Trajectory parameter",
@@ -1354,7 +1410,9 @@
     },
     "G05": {
       "type": "curve",
-      "figures": [],
+      "figures": [
+        "BOYD510"
+      ],
       "labels": {
         "en": [
           "Constraint parameter",
@@ -1622,7 +1680,9 @@
     },
     "I04": {
       "type": "paths2",
-      "figures": [],
+      "figures": [
+        "CHOMP6"
+      ],
       "labels": {
         "en": [
           "Start",

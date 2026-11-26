@@ -116,7 +116,7 @@ Shared research-site theme, responsive navigation and all existing bilingual exp
 
 [Visual atlas](https://crlqinliang.github.io/hicod/atlas.html) · [Complete graph](https://crlqinliang.github.io/hicod/atlas.html#global-graph) · [Figure provenance](FIGURES.md).
 
-60 original bilingual concept illustrations, 21 checked figure locators (papers and textbooks) mapped to 54 concepts, with 17 concepts associated with explicitly licensed original-figure assets. Exact figure matching and asset retrieval remain incomplete; original schematics are not paper crops. The [licensed figure cache](literature/README.md) records actual source retrieval and does not relicense external figures. The global grouped graph renders all 75 nodes and 304 typed edges with zoom, pan, selection, edge filters and SVG export.
+60 original bilingual concept illustrations, 26 curated figure locators (papers, textbooks and lecture illustrations) mapped to all 60 concepts, with 17 concepts associated with explicitly licensed original-figure assets. Exact figure matching and asset retrieval remain incomplete; original schematics are not paper crops. The [licensed figure cache](literature/README.md) records actual source retrieval and does not relicense external figures. The global grouped graph renders all 75 nodes and 304 typed edges with zoom, pan, selection, edge filters and SVG export.
 
 ## Concept modules
 
