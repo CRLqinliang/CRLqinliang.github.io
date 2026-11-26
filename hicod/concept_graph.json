@@ -1,12 +1,13 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "updated": "2026-11-26",
   "scope": "Research taxonomy of robotic solution-space structure; not a standardized ontology or an implementation of 60 physical evaluators.",
   "notation": "F(T): feasible set in declared candidate domain. G(p): object-relative feasible grasps. Γ: path family. V: declared structural descriptor. μ: specified measure. All results are relative to scope, models and evidence. A sampled negative result is not a continuous infeasibility proof.",
   "edge_semantics": {
     "requires": "Computational/evidence dependency; directed acyclic graph. Not sufficient or causal alone.",
     "specializes": "Narrower or scoped variant of a concept. Not an inference rule.",
-    "diagnostic_related": "Potential follow-up query; may be cyclic; no logical implication or causality asserted."
+    "diagnostic_related": "Potential follow-up query; may be cyclic; no logical implication or causality asserted.",
+    "optional_evidence": "An alternative or condition-dependent diagnostic/evaluation input, not a mandatory dependency."
   },
   "categories": {
     "A": "Compatibility",
@@ -23,119 +24,293 @@
   "references": {
     "LAV": {
       "citation": "LaValle, Planning Algorithms (2006), chapters 4–8 and 13–15",
-      "url": "https://msl.cs.uiuc.edu/~lavalle/planning/"
+      "url": "https://msl.cs.uiuc.edu/~lavalle/planning/book.html",
+      "audit": {
+        "date": "2026-11-26",
+        "verification": "source_record_or_accessible_excerpt",
+        "supported_scope": "Book table of contents: configuration space, paths and connectivity, sampling, dynamics.",
+        "limitation": "Not a full-text derivation or independent validation of the HiCoD formula."
+      }
     },
     "TAMP": {
       "citation": "Garrett et al., Integrated Task and Motion Planning (2021)",
-      "url": "https://doi.org/10.1146/annurev-control-091420-084139"
+      "url": "https://doi.org/10.1146/annurev-control-091420-084139",
+      "audit": {
+        "date": "2026-11-26",
+        "verification": "source_record_or_accessible_excerpt",
+        "supported_scope": "Publisher record: survey of integrated symbolic/continuous planning.",
+        "limitation": "Not a full-text derivation or independent validation of the HiCoD formula."
+      }
     },
     "FACT": {
       "citation": "Garrett et al., Sampling-based methods for factored task and motion planning (2018)",
-      "url": "https://doi.org/10.1177/0278364918802962"
+      "url": "https://doi.org/10.1177/0278364918802962",
+      "audit": {
+        "date": "2026-11-26",
+        "verification": "source_record_or_accessible_excerpt",
+        "supported_scope": "Publisher abstract: factored transitions and constraint scopes; deterministic factorization is project specification.",
+        "limitation": "Not a full-text derivation or independent validation of the HiCoD formula."
+      }
     },
     "QIN": {
       "citation": "Qin et al., Learning from Planned Data to Improve Robotic Pick-and-Place Planning Efficiency",
-      "url": "https://arxiv.org/abs/2506.15920"
+      "url": "https://arxiv.org/abs/2506.15920",
+      "audit": {
+        "date": "2026-11-26",
+        "verification": "source_record_or_accessible_excerpt",
+        "supported_scope": "Full HTML introduction and abstract: shared grasps at initial and goal poses; no continuous transfer guarantee.",
+        "limitation": "Not a full-text derivation or independent validation of the HiCoD formula."
+      }
     },
     "GRASP": {
       "citation": "Roa and Suárez, Grasp quality measures: review and performance (2015)",
-      "url": "https://doi.org/10.1007/s10514-014-9402-3"
+      "url": "https://doi.org/10.1007/s10514-014-9402-3",
+      "audit": {
+        "date": "2026-11-26",
+        "verification": "source_record_or_accessible_excerpt",
+        "supported_scope": "Publisher abstract: grasp quality measures; task wrench interpretation is scoped project formalization.",
+        "limitation": "Not a full-text derivation or independent validation of the HiCoD formula."
+      }
     },
     "WAN": {
       "citation": "Wan and Harada, Integrated assembly and motion planning using regrasp graphs (2016)",
-      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5101345/"
+      "url": "https://doi.org/10.1186/s40638-016-0050-2",
+      "audit": {
+        "date": "2026-11-26",
+        "verification": "source_record_or_accessible_excerpt",
+        "supported_scope": "Open-access article: stable support, regrasp graphs and integrated motion planning.",
+        "limitation": "Not a full-text derivation or independent validation of the HiCoD formula."
+      }
     },
     "MODES": {
       "citation": "Hauser, Robotic Systems, Advanced Topics in Planning: multi-modal motion planning",
-      "url": "https://motion.cs.illinois.edu/RoboticSystems/AdvancedTopicsInPlanning.html"
+      "url": "https://motion.cs.illinois.edu/RoboticSystems/AdvancedTopicsInPlanning.html",
+      "audit": {
+        "date": "2026-11-26",
+        "verification": "source_record_or_accessible_excerpt",
+        "supported_scope": "Open textbook chapter: transit/transfer modes, transition regions, joint robot/object C-space.",
+        "limitation": "Not a full-text derivation or independent validation of the HiCoD formula."
+      }
     },
     "IKLINK": {
       "citation": "Wang et al., IKLink: End-Effector Trajectory Tracking with Minimal Reconfigurations (2024)",
-      "url": "https://arxiv.org/abs/2402.16154"
+      "url": "https://arxiv.org/abs/2402.16154",
+      "audit": {
+        "date": "2026-11-26",
+        "verification": "source_record_or_accessible_excerpt",
+        "supported_scope": "Abstract: waypoint IK graph and DP minimize reconfigurations; not a proof of continuous path lifting.",
+        "limitation": "Not a full-text derivation or independent validation of the HiCoD formula."
+      }
     },
     "BASE": {
       "citation": "Real-time robot base placement based on inverse reachability maps (2025)",
-      "url": "https://jicrs.icros.org/_PR/view/?aidx=47244&bidx=4266"
+      "url": "https://jicrs.icros.org/_PR/view/?aidx=47244&bidx=4266",
+      "audit": {
+        "date": "2026-11-26",
+        "verification": "source_record_or_accessible_excerpt",
+        "supported_scope": "Publisher abstract: intersect/integrate inverse reachability maps for task targets.",
+        "limitation": "Not a full-text derivation or independent validation of the HiCoD formula."
+      }
     },
     "DUAL": {
       "citation": "Ortenzi et al., Dual-arm cooperative manipulation under joint limit constraints (2018)",
-      "url": "https://doi.org/10.1016/j.robot.2017.10.005"
+      "url": "https://doi.org/10.1016/j.robot.2017.10.005",
+      "audit": {
+        "date": "2026-11-26",
+        "verification": "source_record_or_accessible_excerpt",
+        "supported_scope": "Publisher abstract/metadata: dual-arm rigid-object coordination and joint limits.",
+        "limitation": "Not a full-text derivation or independent validation of the HiCoD formula."
+      }
     },
     "HAND": {
       "citation": "Manipulation and Handover Planning for Dual-Arm Robots (CASE 2024)",
-      "url": "https://doi.org/10.1109/CASE59546.2024.10711713"
+      "url": "https://doi.org/10.1109/CASE59546.2024.10711713",
+      "audit": {
+        "date": "2026-11-26",
+        "verification": "source_record_or_accessible_excerpt",
+        "supported_scope": "IEEE abstract: regrasp graph and online handover pose planning.",
+        "limitation": "Not a full-text derivation or independent validation of the HiCoD formula."
+      }
     },
     "HOMO": {
       "citation": "Bhattacharya et al., Topological Constraints in Search-based Robot Path Planning (2012)",
-      "url": "https://publications.ri.cmu.edu/topological-constraints-in-search-based-robot-path-planning"
+      "url": "https://publications.ri.cmu.edu/topological-constraints-in-search-based-robot-path-planning",
+      "audit": {
+        "date": "2026-11-26",
+        "verification": "source_record_or_accessible_excerpt",
+        "supported_scope": "Institutional abstract: homotopy/homology classes and planning.",
+        "limitation": "Not a full-text derivation or independent validation of the HiCoD formula."
+      }
     },
     "MENGER": {
       "citation": "Menger's theorem: edge and vertex connectivity",
-      "url": "https://graphsearch.epfl.ch/en/concept/1155738"
+      "url": "https://graphsearch.epfl.ch/en/concept/1155738",
+      "audit": {
+        "date": "2026-11-26",
+        "verification": "source_record_or_accessible_excerpt",
+        "supported_scope": "EPFL theorem statement: disjoint paths and minimum cut; weighted extension.",
+        "limitation": "Not a full-text derivation or independent validation of the HiCoD formula."
+      }
     },
     "NARROW": {
       "citation": "Hsu et al., On Finding Narrow Passages with Probabilistic Roadmap Planners (1998)",
-      "url": "https://www.kavrakilab.rice.edu/publications/hsu-kavraki1998on-finding-narrow.pdf"
+      "url": "https://www.kavrakilab.rice.edu/publications/hsu-kavraki1998on-finding-narrow.pdf",
+      "audit": {
+        "date": "2026-11-26",
+        "verification": "source_record_or_accessible_excerpt",
+        "supported_scope": "Lab/paper abstract: PRM connectivity and narrow passages.",
+        "limitation": "Not a full-text derivation or independent validation of the HiCoD formula."
+      }
     },
     "MR": {
       "citation": "Lynch and Park, Modern Robotics, section 5.4 Manipulability",
-      "url": "https://modernrobotics.northwestern.edu/nu-gm-book-resource/5-4-manipulability/"
+      "url": "https://modernrobotics.northwestern.edu/nu-gm-book-resource/5-4-manipulability/",
+      "audit": {
+        "date": "2026-11-26",
+        "verification": "source_record_or_accessible_excerpt",
+        "supported_scope": "Textbook supplement: manipulability and directional ellipsoid.",
+        "limitation": "Not a full-text derivation or independent validation of the HiCoD formula."
+      }
     },
     "CONFLICT": {
       "citation": "Ortiz-Haro et al., A Conflict-driven Interface between Symbolic Planning and Nonlinear Constraint Solving (2022)",
-      "url": "https://arxiv.org/abs/2211.15275"
+      "url": "https://arxiv.org/abs/2211.15275",
+      "audit": {
+        "date": "2026-11-26",
+        "verification": "source_record_or_accessible_excerpt",
+        "supported_scope": "Abstract: infeasible subsets of nonlinear constraints.",
+        "limitation": "Not a full-text derivation or independent validation of the HiCoD formula."
+      }
     },
     "BUFF": {
       "citation": "Gao et al., On Minimizing the Number of Running Buffers for Tabletop Rearrangement (2021)",
-      "url": "https://www.roboticsproceedings.org/rss17/p033.html"
+      "url": "https://www.roboticsproceedings.org/rss17/p033.html",
+      "audit": {
+        "date": "2026-11-26",
+        "verification": "source_record_or_accessible_excerpt",
+        "supported_scope": "RSS abstract: dependency graphs and running buffers.",
+        "limitation": "Not a full-text derivation or independent validation of the HiCoD formula."
+      }
     },
     "TEXT": {
       "citation": "Lin et al., Text2Motion: From Natural Language Instructions to Feasible Plans (2023)",
-      "url": "https://arxiv.org/abs/2303.12153"
+      "url": "https://arxiv.org/abs/2303.12153",
+      "audit": {
+        "date": "2026-11-26",
+        "verification": "source_record_or_accessible_excerpt",
+        "supported_scope": "Abstract: geometric dependencies spanning skill sequences.",
+        "limitation": "Not a full-text derivation or independent validation of the HiCoD formula."
+      }
     },
     "PDDL": {
       "citation": "Garrett et al., PDDLStream (2020)",
-      "url": "https://arxiv.org/abs/1802.08705"
+      "url": "https://arxiv.org/abs/1802.08705",
+      "audit": {
+        "date": "2026-11-26",
+        "verification": "source_record_or_accessible_excerpt",
+        "supported_scope": "Abstract: symbolic planning with black-box continuous samplers; background only.",
+        "limitation": "Not a full-text derivation or independent validation of the HiCoD formula."
+      }
     },
     "BOYD": {
       "citation": "Boyd and Vandenberghe, Convex Optimization (2004), perturbation and sensitivity analysis",
-      "url": "https://web.stanford.edu/~boyd/cvxbook/"
+      "url": "https://web.stanford.edu/~boyd/cvxbook/",
+      "audit": {
+        "date": "2026-11-26",
+        "verification": "source_record_or_accessible_excerpt",
+        "supported_scope": "Author book site: convex optimization; sensitivity formulas require appropriate hypotheses.",
+        "limitation": "Not a full-text derivation or independent validation of the HiCoD formula."
+      }
     },
     "FUNNEL": {
       "citation": "Majumdar and Tedrake, Funnel Libraries for Real-Time Robust Feedback Motion Planning (2017)",
-      "url": "https://arxiv.org/abs/1601.04037"
+      "url": "https://arxiv.org/abs/1601.04037",
+      "audit": {
+        "date": "2026-11-26",
+        "verification": "source_record_or_accessible_excerpt",
+        "supported_scope": "Abstract: robust feedback funnels and bounded disturbances.",
+        "limitation": "Not a full-text derivation or independent validation of the HiCoD formula."
+      }
     },
     "HJ": {
       "citation": "Bansal et al., Hamilton-Jacobi Reachability: A Brief Overview and Recent Advances (2017)",
-      "url": "https://arxiv.org/abs/1709.07523"
+      "url": "https://arxiv.org/abs/1709.07523",
+      "audit": {
+        "date": "2026-11-26",
+        "verification": "source_record_or_accessible_excerpt",
+        "supported_scope": "Abstract: dynamical reachability under bounded disturbances.",
+        "limitation": "Not a full-text derivation or independent validation of the HiCoD formula."
+      }
     },
     "DEX": {
       "citation": "Berkeley AUTOLAB, Dex-Net, physics-based grasp robustness",
-      "url": "https://berkeleyautomation.github.io/dex-net/"
+      "url": "https://berkeleyautomation.github.io/dex-net/",
+      "audit": {
+        "date": "2026-11-26",
+        "verification": "source_record_or_accessible_excerpt",
+        "supported_scope": "Project publication descriptions: force-closure/grasp success under uncertainties.",
+        "limitation": "Not a full-text derivation or independent validation of the HiCoD formula."
+      }
     },
     "MCR": {
       "citation": "Hauser, The minimum constraint removal problem with three robotics applications (2014)",
-      "url": "https://doi.org/10.1177/0278364913507795"
+      "url": "https://doi.org/10.1177/0278364913507795",
+      "audit": {
+        "date": "2026-11-26",
+        "verification": "source_record_or_accessible_excerpt",
+        "supported_scope": "Publisher abstract: fewest geometric constraints removed to enable path.",
+        "limitation": "Not a full-text derivation or independent validation of the HiCoD formula."
+      }
     },
     "ENV": {
       "citation": "Liu and Brandão, Generating Environment-based Explanations of Motion Planner Failure (ICRA 2024)",
-      "url": "https://doi.org/10.1109/ICRA57147.2024.10611577"
+      "url": "https://doi.org/10.1109/ICRA57147.2024.10611577",
+      "audit": {
+        "date": "2026-11-26",
+        "verification": "source_record_or_accessible_excerpt",
+        "supported_scope": "Institutional abstract: environment pose changes enabling planning success.",
+        "limitation": "Not a full-text derivation or independent validation of the HiCoD formula."
+      }
     },
     "PROOF": {
       "citation": "Li and Dantam, Learning Proofs of Motion Planning Infeasibility (RSS 2021)",
-      "url": "https://www.roboticsproceedings.org/rss17/p064.html"
+      "url": "https://www.roboticsproceedings.org/rss17/p064.html",
+      "audit": {
+        "date": "2026-11-26",
+        "verification": "source_record_or_accessible_excerpt",
+        "supported_scope": "RSS abstract: separating obstacle manifolds as infeasibility certificates.",
+        "limitation": "Not a full-text derivation or independent validation of the HiCoD formula."
+      }
     },
     "TOPP": {
       "citation": "Pham and Pham, A New Approach to Time-Optimal Path Parameterization based on Reachability Analysis (2018)",
-      "url": "https://arxiv.org/abs/1707.07239"
+      "url": "https://arxiv.org/abs/1707.07239",
+      "audit": {
+        "date": "2026-11-26",
+        "verification": "source_record_or_accessible_excerpt",
+        "supported_scope": "Abstract: reachable/controllable speed sets via discretized path LPs.",
+        "limitation": "Not a full-text derivation or independent validation of the HiCoD formula."
+      }
     },
     "CONTACT": {
       "citation": "Cheng et al., Contact Mode Guided Sampling-Based Planning for Quasistatic Dexterous Manipulation in 2D (2021)",
-      "url": "https://par.nsf.gov/servlets/purl/10338784"
+      "url": "https://arxiv.org/abs/2011.01454",
+      "audit": {
+        "date": "2026-11-26",
+        "verification": "source_record_or_accessible_excerpt",
+        "supported_scope": "IEEE/arXiv abstract: quasistatic manipulation with contact-mode transitions.",
+        "limitation": "Not a full-text derivation or independent validation of the HiCoD formula."
+      }
     },
     "EXP": {
       "citation": "Hauser, Robotic Systems, Motion Planning in Higher Dimensions: expansiveness",
-      "url": "https://motion.cs.illinois.edu/RoboticSystems/MotionPlanningHigherDimensions.html"
+      "url": "https://motion.cs.illinois.edu/RoboticSystems/MotionPlanningHigherDimensions.html",
+      "audit": {
+        "date": "2026-11-26",
+        "verification": "source_record_or_accessible_excerpt",
+        "supported_scope": "Open textbook chapter: visibility and expansiveness in high-dimensional motion planning.",
+        "limitation": "Not a full-text derivation or independent validation of the HiCoD formula."
+      }
     }
   },
   "concepts": [
@@ -165,7 +340,14 @@
         "WAN"
       ],
       "source_relationship": "Established underlying concept; the formula is a scoped project specification, not a verbatim source definition.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Keep",
+        "note": "Use canonical object-relative grasp IDs and a common sampled universe. Empty intersection only excludes the tested candidates.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "A02",
@@ -173,28 +355,37 @@
       "category": "A",
       "level": 4,
       "terminology": "operational",
-      "definition": "Grasps admitting a complete task execution under stated attachment and physical constraints.",
+      "definition": "Set of grasps admitting a complete task execution while retaining the attachment during required stages, with dynamics only when required.",
       "formalization": "G_task={g: ∃z∈F(T), attachment(z)=g throughout required stages}.",
       "evaluator": "Filter candidate grasps by complete transfer and task wrench feasibility if dynamics are in scope.",
       "required_inputs": "Task, attachment family, permitted mode changes, geometry and dynamic constraints.",
       "requires": [
-        "A01",
         "B02",
-        "J01"
+        "P08"
       ],
       "specializes": [],
       "diagnostic_related": [
         "E01",
         "H02"
       ],
-      "limitations": "If dynamics are excluded report geometric compatibility only. Not endpoint graspability.",
+      "limitations": "Transfer feasibility alone does not cover approach, release or placement. Evaluate dynamic wrench constraints when required by task scope.",
       "references": [
         "QIN",
         "GRASP",
         "TAMP"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [
+        "A01",
+        "J01"
+      ],
+      "audit": {
+        "decision": "Revise",
+        "note": "Whole-task grasp set differs from endpoint overlap (A01) and transfer-only connectivity (B02). Dynamics are conditional on task scope.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "A03",
@@ -222,7 +413,14 @@
         "LAV"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Scope",
+        "note": "A single (g,q) check is L3. The projected feasible grasp set or its coverage across a pose family is L4.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "A04",
@@ -249,15 +447,22 @@
         "TEXT"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Keep",
+        "note": "The intersection must use reachable output states from the actual allowed initial set, not nominal postconditions.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "A05",
-      "name": "Base–Task Compatibility",
+      "name": "Base–Task Stage Compatibility",
       "category": "A",
       "level": 4,
       "terminology": "operational",
-      "definition": "Common stationary base placements supporting all specified task stages.",
+      "definition": "Intersection of stationary base pose sets admitting a witness for each required stage, before checking joint cross-stage consistency.",
       "formalization": "B_task=∩_i B_i; B_i={b: stage i has a feasible witness at b}.",
       "evaluator": "Intersect inverse reachability sets; verify collision and path constraints.",
       "required_inputs": "Base domain, stage targets, robot, obstacles, resolution.",
@@ -276,7 +481,14 @@
         "TAMP"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Revise",
+        "note": "Intersection of stage base sets is an endpoint/stage screening relation, not full task compatibility. Use a fixed base and consistent shared assignments.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "A06",
@@ -305,7 +517,14 @@
         "HAND"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Scope",
+        "note": "Assess the set of grasp pairs for a specified object pose or explicitly declared pose domain, not just one coupled IK witness.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "B01",
@@ -333,7 +552,14 @@
         "PROOF"
       ],
       "source_relationship": "Established underlying concept; the formula is a scoped project specification, not a verbatim source definition.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Scope",
+        "note": "Pairwise connectivity is a relation on endpoint states; report reachable sets or components when diagnosing a solution space. Finite graph absence is unknown continuously.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "B02",
@@ -362,11 +588,18 @@
         "QIN"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Keep",
+        "note": "Unrestricted object path under a fixed grasp differs from B05 prescribed object path. Include attachment and object collision.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "B03",
-      "name": "IK Branch Connectivity",
+      "name": "Continuous IK Path Lift",
       "category": "B",
       "level": 4,
       "terminology": "operational",
@@ -385,13 +618,20 @@
         "B05",
         "D04"
       ],
-      "limitations": "IK family labels need not be globally invariant; adjacent endpoint proximity is not an edge certificate.",
+      "limitations": "IK labels are not global invariants. Enforce required endpoint configurations, joint/pose tolerances, and validated continuous edges; sample adjacency is insufficient.",
       "references": [
         "IKLINK",
         "LAV"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Revise",
+        "note": "Use continuous path lift with explicit end constraints; IK labels are implementation-specific, not topology invariants.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "B04",
@@ -419,7 +659,14 @@
         "WAN"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Keep",
+        "note": "Object pose projection requires a consistent robot/hybrid witness. Distinguish existential reachability from object-only paths.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "B05",
@@ -428,7 +675,7 @@
       "level": 4,
       "terminology": "operational",
       "definition": "Continuous feasible grasp and IK realization along a prescribed object path, with only explicitly permitted mode changes.",
-      "formalization": "∃g,q(s): FK(q(s))=p(s)·g, all constraints; g constant within transfer segments.",
+      "formalization": "Fixed mode: ∃g, continuous q(s): FK(q(s))=p(s)·g, all constraints for every s. Switch-allowed variant: piecewise (g,q) with explicitly admissible release/reacquisition transitions and task progress rules.",
       "evaluator": "Construct layered grasp–IK graph; verify edges; DP for paths or allowed release cost.",
       "required_inputs": "Object path, grasp candidates, IK branches, transition rules.",
       "requires": [
@@ -436,21 +683,28 @@
         "B03",
         "P06"
       ],
-      "specializes": [
-        "B03"
-      ],
+      "specializes": [],
       "diagnostic_related": [
         "D03",
         "C05"
       ],
-      "limitations": "Report fixed-grasp versus release-allowed scope; finite graph is approximate. This is a HiCoD synthesis of cited foundations.",
+      "limitations": "A sampled graph is an approximation; release/reacquisition is permitted only by the specified task and is not fixed-grasp continuity. Report endpoint configuration constraints and edge verification.",
       "references": [
         "QIN",
         "IKLINK",
         "MODES"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [
+        "C04"
+      ],
+      "audit": {
+        "decision": "Revise",
+        "note": "Separate fixed-attachment path lift from switch-allowed tracking. A release may violate a continuous drag requirement; only count it under explicit task rules.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "B06",
@@ -477,7 +731,14 @@
         "TAMP"
       ],
       "source_relationship": "Established underlying concept; the formula is a scoped project specification, not a verbatim source definition.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Keep",
+        "note": "A hybrid execution needs both within-mode paths and admissible boundary transitions. Connectivity cannot be inferred from mode adjacency alone.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "B07",
@@ -504,7 +765,14 @@
         "LAV"
       ],
       "source_relationship": "Established underlying concept; the formula is a scoped project specification, not a verbatim source definition.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Scope",
+        "note": "Homology signatures can discriminate classes without identifying every homotopy class. Count only represented classes under stated equivalence.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "B08",
@@ -531,7 +799,14 @@
         "LAV"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Keep",
+        "note": "Unit-capacity edge-disjoint routes are a graph invariant; declare directedness, endpoint conventions and failure correlations.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "C01",
@@ -560,7 +835,14 @@
         "MODES"
       ],
       "source_relationship": "Established underlying concept; the formula is a scoped project specification, not a verbatim source definition.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Keep",
+        "note": "A witness with a grasp change is not proof that regrasp is necessary; compare fixed-grasp alternatives.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "C02",
@@ -590,7 +872,14 @@
         "MODES"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Revise",
+        "note": "Require a consistent intermediate placement, supported release and reacquisition and incoming/outgoing robot motions. Two shared-grasp intersections are a screening test.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "C03",
@@ -620,7 +909,14 @@
         "DUAL"
       ],
       "source_relationship": "Established underlying concept; the formula is a scoped project specification, not a verbatim source definition.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Scope",
+        "note": "Report feasible handover region or grasp-pair family; a single verified handover is L3 evidence.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "C04",
@@ -648,7 +944,14 @@
         "CONTACT"
       ],
       "source_relationship": "Established underlying concept; the formula is a scoped project specification, not a verbatim source definition.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Scope",
+        "note": "For L4 describe admissible transition relation or reachable transition domain. Individual transition validity remains L3.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "C05",
@@ -676,7 +979,14 @@
         "LAV"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Keep",
+        "note": "Costs apply to explicitly labeled transition edges; report finite graph optimum and do not equate switch count with execution time.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "C06",
@@ -703,7 +1013,14 @@
         "EXP"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Keep",
+        "note": "Measure must be intrinsic to the declared transition manifold or sampling protocol, not ambient volume.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "D01",
@@ -716,22 +1033,33 @@
       "evaluator": "Locate cuts/low-clearance regions and evaluate controlled geometry interventions.",
       "required_inputs": "Path family, geometry, region and allowed interventions.",
       "requires": [
-        "B01",
-        "D05",
-        "P11"
+        "P05",
+        "P06",
+        "P08"
       ],
       "specializes": [],
       "diagnostic_related": [
         "D02",
         "I03"
       ],
-      "limitations": "One colliding trajectory is not sufficient to establish a global bottleneck.",
+      "limitations": "A single collision or low-clearance path is insufficient; use structural or controlled counterfactual evidence. A geometric intervention must be scoped.",
       "references": [
         "NARROW",
         "ENV"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [
+        "B01",
+        "D05",
+        "P11"
+      ],
+      "audit": {
+        "decision": "Revise",
+        "note": "A geometric bottleneck requires path-family or separator evidence. Low clearance and counterfactual relocation are alternative evidence, not universal prerequisites.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "D02",
@@ -759,7 +1087,14 @@
         "EXP"
       ],
       "source_relationship": "Established underlying concept; the formula is a scoped project specification, not a verbatim source definition.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Keep",
+        "note": "A narrow passage is relative to measure, visibility and metric; do not classify by workspace width alone.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "D03",
@@ -768,12 +1103,11 @@
       "level": 4,
       "terminology": "operational",
       "definition": "A cut or stage transition limiting the capacity of task paths in a specified graph.",
-      "formalization": "min_{S:s∈S,t∉S} Σ_{e∈δ+(S)}cap(e).",
+      "formalization": "For distinct source and sink in a finite capacitated graph, κ=min_{S:s∈S,t∉S} Σ_{e∈δ+(S)} cap(e). Report cut witness and distinguish κ=0 (disconnected in the graph) from small positive capacity.",
       "evaluator": "Minimum cut or stagewise edge counts with path-conditioned analysis.",
       "required_inputs": "Task graph, capacities and endpoint sets.",
       "requires": [
-        "P06",
-        "B05"
+        "P06"
       ],
       "specializes": [],
       "diagnostic_related": [
@@ -786,7 +1120,17 @@
         "IKLINK"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [
+        "B05",
+        "B08"
+      ],
+      "audit": {
+        "decision": "Revise",
+        "note": "Minimum cut is generic graph capacity, not specific to grasp–IK tracking. Report zero-cut disconnection separately from small positive bottleneck.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "D04",
@@ -813,7 +1157,14 @@
         "IKLINK"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Revise",
+        "note": "An infimum singular value along a path is a proxy; directional velocity feasibility and rank must be interpreted with task dimension and scaling.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "D05",
@@ -840,7 +1191,14 @@
         "NARROW"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Keep",
+        "note": "Widest-path clearance over alternatives is L4; clearance of a supplied path is L3. Empty feasible path family has no finite margin.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "D06",
@@ -867,7 +1225,14 @@
         "MCR"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Keep",
+        "note": "Controlled intervention must specify metric, comparable domain and constraints; diagnostic removal does not authorize physical execution.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "D07",
@@ -894,7 +1259,14 @@
         "PROOF"
       ],
       "source_relationship": "Established underlying concept; the formula is a scoped project specification, not a verbatim source definition.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Keep",
+        "note": "Distinguish inclusion-minimal conflict, minimum-cardinality conflict and a mere unsuccessful numerical solve.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "E01",
@@ -921,7 +1293,14 @@
         "QIN"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Keep",
+        "note": "Use conditional transfer fibers over grasp choices, equal exploration budget; relation is not a single downstream failure.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "E02",
@@ -948,7 +1327,14 @@
         "TEXT"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Keep",
+        "note": "Condition on complete upstream boundary state, distinguish feasibility effects from sampling/solver differences.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "E03",
@@ -975,7 +1361,14 @@
         "TAMP"
       ],
       "source_relationship": "Established underlying concept; the formula is a scoped project specification, not a verbatim source definition.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Scope",
+        "note": "Separate mandatory blocking under a specified model from observed collisions on sampled paths.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "E04",
@@ -988,7 +1381,6 @@
       "evaluator": "Derive mandatory precedences or test alternative sequences with witnesses.",
       "required_inputs": "Actions, temporal/precondition constraints, blocking model.",
       "requires": [
-        "E03",
         "P08"
       ],
       "specializes": [],
@@ -1002,21 +1394,31 @@
         "BUFF"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [
+        "E03",
+        "P13"
+      ],
+      "audit": {
+        "decision": "Revise",
+        "note": "Precedence can derive from task rules without object blocking; avoid vacuous truth when no feasible execution exists.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "E05",
-      "name": "Deadlock / Cyclic Dependency",
+      "name": "Precedence Cycles & State Deadlock",
       "category": "E",
       "level": 4,
       "terminology": "operational",
       "definition": "Cycle in strict precedence relations, or a reachable non-goal state with no enabled continuation under a stated model.",
-      "formalization": "Cycle in fixed precedence graph; behavioral deadlock if no admissible progress action.",
+      "formalization": "Cycle: directed cycle of strict precedence constraints. State deadlock: x∉Goal and no enabled admissible transitions. Goal-unreachable states may still have enabled transitions.",
       "evaluator": "Strongly connected components and state-space continuation checks.",
       "required_inputs": "Precedence model, modes, buffer availability, enabled actions.",
       "requires": [
-        "E04",
-        "P07"
+        "P07",
+        "P08"
       ],
       "specializes": [],
       "diagnostic_related": [
@@ -1029,7 +1431,17 @@
         "LAV"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [
+        "E04",
+        "E06"
+      ],
+      "audit": {
+        "decision": "Revise",
+        "note": "A strict precedence cycle and a state with no enabled transitions are distinct; report separately. A non-goal state with no goal-reaching continuation may still have enabled actions.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "E06",
@@ -1037,7 +1449,7 @@
       "category": "E",
       "level": 4,
       "terminology": "operational",
-      "definition": "Whether an intermediate state lies in the goal-reachable set for remaining stages.",
+      "definition": "The set of intermediate states from which the remaining task goal is reachable under allowed controls and constraints; membership is a local query.",
       "formalization": "K_i={x: ∃ admissible continuation from x to goal}; require x∈K_i.",
       "evaluator": "Backward graph reachability or controllable-set analysis.",
       "required_inputs": "Remaining stages, goal, transition model and constraints.",
@@ -1057,7 +1469,14 @@
         "FACT"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Scope",
+        "note": "Compute the backward reachable set for the remaining goal; a membership test for one intermediate state is only L3 evidence.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "F01",
@@ -1083,7 +1502,14 @@
         "BOYD"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Keep",
+        "note": "Feasible-set nonfactorization and objective nonseparability are distinct coupling types; specify blocks and domain.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "F02",
@@ -1092,7 +1518,7 @@
       "level": 4,
       "terminology": "operational",
       "definition": "Interaction between constraints through shared variables and joint feasible relations.",
-      "formalization": "Compare F(C1∪C2) with individual feasible sets and joint satisfiability.",
+      "formalization": "In a common domain F(C1∪C2)=F(C1)∩F(C2). Report shared variable scopes separately from interaction, e.g. μ(F1∩F2)−μ(F1)μ(F2) for a normalized declared measure. Conflict is a distinct predicate.",
       "evaluator": "Build constraint incidence graph, test joint feasibility and conflicts.",
       "required_inputs": "Constraint scopes, variable domains, feasibility oracle.",
       "requires": [
@@ -1109,7 +1535,14 @@
         "CONFLICT"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Revise",
+        "note": "Separate structural variable-sharing from quantitative interaction and infeasibility. Joint feasible set is always intersection in common domain.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "F03",
@@ -1117,7 +1550,7 @@
       "category": "F",
       "level": 4,
       "terminology": "literature",
-      "definition": "Closed-chain constraint that both arms realize the same rigid-object transform.",
+      "definition": "The jointly feasible configuration relation of both arms satisfying a rigid common object transform; analyze its projections or connected paths, not a single closed-chain residual.",
       "formalization": "FK_L(qL)·gL⁻¹=FK_R(qR)·gR⁻¹=p within tolerance.",
       "evaluator": "Coupled IK, relative pose residuals and joint path checks.",
       "required_inputs": "Robot models, object-relative grasps, limits and collisions.",
@@ -1137,7 +1570,14 @@
         "LAV"
       ],
       "source_relationship": "Established underlying concept; the formula is a scoped project specification, not a verbatim source definition.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Scope",
+        "note": "Closed-chain equality is L3 at a point. L4 describes coupled feasible pairs, projection/fibers and connectivity across the joint space.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "F04",
@@ -1163,11 +1603,18 @@
         "TAMP"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Keep",
+        "note": "Feasibility decomposition and independent optimality have different conditions; separators and objective both matter.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "F05",
-      "name": "Conditional Independence",
+      "name": "Conditional Feasible-Set Independence",
       "category": "F",
       "level": 4,
       "terminology": "operational",
@@ -1189,7 +1636,14 @@
         "BOYD"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Revise",
+        "note": "Rename display to conditional feasible-set independence (deterministic); do not conflate with probabilistic conditional independence.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "G01",
@@ -1216,7 +1670,14 @@
         "QIN"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Keep",
+        "note": "Compare normalized grasp perturbations or discrete contrasts with consistent physical and computational budgets.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "G02",
@@ -1243,7 +1704,14 @@
         "LAV"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Keep",
+        "note": "Specify SE(3) perturbation convention and translation/rotation scaling; distinguish changing a task from modeling error.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "G03",
@@ -1256,7 +1724,7 @@
       "evaluator": "Probe base placements using inverse reachability and task checks.",
       "required_inputs": "Base pose domain, task, descriptor, allowable base movement.",
       "requires": [
-        "A05",
+        "P08",
         "P11"
       ],
       "specializes": [],
@@ -1270,7 +1738,16 @@
         "BOYD"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [
+        "A05"
+      ],
+      "audit": {
+        "decision": "Revise",
+        "note": "Base-pose sensitivity may use any full task descriptor; stage base compatibility is one optional proxy.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "G04",
@@ -1283,7 +1760,7 @@
       "evaluator": "Differentiate validated surrogate or probe spline parameters within deformation budget.",
       "required_inputs": "Trajectory parameterization, metric, fixed endpoints and budget.",
       "requires": [
-        "B05",
+        "P06",
         "P11"
       ],
       "specializes": [],
@@ -1297,7 +1774,16 @@
         "IKLINK"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [
+        "B05"
+      ],
+      "audit": {
+        "decision": "Revise",
+        "note": "Trajectory sensitivity applies to a declared family/metric, not exclusively Grasp–IK Connectivity; surrogate gradients are hypotheses.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "G05",
@@ -1324,7 +1810,14 @@
         "CONFLICT"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Keep",
+        "note": "Dual sensitivity only with appropriate regularity; local solver noise and discontinuous feasibility must be explicit.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "H01",
@@ -1351,7 +1844,14 @@
         "HJ"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Scope",
+        "note": "Separate fixed-plan, adaptive replan and feedback-policy robustness; L4 concerns family or quantified uncertainty, not one nominal result.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "H02",
@@ -1379,7 +1879,14 @@
         "DEX"
       ],
       "source_relationship": "Established underlying concept; the formula is a scoped project specification, not a verbatim source definition.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Scope",
+        "note": "Single-grasp robustness is a conventional quality metric (L3); L4 evaluates distribution or task-conditioned robust grasp set.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "H03",
@@ -1388,7 +1895,7 @@
       "level": 4,
       "terminology": "operational",
       "definition": "Persistence of connectivity as scene, robot or task parameters vary.",
-      "formalization": "Pδ[connected(Fδ)] versus ∃γ∀δ valid(γ,δ).",
+      "formalization": "Pδ[∃γ connecting specified start and goal in Fδ] versus ∃γ∀δ valid(γ,δ) with consistent endpoint mapping.",
       "evaluator": "Rebuild graphs under perturbations and independently evaluate fixed-path robustness.",
       "required_inputs": "Graph protocol, uncertainty, endpoints, constraints.",
       "requires": [
@@ -1407,7 +1914,14 @@
         "LAV"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Revise",
+        "note": "Endpoint connectivity under each perturbation is not global connectedness of the entire free space; distinguish quantifier order.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "H04",
@@ -1434,7 +1948,14 @@
         "EXP"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Keep",
+        "note": "Declare sampling law, domain and intrinsic measure. A finite feasible fraction estimates probability under that law, not necessarily geometric volume.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "H05",
@@ -1461,7 +1982,14 @@
         "LAV"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Keep",
+        "note": "Count classes or separated witnesses under a declared metric; diversity is not a universal scalar.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "H06",
@@ -1474,7 +2002,7 @@
       "evaluator": "Remove modeled failures and recompute verified reachability.",
       "required_inputs": "Failure model, graph, endpoints and failure correlations.",
       "requires": [
-        "B08",
+        "P06",
         "P14"
       ],
       "specializes": [],
@@ -1488,7 +2016,16 @@
         "FUNNEL"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [
+        "B08"
+      ],
+      "audit": {
+        "decision": "Revise",
+        "note": "Failure tolerance requires explicit failed elements and correlated scenarios; edge-disjointness is one special case, not mandatory.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "I01",
@@ -1496,7 +2033,7 @@
       "category": "I",
       "level": 4,
       "terminology": "operational",
-      "definition": "Existence of a permitted safe continuation from a failed or perturbed state to the original goal.",
+      "definition": "The set of states from which a permitted safe recovery continuation reaches the original goal; a single failed-state membership check is local evidence.",
       "formalization": "x_fail∈backward reachable goal set under permitted controls and safety bounds.",
       "evaluator": "Backward search/reachability with verified recovery witness.",
       "required_inputs": "Failure state, goal, recovery actions, hard safety constraints.",
@@ -1515,7 +2052,14 @@
         "LAV"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Scope",
+        "note": "Recoverable state set is L4; checking whether one failed state belongs to it is L3. Preserve original task and safety constraints.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "I02",
@@ -1542,7 +2086,14 @@
         "CONFLICT"
       ],
       "source_relationship": "Established underlying concept; the formula is a scoped project specification, not a verbatim source definition.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Keep",
+        "note": "Original MCR concerns geometric path constraints; weighted and generic variants are project extensions; do not physically remove safety requirements.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "I03",
@@ -1555,7 +2106,7 @@
       "evaluator": "Joint trajectory/environment optimization or counterfactual search.",
       "required_inputs": "Movable geometry, change bounds/cost, task and oracle.",
       "requires": [
-        "D01",
+        "P08",
         "P11"
       ],
       "specializes": [],
@@ -1569,7 +2120,17 @@
         "MCR"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [
+        "D01",
+        "P13"
+      ],
+      "audit": {
+        "decision": "Revise",
+        "note": "Need not first prove a geometric bottleneck; evaluate allowed changes directly and distinguish repair witness from global optimum.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "I04",
@@ -1582,7 +2143,7 @@
       "evaluator": "Constrained deformation or path repair with verified witness.",
       "required_inputs": "Reference path/task, metric, allowed modifications, hard constraints.",
       "requires": [
-        "G04",
+        "P08",
         "P11"
       ],
       "specializes": [],
@@ -1597,7 +2158,17 @@
         "ENV"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [
+        "G04",
+        "P13"
+      ],
+      "audit": {
+        "decision": "Revise",
+        "note": "Sensitivity is optional for search, not necessary for minimum deformation; keep hard goals and constraints unchanged.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "I05",
@@ -1624,7 +2195,14 @@
         "TAMP"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Keep",
+        "note": "Alternative mode family must preserve same goal and hard constraints; distinguish verified substitute from suggestion.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "I06",
@@ -1637,9 +2215,7 @@
       "evaluator": "Query bottlenecks, conflicts and interventions; rank scoped evidence and keep unknowns.",
       "required_inputs": "Failed family, alternative hypotheses, scope, oracle and budget.",
       "requires": [
-        "D07",
-        "D03",
-        "P11"
+        "P08"
       ],
       "specializes": [],
       "diagnostic_related": [
@@ -1647,14 +2223,26 @@
         "I02",
         "E02"
       ],
-      "limitations": "No unique causal explanation guaranteed; counterfactual conclusions are model-relative.",
+      "limitations": "Use at least one relevant, valid source of diagnostic evidence; no unique cause is guaranteed. Missing or inconclusive evidence yields UNKNOWN.",
       "references": [
         "CONFLICT",
         "ENV",
         "PROOF"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [
+        "D07",
+        "D03",
+        "P11",
+        "P13"
+      ],
+      "audit": {
+        "decision": "Revise",
+        "note": "Conflict, bottleneck and counterfactual tests are alternate evidence types; failure cause may be unidentified or nonunique.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "J01",
@@ -1681,7 +2269,14 @@
         "MR"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Scope",
+        "note": "Evaluate wrench feasibility over candidate grasps/task states with force bounds, sign convention and frame; pointwise force closure is not L4.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "J02",
@@ -1708,7 +2303,14 @@
         "HJ"
       ],
       "source_relationship": "Established underlying concept; the formula is a scoped project specification, not a verbatim source definition.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Keep",
+        "note": "State/control connectivity under dynamics; finite search absence is not a proof.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "J03",
@@ -1738,7 +2340,14 @@
         "MODES"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Keep",
+        "note": "Model contact guards, resets and laws; quasistatic and dynamic cases are distinct.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "J04",
@@ -1766,7 +2375,14 @@
         "GRASP"
       ],
       "source_relationship": "Proposed HiCoD operational definition; cited literature supports the underlying theory or method, not necessarily the exact name or formula.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Keep",
+        "note": "Compare dynamic margins across candidate trajectories, normalize slacks and distinguish infeasible family from low positive margin.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     },
     {
       "id": "J05",
@@ -1774,8 +2390,8 @@
       "category": "J",
       "level": 4,
       "terminology": "literature",
-      "definition": "Existence of an admissible time parameterization of a prescribed geometric path under dynamic and kinematic bounds.",
-      "formalization": "∃ monotone s(t): q(t)=q_path(s(t)) with velocity/acceleration/torque bounds and boundary conditions.",
+      "definition": "Family of admissible time parameterizations or controllable path-speed sets for a prescribed geometric path under declared dynamic and motion bounds.",
+      "formalization": "S={s(t): monotone, q(t)=q_path(s(t)), all bounds and boundary conditions hold}; report existence and controllable speed sets over path progress.",
       "evaluator": "TOPP-RA or equivalent path-speed controllability analysis with verification.",
       "required_inputs": "Geometric path, boundary velocities, limits and dynamics.",
       "requires": [
@@ -1787,13 +2403,20 @@
         "J02",
         "J04"
       ],
-      "limitations": "This concerns a prescribed path and modeled constraints, not search over all path shapes.",
+      "limitations": "Single path timing feasibility is a local test; the family or controllable-set structure is L4. Does not search alternative path shapes.",
       "references": [
         "TOPP",
         "LAV"
       ],
       "source_relationship": "Established underlying concept; the formula is a scoped project specification, not a verbatim source definition.",
-      "implementation_status": "definition_only"
+      "implementation_status": "definition_only",
+      "optional_evidence": [],
+      "audit": {
+        "decision": "Scope",
+        "note": "For one fixed path, existence of a timing is a trajectory feasibility test. L4 describes controllable speed sets or feasible timing/path families.",
+        "status": "desk_reviewed",
+        "expert_review": "pending"
+      }
     }
   ],
   "primitives": [
@@ -1809,7 +2432,8 @@
       "requires": [],
       "specializes": [],
       "diagnostic_related": [],
-      "implementation_status": "backend_contract"
+      "implementation_status": "backend_contract",
+      "optional_evidence": []
     },
     {
       "id": "P02",
@@ -1823,7 +2447,8 @@
       "requires": [],
       "specializes": [],
       "diagnostic_related": [],
-      "implementation_status": "backend_contract"
+      "implementation_status": "backend_contract",
+      "optional_evidence": []
     },
     {
       "id": "P03",
@@ -1841,7 +2466,8 @@
       ],
       "specializes": [],
       "diagnostic_related": [],
-      "implementation_status": "backend_contract"
+      "implementation_status": "backend_contract",
+      "optional_evidence": []
     },
     {
       "id": "P04",
@@ -1858,7 +2484,8 @@
       ],
       "specializes": [],
       "diagnostic_related": [],
-      "implementation_status": "backend_contract"
+      "implementation_status": "backend_contract",
+      "optional_evidence": []
     },
     {
       "id": "P05",
@@ -1875,7 +2502,8 @@
       ],
       "specializes": [],
       "diagnostic_related": [],
-      "implementation_status": "backend_contract"
+      "implementation_status": "backend_contract",
+      "optional_evidence": []
     },
     {
       "id": "P06",
@@ -1893,7 +2521,8 @@
       ],
       "specializes": [],
       "diagnostic_related": [],
-      "implementation_status": "backend_contract"
+      "implementation_status": "backend_contract",
+      "optional_evidence": []
     },
     {
       "id": "P07",
@@ -1911,7 +2540,8 @@
       ],
       "specializes": [],
       "diagnostic_related": [],
-      "implementation_status": "backend_contract"
+      "implementation_status": "backend_contract",
+      "optional_evidence": []
     },
     {
       "id": "P08",
@@ -1928,7 +2558,8 @@
       ],
       "specializes": [],
       "diagnostic_related": [],
-      "implementation_status": "backend_contract"
+      "implementation_status": "backend_contract",
+      "optional_evidence": []
     },
     {
       "id": "P09",
@@ -1946,7 +2577,8 @@
       ],
       "specializes": [],
       "diagnostic_related": [],
-      "implementation_status": "backend_contract"
+      "implementation_status": "backend_contract",
+      "optional_evidence": []
     },
     {
       "id": "P10",
@@ -1964,7 +2596,8 @@
       ],
       "specializes": [],
       "diagnostic_related": [],
-      "implementation_status": "backend_contract"
+      "implementation_status": "backend_contract",
+      "optional_evidence": []
     },
     {
       "id": "P11",
@@ -1982,7 +2615,8 @@
       ],
       "specializes": [],
       "diagnostic_related": [],
-      "implementation_status": "backend_contract"
+      "implementation_status": "backend_contract",
+      "optional_evidence": []
     },
     {
       "id": "P12",
@@ -1999,7 +2633,8 @@
       ],
       "specializes": [],
       "diagnostic_related": [],
-      "implementation_status": "backend_contract"
+      "implementation_status": "backend_contract",
+      "optional_evidence": []
     },
     {
       "id": "P13",
@@ -2017,7 +2652,8 @@
       ],
       "specializes": [],
       "diagnostic_related": [],
-      "implementation_status": "backend_contract"
+      "implementation_status": "backend_contract",
+      "optional_evidence": []
     },
     {
       "id": "P14",
@@ -2035,7 +2671,8 @@
       ],
       "specializes": [],
       "diagnostic_related": [],
-      "implementation_status": "backend_contract"
+      "implementation_status": "backend_contract",
+      "optional_evidence": []
     },
     {
       "id": "P15",
@@ -2053,7 +2690,8 @@
       ],
       "specializes": [],
       "diagnostic_related": [],
-      "implementation_status": "backend_contract"
+      "implementation_status": "backend_contract",
+      "optional_evidence": []
     }
   ],
   "edges": [
@@ -2084,17 +2722,12 @@
     },
     {
       "source": "A02",
-      "target": "A01",
-      "type": "requires"
-    },
-    {
-      "source": "A02",
       "target": "B02",
       "type": "requires"
     },
     {
       "source": "A02",
-      "target": "J01",
+      "target": "P08",
       "type": "requires"
     },
     {
@@ -2106,6 +2739,16 @@
       "source": "A02",
       "target": "H02",
       "type": "diagnostic_related"
+    },
+    {
+      "source": "A02",
+      "target": "A01",
+      "type": "optional_evidence"
+    },
+    {
+      "source": "A02",
+      "target": "J01",
+      "type": "optional_evidence"
     },
     {
       "source": "A03",
@@ -2319,11 +2962,6 @@
     },
     {
       "source": "B05",
-      "target": "B03",
-      "type": "specializes"
-    },
-    {
-      "source": "B05",
       "target": "D03",
       "type": "diagnostic_related"
     },
@@ -2331,6 +2969,11 @@
       "source": "B05",
       "target": "C05",
       "type": "diagnostic_related"
+    },
+    {
+      "source": "B05",
+      "target": "C04",
+      "type": "optional_evidence"
     },
     {
       "source": "B06",
@@ -2544,17 +3187,17 @@
     },
     {
       "source": "D01",
-      "target": "B01",
+      "target": "P05",
       "type": "requires"
     },
     {
       "source": "D01",
-      "target": "D05",
+      "target": "P06",
       "type": "requires"
     },
     {
       "source": "D01",
-      "target": "P11",
+      "target": "P08",
       "type": "requires"
     },
     {
@@ -2566,6 +3209,21 @@
       "source": "D01",
       "target": "I03",
       "type": "diagnostic_related"
+    },
+    {
+      "source": "D01",
+      "target": "B01",
+      "type": "optional_evidence"
+    },
+    {
+      "source": "D01",
+      "target": "D05",
+      "type": "optional_evidence"
+    },
+    {
+      "source": "D01",
+      "target": "P11",
+      "type": "optional_evidence"
     },
     {
       "source": "D02",
@@ -2599,11 +3257,6 @@
     },
     {
       "source": "D03",
-      "target": "B05",
-      "type": "requires"
-    },
-    {
-      "source": "D03",
       "target": "B08",
       "type": "diagnostic_related"
     },
@@ -2611,6 +3264,16 @@
       "source": "D03",
       "target": "D06",
       "type": "diagnostic_related"
+    },
+    {
+      "source": "D03",
+      "target": "B05",
+      "type": "optional_evidence"
+    },
+    {
+      "source": "D03",
+      "target": "B08",
+      "type": "optional_evidence"
     },
     {
       "source": "D04",
@@ -2754,11 +3417,6 @@
     },
     {
       "source": "E04",
-      "target": "E03",
-      "type": "requires"
-    },
-    {
-      "source": "E04",
       "target": "P08",
       "type": "requires"
     },
@@ -2773,13 +3431,23 @@
       "type": "diagnostic_related"
     },
     {
-      "source": "E05",
-      "target": "E04",
-      "type": "requires"
+      "source": "E04",
+      "target": "E03",
+      "type": "optional_evidence"
+    },
+    {
+      "source": "E04",
+      "target": "P13",
+      "type": "optional_evidence"
     },
     {
       "source": "E05",
       "target": "P07",
+      "type": "requires"
+    },
+    {
+      "source": "E05",
+      "target": "P08",
       "type": "requires"
     },
     {
@@ -2791,6 +3459,16 @@
       "source": "E05",
       "target": "C02",
       "type": "diagnostic_related"
+    },
+    {
+      "source": "E05",
+      "target": "E04",
+      "type": "optional_evidence"
+    },
+    {
+      "source": "E05",
+      "target": "E06",
+      "type": "optional_evidence"
     },
     {
       "source": "E06",
@@ -2939,7 +3617,7 @@
     },
     {
       "source": "G03",
-      "target": "A05",
+      "target": "P08",
       "type": "requires"
     },
     {
@@ -2958,8 +3636,13 @@
       "type": "diagnostic_related"
     },
     {
+      "source": "G03",
+      "target": "A05",
+      "type": "optional_evidence"
+    },
+    {
       "source": "G04",
-      "target": "B05",
+      "target": "P06",
       "type": "requires"
     },
     {
@@ -2976,6 +3659,11 @@
       "source": "G04",
       "target": "I04",
       "type": "diagnostic_related"
+    },
+    {
+      "source": "G04",
+      "target": "B05",
+      "type": "optional_evidence"
     },
     {
       "source": "G05",
@@ -3104,7 +3792,7 @@
     },
     {
       "source": "H06",
-      "target": "B08",
+      "target": "P06",
       "type": "requires"
     },
     {
@@ -3121,6 +3809,11 @@
       "source": "H06",
       "target": "I05",
       "type": "diagnostic_related"
+    },
+    {
+      "source": "H06",
+      "target": "B08",
+      "type": "optional_evidence"
     },
     {
       "source": "I01",
@@ -3164,7 +3857,7 @@
     },
     {
       "source": "I03",
-      "target": "D01",
+      "target": "P08",
       "type": "requires"
     },
     {
@@ -3183,8 +3876,18 @@
       "type": "diagnostic_related"
     },
     {
+      "source": "I03",
+      "target": "D01",
+      "type": "optional_evidence"
+    },
+    {
+      "source": "I03",
+      "target": "P13",
+      "type": "optional_evidence"
+    },
+    {
       "source": "I04",
-      "target": "G04",
+      "target": "P08",
       "type": "requires"
     },
     {
@@ -3201,6 +3904,16 @@
       "source": "I04",
       "target": "G02",
       "type": "diagnostic_related"
+    },
+    {
+      "source": "I04",
+      "target": "G04",
+      "type": "optional_evidence"
+    },
+    {
+      "source": "I04",
+      "target": "P13",
+      "type": "optional_evidence"
     },
     {
       "source": "I05",
@@ -3224,17 +3937,7 @@
     },
     {
       "source": "I06",
-      "target": "D07",
-      "type": "requires"
-    },
-    {
-      "source": "I06",
-      "target": "D03",
-      "type": "requires"
-    },
-    {
-      "source": "I06",
-      "target": "P11",
+      "target": "P08",
       "type": "requires"
     },
     {
@@ -3251,6 +3954,26 @@
       "source": "I06",
       "target": "E02",
       "type": "diagnostic_related"
+    },
+    {
+      "source": "I06",
+      "target": "D07",
+      "type": "optional_evidence"
+    },
+    {
+      "source": "I06",
+      "target": "D03",
+      "type": "optional_evidence"
+    },
+    {
+      "source": "I06",
+      "target": "P11",
+      "type": "optional_evidence"
+    },
+    {
+      "source": "I06",
+      "target": "P13",
+      "type": "optional_evidence"
     },
     {
       "source": "J01",
@@ -3492,5 +4215,6 @@
       "target": "P02",
       "type": "requires"
     }
-  ]
+  ],
+  "audit_scope": "All 60 entries received a desk review for scope, ambiguity and overlap; source records/excerpts checked, not full-text proof review. Human expert approval pending."
 }

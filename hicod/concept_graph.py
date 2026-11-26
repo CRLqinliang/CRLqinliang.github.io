@@ -19,7 +19,7 @@ class ConceptGraph:
         refs = self.data["references"]
         expected = set()
         for key, n in self.nodes.items():
-            for kind in ("requires", "specializes", "diagnostic_related"):
+            for kind in ("requires", "specializes", "diagnostic_related", "optional_evidence"):
                 for dep in n[kind]:
                     if dep not in self.nodes or dep == key:
                         raise ValueError(f"Invalid edge {key} {kind} {dep}")

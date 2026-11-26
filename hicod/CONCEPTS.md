@@ -1,6 +1,6 @@
-# HiCoD L4 catalogue · v0.2
+# HiCoD L4 catalogue · v0.3
 
-60 candidate definitions, 15 lower-level evidence interfaces. Each mathematical expression is a scoped project specification. `literature` identifies established underlying concepts; `operational` identifies our proposed descriptors, supported by related theory. No full evaluator is claimed for any of these 60 entries; the existing planar proxy is separate.
+See [AUDIT.md](AUDIT.md) for the individual review and source scope. All definitions are model-relative. Operational specifications are not quotations or universal standards. Full physical evaluators are not implied.
 
 F(T): feasible set in declared candidate domain. G(p): object-relative feasible grasps. Γ: path family. V: declared structural descriptor. μ: specified measure. All results are relative to scope, models and evidence. A sampled negative result is not a continuous infeasibility proof.
 
@@ -14,20 +14,24 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Intersect candidate identities after endpoint grasp, IK and collision checks.
 - Inputs: Common grasp universe, two object poses, robot/base and obstacles.
 - Required evidence: P03, P04, P05
+- Optional evidence: None registered
 - Diagnostic follow-up: B02, C02
 - Limitations: Necessary for fixed-grasp transfer; not sufficient for a path. Empty sampled intersection is not a continuous certificate.
-- Foundations: [QIN](https://arxiv.org/abs/2506.15920), [WAN](https://pmc.ncbi.nlm.nih.gov/articles/PMC5101345/)
+- Audit: Keep — Use canonical object-relative grasp IDs and a common sampled universe. Empty intersection only excludes the tested candidates.
+- Foundations: [QIN](https://arxiv.org/abs/2506.15920), [WAN](https://doi.org/10.1186/s40638-016-0050-2)
 
 ### A02 — Grasp–Task Compatibility
 
 - Terminology: operational
-- Definition: Grasps admitting a complete task execution under stated attachment and physical constraints.
+- Definition: Set of grasps admitting a complete task execution while retaining the attachment during required stages, with dynamics only when required.
 - Formalization: `G_task={g: ∃z∈F(T), attachment(z)=g throughout required stages}.`
 - Computation: Filter candidate grasps by complete transfer and task wrench feasibility if dynamics are in scope.
 - Inputs: Task, attachment family, permitted mode changes, geometry and dynamic constraints.
-- Required evidence: A01, B02, J01
+- Required evidence: B02, P08
+- Optional evidence: A01, J01
 - Diagnostic follow-up: E01, H02
-- Limitations: If dynamics are excluded report geometric compatibility only. Not endpoint graspability.
+- Limitations: Transfer feasibility alone does not cover approach, release or placement. Evaluate dynamic wrench constraints when required by task scope.
+- Audit: Revise — Whole-task grasp set differs from endpoint overlap (A01) and transfer-only connectivity (B02). Dynamics are conditional on task scope.
 - Foundations: [QIN](https://arxiv.org/abs/2506.15920), [GRASP](https://doi.org/10.1007/s10514-014-9402-3), [TAMP](https://doi.org/10.1146/annurev-control-091420-084139)
 
 ### A03 — Grasp–IK Compatibility
@@ -38,9 +42,11 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Sample grasps; enumerate or sample IK branches and filter collisions and limits.
 - Inputs: Object poses, grasp transforms, robot, joint limits, environment.
 - Required evidence: P03, P04, P05
+- Optional evidence: None registered
 - Diagnostic follow-up: A01, B03
 - Limitations: A single IK witness is local evidence; it does not establish path feasibility or exhaustive coverage.
-- Foundations: [QIN](https://arxiv.org/abs/2506.15920), [LAV](https://msl.cs.uiuc.edu/~lavalle/planning/)
+- Audit: Scope — A single (g,q) check is L3. The projected feasible grasp set or its coverage across a pose family is L4.
+- Foundations: [QIN](https://arxiv.org/abs/2506.15920), [LAV](https://msl.cs.uiuc.edu/~lavalle/planning/book.html)
 
 ### A04 — Skill Compatibility
 
@@ -50,20 +56,24 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Compute reachable postconditions and feasible preconditions; test shared assignments.
 - Inputs: Skill models, start sets, boundary states, geometric and resource constraints.
 - Required evidence: P07, P08
+- Optional evidence: None registered
 - Diagnostic follow-up: E02, E06
 - Limitations: Symbolic predicate agreement alone is insufficient if continuous parameters differ.
+- Audit: Keep — The intersection must use reachable output states from the actual allowed initial set, not nominal postconditions.
 - Foundations: [FACT](https://doi.org/10.1177/0278364918802962), [TEXT](https://arxiv.org/abs/2303.12153)
 
-### A05 — Base–Task Compatibility
+### A05 — Base–Task Stage Compatibility
 
 - Terminology: operational
-- Definition: Common stationary base placements supporting all specified task stages.
+- Definition: Intersection of stationary base pose sets admitting a witness for each required stage, before checking joint cross-stage consistency.
 - Formalization: `B_task=∩_i B_i; B_i={b: stage i has a feasible witness at b}.`
 - Computation: Intersect inverse reachability sets; verify collision and path constraints.
 - Inputs: Base domain, stage targets, robot, obstacles, resolution.
 - Required evidence: P04, P05
+- Optional evidence: None registered
 - Diagnostic follow-up: G03, B04
 - Limitations: Separate stage witnesses may be mutually incompatible; moving-base tasks need different mode assumptions.
+- Audit: Revise — Intersection of stage base sets is an endpoint/stage screening relation, not full task compatibility. Use a fixed base and consistent shared assignments.
 - Foundations: [BASE](https://jicrs.icros.org/_PR/view/?aidx=47244&bidx=4266), [TAMP](https://doi.org/10.1146/annurev-control-091420-084139)
 
 ### A06 — Bimanual Grasp Compatibility
@@ -74,8 +84,10 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Pair grasps, solve coupled IK, check inter-arm and object collision.
 - Inputs: Both robots, object pose, grasp pairs, limits and obstacles.
 - Required evidence: P03, P04, P05, F03
+- Optional evidence: None registered
 - Diagnostic follow-up: C03, J01
 - Limitations: Static simultaneous feasibility is not a transport or load-sharing guarantee.
+- Audit: Scope — Assess the set of grasp pairs for a specified object pose or explicitly declared pose domain, not just one coupled IK witness.
 - Foundations: [DUAL](https://doi.org/10.1016/j.robot.2017.10.005), [HAND](https://doi.org/10.1109/CASE59546.2024.10711713)
 
 ## B — Connectivity
@@ -88,9 +100,11 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Roadmap or continuous search, verified edges, certified methods for negative claims.
 - Inputs: Configuration space, collision model, endpoints and constraints.
 - Required evidence: P04, P05, P06
+- Optional evidence: None registered
 - Diagnostic follow-up: D02, B07
 - Limitations: Path-connectedness is relevant; finite roadmap disconnection does not prove continuous disconnection.
-- Foundations: [LAV](https://msl.cs.uiuc.edu/~lavalle/planning/), [PROOF](https://www.roboticsproceedings.org/rss17/p064.html)
+- Audit: Scope — Pairwise connectivity is a relation on endpoint states; report reachable sets or components when diagnosing a solution space. Finite graph absence is unknown continuously.
+- Foundations: [LAV](https://msl.cs.uiuc.edu/~lavalle/planning/book.html), [PROOF](https://www.roboticsproceedings.org/rss17/p064.html)
 
 ### B02 — Grasp Connectivity
 
@@ -100,11 +114,13 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Search inside each candidate transfer mode with attachment retained.
 - Inputs: Endpoint grasp sets, robot, object, transfer mode geometry.
 - Required evidence: A01, B01
+- Optional evidence: None registered
 - Diagnostic follow-up: B05, A02
 - Limitations: Endpoint compatibility alone is insufficient; prescribed object paths use B05.
+- Audit: Keep — Unrestricted object path under a fixed grasp differs from B05 prescribed object path. Include attachment and object collision.
 - Foundations: [MODES](https://motion.cs.illinois.edu/RoboticSystems/AdvancedTopicsInPlanning.html), [QIN](https://arxiv.org/abs/2506.15920)
 
-### B03 — IK Branch Connectivity
+### B03 — Continuous IK Path Lift
 
 - Terminology: operational
 - Definition: Existence of a continuous valid joint-space lift of a prescribed end-effector path.
@@ -112,9 +128,11 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Generate waypoint IK candidates, verify connecting lifts, search layered graph.
 - Inputs: Cartesian path, IK solver, tolerances, limits, collisions.
 - Required evidence: P03, P04, P05, P06
+- Optional evidence: None registered
 - Diagnostic follow-up: B05, D04
-- Limitations: IK family labels need not be globally invariant; adjacent endpoint proximity is not an edge certificate.
-- Foundations: [IKLINK](https://arxiv.org/abs/2402.16154), [LAV](https://msl.cs.uiuc.edu/~lavalle/planning/)
+- Limitations: IK labels are not global invariants. Enforce required endpoint configurations, joint/pose tolerances, and validated continuous edges; sample adjacency is insufficient.
+- Audit: Revise — Use continuous path lift with explicit end constraints; IK labels are implementation-specific, not topology invariants.
+- Foundations: [IKLINK](https://arxiv.org/abs/2402.16154), [LAV](https://msl.cs.uiuc.edu/~lavalle/planning/book.html)
 
 ### B04 — Object-Pose Connectivity
 
@@ -124,20 +142,24 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Search object/grasp/mode graph with consistent robot witnesses.
 - Inputs: Object domain, allowed modes, robot, support and collision models.
 - Required evidence: B06, P07
+- Optional evidence: None registered
 - Diagnostic follow-up: C02, A05
 - Limitations: Object-only geometric paths need a consistent robot realization.
-- Foundations: [MODES](https://motion.cs.illinois.edu/RoboticSystems/AdvancedTopicsInPlanning.html), [TAMP](https://doi.org/10.1146/annurev-control-091420-084139), [WAN](https://pmc.ncbi.nlm.nih.gov/articles/PMC5101345/)
+- Audit: Keep — Object pose projection requires a consistent robot/hybrid witness. Distinguish existential reachability from object-only paths.
+- Foundations: [MODES](https://motion.cs.illinois.edu/RoboticSystems/AdvancedTopicsInPlanning.html), [TAMP](https://doi.org/10.1146/annurev-control-091420-084139), [WAN](https://doi.org/10.1186/s40638-016-0050-2)
 
 ### B05 — Grasp–IK Trajectory Connectivity
 
 - Terminology: operational
 - Definition: Continuous feasible grasp and IK realization along a prescribed object path, with only explicitly permitted mode changes.
-- Formalization: `∃g,q(s): FK(q(s))=p(s)·g, all constraints; g constant within transfer segments.`
+- Formalization: `Fixed mode: ∃g, continuous q(s): FK(q(s))=p(s)·g, all constraints for every s. Switch-allowed variant: piecewise (g,q) with explicitly admissible release/reacquisition transitions and task progress rules.`
 - Computation: Construct layered grasp–IK graph; verify edges; DP for paths or allowed release cost.
 - Inputs: Object path, grasp candidates, IK branches, transition rules.
 - Required evidence: A03, B03, P06
+- Optional evidence: C04
 - Diagnostic follow-up: D03, C05
-- Limitations: Report fixed-grasp versus release-allowed scope; finite graph is approximate. This is a HiCoD synthesis of cited foundations.
+- Limitations: A sampled graph is an approximation; release/reacquisition is permitted only by the specified task and is not fixed-grasp continuity. Report endpoint configuration constraints and edge verification.
+- Audit: Revise — Separate fixed-attachment path lift from switch-allowed tracking. A release may violate a continuous drag requirement; only count it under explicit task rules.
 - Foundations: [QIN](https://arxiv.org/abs/2506.15920), [IKLINK](https://arxiv.org/abs/2402.16154), [MODES](https://motion.cs.illinois.edu/RoboticSystems/AdvancedTopicsInPlanning.html)
 
 ### B06 — Multi-modal Connectivity
@@ -148,8 +170,10 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Build/search hybrid mode graph; validate within-mode and transition witnesses.
 - Inputs: Mode manifolds, boundary relations, start and goal sets.
 - Required evidence: B01, C04
+- Optional evidence: None registered
 - Diagnostic follow-up: B04, C01
 - Limitations: A symbolic mode edge without a valid boundary witness can be optimistic.
+- Audit: Keep — A hybrid execution needs both within-mode paths and admissible boundary transitions. Connectivity cannot be inferred from mode adjacency alone.
 - Foundations: [MODES](https://motion.cs.illinois.edu/RoboticSystems/AdvancedTopicsInPlanning.html), [TAMP](https://doi.org/10.1146/annurev-control-091420-084139)
 
 ### B07 — Homotopy Diversity
@@ -160,9 +184,11 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Topology-aware signatures or certificates and alternative path sampling.
 - Inputs: Free space, endpoints, path family, equivalence relation.
 - Required evidence: B01, P06
+- Optional evidence: None registered
 - Diagnostic follow-up: H05, B08
 - Limitations: Homology may merge homotopy classes; observed count is only a lower bound with sound classification.
-- Foundations: [HOMO](https://publications.ri.cmu.edu/topological-constraints-in-search-based-robot-path-planning), [LAV](https://msl.cs.uiuc.edu/~lavalle/planning/)
+- Audit: Scope — Homology signatures can discriminate classes without identifying every homotopy class. Count only represented classes under stated equivalence.
+- Foundations: [HOMO](https://publications.ri.cmu.edu/topological-constraints-in-search-based-robot-path-planning), [LAV](https://msl.cs.uiuc.edu/~lavalle/planning/book.html)
 
 ### B08 — Connectivity Redundancy
 
@@ -172,9 +198,11 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Compute max flow/min cut or vertex-disjoint paths as declared.
 - Inputs: Graph, endpoints, capacity and independence criterion.
 - Required evidence: B01, P06
+- Optional evidence: None registered
 - Diagnostic follow-up: D03, H06
 - Limitations: Graph redundancy does not guarantee robustness to correlated physical failures.
-- Foundations: [MENGER](https://graphsearch.epfl.ch/en/concept/1155738), [LAV](https://msl.cs.uiuc.edu/~lavalle/planning/)
+- Audit: Keep — Unit-capacity edge-disjoint routes are a graph invariant; declare directedness, endpoint conventions and failure correlations.
+- Foundations: [MENGER](https://graphsearch.epfl.ch/en/concept/1155738), [LAV](https://msl.cs.uiuc.edu/~lavalle/planning/book.html)
 
 ## C — Transition
 
@@ -186,9 +214,11 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Search regrasp graph with support, transit and transfer checks.
 - Inputs: Grasp modes, poses, support surfaces and switch rules.
 - Required evidence: B06, C04
+- Optional evidence: None registered
 - Diagnostic follow-up: C02, C05
 - Limitations: A feasible regrasp does not prove a regrasp is necessary.
-- Foundations: [WAN](https://pmc.ncbi.nlm.nih.gov/articles/PMC5101345/), [MODES](https://motion.cs.illinois.edu/RoboticSystems/AdvancedTopicsInPlanning.html)
+- Audit: Keep — A witness with a grasp change is not proof that regrasp is necessary; compare fixed-grasp alternatives.
+- Foundations: [WAN](https://doi.org/10.1186/s40638-016-0050-2), [MODES](https://motion.cs.illinois.edu/RoboticSystems/AdvancedTopicsInPlanning.html)
 
 ### C02 — Intermediate-Pose Bridging
 
@@ -198,9 +228,11 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Sample stable placements; prefilter shared grasps then verify both transfers and switch.
 - Inputs: Endpoint poses, placement domain, support and grasp constraints.
 - Required evidence: A01, B02, C04, P09
+- Optional evidence: None registered
 - Diagnostic follow-up: C01, C06
 - Limitations: Endpoint intersections alone do not verify motion or stable placement.
-- Foundations: [WAN](https://pmc.ncbi.nlm.nih.gov/articles/PMC5101345/), [QIN](https://arxiv.org/abs/2506.15920), [MODES](https://motion.cs.illinois.edu/RoboticSystems/AdvancedTopicsInPlanning.html)
+- Audit: Revise — Require a consistent intermediate placement, supported release and reacquisition and incoming/outgoing robot motions. Two shared-grasp intersections are a screening test.
+- Foundations: [WAN](https://doi.org/10.1186/s40638-016-0050-2), [QIN](https://arxiv.org/abs/2506.15920), [MODES](https://motion.cs.illinois.edu/RoboticSystems/AdvancedTopicsInPlanning.html)
 
 ### C03 — Handover Feasibility
 
@@ -210,8 +242,10 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Search handover poses and grasp pairs, solve coupled IK, verify release and approach.
 - Inputs: Arms, grasp pairs, support/force assumptions, handover region.
 - Required evidence: A06, C04, P09
+- Optional evidence: None registered
 - Diagnostic follow-up: C01, F03
 - Limitations: Simultaneous static IK is necessary but does not guarantee safe transfer.
+- Audit: Scope — Report feasible handover region or grasp-pair family; a single verified handover is L3 evidence.
 - Foundations: [HAND](https://doi.org/10.1109/CASE59546.2024.10711713), [DUAL](https://doi.org/10.1016/j.robot.2017.10.005)
 
 ### C04 — Mode Transition Feasibility
@@ -222,9 +256,11 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Check guards, reset relations, approach, collisions and support at sampled boundaries.
 - Inputs: Mode definitions, boundary states and transition rules.
 - Required evidence: P05, P07, P09
+- Optional evidence: None registered
 - Diagnostic follow-up: C06, J03
 - Limitations: Intersection of mode manifolds need not imply a physically realizable switch.
-- Foundations: [MODES](https://motion.cs.illinois.edu/RoboticSystems/AdvancedTopicsInPlanning.html), [CONTACT](https://par.nsf.gov/servlets/purl/10338784)
+- Audit: Scope — For L4 describe admissible transition relation or reachable transition domain. Individual transition validity remains L3.
+- Foundations: [MODES](https://motion.cs.illinois.edu/RoboticSystems/AdvancedTopicsInPlanning.html), [CONTACT](https://arxiv.org/abs/2011.01454)
 
 ### C05 — Minimum Mode-Switch Cost
 
@@ -234,9 +270,11 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Shortest path/DP on validated mode graph, record optimum within graph.
 - Inputs: Mode graph, weights, endpoints.
 - Required evidence: B06, C04
+- Optional evidence: None registered
 - Diagnostic follow-up: C01, B05
 - Limitations: Graph optimum is not continuous global optimum; absence requires appropriate certificate.
-- Foundations: [IKLINK](https://arxiv.org/abs/2402.16154), [WAN](https://pmc.ncbi.nlm.nih.gov/articles/PMC5101345/), [LAV](https://msl.cs.uiuc.edu/~lavalle/planning/)
+- Audit: Keep — Costs apply to explicitly labeled transition edges; report finite graph optimum and do not equate switch count with execution time.
+- Foundations: [IKLINK](https://arxiv.org/abs/2402.16154), [WAN](https://doi.org/10.1186/s40638-016-0050-2), [LAV](https://msl.cs.uiuc.edu/~lavalle/planning/book.html)
 
 ### C06 — Transition Region Availability
 
@@ -246,8 +284,10 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Sample intrinsic transition domain and estimate feasible fraction/support.
 - Inputs: Transition parameterization, sampling measure and domain.
 - Required evidence: C04, P10
+- Optional evidence: None registered
 - Diagnostic follow-up: D01, H04
 - Limitations: Lower-dimensional boundaries can have zero ambient measure; report intrinsic measure.
+- Audit: Keep — Measure must be intrinsic to the declared transition manifold or sampling protocol, not ambient volume.
 - Foundations: [MODES](https://motion.cs.illinois.edu/RoboticSystems/AdvancedTopicsInPlanning.html), [EXP](https://motion.cs.illinois.edu/RoboticSystems/MotionPlanningHigherDimensions.html)
 
 ## D — Bottleneck
@@ -259,9 +299,11 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Formalization: `Compare connectivity/capacity of F before and after a declared regional perturbation.`
 - Computation: Locate cuts/low-clearance regions and evaluate controlled geometry interventions.
 - Inputs: Path family, geometry, region and allowed interventions.
-- Required evidence: B01, D05, P11
+- Required evidence: P05, P06, P08
+- Optional evidence: B01, D05, P11
 - Diagnostic follow-up: D02, I03
-- Limitations: One colliding trajectory is not sufficient to establish a global bottleneck.
+- Limitations: A single collision or low-clearance path is insufficient; use structural or controlled counterfactual evidence. A geometric intervention must be scoped.
+- Audit: Revise — A geometric bottleneck requires path-family or separator evidence. Low clearance and counterfactual relocation are alternative evidence, not universal prerequisites.
 - Foundations: [NARROW](https://www.kavrakilab.rice.edu/publications/hsu-kavraki1998on-finding-narrow.pdf), [ENV](https://doi.org/10.1109/ICRA57147.2024.10611577)
 
 ### D02 — Narrow Passage
@@ -272,20 +314,24 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Estimate visibility/expansiveness and roadmap connectivity with adaptive sampling.
 - Inputs: Free space, sampling measure, metric, local planner.
 - Required evidence: B01, P10, P05
+- Optional evidence: None registered
 - Diagnostic follow-up: D01, D05
 - Limitations: No universal threshold; workspace aperture is not C-space passage width.
+- Audit: Keep — A narrow passage is relative to measure, visibility and metric; do not classify by workspace width alone.
 - Foundations: [NARROW](https://www.kavrakilab.rice.edu/publications/hsu-kavraki1998on-finding-narrow.pdf), [EXP](https://motion.cs.illinois.edu/RoboticSystems/MotionPlanningHigherDimensions.html)
 
 ### D03 — Connectivity Bottleneck
 
 - Terminology: operational
 - Definition: A cut or stage transition limiting the capacity of task paths in a specified graph.
-- Formalization: `min_{S:s∈S,t∉S} Σ_{e∈δ+(S)}cap(e).`
+- Formalization: `For distinct source and sink in a finite capacitated graph, κ=min_{S:s∈S,t∉S} Σ_{e∈δ+(S)} cap(e). Report cut witness and distinguish κ=0 (disconnected in the graph) from small positive capacity.`
 - Computation: Minimum cut or stagewise edge counts with path-conditioned analysis.
 - Inputs: Task graph, capacities and endpoint sets.
-- Required evidence: P06, B05
+- Required evidence: P06
+- Optional evidence: B05, B08
 - Diagnostic follow-up: B08, D06
 - Limitations: Capacities and graph approximation determine interpretation; sampled zero cut is not a global proof.
+- Audit: Revise — Minimum cut is generic graph capacity, not specific to grasp–IK tracking. Report zero-cut disconnection separately from small positive bottleneck.
 - Foundations: [MENGER](https://graphsearch.epfl.ch/en/concept/1155738), [IKLINK](https://arxiv.org/abs/2402.16154)
 
 ### D04 — Singularity Bottleneck
@@ -296,8 +342,10 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Evaluate task velocity feasibility over path family; localize restricted directions.
 - Inputs: Jacobian, task direction, scaling, velocity bounds, path family.
 - Required evidence: B03, P12
+- Optional evidence: None registered
 - Diagnostic follow-up: D03, J04
 - Limitations: A small singular value on one path is L3; full rank is not a guarantee of execution.
+- Audit: Revise — An infimum singular value along a path is a proxy; directional velocity feasibility and rank must be interpreted with task dimension and scaling.
 - Foundations: [MR](https://modernrobotics.northwestern.edu/nu-gm-book-resource/5-4-manipulability/), [IKLINK](https://arxiv.org/abs/2402.16154)
 
 ### D05 — Clearance Bottleneck
@@ -308,9 +356,11 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Signed-distance checks and widest-path search; identify limiting geometry.
 - Inputs: Path family, obstacle and robot geometry, distance metric.
 - Required evidence: B01, P05
+- Optional evidence: None registered
 - Diagnostic follow-up: D01, D02
 - Limitations: Clearance of one trajectory is local; sampled best clearance is only a scoped estimate.
-- Foundations: [LAV](https://msl.cs.uiuc.edu/~lavalle/planning/), [NARROW](https://www.kavrakilab.rice.edu/publications/hsu-kavraki1998on-finding-narrow.pdf)
+- Audit: Keep — Widest-path clearance over alternatives is L4; clearance of a supplied path is L3. Empty feasible path family has no finite margin.
+- Foundations: [LAV](https://msl.cs.uiuc.edu/~lavalle/planning/book.html), [NARROW](https://www.kavrakilab.rice.edu/publications/hsu-kavraki1998on-finding-narrow.pdf)
 
 ### D06 — Critical Constraint
 
@@ -320,8 +370,10 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Controlled re-solving or probing with a comparable domain and budget.
 - Inputs: Constraint set, intervention rules, descriptor, solver oracle.
 - Required evidence: P08, P11
+- Optional evidence: None registered
 - Diagnostic follow-up: D07, G05
 - Limitations: Interactions matter; diagnostic removal never authorizes violating safety constraints.
+- Audit: Keep — Controlled intervention must specify metric, comparable domain and constraints; diagnostic removal does not authorize physical execution.
 - Foundations: [CONFLICT](https://arxiv.org/abs/2211.15275), [MCR](https://doi.org/10.1177/0278364913507795)
 
 ### D07 — Constraint Conflict
@@ -332,8 +384,10 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Extract conflicts using sound feasibility/infeasibility oracle semantics.
 - Inputs: Constraints, variables, tolerances, certificate requirements.
 - Required evidence: P08, P13
+- Optional evidence: None registered
 - Diagnostic follow-up: D06, I02
 - Limitations: Inclusion-minimal is not minimum cardinality; local solver failure is not a proof.
+- Audit: Keep — Distinguish inclusion-minimal conflict, minimum-cardinality conflict and a mere unsuccessful numerical solve.
 - Foundations: [CONFLICT](https://arxiv.org/abs/2211.15275), [PROOF](https://www.roboticsproceedings.org/rss17/p064.html)
 
 ## E — Dependency
@@ -346,8 +400,10 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Fix each grasp, explore valid transfers, compare paths or structural measures.
 - Inputs: Grasp family, motion domain, task constraints.
 - Required evidence: A01, B02
+- Optional evidence: None registered
 - Diagnostic follow-up: E02, G01
 - Limitations: Equalize exploration budget and parameterization; observed association need not be causal.
+- Audit: Keep — Use conditional transfer fibers over grasp choices, equal exploration budget; relation is not a single downstream failure.
 - Foundations: [MODES](https://motion.cs.illinois.edu/RoboticSystems/AdvancedTopicsInPlanning.html), [QIN](https://arxiv.org/abs/2506.15920)
 
 ### E02 — Cross-Stage Dependency
@@ -358,8 +414,10 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Condition on different boundary states and probe suffix feasibility.
 - Inputs: Task skeleton, boundary state domain, remaining constraints.
 - Required evidence: A04, P08
+- Optional evidence: None registered
 - Diagnostic follow-up: E01, E06
 - Limitations: Compare controlled choices; distinguish correlation from causal intervention.
+- Audit: Keep — Condition on complete upstream boundary state, distinguish feasibility effects from sampling/solver differences.
 - Foundations: [FACT](https://doi.org/10.1177/0278364918802962), [TEXT](https://arxiv.org/abs/2303.12153)
 
 ### E03 — Object Blocking Dependency
@@ -370,8 +428,10 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Test goal overlap or swept-volume blocking across allowed candidates.
 - Inputs: Object poses, geometries, action model and target arrangements.
 - Required evidence: P05, P08
+- Optional evidence: None registered
 - Diagnostic follow-up: E04, E05
 - Limitations: Goal-overlap dependencies assume a specific rearrangement model; path-dependent blocking may be conditional.
+- Audit: Scope — Separate mandatory blocking under a specified model from observed collisions on sampled paths.
 - Foundations: [BUFF](https://www.roboticsproceedings.org/rss17/p033.html), [TAMP](https://doi.org/10.1146/annurev-control-091420-084139)
 
 ### E04 — Task Ordering Dependency
@@ -381,33 +441,39 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Formalization: `i≺j iff every feasible execution in scope orders i before j (nonempty feasible family).`
 - Computation: Derive mandatory precedences or test alternative sequences with witnesses.
 - Inputs: Actions, temporal/precondition constraints, blocking model.
-- Required evidence: E03, P08
+- Required evidence: P08
+- Optional evidence: E03, P13
 - Diagnostic follow-up: E05, E02
 - Limitations: An observed order is not mandatory; conditional precedences need explicit guards.
+- Audit: Revise — Precedence can derive from task rules without object blocking; avoid vacuous truth when no feasible execution exists.
 - Foundations: [TAMP](https://doi.org/10.1146/annurev-control-091420-084139), [BUFF](https://www.roboticsproceedings.org/rss17/p033.html)
 
-### E05 — Deadlock / Cyclic Dependency
+### E05 — Precedence Cycles & State Deadlock
 
 - Terminology: operational
 - Definition: Cycle in strict precedence relations, or a reachable non-goal state with no enabled continuation under a stated model.
-- Formalization: `Cycle in fixed precedence graph; behavioral deadlock if no admissible progress action.`
+- Formalization: `Cycle: directed cycle of strict precedence constraints. State deadlock: x∉Goal and no enabled admissible transitions. Goal-unreachable states may still have enabled transitions.`
 - Computation: Strongly connected components and state-space continuation checks.
 - Inputs: Precedence model, modes, buffer availability, enabled actions.
-- Required evidence: E04, P07
+- Required evidence: P07, P08
+- Optional evidence: E04, E06
 - Diagnostic follow-up: I01, C02
 - Limitations: A dependency cycle can be resolved by buffers; not necessarily global infeasibility.
-- Foundations: [BUFF](https://www.roboticsproceedings.org/rss17/p033.html), [LAV](https://msl.cs.uiuc.edu/~lavalle/planning/)
+- Audit: Revise — A strict precedence cycle and a state with no enabled transitions are distinct; report separately. A non-goal state with no goal-reaching continuation may still have enabled actions.
+- Foundations: [BUFF](https://www.roboticsproceedings.org/rss17/p033.html), [LAV](https://msl.cs.uiuc.edu/~lavalle/planning/book.html)
 
 ### E06 — Future Feasibility Preservation
 
 - Terminology: operational
-- Definition: Whether an intermediate state lies in the goal-reachable set for remaining stages.
+- Definition: The set of intermediate states from which the remaining task goal is reachable under allowed controls and constraints; membership is a local query.
 - Formalization: `K_i={x: ∃ admissible continuation from x to goal}; require x∈K_i.`
 - Computation: Backward graph reachability or controllable-set analysis.
 - Inputs: Remaining stages, goal, transition model and constraints.
 - Required evidence: P07, P06
+- Optional evidence: None registered
 - Diagnostic follow-up: E02, I01
 - Limitations: Robust versions need explicit control/disturbance quantifier order.
+- Audit: Scope — Compute the backward reachable set for the remaining goal; a membership test for one intermediate state is only L3 evidence.
 - Foundations: [HJ](https://arxiv.org/abs/1709.07523), [TOPP](https://arxiv.org/abs/1707.07239), [FACT](https://doi.org/10.1177/0278364918802962)
 
 ## F — Coupling & decomposability
@@ -420,33 +486,39 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Inspect factor scopes, conditional feasible fibers or cross-derivative proxies.
 - Inputs: Variable partition, constraints, objective and domains.
 - Required evidence: P08
+- Optional evidence: None registered
 - Diagnostic follow-up: F02, F04
 - Limitations: Shared factors show potential coupling, not its quantitative strength; Hessian is local.
+- Audit: Keep — Feasible-set nonfactorization and objective nonseparability are distinct coupling types; specify blocks and domain.
 - Foundations: [FACT](https://doi.org/10.1177/0278364918802962), [BOYD](https://web.stanford.edu/~boyd/cvxbook/)
 
 ### F02 — Constraint Coupling
 
 - Terminology: operational
 - Definition: Interaction between constraints through shared variables and joint feasible relations.
-- Formalization: `Compare F(C1∪C2) with individual feasible sets and joint satisfiability.`
+- Formalization: `In a common domain F(C1∪C2)=F(C1)∩F(C2). Report shared variable scopes separately from interaction, e.g. μ(F1∩F2)−μ(F1)μ(F2) for a normalized declared measure. Conflict is a distinct predicate.`
 - Computation: Build constraint incidence graph, test joint feasibility and conflicts.
 - Inputs: Constraint scopes, variable domains, feasibility oracle.
 - Required evidence: P08
+- Optional evidence: None registered
 - Diagnostic follow-up: D07, F01
 - Limitations: Coupling may occur without conflict; structural incidence alone does not quantify strength.
+- Audit: Revise — Separate structural variable-sharing from quantitative interaction and infeasibility. Joint feasible set is always intersection in common domain.
 - Foundations: [FACT](https://doi.org/10.1177/0278364918802962), [CONFLICT](https://arxiv.org/abs/2211.15275)
 
 ### F03 — Bimanual Kinematic Coupling
 
 - Terminology: literature
-- Definition: Closed-chain constraint that both arms realize the same rigid-object transform.
+- Definition: The jointly feasible configuration relation of both arms satisfying a rigid common object transform; analyze its projections or connected paths, not a single closed-chain residual.
 - Formalization: `FK_L(qL)·gL⁻¹=FK_R(qR)·gR⁻¹=p within tolerance.`
 - Computation: Coupled IK, relative pose residuals and joint path checks.
 - Inputs: Robot models, object-relative grasps, limits and collisions.
 - Required evidence: P03, P04, P08
+- Optional evidence: None registered
 - Diagnostic follow-up: A06, J01
 - Limitations: Independent-arm feasibility is insufficient; assumes rigid cooperative attachment.
-- Foundations: [DUAL](https://doi.org/10.1016/j.robot.2017.10.005), [LAV](https://msl.cs.uiuc.edu/~lavalle/planning/)
+- Audit: Scope — Closed-chain equality is L3 at a point. L4 describes coupled feasible pairs, projection/fibers and connectivity across the joint space.
+- Foundations: [DUAL](https://doi.org/10.1016/j.robot.2017.10.005), [LAV](https://msl.cs.uiuc.edu/~lavalle/planning/book.html)
 
 ### F04 — Task Decomposability
 
@@ -456,11 +528,13 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Analyze constraint graph separators; verify consistent assignments and objective.
 - Inputs: Factor graph, proposed partition, separator and objective.
 - Required evidence: F01, F05
+- Optional evidence: None registered
 - Diagnostic follow-up: E02
 - Limitations: Approximate decomposition may sacrifice optimality or completeness; declare preserved properties.
+- Audit: Keep — Feasibility decomposition and independent optimality have different conditions; separators and objective both matter.
 - Foundations: [FACT](https://doi.org/10.1177/0278364918802962), [TAMP](https://doi.org/10.1146/annurev-control-091420-084139)
 
-### F05 — Conditional Independence
+### F05 — Conditional Feasible-Set Independence
 
 - Terminology: operational
 - Definition: After fixing separator variables, feasible assignments in remaining blocks factorize.
@@ -468,8 +542,10 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Inspect factor scopes after conditioning; test feasible relation factorization.
 - Inputs: Constraint network, variable blocks, separator assignments.
 - Required evidence: P08
+- Optional evidence: None registered
 - Diagnostic follow-up: F04, F01
 - Limitations: This is deterministic feasibility independence, not automatically statistical independence.
+- Audit: Revise — Rename display to conditional feasible-set independence (deterministic); do not conflate with probabilistic conditional independence.
 - Foundations: [FACT](https://doi.org/10.1177/0278364918802962), [BOYD](https://web.stanford.edu/~boyd/cvxbook/)
 
 ## G — Sensitivity
@@ -482,8 +558,10 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Controlled grasp perturbations or discrete comparisons with equal budgets.
 - Inputs: Grasp parameterization, perturbation metric and task descriptor.
 - Required evidence: E01, P11
+- Optional evidence: None registered
 - Diagnostic follow-up: G04, H02
 - Limitations: For discrete grasps use finite contrasts; account for search noise.
+- Audit: Keep — Compare normalized grasp perturbations or discrete contrasts with consistent physical and computational budgets.
 - Foundations: [BOYD](https://web.stanford.edu/~boyd/cvxbook/), [QIN](https://arxiv.org/abs/2506.15920)
 
 ### G02 — Object-Pose Sensitivity
@@ -494,9 +572,11 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Perturb normalized translation/rotation coordinates, recompute descriptor.
 - Inputs: Pose domain, units, task and perturbation bounds.
 - Required evidence: B04, P11
+- Optional evidence: None registered
 - Diagnostic follow-up: H01, I04
 - Limitations: Do not change mandatory task poses; specify translation/rotation normalization.
-- Foundations: [BOYD](https://web.stanford.edu/~boyd/cvxbook/), [LAV](https://msl.cs.uiuc.edu/~lavalle/planning/)
+- Audit: Keep — Specify SE(3) perturbation convention and translation/rotation scaling; distinguish changing a task from modeling error.
+- Foundations: [BOYD](https://web.stanford.edu/~boyd/cvxbook/), [LAV](https://msl.cs.uiuc.edu/~lavalle/planning/book.html)
 
 ### G03 — Base-Pose Sensitivity
 
@@ -505,9 +585,11 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Formalization: `Δ_bV=[V(b⊕δ)−V(b)]/||δ||_W.`
 - Computation: Probe base placements using inverse reachability and task checks.
 - Inputs: Base pose domain, task, descriptor, allowable base movement.
-- Required evidence: A05, P11
+- Required evidence: P08, P11
+- Optional evidence: A05
 - Diagnostic follow-up: H01, I03
 - Limitations: Inverse reachability alone cannot verify full task or base navigation.
+- Audit: Revise — Base-pose sensitivity may use any full task descriptor; stage base compatibility is one optional proxy.
 - Foundations: [BASE](https://jicrs.icros.org/_PR/view/?aidx=47244&bidx=4266), [BOYD](https://web.stanford.edu/~boyd/cvxbook/)
 
 ### G04 — Trajectory Sensitivity
@@ -517,9 +599,11 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Formalization: `∇_aV(τ(a)) or controlled finite differences.`
 - Computation: Differentiate validated surrogate or probe spline parameters within deformation budget.
 - Inputs: Trajectory parameterization, metric, fixed endpoints and budget.
-- Required evidence: B05, P11
+- Required evidence: P06, P11
+- Optional evidence: B05
 - Diagnostic follow-up: D03, I04
 - Limitations: Surrogate gradients need physical verification; discrete metrics may be nonsmooth.
+- Audit: Revise — Trajectory sensitivity applies to a declared family/metric, not exclusively Grasp–IK Connectivity; surrogate gradients are hypotheses.
 - Foundations: [BOYD](https://web.stanford.edu/~boyd/cvxbook/), [IKLINK](https://arxiv.org/abs/2402.16154)
 
 ### G05 — Constraint Sensitivity
@@ -530,8 +614,10 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Parametric optimization, valid dual sensitivity or controlled re-solving.
 - Inputs: Constraint parameterization, metric, allowed perturbations.
 - Required evidence: D06, P11
+- Optional evidence: None registered
 - Diagnostic follow-up: D07, I02
 - Limitations: Dual interpretations require regularity; feasibility may change discontinuously.
+- Audit: Keep — Dual sensitivity only with appropriate regularity; local solver noise and discontinuous feasibility must be explicit.
 - Foundations: [BOYD](https://web.stanford.edu/~boyd/cvxbook/), [CONFLICT](https://arxiv.org/abs/2211.15275)
 
 ## H — Robustness & redundancy
@@ -544,8 +630,10 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Sample uncertainty or compute robust sets with declared quantifiers.
 - Inputs: Perturbation distribution/set, model, solution family.
 - Required evidence: P14, P08
+- Optional evidence: None registered
 - Diagnostic follow-up: H03, H02
 - Limitations: Finite Monte Carlo is estimation, not guarantee; uncertainty assumptions are essential.
+- Audit: Scope — Separate fixed-plan, adaptive replan and feedback-policy robustness; L4 concerns family or quantified uncertainty, not one nominal result.
 - Foundations: [FUNNEL](https://arxiv.org/abs/1601.04037), [HJ](https://arxiv.org/abs/1709.07523)
 
 ### H02 — Grasp Robustness
@@ -556,21 +644,25 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Perturb contact models, evaluate force/wrench feasibility or physical trials.
 - Inputs: Grasp family, contact model, uncertainty and success condition.
 - Required evidence: P03, P09, P14
+- Optional evidence: None registered
 - Diagnostic follow-up: J01, H01
 - Limitations: A single grasp's robustness score is L3 unless used to describe a family or task.
+- Audit: Scope — Single-grasp robustness is a conventional quality metric (L3); L4 evaluates distribution or task-conditioned robust grasp set.
 - Foundations: [GRASP](https://doi.org/10.1007/s10514-014-9402-3), [DEX](https://berkeleyautomation.github.io/dex-net/)
 
 ### H03 — Connectivity Robustness
 
 - Terminology: operational
 - Definition: Persistence of connectivity as scene, robot or task parameters vary.
-- Formalization: `Pδ[connected(Fδ)] versus ∃γ∀δ valid(γ,δ).`
+- Formalization: `Pδ[∃γ connecting specified start and goal in Fδ] versus ∃γ∀δ valid(γ,δ) with consistent endpoint mapping.`
 - Computation: Rebuild graphs under perturbations and independently evaluate fixed-path robustness.
 - Inputs: Graph protocol, uncertainty, endpoints, constraints.
 - Required evidence: B01, P14
+- Optional evidence: None registered
 - Diagnostic follow-up: B08
 - Limitations: ∀δ∃γ is weaker than ∃γ∀δ; sampled topology is resolution dependent.
-- Foundations: [FUNNEL](https://arxiv.org/abs/1601.04037), [LAV](https://msl.cs.uiuc.edu/~lavalle/planning/)
+- Audit: Revise — Endpoint connectivity under each perturbation is not global connectedness of the entire free space; distinguish quantifier order.
+- Foundations: [FUNNEL](https://arxiv.org/abs/1601.04037), [LAV](https://msl.cs.uiuc.edu/~lavalle/planning/book.html)
 
 ### H04 — Solution-Space Volume
 
@@ -580,9 +672,11 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Uniform or importance sampling; estimate feasible fraction and uncertainty.
 - Inputs: Domain, measure, feasibility predicate and sample protocol.
 - Required evidence: P08, P10
+- Optional evidence: None registered
 - Diagnostic follow-up: C06, D02
 - Limitations: Equality-constrained sets may have zero ambient volume; parameterization matters.
-- Foundations: [LAV](https://msl.cs.uiuc.edu/~lavalle/planning/), [EXP](https://motion.cs.illinois.edu/RoboticSystems/MotionPlanningHigherDimensions.html)
+- Audit: Keep — Declare sampling law, domain and intrinsic measure. A finite feasible fraction estimates probability under that law, not necessarily geometric volume.
+- Foundations: [LAV](https://msl.cs.uiuc.edu/~lavalle/planning/book.html), [EXP](https://motion.cs.illinois.edu/RoboticSystems/MotionPlanningHigherDimensions.html)
 
 ### H05 — Solution Diversity
 
@@ -592,9 +686,11 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Cluster verified candidates or compute mode/topology signatures.
 - Inputs: Feasible candidates, metric/equivalence and thresholds.
 - Required evidence: P06, P10
+- Optional evidence: None registered
 - Diagnostic follow-up: B07, B08
 - Limitations: No universal diversity metric; different paths can share failure modes.
-- Foundations: [HOMO](https://publications.ri.cmu.edu/topological-constraints-in-search-based-robot-path-planning), [LAV](https://msl.cs.uiuc.edu/~lavalle/planning/)
+- Audit: Keep — Count classes or separated witnesses under a declared metric; diversity is not a universal scalar.
+- Foundations: [HOMO](https://publications.ri.cmu.edu/topological-constraints-in-search-based-robot-path-planning), [LAV](https://msl.cs.uiuc.edu/~lavalle/planning/book.html)
 
 ### H06 — Failure Tolerance
 
@@ -603,9 +699,11 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Formalization: `max k such that all allowed failure sets of size ≤k preserve a goal path, or probability under failure model.`
 - Computation: Remove modeled failures and recompute verified reachability.
 - Inputs: Failure model, graph, endpoints and failure correlations.
-- Required evidence: B08, P14
+- Required evidence: P06, P14
+- Optional evidence: B08
 - Diagnostic follow-up: H03, I05
 - Limitations: Disjoint graph paths may share physical risks; modeled failure sets matter.
+- Audit: Revise — Failure tolerance requires explicit failed elements and correlated scenarios; edge-disjointness is one special case, not mandatory.
 - Foundations: [MENGER](https://graphsearch.epfl.ch/en/concept/1155738), [FUNNEL](https://arxiv.org/abs/1601.04037)
 
 ## I — Recoverability & counterfactual feasibility
@@ -613,14 +711,16 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 ### I01 — Recoverability
 
 - Terminology: operational
-- Definition: Existence of a permitted safe continuation from a failed or perturbed state to the original goal.
+- Definition: The set of states from which a permitted safe recovery continuation reaches the original goal; a single failed-state membership check is local evidence.
 - Formalization: `x_fail∈backward reachable goal set under permitted controls and safety bounds.`
 - Computation: Backward search/reachability with verified recovery witness.
 - Inputs: Failure state, goal, recovery actions, hard safety constraints.
 - Required evidence: E06, P07
+- Optional evidence: None registered
 - Diagnostic follow-up: I05, E05
 - Limitations: Simulator reset need not be physically available; real state/model validity matter.
-- Foundations: [HJ](https://arxiv.org/abs/1709.07523), [LAV](https://msl.cs.uiuc.edu/~lavalle/planning/)
+- Audit: Scope — Recoverable state set is L4; checking whether one failed state belongs to it is L3. Preserve original task and safety constraints.
+- Foundations: [HJ](https://arxiv.org/abs/1709.07523), [LAV](https://msl.cs.uiuc.edu/~lavalle/planning/book.html)
 
 ### I02 — Minimum Constraint Removal
 
@@ -630,8 +730,10 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Labeled roadmap or constrained search with witness and bound.
 - Inputs: Constraint labels, costs, endpoints and geometry.
 - Required evidence: P08, B01
+- Optional evidence: None registered
 - Diagnostic follow-up: D07, D06
 - Limitations: Diagnostic removal is not authorization to violate constraints; exact minimum needs a proof.
+- Audit: Keep — Original MCR concerns geometric path constraints; weighted and generic variants are project extensions; do not physically remove safety requirements.
 - Foundations: [MCR](https://doi.org/10.1177/0278364913507795), [CONFLICT](https://arxiv.org/abs/2211.15275)
 
 ### I03 — Minimum Environment Change
@@ -641,9 +743,11 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Formalization: `inf_δ cost(δ) s.t. ∃z∈F(E⊕δ), δ∈allowed interventions.`
 - Computation: Joint trajectory/environment optimization or counterfactual search.
 - Inputs: Movable geometry, change bounds/cost, task and oracle.
-- Required evidence: D01, P11
+- Required evidence: P08, P11
+- Optional evidence: D01, P13
 - Diagnostic follow-up: I02, G03
 - Limitations: A modified feasible scene does not prove the robot can enact the change.
+- Audit: Revise — Need not first prove a geometric bottleneck; evaluate allowed changes directly and distinguish repair witness from global optimum.
 - Foundations: [ENV](https://doi.org/10.1109/ICRA57147.2024.10611577), [MCR](https://doi.org/10.1177/0278364913507795)
 
 ### I04 — Minimum Task Deformation
@@ -653,9 +757,11 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Formalization: `inf_{δ∈D_allowed}||δ||_W s.t. F(T⊕δ)≠∅.`
 - Computation: Constrained deformation or path repair with verified witness.
 - Inputs: Reference path/task, metric, allowed modifications, hard constraints.
-- Required evidence: G04, P11
+- Required evidence: P08, P11
+- Optional evidence: G04, P13
 - Diagnostic follow-up: C05, G02
 - Limitations: Preserve mandatory goals and safety; local solution gives upper bound, not global minimum.
+- Audit: Revise — Sensitivity is optional for search, not necessary for minimum deformation; keep hard goals and constraints unchanged.
 - Foundations: [IKLINK](https://arxiv.org/abs/2402.16154), [BOYD](https://web.stanford.edu/~boyd/cvxbook/), [ENV](https://doi.org/10.1109/ICRA57147.2024.10611577)
 
 ### I05 — Mode Substitutability
@@ -666,8 +772,10 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Search alternative mode families under same task constraints.
 - Inputs: Allowed and excluded modes, goals, costs and safety constraints.
 - Required evidence: B06, P07
+- Optional evidence: None registered
 - Diagnostic follow-up: H06, C01
 - Limitations: Alternatives may differ in cost or robustness; validate the new execution.
+- Audit: Keep — Alternative mode family must preserve same goal and hard constraints; distinguish verified substitute from suggestion.
 - Foundations: [MODES](https://motion.cs.illinois.edu/RoboticSystems/AdvancedTopicsInPlanning.html), [TAMP](https://doi.org/10.1146/annurev-control-091420-084139)
 
 ### I06 — Failure Attribution
@@ -677,9 +785,11 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Formalization: `Compare hypotheses using conflict certificates or controlled differences V(F_h)−V(F).`
 - Computation: Query bottlenecks, conflicts and interventions; rank scoped evidence and keep unknowns.
 - Inputs: Failed family, alternative hypotheses, scope, oracle and budget.
-- Required evidence: D07, D03, P11
+- Required evidence: P08
+- Optional evidence: D07, D03, P11, P13
 - Diagnostic follow-up: D06, I02, E02
-- Limitations: No unique causal explanation guaranteed; counterfactual conclusions are model-relative.
+- Limitations: Use at least one relevant, valid source of diagnostic evidence; no unique cause is guaranteed. Missing or inconclusive evidence yields UNKNOWN.
+- Audit: Revise — Conflict, bottleneck and counterfactual tests are alternate evidence types; failure cause may be unidentified or nonunique.
 - Foundations: [CONFLICT](https://arxiv.org/abs/2211.15275), [ENV](https://doi.org/10.1109/ICRA57147.2024.10611577), [PROOF](https://www.roboticsproceedings.org/rss17/p064.html)
 
 ## J — Dynamic structure
@@ -692,8 +802,10 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Construct contact wrench sets, test force feasibility or inclusion and margins.
 - Inputs: Contacts, friction, mass/inertia, path and actuator force limits.
 - Required evidence: P09, P15
+- Optional evidence: None registered
 - Diagnostic follow-up: A02, H02
 - Limitations: Force closure at one state does not guarantee bounded task-wide wrench capacity.
+- Audit: Scope — Evaluate wrench feasibility over candidate grasps/task states with force bounds, sign convention and frame; pointwise force closure is not L4.
 - Foundations: [GRASP](https://doi.org/10.1007/s10514-014-9402-3), [MR](https://modernrobotics.northwestern.edu/nu-gm-book-resource/5-4-manipulability/)
 
 ### J02 — Kinodynamic Connectivity
@@ -704,9 +816,11 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Kinodynamic planning, trajectory optimization or reachability with validation.
 - Inputs: Dynamics, initial/goal state sets, controls, environment and limits.
 - Required evidence: P15, P07
+- Optional evidence: None registered
 - Diagnostic follow-up: J05, J03
 - Limitations: Geometric path existence does not imply dynamic feasibility; sampling failure is not a certificate.
-- Foundations: [LAV](https://msl.cs.uiuc.edu/~lavalle/planning/), [HJ](https://arxiv.org/abs/1709.07523)
+- Audit: Keep — State/control connectivity under dynamics; finite search absence is not a proof.
+- Foundations: [LAV](https://msl.cs.uiuc.edu/~lavalle/planning/book.html), [HJ](https://arxiv.org/abs/1709.07523)
 
 ### J03 — Contact-Mode Connectivity
 
@@ -716,9 +830,11 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Contact-mode graph, complementarity or hybrid optimization with checks.
 - Inputs: Contact geometry/friction, modes, dynamic or quasistatic model.
 - Required evidence: C04, P09, P15
+- Optional evidence: None registered
 - Diagnostic follow-up: J02, C03
 - Limitations: Quasistatic results are not dynamic guarantees; switches require consistent states and forces.
-- Foundations: [CONTACT](https://par.nsf.gov/servlets/purl/10338784), [MODES](https://motion.cs.illinois.edu/RoboticSystems/AdvancedTopicsInPlanning.html)
+- Audit: Keep — Model contact guards, resets and laws; quasistatic and dynamic cases are distinct.
+- Foundations: [CONTACT](https://arxiv.org/abs/2011.01454), [MODES](https://motion.cs.illinois.edu/RoboticSystems/AdvancedTopicsInPlanning.html)
 
 ### J04 — Dynamic Bottleneck
 
@@ -728,48 +844,34 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - Computation: Evaluate dynamic constraints over candidate trajectory families; identify limiting interval.
 - Inputs: Dynamics, actuator/contact limits, normalization and family.
 - Required evidence: J02, P15
+- Optional evidence: None registered
 - Diagnostic follow-up: D04, J05
 - Limitations: A single trajectory peak torque is L3; L4 requires a family or certified bound.
-- Foundations: [LAV](https://msl.cs.uiuc.edu/~lavalle/planning/), [TOPP](https://arxiv.org/abs/1707.07239), [GRASP](https://doi.org/10.1007/s10514-014-9402-3)
+- Audit: Keep — Compare dynamic margins across candidate trajectories, normalize slacks and distinguish infeasible family from low positive margin.
+- Foundations: [LAV](https://msl.cs.uiuc.edu/~lavalle/planning/book.html), [TOPP](https://arxiv.org/abs/1707.07239), [GRASP](https://doi.org/10.1007/s10514-014-9402-3)
 
 ### J05 — Temporal Feasibility
 
 - Terminology: literature
-- Definition: Existence of an admissible time parameterization of a prescribed geometric path under dynamic and kinematic bounds.
-- Formalization: `∃ monotone s(t): q(t)=q_path(s(t)) with velocity/acceleration/torque bounds and boundary conditions.`
+- Definition: Family of admissible time parameterizations or controllable path-speed sets for a prescribed geometric path under declared dynamic and motion bounds.
+- Formalization: `S={s(t): monotone, q(t)=q_path(s(t)), all bounds and boundary conditions hold}; report existence and controllable speed sets over path progress.`
 - Computation: TOPP-RA or equivalent path-speed controllability analysis with verification.
 - Inputs: Geometric path, boundary velocities, limits and dynamics.
 - Required evidence: P15, P07
+- Optional evidence: None registered
 - Diagnostic follow-up: J02, J04
-- Limitations: This concerns a prescribed path and modeled constraints, not search over all path shapes.
-- Foundations: [TOPP](https://arxiv.org/abs/1707.07239), [LAV](https://msl.cs.uiuc.edu/~lavalle/planning/)
-
-## Evidence interfaces
-
-- **P01 Geometry and frames**: Meshes, transforms and geometry in consistent frames. Geometry/FK representation.
-- **P02 Task and allowed modes**: Goal, boundaries, allowed actions and hard constraints. Task specification.
-- **P03 Grasp and IK candidate relation**: Object-relative grasp transforms and their IK witnesses. Grasp sampling/IK.
-- **P04 Joint and kinematic validity**: FK residual, joint limits, configuration validity. FK/IK/bounds checks.
-- **P05 Collision and signed distance**: Collision predicate and distance for a candidate state or edge. Collision/distance queries.
-- **P06 Path and graph evidence**: Candidate states, edges, witnesses and edge-check rules. Roadmap/layered graph verification.
-- **P07 State transition and control model**: Permitted transitions, guards and controls. Transition/control feasibility checks.
-- **P08 Constraint and variable specification**: Domains, constraint scopes, predicates and objective. Constraint evaluation and incidence graph.
-- **P09 Contact, support and grasp stability**: Contact laws, support, grasp forces and stable placements. Contact/wrench evaluation.
-- **P10 Sampling domain and measure**: Parameterization, weights, measure, resolution and protocol. Sampling and estimation.
-- **P11 Controlled intervention protocol**: Allowed changes, normalized budget, fixed factors and cost. Counterfactual evaluation.
-- **P12 Jacobian and directional margin**: Scaled task Jacobian, rank and directional velocity bounds. SVD/directional feasibility.
-- **P13 Feasibility certificate / oracle**: Oracle semantics, verified witnesses and sound negative certificates. Certified feasibility checks.
-- **P14 Uncertainty and failure model**: Perturbation sets/distributions, scenarios and quantifiers. Uncertainty sampling/robust sets.
-- **P15 Dynamics and actuation model**: State dynamics, inertia, actuator and timing constraints. Dynamics/torque checks.
+- Limitations: Single path timing feasibility is a local test; the family or controllable-set structure is L4. Does not search alternative path shapes.
+- Audit: Scope — For one fixed path, existence of a timing is a trajectory feasibility test. L4 describes controllable speed sets or feasible timing/path families.
+- Foundations: [TOPP](https://arxiv.org/abs/1707.07239), [LAV](https://msl.cs.uiuc.edu/~lavalle/planning/book.html)
 
 ## References
 
-- **LAV** — [LaValle, Planning Algorithms (2006), chapters 4–8 and 13–15](https://msl.cs.uiuc.edu/~lavalle/planning/)
+- **LAV** — [LaValle, Planning Algorithms (2006), chapters 4–8 and 13–15](https://msl.cs.uiuc.edu/~lavalle/planning/book.html)
 - **TAMP** — [Garrett et al., Integrated Task and Motion Planning (2021)](https://doi.org/10.1146/annurev-control-091420-084139)
 - **FACT** — [Garrett et al., Sampling-based methods for factored task and motion planning (2018)](https://doi.org/10.1177/0278364918802962)
 - **QIN** — [Qin et al., Learning from Planned Data to Improve Robotic Pick-and-Place Planning Efficiency](https://arxiv.org/abs/2506.15920)
 - **GRASP** — [Roa and Suárez, Grasp quality measures: review and performance (2015)](https://doi.org/10.1007/s10514-014-9402-3)
-- **WAN** — [Wan and Harada, Integrated assembly and motion planning using regrasp graphs (2016)](https://pmc.ncbi.nlm.nih.gov/articles/PMC5101345/)
+- **WAN** — [Wan and Harada, Integrated assembly and motion planning using regrasp graphs (2016)](https://doi.org/10.1186/s40638-016-0050-2)
 - **MODES** — [Hauser, Robotic Systems, Advanced Topics in Planning: multi-modal motion planning](https://motion.cs.illinois.edu/RoboticSystems/AdvancedTopicsInPlanning.html)
 - **IKLINK** — [Wang et al., IKLink: End-Effector Trajectory Tracking with Minimal Reconfigurations (2024)](https://arxiv.org/abs/2402.16154)
 - **BASE** — [Real-time robot base placement based on inverse reachability maps (2025)](https://jicrs.icros.org/_PR/view/?aidx=47244&bidx=4266)
@@ -791,5 +893,5 @@ F(T): feasible set in declared candidate domain. G(p): object-relative feasible 
 - **ENV** — [Liu and Brandão, Generating Environment-based Explanations of Motion Planner Failure (ICRA 2024)](https://doi.org/10.1109/ICRA57147.2024.10611577)
 - **PROOF** — [Li and Dantam, Learning Proofs of Motion Planning Infeasibility (RSS 2021)](https://www.roboticsproceedings.org/rss17/p064.html)
 - **TOPP** — [Pham and Pham, A New Approach to Time-Optimal Path Parameterization based on Reachability Analysis (2018)](https://arxiv.org/abs/1707.07239)
-- **CONTACT** — [Cheng et al., Contact Mode Guided Sampling-Based Planning for Quasistatic Dexterous Manipulation in 2D (2021)](https://par.nsf.gov/servlets/purl/10338784)
+- **CONTACT** — [Cheng et al., Contact Mode Guided Sampling-Based Planning for Quasistatic Dexterous Manipulation in 2D (2021)](https://arxiv.org/abs/2011.01454)
 - **EXP** — [Hauser, Robotic Systems, Motion Planning in Higher Dimensions: expansiveness](https://motion.cs.illinois.edu/RoboticSystems/MotionPlanningHigherDimensions.html)

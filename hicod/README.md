@@ -34,11 +34,13 @@ The example is a pedagogical kinematic XY carrier with a fixed payload orientati
 
 Reports distinguish verified sampled facts, sampled graph witnesses, and unknown continuous-space feasibility. The absence of a graph path is **not** a proof of continuous infeasibility. A graph witness is not a verified dynamic execution. Sample ratios depend on the domain, measure and grid resolution. Safety constraints must never be relaxed for execution simply because a counterfactual suggests it.
 
-## v0.2: Structural concept knowledge graph
+## v0.3: Structural concept knowledge graph
+
+[Definition audit](AUDIT.md): 60 entries desk-reviewed. Required and optional evidence are separate; source excerpts verified, independent full-text review pending.
 
 [Interactive graph explorer](https://crlqinliang.github.io/hicod/graph.html) · [Full concept catalogue](CONCEPTS.md).
 
-The [full registry](concept_graph.json) contains 60 L4 definitions, 15 evidence interfaces, 287 typed edges and 29 source records. The [catalogue](CONCEPTS.md) contains mathematical specifications, computation contracts, inputs, dependencies and limitations. The underlying literature is distinguished from HiCoD operational proposals; all 60 entries are definition-only, not full physical evaluators.
+The [full registry](concept_graph.json) contains 60 L4 definitions, 15 evidence interfaces, 304 typed edges and 29 source records. The [catalogue](CONCEPTS.md) contains mathematical specifications, computation contracts, inputs, dependencies and limitations. The underlying literature is distinguished from HiCoD operational proposals; all 60 entries are definition-only, not full physical evaluators.
 
 The required-evidence DAG can be queried without MuJoCo or an LLM:
 
