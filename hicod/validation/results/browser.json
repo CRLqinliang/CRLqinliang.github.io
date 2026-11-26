@@ -1,6 +1,6 @@
 {
   "status": "completed_with_failures",
-  "source_commit": "9812ba44cc64db74857a65c36277c6e229da4f79",
+  "source_commit": "474c4ec3c22f65d7ba1e0987aee3c9320a4dc803",
   "scope": "Real headless Chromium on locally served repository files. Desktop/mobile CN/EN, dynamic interactions, native MP4 metadata, viewport overflow. Production Pages deployment is not certified.",
   "cases": 32,
   "passed": 26,

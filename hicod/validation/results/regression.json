@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "source_commit": "9812ba44cc64db74857a65c36277c6e229da4f79",
+  "source_commit": "474c4ec3c22f65d7ba1e0987aee3c9320a4dc803",
   "node": "v22.23.5",
   "oracle_outcomes": 448,
   "scope": "Actual CLI tests and exact same-backend oracle regeneration"
