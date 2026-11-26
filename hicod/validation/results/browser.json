@@ -1,9 +1,9 @@
 {
   "status": "completed_with_failures",
-  "source_commit": "474c4ec3c22f65d7ba1e0987aee3c9320a4dc803",
+  "source_commit": "a0dd4cfaa1a94952c4a3f4e9fa2af9bf0107a91e",
   "scope": "Real headless Chromium on locally served repository files. Desktop/mobile CN/EN, dynamic interactions, native MP4 metadata, viewport overflow. Production Pages deployment is not certified.",
-  "cases": 32,
-  "passed": 26,
+  "cases": 36,
+  "passed": 30,
   "rows": [
     {
       "page": "index.html",
@@ -567,6 +567,82 @@
         "all_edges": true,
         "selection": true,
         "translated": true,
+        "no_horizontal_overflow": true
+      },
+      "page_errors": [],
+      "failed_requests": [],
+      "error": null
+    },
+    {
+      "page": "blog.html",
+      "lang": "en",
+      "device": "desktop",
+      "passed": true,
+      "checks": {
+        "http_ok": true,
+        "language": true,
+        "theme": true,
+        "navigation": true,
+        "article_sections": true,
+        "worked_example": true,
+        "article_language": true,
+        "no_horizontal_overflow": true
+      },
+      "page_errors": [],
+      "failed_requests": [],
+      "error": null
+    },
+    {
+      "page": "blog.html",
+      "lang": "en",
+      "device": "mobile",
+      "passed": true,
+      "checks": {
+        "http_ok": true,
+        "language": true,
+        "theme": true,
+        "navigation": true,
+        "article_sections": true,
+        "worked_example": true,
+        "article_language": true,
+        "no_horizontal_overflow": true
+      },
+      "page_errors": [],
+      "failed_requests": [],
+      "error": null
+    },
+    {
+      "page": "blog.html",
+      "lang": "zh",
+      "device": "desktop",
+      "passed": true,
+      "checks": {
+        "http_ok": true,
+        "language": true,
+        "theme": true,
+        "navigation": true,
+        "article_sections": true,
+        "worked_example": true,
+        "article_language": true,
+        "no_horizontal_overflow": true
+      },
+      "page_errors": [],
+      "failed_requests": [],
+      "error": null
+    },
+    {
+      "page": "blog.html",
+      "lang": "zh",
+      "device": "mobile",
+      "passed": true,
+      "checks": {
+        "http_ok": true,
+        "language": true,
+        "theme": true,
+        "navigation": true,
+        "article_sections": true,
+        "worked_example": true,
+        "article_language": true,
         "no_horizontal_overflow": true
       },
       "page_errors": [],
