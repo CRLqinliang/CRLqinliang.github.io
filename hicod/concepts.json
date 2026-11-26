@@ -1,0 +1,136 @@
+{
+  "version": "0.1",
+  "scope": "Planar fixed-mode transport prototype; broader manipulation research roadmap",
+  "concepts": [
+    {
+      "id": "sample_feasibility",
+      "level": 4,
+      "status": "prototype",
+      "definition": "Fraction of feasible samples under a specified finite grid and collision model",
+      "depends_on": [
+        "collision_check"
+      ],
+      "limitations": "Not a volume estimate without a specified measure."
+    },
+    {
+      "id": "endpoint_compatibility",
+      "level": 4,
+      "status": "prototype",
+      "definition": "Common fixed modes admissible at both endpoints",
+      "depends_on": [
+        "collision_check"
+      ],
+      "limitations": "Necessary only; no path guarantee."
+    },
+    {
+      "id": "mode_connectivity",
+      "level": 4,
+      "status": "prototype",
+      "definition": "Start-goal path existence in a sampled fixed-mode graph",
+      "depends_on": [
+        "collision_check",
+        "endpoint_compatibility"
+      ],
+      "limitations": "Graph absence is not continuous infeasibility."
+    },
+    {
+      "id": "connected_components",
+      "level": 4,
+      "status": "prototype",
+      "definition": "Connected components of a sampled graph",
+      "depends_on": [
+        "mode_connectivity"
+      ],
+      "limitations": "Resolution dependent."
+    },
+    {
+      "id": "shared_grasp",
+      "level": 4,
+      "status": "roadmap",
+      "definition": "Intersection of object-relative feasible grasp sets across states",
+      "depends_on": [
+        "grasp_feasibility",
+        "inverse_kinematics",
+        "collision_check"
+      ]
+    },
+    {
+      "id": "intermediate_pose_bridging",
+      "level": 4,
+      "status": "roadmap",
+      "definition": "Intermediate states that permit validated mode transitions",
+      "depends_on": [
+        "shared_grasp",
+        "support_stability",
+        "mode_connectivity"
+      ]
+    },
+    {
+      "id": "grasp_ik_connectivity",
+      "level": 4,
+      "status": "roadmap",
+      "definition": "Continuous grasp and IK mode paths along object trajectories",
+      "depends_on": [
+        "shared_grasp",
+        "inverse_kinematics",
+        "collision_check"
+      ]
+    },
+    {
+      "id": "bottleneck",
+      "level": 4,
+      "status": "roadmap",
+      "definition": "Critical region or cut limiting task-level connectivity",
+      "depends_on": [
+        "grasp_ik_connectivity"
+      ]
+    },
+    {
+      "id": "dependency",
+      "level": 4,
+      "status": "roadmap",
+      "definition": "Cross-stage effects of choices on future feasible sets",
+      "depends_on": [
+        "mode_connectivity"
+      ]
+    },
+    {
+      "id": "sensitivity",
+      "level": 4,
+      "status": "roadmap",
+      "definition": "Change of structural metrics under normalized allowed interventions",
+      "depends_on": [
+        "mode_connectivity"
+      ]
+    },
+    {
+      "id": "robustness",
+      "level": 4,
+      "status": "roadmap",
+      "definition": "Persistence of feasibility under model perturbations",
+      "depends_on": [
+        "mode_connectivity"
+      ]
+    },
+    {
+      "id": "recoverability",
+      "level": 4,
+      "status": "roadmap",
+      "definition": "Feasibility under bounded physically permitted repair interventions",
+      "depends_on": [
+        "mode_connectivity",
+        "sensitivity"
+      ]
+    },
+    {
+      "id": "constraint_conflict",
+      "level": 4,
+      "status": "roadmap",
+      "definition": "Constraint subsets obstructing feasibility with appropriate evidence or certificates",
+      "depends_on": [
+        "collision_check",
+        "inverse_kinematics"
+      ]
+    }
+  ]
+}

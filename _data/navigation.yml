@@ -2,6 +2,8 @@
 main:
   - title: "Research"
     url: /#research
+  - title: "HiCoD"
+    url: /hicod/
   - title: "Publications"
     url: /#publications
   - title: "Education"

@@ -138,6 +138,16 @@ redirect_from:
   </div>
 </section>
 
+<section id="hicod-project" class="home-section" aria-labelledby="hicod-heading">
+  <p class="home-eyebrow">Open-source research initiative · Work in progress</p>
+  <h2 id="hicod-heading">HiCoD — High-Level Concept Debugger</h2>
+  <p>Robotics for reasoning: a computationally grounded, traceable concept library that helps LLM-driven robot agents understand solution spaces, rather than merely explain individual failed trajectories. Initial scope: pick-and-place across changing objects and environments.</p>
+  <div class="home-actions">
+    <a class="home-button" href="{{ '/hicod/' | relative_url }}">Project &amp; interactive demo <span aria-hidden="true">↗</span></a>
+    <a href="https://github.com/CRLqinliang/CRLqinliang.github.io/tree/master/hicod">Source code</a>
+  </div>
+</section>
+
 <section id="publications" class="home-section" aria-labelledby="publications-heading">
   <span id="recent-publications" class="home-anchor" aria-hidden="true"></span>
   <h2 id="publications-heading">Publications</h2>
