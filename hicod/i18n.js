@@ -2,6 +2,7 @@
 (function(){
 "use strict";
 const dict={
+  "HiCoD | Why high-level robotics concepts matter": "HiCoD | 为什么机器人智能体需要高层概念？",
   "Framework": "框架",
   "Concepts": "概念库",
   "Concept Graph": "概念图谱",

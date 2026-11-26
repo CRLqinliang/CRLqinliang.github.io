@@ -7,7 +7,7 @@ from playwright.sync_api import sync_playwright
 base=os.environ.get("HICOD_BASE_URL","http://127.0.0.1:8765/hicod/")
 out=Path(os.environ.get("HICOD_VALIDATION_OUT","/tmp/hicod-validation"))
 out.mkdir(parents=True,exist_ok=True)
-pages=["index.html","graph.html","physical.html","multimodal.html","agent.html","benchmark.html","validation.html","atlas.html"]
+pages=["index.html","graph.html","physical.html","multimodal.html","agent.html","benchmark.html","validation.html","atlas.html","blog.html"]
 rows=[]
 with sync_playwright() as p:
     browser=p.chromium.launch(headless=True)
@@ -70,6 +70,10 @@ with sync_playwright() as p:
                         page.locator("#global-find").click()
                         checks["selection"]="B05" in page.locator("#global-detail").inner_text()
                         if lang=="zh":checks["translated"]="抓取" in page.locator("#global-detail").inner_text()
+                    elif name=="blog.html":
+                        checks["article_sections"]=page.locator(".blog-article h2").count()==7
+                        checks["worked_example"]=page.locator(".blog-stats > div").count()==4
+                        checks["article_language"]=("高层概念" in page.locator(".blog-hero h1").inner_text()) if lang=="zh" else ("high-level concepts" in page.locator(".blog-hero h1").inner_text())
                     elif name=="validation.html":
                         page.wait_for_function("document.querySelectorAll('.validation-status article').length >= 3")
                         checks["status_dashboard"]=True

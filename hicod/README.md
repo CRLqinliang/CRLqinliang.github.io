@@ -79,7 +79,7 @@ The 3R planar arm uses analytic FK/IK, collision clearances, ideal fixed attachm
 
 ## 中文 / English
 
-The eight project pages share a persistent CN/EN switch. [中文术语规范](TERMINOLOGY_CN.md) and [Chinese concept definitions](concept_graph.zh.json) contain all 60 L4 concepts plus 15 evidence interfaces. Mathematical specifications, source titles, code, exported canonical JSON and some implementation/audit details retain their original English. Chinese definitions and limits are authored translations, not independent mathematical definitions.
+The nine project pages share a persistent CN/EN switch. [中文术语规范](TERMINOLOGY_CN.md) and [Chinese concept definitions](concept_graph.zh.json) contain all 60 L4 concepts plus 15 evidence interfaces. Mathematical specifications, source titles, code, exported canonical JSON and some implementation/audit details retain their original English. Chinese definitions and limits are authored translations, not independent mathematical definitions.
 
 ## v0.5.1: Counterfactual path sweep
 
@@ -117,6 +117,10 @@ Shared research-site theme, responsive navigation and all existing bilingual exp
 [Visual atlas](https://crlqinliang.github.io/hicod/atlas.html) · [Complete graph](https://crlqinliang.github.io/hicod/atlas.html#global-graph) · [Figure provenance](FIGURES.md).
 
 60 original bilingual concept illustrations, 26 curated figure locators (papers, textbooks and lecture illustrations) mapped to all 60 concepts, with 17 concepts associated with explicitly licensed original-figure assets. Exact figure matching and asset retrieval remain incomplete; original schematics are not paper crops. The [licensed figure cache](literature/README.md) records actual source retrieval and does not relicense external figures. The global grouped graph renders all 75 nodes and 304 typed edges with zoom, pan, selection, edge filters and SVG export.
+
+## Research blog
+
+[Why do robot agents need high-level concepts?](https://crlqinliang.github.io/hicod/blog.html) · [中文版](https://crlqinliang.github.io/hicod/blog.html?lang=zh). A bilingual research perspective on solution-space structure, decision-sufficient abstraction, problem formulation, and testable concept utility. Illustrations are original; the worked example links the computed multimodal and path-sweep evidence.
 
 ## Concept modules
 
