@@ -1,0 +1,68 @@
+{
+  "results": [
+    {
+      "id": "W4",
+      "source": "https://link.springer.com/article/10.1186/s40638-016-0050-2/figures/4",
+      "license": "CC BY 4.0",
+      "file": "W4.gif",
+      "change": "Unmodified publisher figure",
+      "status": "unavailable",
+      "error": "cannot identify image file <_io.BytesIO object at 0x7f30897d7c40>"
+    },
+    {
+      "id": "W5",
+      "source": "https://link.springer.com/article/10.1186/s40638-016-0050-2/figures/5",
+      "license": "CC BY 4.0",
+      "file": "W5.gif",
+      "change": "Unmodified publisher figure",
+      "width": 568,
+      "height": 649,
+      "status": "cached",
+      "bytes": 68860,
+      "sha256": "32fa5f0d48fcc41f7914533348c44068a83160c13171ae8c1d2cd08478e80981"
+    },
+    {
+      "id": "W6",
+      "source": "https://link.springer.com/article/10.1186/s40638-016-0050-2/figures/6",
+      "license": "CC BY 4.0",
+      "file": "W6.gif",
+      "change": "Unmodified publisher figure",
+      "width": 568,
+      "height": 229,
+      "status": "cached",
+      "bytes": 31452,
+      "sha256": "3632e980ae0bfd20aeb5a3782de500dfe47087da982d9d78c6ac478419df3ed8"
+    },
+    {
+      "id": "R7",
+      "source": "https://link.springer.com/article/10.1007/s10514-014-9402-3/figures/7",
+      "license": "CC BY (article terms)",
+      "file": "R7.gif",
+      "change": "Unmodified publisher figure",
+      "status": "unavailable",
+      "error": "cannot identify image file <_io.BytesIO object at 0x7f30897d7c40>"
+    },
+    {
+      "id": "R10",
+      "source": "https://link.springer.com/article/10.1007/s10514-014-9402-3/figures/10",
+      "license": "CC BY (article terms)",
+      "file": "R10.gif",
+      "change": "Unmodified publisher figure",
+      "status": "unavailable",
+      "error": "cannot identify image file <_io.BytesIO object at 0x7f30897d7c40>"
+    },
+    {
+      "id": "T1",
+      "source": "https://arxiv.org/pdf/2303.12153v5#page=2",
+      "license": "CC BY-SA 4.0 \u00b7 cropped from Fig. 1, arXiv v5",
+      "file": "T1.png",
+      "change": "Figure crop from page 2, arXiv v5",
+      "width": 551,
+      "height": 485,
+      "status": "cached",
+      "bytes": 239765,
+      "sha256": "bf302abd5fd22e839d42a5a28ebae435ff9ee7e41a285a381607fabaefc3f491"
+    }
+  ],
+  "scope": "Downloaded or cropped licensed source images; unavailable assets remain links."
+}
