@@ -1,0 +1,162 @@
+{
+  "status": "executed_deterministic_tool_sequence_not_llm",
+  "checks": [
+    "baseline disconnected",
+    "one switch",
+    "paginated bridge evidence",
+    "transition trace",
+    "release trace",
+    "comparison preserves scope",
+    "unsupported explicit",
+    "registry closure",
+    "session isolation",
+    "unknown session rejected"
+  ],
+  "example": {
+    "diagnosis": {
+      "session_id": "session-1",
+      "scene": "regrasp_recovery",
+      "status": "FINITE_EVIDENCE_RESULT",
+      "claim": "Endpoint compatibility and local IK feasibility coexist with disconnection of the sampled fixed-mode path family.",
+      "scope": {
+        "model": "analytic planar 3R capsules + circular payload and obstacles",
+        "domain": "prescribed piecewise-linear SE(2) path; fixed ideal attachments; two sampled IK branches; discrete layers and substeps",
+        "evidence": "Computed FK, analytic IK, pairwise signed clearance and joint bounds. No actual grasp contact, approach/place, continuous edge certificate or dynamics.",
+        "stages": 17,
+        "edge_subdivisions": 4,
+        "max_joint_step_rad": 0.24
+      },
+      "common_modes": [
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "connected_fixed_modes": [],
+      "local_counts": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        8,
+        8,
+        7,
+        8,
+        7,
+        9,
+        9,
+        8,
+        8,
+        8
+      ],
+      "start_reachable_counts": [
+        6,
+        6,
+        5,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        3,
+        3,
+        2,
+        2,
+        2,
+        1,
+        1,
+        0
+      ],
+      "frontier_edge_ids": [
+        "e21",
+        "e41",
+        "e139",
+        "e162",
+        "e221",
+        "e244"
+      ],
+      "available_reports": [
+        "A01",
+        "H04",
+        "B05",
+        "D03",
+        "E06"
+      ],
+      "suggested_queries": [
+        "B05",
+        "D03",
+        "C02",
+        "B06",
+        "I04"
+      ],
+      "support_stages": [
+        8
+      ],
+      "limitations": [
+        "Failure frontier describes this sampled path family, not a causal proof or global task infeasibility.",
+        "No actual gripper, support/regrasp, approach, release, dynamics, or continuous collision certificate."
+      ]
+    },
+    "minimum_switch": 1,
+    "bridge_page": {
+      "total": 1,
+      "offset": 0,
+      "limit": 1,
+      "items": [
+        {
+          "id": "r:8:s8_g2_b-1:s8_g3_b-1",
+          "stage": 8,
+          "from": "s8_g2_b-1",
+          "to": "s8_g3_b-1",
+          "valid": true,
+          "reason": null,
+          "release_dock": "dock:s8_g2_b-1",
+          "acquire_dock": "dock:s8_g3_b-1"
+        }
+      ],
+      "next_offset": null
+    },
+    "comparison": {
+      "session_id": "session-1",
+      "status": "FINITE_EVIDENCE_RESULT",
+      "alternatives": [
+        {
+          "strategy": "fixed_attachment_reference",
+          "sampled_path_found": false,
+          "connected_modes": []
+        },
+        {
+          "strategy": "supported_regrasp",
+          "sampled_path_found": true,
+          "min_graph_switches": 1,
+          "bridge_stages": [
+            8
+          ],
+          "support_stages": [
+            8
+          ],
+          "witness_switch_ids": [
+            "r:8:s8_g2_b-1:s8_g3_b-1"
+          ]
+        },
+        {
+          "strategy": "finite_midpoint_deformation",
+          "status": "EVALUATED",
+          "sampled_path_found": false,
+          "candidates": 49,
+          "minimum_enumerated_deviation_m": null,
+          "witness_id": null
+        }
+      ],
+      "claim": "Compare evidence under explicit assumptions; costs are not commensurate, no globally optimal intervention is asserted.",
+      "limitations": [
+        "Support is ideal and externally specified.",
+        "The deformation search is finite.",
+        "No continuous collision, dynamic, grasp-stability or hardware certificate."
+      ]
+    }
+  }
+}

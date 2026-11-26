@@ -1,0 +1,11 @@
+import {readFileSync} from "node:fs";
+import {Server} from "@modelcontextprotocol/sdk/server/index.js";
+import {StdioServerTransport} from "@modelcontextprotocol/sdk/server/stdio.js";
+import {ListToolsRequestSchema,CallToolRequestSchema} from "@modelcontextprotocol/sdk/types.js";
+import {createAgent} from "./core.mjs";
+import {tools} from "./tools.mjs";
+const engine=createAgent(JSON.parse(readFileSync(new URL("../concept_graph.json",import.meta.url),"utf8")));
+const server=new Server({name:"hicod",version:"0.6.0"},{capabilities:{tools:{}}});
+server.setRequestHandler(ListToolsRequestSchema,async()=>({tools}));
+server.setRequestHandler(CallToolRequestSchema,async req=>{try{return {content:[{type:"text",text:JSON.stringify(engine.call(req.params.name,req.params.arguments??{}))}]};}catch(e){return {isError:true,content:[{type:"text",text:e.message}]};}});
+await server.connect(new StdioServerTransport());
