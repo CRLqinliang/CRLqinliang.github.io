@@ -36,6 +36,8 @@ Reports distinguish verified sampled facts, sampled graph witnesses, and unknown
 
 ## v0.2: Structural concept knowledge graph
 
+[Interactive graph explorer](https://crlqinliang.github.io/hicod/graph.html) · [Full concept catalogue](CONCEPTS.md).
+
 The [full registry](concept_graph.json) contains 60 L4 definitions, 15 evidence interfaces, 287 typed edges and 29 source records. The [catalogue](CONCEPTS.md) contains mathematical specifications, computation contracts, inputs, dependencies and limitations. The underlying literature is distinguished from HiCoD operational proposals; all 60 entries are definition-only, not full physical evaluators.
 
 The required-evidence DAG can be queried without MuJoCo or an LLM:
