@@ -1,5 +1,5 @@
 {
-  "version": "0.5.1",
+  "version": "0.6.0",
   "updated": "2026-11-26",
   "scope": "Research taxonomy of robotic solution-space structure; not a standardized ontology or an implementation of 60 physical evaluators.",
   "notation": "F(T): feasible set in declared candidate domain. G(p): object-relative feasible grasps. Γ: path family. V: declared structural descriptor. μ: specified measure. All results are relative to scope, models and evidence. A sampled negative result is not a continuous infeasibility proof.",

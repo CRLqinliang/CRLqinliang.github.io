@@ -40,7 +40,7 @@ Reports distinguish verified sampled facts, sampled graph witnesses, and unknown
 
 [Interactive graph explorer](https://crlqinliang.github.io/hicod/graph.html) · [Full concept catalogue](CONCEPTS.md).
 
-The [full registry](concept_graph.json) contains 60 L4 definitions, 15 evidence interfaces, 304 typed edges and 29 source records. The [catalogue](CONCEPTS.md) contains mathematical specifications, computation contracts, inputs, dependencies and limitations. The underlying literature is distinguished from HiCoD operational proposals; ten entries now have finite-evidence evaluators; the remaining 50 are definition-only. No entry is claimed as a full physical evaluator.
+The [full registry](concept_graph.json) contains 60 L4 definitions, 15 evidence interfaces, 304 typed edges and 29 source records. The [catalogue](CONCEPTS.md) contains mathematical specifications, computation contracts, inputs, dependencies and limitations. The underlying literature is distinguished from HiCoD operational proposals; 16 entries now have finite-evidence implementations; the remaining 44 are definition-only. No entry is claimed as a full physical evaluator.
 
 The required-evidence DAG can be queried without MuJoCo or an LLM:
 
@@ -79,7 +79,7 @@ The 3R planar arm uses analytic FK/IK, collision clearances, ideal fixed attachm
 
 ## 中文 / English
 
-The four project pages share a persistent CN/EN switch. [中文术语规范](TERMINOLOGY_CN.md) and [Chinese concept definitions](concept_graph.zh.json) contain all 60 L4 concepts plus 15 evidence interfaces. Mathematical specifications, source titles, code, exported canonical JSON and some implementation/audit details retain their original English. Chinese definitions and limits are authored translations, not independent mathematical definitions.
+The five project pages share a persistent CN/EN switch. [中文术语规范](TERMINOLOGY_CN.md) and [Chinese concept definitions](concept_graph.zh.json) contain all 60 L4 concepts plus 15 evidence interfaces. Mathematical specifications, source titles, code, exported canonical JSON and some implementation/audit details retain their original English. Chinese definitions and limits are authored translations, not independent mathematical definitions.
 
 ## v0.5.1: Counterfactual path sweep
 
@@ -87,6 +87,14 @@ The four project pages share a persistent CN/EN switch. [中文术语规范](TER
 
     node examples/path_sweep.mjs regrasp_recovery
     node tests/test_path_sweep.mjs
+
+## v0.6: Agent-facing debugger and media
+
+[Agent tool playground](https://crlqinliang.github.io/hicod/agent.html) · [API documentation](AGENT.md) · [Media provenance](media/README.md)
+
+Six session-bound, read-only computational tools expose the existing planar backend with lazy hybrid/deformation queries and paginated evidence. The MCP stdio adapter uses the official SDK (installation and actual client handshake pending). Ten core checks passed in a JavaScript runtime. No live LLM experiment was run.
+
+The website embeds an actual analytic GIF and a 130-sample evidence player. The separate MuJoCo MP4 renderer is provided but MuJoCo was unavailable in the authoring environment. Do not describe the analytic animation as a MuJoCo simulation.
 
 ## Concept modules
 
