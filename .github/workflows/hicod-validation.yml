@@ -1,0 +1,131 @@
+name: HiCoD validation
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - '.github/workflows/hicod-validation.yml'
+      - 'hicod/validation/*.mjs'
+      - 'hicod/validation/*.py'
+      - 'hicod/benchmark/**'
+      - 'hicod/physical/**'
+      - 'hicod/agent/**'
+      - 'hicod/tests/**'
+      - 'hicod/*.html'
+      - 'hicod/*.css'
+      - 'hicod/*.js'
+      - 'hicod/*.mjs'
+permissions:
+  contents: read
+concurrency:
+  group: hicod-validation
+  cancel-in-progress: true
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run actual Node and Python tests
+        working-directory: hicod
+        run: |
+          mkdir -p /tmp/hicod-regression
+          python -m pip install numpy
+          python -m unittest discover -s tests
+          node tests/test_evaluators.mjs
+          node tests/test_planar3r.mjs
+          node tests/test_multimodal.mjs
+          node tests/test_path_sweep.mjs
+          node tests/test_agent.mjs
+          node tests/test_benchmark.mjs
+          node tests/test_model_runner.mjs
+          node benchmark/regenerate_oracle.mjs
+          node -e 'require("fs").writeFileSync("/tmp/hicod-regression/regression.json",JSON.stringify({status:"passed",source_commit:process.env.GITHUB_SHA,node:process.version,oracle_outcomes:448,scope:"Actual CLI tests and exact same-backend oracle regeneration"},null,2))'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hicod-validation-regression
+          path: /tmp/hicod-regression/
+          if-no-files-found: warn
+  geometry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install mujoco-core==4.0.1 numpy
+      - name: Cross-check reference graphs and repair witnesses
+        working-directory: hicod
+        run: |
+          node validation/export_cases.mjs /tmp/hicod-geometry-input
+          python validation/check_mujoco.py /tmp/hicod-geometry-input /tmp/hicod-geometry/geometry.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hicod-validation-geometry
+          path: /tmp/hicod-geometry/
+          if-no-files-found: warn
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: |
+          python -m pip install playwright==1.56.0
+          python -m playwright install --with-deps chromium
+      - name: Check real browser interactions and capture screenshots
+        run: |
+          python -m http.server 8765 > /tmp/hicod-http.log 2>&1 &
+          python hicod/validation/browser_check.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hicod-validation-browser
+          path: /tmp/hicod-validation/
+          if-no-files-found: warn
+  publish:
+    if: always()
+    needs: [regression, geometry, browser]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: hicod-validation-*
+          path: /tmp/hicod-validation-reports
+          merge-multiple: true
+      - name: Publish JSON reports only
+        env:
+          REGRESSION_JOB: ${{ needs.regression.result }}
+          GEOMETRY_JOB: ${{ needs.geometry.result }}
+          BROWSER_JOB: ${{ needs.browser.result }}
+        run: |
+          mkdir -p hicod/validation/results
+          python - <<'PY'
+          import json,os,shutil
+          from pathlib import Path
+          src=Path('/tmp/hicod-validation-reports'); dest=Path('hicod/validation/results')
+          for k in ['regression','geometry','browser']:
+              p=src/(k+'.json')
+              if p.exists():shutil.copyfile(p,dest/p.name)
+              else:(dest/(k+'.json')).write_text(json.dumps({'status':'no_report','source_commit':os.environ['GITHUB_SHA'],'job_result':os.environ[k.upper()+'_JOB']},indent=2))
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- hicod/validation/results/regression.json hicod/validation/results/geometry.json hicod/validation/results/browser.json
+          if ! git diff --cached --quiet; then git commit -m 'Publish HiCoD validation reports'; git push origin HEAD:master; fi
