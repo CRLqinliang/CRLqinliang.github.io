@@ -20,7 +20,7 @@ const dict={
   "Computed data": "计算数据",
   "Computed results": "计算结果",
   "Backend code ↗": "后端代码 ↗",
-  "OPEN-SOURCE RESEARCH INITIATIVE / V0.7.1 PROTOTYPE": "开源研究项目 / V0.7.1 原型",
+  "OPEN-SOURCE RESEARCH INITIATIVE / V0.8 PROTOTYPE": "开源研究项目 / V0.8 原型",
   "Robotics for": "面向推理的",
   "reasoning.": "机器人学。",
   "High-Level Concept Debugger for Agentic Robotics": "面向智能体驱动机器人的高层概念调试器",

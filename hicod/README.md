@@ -79,7 +79,7 @@ The 3R planar arm uses analytic FK/IK, collision clearances, ideal fixed attachm
 
 ## 中文 / English
 
-The seven project pages share a persistent CN/EN switch. [中文术语规范](TERMINOLOGY_CN.md) and [Chinese concept definitions](concept_graph.zh.json) contain all 60 L4 concepts plus 15 evidence interfaces. Mathematical specifications, source titles, code, exported canonical JSON and some implementation/audit details retain their original English. Chinese definitions and limits are authored translations, not independent mathematical definitions.
+The eight project pages share a persistent CN/EN switch. [中文术语规范](TERMINOLOGY_CN.md) and [Chinese concept definitions](concept_graph.zh.json) contain all 60 L4 concepts plus 15 evidence interfaces. Mathematical specifications, source titles, code, exported canonical JSON and some implementation/audit details retain their original English. Chinese definitions and limits are authored translations, not independent mathematical definitions.
 
 ## v0.5.1: Counterfactual path sweep
 
@@ -111,6 +111,12 @@ The website embeds an actual analytic GIF and a 130-sample evidence player. GitH
 [Validation dashboard](https://crlqinliang.github.io/hicod/validation.html) · [Validation protocol](VALIDATION.md)
 
 Shared research-site theme, responsive navigation and all existing bilingual explorers. CI runs actual CLI regression, browser acceptance and MuJoCo finite geometry cross-checks. A separate open-weight real-model pilot uses Qwen2.5-0.5B-Instruct on CPU with four public tasks × six profiles. Reports indicate actual execution; no result is claimed until it is published. Scientific scope remains limited to finite sampled geometry.
+
+## v0.8: Visual concept atlas
+
+[Visual atlas](https://crlqinliang.github.io/hicod/atlas.html) · [Complete graph](https://crlqinliang.github.io/hicod/atlas.html#global-graph) · [Figure provenance](FIGURES.md).
+
+60 original bilingual concept illustrations, 10 verified paper figure locators mapped to 26 concepts, and 5 licensed publisher image links covering 15 concepts. Exact figure matching and reuse verification remain incomplete; original schematics are not paper crops. The global grouped graph renders all 75 nodes and 304 typed edges with zoom, pan, selection, edge filters and SVG export.
 
 ## Concept modules
 
